@@ -1,0 +1,9 @@
+export { default as ServiceHero } from './ServiceHero';
+export { default as MethodologySection } from './MethodologySection';
+export { default as BenefitsSection } from './BenefitsSection';
+export { default as ComparisonSection } from './ComparisonSection';
+export { default as EngagementsSection } from './EngagementsSection';
+export { default as ContentSection } from './ContentSection';
+export { default as VigilanceSection } from './VigilanceSection';
+export { default as OtherExpertisesSection } from './OtherExpertises';
+export { default as EnjeuxSection } from './EnjeuxSection';

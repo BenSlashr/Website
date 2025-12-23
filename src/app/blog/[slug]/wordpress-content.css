@@ -1,0 +1,221 @@
+/* WordPress Gutenberg Content Styles */
+
+.wp-content {
+  color: #d1d5db; /* gray-300 */
+  line-height: 1.8;
+}
+
+/* Paragraphs */
+.wp-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+/* Headings */
+.wp-content h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 6rem;
+}
+
+.wp-content h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.wp-content h4 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+.wp-content a {
+  color: #fb923c; /* orange-400 */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.wp-content a:hover {
+  text-decoration: underline;
+}
+
+/* Strong/Bold */
+.wp-content strong,
+.wp-content b {
+  color: white;
+  font-weight: 600;
+}
+
+/* Lists */
+.wp-content ul,
+.wp-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.wp-content ul {
+  list-style-type: disc;
+}
+
+.wp-content ol {
+  list-style-type: decimal;
+}
+
+.wp-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.wp-content li > ul,
+.wp-content li > ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* WordPress block list */
+.wp-content .wp-block-list {
+  margin-bottom: 1.5rem;
+}
+
+/* Images */
+.wp-content img {
+  border-radius: 1rem;
+  margin: 2rem 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-content figure {
+  margin: 2rem 0;
+}
+
+.wp-content figcaption {
+  color: #6b7280; /* gray-500 */
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* WordPress image alignment */
+.wp-content .aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-content .alignleft {
+  float: left;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.wp-content .alignright {
+  float: right;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Blockquotes */
+.wp-content blockquote {
+  border-left: 4px solid #fb923c;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #9ca3af; /* gray-400 */
+}
+
+/* Code */
+.wp-content code {
+  background: #252525;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #fb923c;
+}
+
+.wp-content pre {
+  background: #252525;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.wp-content pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Tables */
+.wp-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.wp-content th,
+.wp-content td {
+  border: 1px solid #374151; /* gray-700 */
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.wp-content th {
+  background: #252525;
+  color: white;
+  font-weight: 600;
+}
+
+.wp-content tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Horizontal rule */
+.wp-content hr {
+  border: none;
+  border-top: 1px solid #374151;
+  margin: 3rem 0;
+}
+
+/* WordPress specific blocks */
+.wp-content .wp-block-image {
+  margin: 2rem 0;
+}
+
+.wp-content .wp-block-quote {
+  border-left: 4px solid #fb923c;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+
+.wp-content .wp-block-separator {
+  border: none;
+  border-top: 1px solid #374151;
+  margin: 3rem 0;
+}
+
+/* Clear floats */
+.wp-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive images in content */
+@media (max-width: 768px) {
+  .wp-content .alignleft,
+  .wp-content .alignright {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
