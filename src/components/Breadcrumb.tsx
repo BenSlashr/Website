@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { BreadcrumbSchema } from './JsonLd';
 
 interface BreadcrumbItem {
   label: string;
@@ -12,8 +13,18 @@ interface BreadcrumbProps {
 }
 
 const Breadcrumb = ({ items }: BreadcrumbProps) => {
+  // Prepare items for JSON-LD schema
+  const schemaItems = items
+    .filter((item) => item.href)
+    .map((item) => ({
+      name: item.label,
+      url: `https://slashr.fr${item.href}`,
+    }));
+
   return (
     <section className="bg-[#1a1a1a] py-8 px-6 border-t border-gray-800">
+      {/* JSON-LD Breadcrumb Schema */}
+      {schemaItems.length > 0 && <BreadcrumbSchema items={schemaItems} />}
       <div className="max-w-5xl mx-auto">
         <nav aria-label="Fil d'Ariane">
           <ol className="flex flex-wrap items-center gap-2 text-sm" itemScope itemType="https://schema.org/BreadcrumbList">

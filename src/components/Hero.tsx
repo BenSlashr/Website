@@ -25,14 +25,14 @@ const Hero = () => {
         </h1>
 
         {/* Subtitle */}
-        <div className="space-y-1 sm:space-y-2 mb-8 sm:mb-10 max-w-md sm:max-w-lg md:max-w-xl mx-auto">
-          <p className="text-base sm:text-lg md:text-xl text-white/90 font-medium">
+        <div className="space-y-2 sm:space-y-3 mb-8 sm:mb-10 max-w-md sm:max-w-lg md:max-w-xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white font-medium">
             L&apos;agence des marques qui veulent gagner la bataille de l&apos;attention.
           </p>
-          <p className="text-xs sm:text-sm md:text-base text-white/60">
+          <p className="text-sm sm:text-base md:text-lg text-white/80">
             Google, ChatGPT, TikTok, YouTube...
           </p>
-          <p className="text-xs sm:text-sm md:text-base text-white/60">
+          <p className="text-sm sm:text-base md:text-lg text-white/80">
             Où qu&apos;ils cherchent, vos clients doivent tomber sur vous.
           </p>
         </div>

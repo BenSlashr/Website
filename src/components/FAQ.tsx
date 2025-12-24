@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { FAQSchema } from './JsonLd';
 
 interface FAQItem {
   question: string;
@@ -94,6 +95,9 @@ const FAQ = ({ title = "Questions fréquentes", faqs }: FAQProps) => {
 
   return (
     <section className="bg-[#1a1a1a] py-20 sm:py-28 md:py-36 px-4 sm:px-6">
+      {/* FAQ Schema for SEO */}
+      <FAQSchema faqs={faqsToDisplay} />
+
       <div className="max-w-4xl mx-auto">
         {/* Title */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 sm:mb-10 md:mb-12 italic font-serif">

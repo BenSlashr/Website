@@ -308,6 +308,7 @@ const LiquidGradient = ({ className = '' }: LiquidGradientProps) => {
   const uniformsRef = useRef<Record<string, THREE.IUniform> | null>(null);
   const clockRef = useRef<THREE.Clock | null>(null);
   const animationFrameRef = useRef<number>(0);
+  const isVisibleRef = useRef<boolean>(true);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -436,17 +437,37 @@ const LiquidGradient = ({ className = '' }: LiquidGradientProps) => {
     const tick = () => {
       if (!rendererRef.current || !sceneRef.current || !cameraRef.current || !clockRef.current) return;
 
-      const delta = Math.min(clockRef.current.getDelta(), 0.1);
+      // Only animate if visible
+      if (isVisibleRef.current) {
+        const delta = Math.min(clockRef.current.getDelta(), 0.1);
 
-      touchTextureRef.current?.update();
+        touchTextureRef.current?.update();
 
-      if (uniformsRef.current?.uTime) {
-        uniformsRef.current.uTime.value += delta;
+        if (uniformsRef.current?.uTime) {
+          uniformsRef.current.uTime.value += delta;
+        }
+
+        rendererRef.current.render(sceneRef.current, cameraRef.current);
       }
 
-      rendererRef.current.render(sceneRef.current, cameraRef.current);
       animationFrameRef.current = requestAnimationFrame(tick);
     };
+
+    // Intersection Observer to pause animation when not visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisibleRef.current = entry.isIntersecting;
+          // Reset clock when becoming visible to avoid time jump
+          if (entry.isIntersecting && clockRef.current) {
+            clockRef.current.getDelta(); // Consume accumulated delta
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(containerRef.current);
 
     window.addEventListener('resize', handleResize);
     containerRef.current.addEventListener('mousemove', handleMouseMove);
@@ -456,6 +477,7 @@ const LiquidGradient = ({ className = '' }: LiquidGradientProps) => {
 
     // Cleanup
     return () => {
+      observer.disconnect();
       window.removeEventListener('resize', handleResize);
       containerRef.current?.removeEventListener('mousemove', handleMouseMove);
       containerRef.current?.removeEventListener('touchmove', handleTouchMove);
