@@ -280,12 +280,10 @@ export default async function PrestationPage({ params }: Props) {
       )}
 
       {/* Autres expertises */}
-      {prestation.otherExpertises && prestation.otherExpertises.length > 0 && (
-        <OtherExpertisesSection
-          expertises={prestation.otherExpertises}
-          currentExpertise={prestation.tag}
-        />
-      )}
+      <OtherExpertisesSection
+        currentSlug={slug}
+        category={prestation.category}
+      />
 
       {/* FAQ */}
       {prestation.faqs && prestation.faqs.length > 0 && (

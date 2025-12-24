@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { getCaseStudyBySlug, getOtherCaseStudies, CaseStudy, CaseStudyCard } from '@/lib/caseStudiesWP';
 
+const CALENDLY_URL = 'https://calendly.com/quentin-slashr/appel-de-decouverte-client-by-slashr?back=1';
+
 export default function CaseStudyDetail() {
   const params = useParams();
   const slug = params.slug as string;
@@ -16,6 +18,10 @@ export default function CaseStudyDetail() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
   const [hoveredCardIndex, setHoveredCardIndex] = useState<number | null>(null);
   const [carouselIndex, setCarouselIndex] = useState(0);
+
+  const openCalendly = () => {
+    window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+  };
 
   // Charger les données depuis WordPress
   useEffect(() => {
@@ -181,7 +187,10 @@ export default function CaseStudyDetail() {
               {/* CTA Card */}
               <div className="bg-gray-100 rounded-2xl p-6">
                 <h3 className="text-[#1a1a1a] font-bold text-lg mb-4">Vous avez un projet ?</h3>
-                <button className="flex items-center gap-2 bg-[#1a1a1a] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#333] transition-colors">
+                <button
+                  onClick={openCalendly}
+                  className="flex items-center gap-2 bg-[#1a1a1a] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#333] transition-colors"
+                >
                   Prendre RDV
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -235,7 +244,10 @@ export default function CaseStudyDetail() {
                   <p className="text-white text-xl font-semibold italic">
                     Je veux les mêmes résultats !
                   </p>
-                  <button className="flex items-center gap-2 bg-white text-[#1a1a1a] px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
+                  <button
+                    onClick={openCalendly}
+                    className="flex items-center gap-2 bg-white text-[#1a1a1a] px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  >
                     Prendre RDV
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />

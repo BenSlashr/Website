@@ -34,18 +34,20 @@ const Process = () => {
           {steps.map((step) => (
             <div
               key={step.number}
-              className="bg-[#252525] rounded-2xl p-6 sm:p-8 py-8 sm:py-10 flex flex-col items-center text-center"
+              className="group rounded-2xl p-[1px] transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:via-pink-500 hover:to-purple-500"
             >
-              {/* Number Circle */}
-              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 border-gray-500 flex items-center justify-center mb-4 sm:mb-6">
-                <span className="text-white text-lg sm:text-xl font-medium">{step.number}</span>
-              </div>
+              <div className="bg-[#252525] rounded-2xl p-6 sm:p-8 py-8 sm:py-10 flex flex-col items-center text-center h-full">
+                {/* Number Circle */}
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 border-gray-500 flex items-center justify-center mb-4 sm:mb-6">
+                  <span className="text-white text-lg sm:text-xl font-medium">{step.number}</span>
+                </div>
 
-              {/* Text */}
-              <h3 className="text-white font-semibold text-base sm:text-lg mb-1">
-                {step.title}
-              </h3>
-              <p className="text-gray-400 text-sm sm:text-base">{step.subtitle}</p>
+                {/* Text */}
+                <h3 className="text-white font-semibold text-base sm:text-lg mb-1">
+                  {step.title}
+                </h3>
+                <p className="text-gray-400 text-sm sm:text-base">{step.subtitle}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -42,9 +42,70 @@ interface WPPost {
   };
 }
 
+// Fonction pour décoder les entités HTML
+function decodeHtmlEntities(text: string): string {
+  const entities: Record<string, string> = {
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&#039;': "'",
+    '&#8217;': "'",
+    '&#8216;': "'",
+    '&#8220;': '"',
+    '&#8221;': '"',
+    '&apos;': "'",
+    '&nbsp;': ' ',
+    '&hellip;': '...',
+    '&ndash;': '–',
+    '&mdash;': '—',
+    '&laquo;': '«',
+    '&raquo;': '»',
+    '&euro;': '€',
+    '&copy;': '©',
+    '&reg;': '®',
+    '&trade;': '™',
+    '&lsquo;': "'",
+    '&rsquo;': "'",
+    '&ldquo;': '"',
+    '&rdquo;': '"',
+    '&bull;': '•',
+    '&middot;': '·',
+    '&deg;': '°',
+    '&frac12;': '½',
+    '&frac14;': '¼',
+    '&frac34;': '¾',
+    '&times;': '×',
+    '&divide;': '÷',
+    '&plusmn;': '±',
+    '&sup2;': '²',
+    '&sup3;': '³',
+  };
+
+  // Remplacer les entités nommées
+  let result = text;
+  for (const [entity, char] of Object.entries(entities)) {
+    result = result.split(entity).join(char);
+  }
+
+  // Remplacer les entités numériques décimales (&#123;)
+  result = result.replace(/&#(\d+);/g, (_, code) => {
+    return String.fromCharCode(parseInt(code, 10));
+  });
+
+  // Remplacer les entités numériques hexadécimales (&#x1F4A1;)
+  result = result.replace(/&#x([0-9a-fA-F]+);/g, (_, code) => {
+    return String.fromCharCode(parseInt(code, 16));
+  });
+
+  return result;
+}
+
 // Fonction utilitaire pour nettoyer le HTML
 function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, '').trim();
+  // Enlever les balises HTML puis décoder les entités
+  const withoutTags = html.replace(/<[^>]*>/g, '');
+  return decodeHtmlEntities(withoutTags).trim();
 }
 
 // Calcul du temps de lecture
@@ -278,6 +339,27 @@ export async function getCategoriesFromWP(): Promise<string[]> {
     return categories.map((c) => c.name);
   } catch (error) {
     console.error('Erreur lors de la récupération des catégories:', error);
+    return [];
+  }
+}
+
+// Récupérer les articles par nom d'auteur
+export async function getArticlesByAuthorFromWP(authorName: string): Promise<Article[]> {
+  try {
+    // Récupérer tous les articles et filtrer par auteur côté client
+    // (car l'API users de WordPress est protégée)
+    const allArticles = await getArticlesFromWP();
+
+    const normalizedAuthorName = authorName.toLowerCase().trim();
+
+    return allArticles.filter((article) => {
+      const articleAuthor = article.author.toLowerCase().trim();
+      // Match partiel pour gérer les variations (Benoit vs Benoît)
+      return articleAuthor.includes(normalizedAuthorName) ||
+             normalizedAuthorName.includes(articleAuthor.split(' ')[0]);
+    });
+  } catch (error) {
+    console.error('Erreur lors de la récupération des articles par auteur:', error);
     return [];
   }
 }

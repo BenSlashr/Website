@@ -4,25 +4,34 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const CALENDLY_URL = 'https://calendly.com/quentin-slashr/appel-de-decouverte-client-by-slashr?back=1';
+
 const Header = () => {
   const [isExpertisesOpen, setIsExpertisesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const openCalendly = () => {
+    window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+  };
+
   const expertises = {
-    acquisition: [
-      { name: 'SEO', description: 'Référencement naturel', href: '/prestations/seo-ecommerce', icon: 'search' },
-      { name: 'GEO', description: 'Référencement sur moteur IA', href: '/prestations/seo-international', icon: 'ai' },
-      { name: 'Social Search', description: 'Référencement réseaux sociaux', href: '/prestations/seo-local', icon: 'social' },
-      { name: 'SEA', description: 'Référencement payant', href: '/prestations/google-ads', icon: 'euro' },
+    seo: [
+      { name: 'SEO', description: 'Référencement naturel', href: '/seo', icon: 'search' },
+      { name: 'SEO E-commerce', description: 'Shopify, Prestashop, Magento...', href: '/seo/prestations/ecommerce', icon: 'cart' },
+      { name: 'SEO Local', description: 'Google Business Profile', href: '/seo/prestations/local', icon: 'location' },
+      { name: 'SEO International', description: 'Multilingue & Hreflang', href: '/seo/prestations/international', icon: 'globe' },
+      { name: 'Migration SEO', description: 'Refonte sans perte de trafic', href: '/seo/prestations/refonte-migration', icon: 'ux' },
     ],
-    activation: [
-      { name: 'Contenu augmenté', description: '', href: '/prestations/seo-ecommerce', icon: 'content' },
-      { name: 'UX', description: '', href: '/prestations/refonte-migration-seo', icon: 'ux' },
-      { name: 'Data & CRO', description: '', href: '/prestations/google-ads', icon: 'data' },
+    geo: [
+      { name: 'GEO', description: 'Référencement IA', href: '/seo/prestations/agence-geo', icon: 'ai' },
+    ],
+    ads: [
+      { name: 'Ads', description: 'Publicité digitale', href: '/ads', icon: 'euro' },
+      { name: 'SEA / Google Ads', description: 'Search, Shopping, Display', href: '/ads/sea', icon: 'search' },
+      { name: 'Social Ads', description: 'Meta, LinkedIn, TikTok', href: '/ads/social', icon: 'social' },
     ],
     conseil: [
-      { name: 'Accompagnement', description: '', href: '/prestations/seo-ecommerce', icon: 'chat' },
-      { name: 'Formation', description: '', href: '/prestations/formation-seo', icon: 'formation' },
+      { name: 'Formation SEO', description: 'Montée en compétences', href: '/seo/prestations/formation', icon: 'formation' },
     ],
   };
 
@@ -62,6 +71,25 @@ const Header = () => {
         return (
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+          </svg>
+        );
+      case 'cart':
+        return (
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        );
+      case 'location':
+        return (
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        );
+      case 'globe':
+        return (
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         );
       case 'data':
@@ -130,8 +158,8 @@ const Header = () => {
           <Link href="/blog" className="text-gray-600 hover:text-black transition-colors text-sm">
             Blog
           </Link>
-          <Link href="#outils" className="text-gray-600 hover:text-black transition-colors text-sm">
-            Outils
+          <Link href="/r-and-d" className="text-gray-600 hover:text-black transition-colors text-sm">
+            R&D
           </Link>
         </div>
 
@@ -150,15 +178,15 @@ const Header = () => {
         </button>
 
         {/* CTA Button - Desktop */}
-        <Link
-          href="#contact"
+        <button
+          onClick={openCalendly}
           className="hidden md:flex items-center gap-2 bg-[#1a1a1a] hover:bg-black text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors"
         >
           Prendre RDV
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
-        </Link>
+        </button>
       </nav>
 
       {/* Mega Menu - Expertises */}
@@ -169,13 +197,13 @@ const Header = () => {
         >
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <div className="grid grid-cols-3 gap-8">
-              {/* Acquisition */}
+              {/* SEO */}
               <div>
                 <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
-                  Acquisition
+                  SEO
                 </h3>
                 <div className="space-y-4">
-                  {expertises.acquisition.map((item) => (
+                  {expertises.seo.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -200,13 +228,13 @@ const Header = () => {
                 </div>
               </div>
 
-              {/* Activation et performance */}
+              {/* GEO & Ads */}
               <div>
                 <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
-                  Activation et performance
+                  GEO & Publicité
                 </h3>
                 <div className="space-y-4">
-                  {expertises.activation.map((item) => (
+                  {[...expertises.geo, ...expertises.ads].map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -220,6 +248,11 @@ const Header = () => {
                         <p className="text-gray-900 font-medium text-sm group-hover:text-black">
                           {item.name}
                         </p>
+                        {item.description && (
+                          <p className="text-gray-500 text-xs">
+                            {item.description}
+                          </p>
+                        )}
                       </div>
                     </Link>
                   ))}
@@ -260,30 +293,81 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden mt-2 bg-white rounded-2xl shadow-lg p-4 max-h-[80vh] overflow-y-auto">
           <div className="flex flex-col gap-2">
-            <Link href="/prestations" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100">
-              Nos expertises
-            </Link>
-            <Link href="#agence" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100">
+            {/* Expertises Section */}
+            <div className="border-b border-gray-100 pb-3">
+              <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">SEO</p>
+              {expertises.seo.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-3 py-2 text-gray-600 hover:text-black transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">
+                    {getIcon(item.icon)}
+                  </div>
+                  <span className="text-sm">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="border-b border-gray-100 pb-3">
+              <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">GEO & Publicité</p>
+              {[...expertises.geo, ...expertises.ads].map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-3 py-2 text-gray-600 hover:text-black transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">
+                    {getIcon(item.icon)}
+                  </div>
+                  <span className="text-sm">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="border-b border-gray-100 pb-3">
+              <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">Conseil</p>
+              {expertises.conseil.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-3 py-2 text-gray-600 hover:text-black transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">
+                    {getIcon(item.icon)}
+                  </div>
+                  <span className="text-sm">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+
+            {/* Other Links */}
+            <Link href="#agence" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100" onClick={() => setIsMobileMenuOpen(false)}>
               L&apos;agence
             </Link>
-            <Link href="#cas-clients" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100">
+            <Link href="#cas-clients" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100" onClick={() => setIsMobileMenuOpen(false)}>
               Cas clients
             </Link>
-            <Link href="/blog" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100">
+            <Link href="/blog" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100" onClick={() => setIsMobileMenuOpen(false)}>
               Blog
             </Link>
-            <Link href="#outils" className="text-gray-600 hover:text-black transition-colors text-base py-3">
-              Outils
+            <Link href="/r-and-d" className="text-gray-600 hover:text-black transition-colors text-base py-3" onClick={() => setIsMobileMenuOpen(false)}>
+              R&D
             </Link>
-            <Link
-              href="#contact"
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                openCalendly();
+              }}
               className="flex items-center justify-center gap-2 bg-[#1a1a1a] text-white px-5 py-3.5 rounded-full text-base font-medium mt-4"
             >
               Prendre RDV
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-            </Link>
+            </button>
           </div>
         </div>
       )}

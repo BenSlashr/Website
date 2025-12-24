@@ -21,12 +21,17 @@ export const metadata: Metadata = {
     "Search Marketing",
     "Agence SEO",
     "SEO Lille",
-    "SEO Paris",
     "Référencement naturel",
     "Google Ads",
     "SEA",
     "Content Marketing",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/favicon.svg",
+  },
   authors: [{ name: "SLASHR" }],
   creator: "SLASHR",
   publisher: "SLASHR",

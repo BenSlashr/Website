@@ -3,7 +3,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getAllArticleSlugs, getArticleBySlug, getArticles } from "@/lib/blog";
+import { getAuthorSlugFromName, getAuthorBySlug } from "@/lib/authors";
+import { loadEmbeddingsCache, getSuggestionsFromCache } from "@/lib/internalLinking";
 import Newsletter from "@/components/Newsletter";
+import RelatedServices from "@/components/RelatedServices";
+import RelatedArticles from "@/components/RelatedArticles";
 import "./wordpress-content.css";
 
 // Revalide toutes les 60 secondes (ISR)
@@ -123,22 +127,105 @@ export default async function ArticlePage({ params }: Props) {
     .filter((a) => a.slug !== slug)
     .slice(0, 4);
 
-  // Schema.org Article
+  // Charger le cache des embeddings pour les suggestions sémantiques
+  const embeddingsCache = await loadEmbeddingsCache();
+  const semanticSuggestions = embeddingsCache
+    ? getSuggestionsFromCache(slug, embeddingsCache)
+    : null;
+
+  // Récupérer le slug et les infos de l'auteur
+  const authorSlug = getAuthorSlugFromName(article.author);
+  const authorInfo = authorSlug ? getAuthorBySlug(authorSlug) : null;
+
+  // Estimation du nombre de mots (pour wordCount)
+  const wordCount = article.content
+    ? article.content.replace(/<[^>]*>/g, '').split(/\s+/).filter(Boolean).length
+    : 0;
+
+  // Estimation du temps de lecture (200 mots/min)
+  const readingTimeMinutes = Math.max(1, Math.ceil(wordCount / 200));
+
+  // Schema.org Article - Version avancée
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `https://slashr.fr/blog/${slug}#article`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://slashr.fr/blog/${slug}`,
+    },
     headline: article.title,
-    description: article.excerpt,
+    description: article.excerpt || article.metaDescription,
+    image: article.featuredImage
+      ? {
+          "@type": "ImageObject",
+          url: article.featuredImage,
+          width: 1200,
+          height: 630,
+        }
+      : {
+          "@type": "ImageObject",
+          url: "https://slashr.fr/og-default.jpg",
+          width: 1200,
+          height: 630,
+        },
     author: {
       "@type": "Person",
       name: article.author,
+      url: authorSlug
+        ? `https://slashr.fr/blog/author/${authorSlug}`
+        : "https://slashr.fr/qui-sommes-nous",
+      image: authorInfo?.image,
+      jobTitle: authorInfo?.role,
+      worksFor: {
+        "@type": "Organization",
+        name: "SLASHR",
+      },
+      sameAs: authorInfo?.linkedIn ? [authorInfo.linkedIn] : undefined,
     },
     datePublished: article.publishedAt,
     dateModified: article.updatedAt || article.publishedAt,
     publisher: {
       "@type": "Organization",
+      "@id": "https://slashr.fr/#organization",
       name: "SLASHR",
       url: "https://slashr.fr",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://agence-slashr.fr/wp-content/uploads/2024/03/LOGO-SLASHR-NOIR.png",
+        width: 200,
+        height: 60,
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "165 avenue de Bretagne",
+        addressLocality: "Lille",
+        postalCode: "59800",
+        addressCountry: "FR",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+33-6-58-87-90-65",
+        contactType: "customer service",
+        availableLanguage: "French",
+      },
+      sameAs: [
+        "https://www.linkedin.com/company/slashr-seo/",
+      ],
+    },
+    articleSection: article.category,
+    keywords: article.tags?.join(", ") || article.category,
+    wordCount: wordCount,
+    timeRequired: `PT${readingTimeMinutes}M`,
+    inLanguage: "fr-FR",
+    isAccessibleForFree: true,
+    isPartOf: {
+      "@type": "Blog",
+      "@id": "https://slashr.fr/blog#blog",
+      name: "Blog SLASHR",
+      publisher: {
+        "@id": "https://slashr.fr/#organization",
+      },
     },
   };
 
@@ -249,11 +336,35 @@ export default async function ArticlePage({ params }: Props) {
             {/* Meta */}
             <div className="flex flex-wrap items-center gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-medium text-sm">
-                  {article.author.split(' ').map(n => n[0]).join('')}
-                </div>
+                {authorSlug ? (
+                  <Link href={`/blog/author/${authorSlug}`} className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    {authorInfo?.image ? (
+                      <Image
+                        src={authorInfo.image}
+                        alt={article.author}
+                        fill
+                        className="object-cover"
+                        sizes="40px"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-medium text-sm">
+                        {article.author.split(' ').map(n => n[0]).join('')}
+                      </div>
+                    )}
+                  </Link>
+                ) : (
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-medium text-sm">
+                    {article.author.split(' ').map(n => n[0]).join('')}
+                  </div>
+                )}
                 <div>
-                  <p className="text-white font-medium text-sm">{article.author}</p>
+                  {authorSlug ? (
+                    <Link href={`/blog/author/${authorSlug}`} className="text-white font-medium text-sm hover:text-orange-400 transition-colors">
+                      {article.author}
+                    </Link>
+                  ) : (
+                    <p className="text-white font-medium text-sm">{article.author}</p>
+                  )}
                   <div className="flex items-center gap-2 text-gray-500 text-sm">
                     <time dateTime={article.publishedAt}>
                       {new Date(article.publishedAt).toLocaleDateString("fr-FR", {
@@ -307,18 +418,55 @@ export default async function ArticlePage({ params }: Props) {
                 {/* Author Box */}
                 <div className="mt-12 bg-[#252525] rounded-3xl p-8">
                   <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                      {article.author.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <div>
-                      <h3 className="text-white font-bold text-lg mb-1">
-                        {article.author}
-                      </h3>
-                      <p className="text-orange-400 text-sm mb-3">Expert SEO @ SLASHR</p>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        Passionné par le référencement naturel et les stratégies de croissance organique.
-                        Accompagne les entreprises dans leur visibilité sur les moteurs de recherche.
+                    {authorSlug ? (
+                      <Link href={`/blog/author/${authorSlug}`} className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                        {authorInfo?.image ? (
+                          <Image
+                            src={authorInfo.image}
+                            alt={article.author}
+                            fill
+                            className="object-cover"
+                            sizes="64px"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-bold text-xl">
+                            {article.author.split(' ').map(n => n[0]).join('')}
+                          </div>
+                        )}
+                      </Link>
+                    ) : (
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                        {article.author.split(' ').map(n => n[0]).join('')}
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      {authorSlug ? (
+                        <Link href={`/blog/author/${authorSlug}`} className="text-white font-bold text-lg mb-1 hover:text-orange-400 transition-colors inline-block">
+                          {article.author}
+                        </Link>
+                      ) : (
+                        <h3 className="text-white font-bold text-lg mb-1">
+                          {article.author}
+                        </h3>
+                      )}
+                      <p className="text-orange-400 text-sm mb-3">
+                        {authorInfo?.role || 'Expert SEO @ SLASHR'}
                       </p>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        {authorInfo?.bio ||
+                          'Passionné par le référencement naturel et les stratégies de croissance organique. Accompagne les entreprises dans leur visibilité sur les moteurs de recherche.'}
+                      </p>
+                      {authorSlug && (
+                        <Link
+                          href={`/blog/author/${authorSlug}`}
+                          className="inline-flex items-center gap-2 text-orange-400 text-sm font-medium mt-4 hover:text-orange-300 transition-colors"
+                        >
+                          Voir tous ses articles
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -392,13 +540,13 @@ export default async function ArticlePage({ params }: Props) {
                         <span className="text-pink-400 text-xs font-medium uppercase tracking-wider">Prochain Event</span>
                       </div>
                       <h3 className="text-white font-bold mb-2">
-                        Afterwork SEO Paris
+                        Afterwork SEO Lille
                       </h3>
                       <p className="text-gray-400 text-sm mb-1">
                         Jeudi 25 janvier 2024
                       </p>
                       <p className="text-gray-500 text-sm mb-4">
-                        19h00 - Paris 9e
+                        19h00 - Lille
                       </p>
                       <Link
                         href="#"
@@ -438,55 +586,74 @@ export default async function ArticlePage({ params }: Props) {
                     </div>
                   </div>
 
+                  {/* Services associés (basé sur les embeddings) */}
+                  {semanticSuggestions && semanticSuggestions.relatedServices.length > 0 && (
+                    <RelatedServices
+                      services={semanticSuggestions.relatedServices}
+                      title="Services associés"
+                    />
+                  )}
+
                 </div>
               </aside>
             </div>
           </div>
         </div>
 
-        {/* Related Articles */}
-        {relatedArticles.length > 0 && (
+        {/* Related Articles - Semantic suggestions prioritized, fallback to category-based */}
+        {((semanticSuggestions?.relatedArticles?.length ?? 0) > 0 || relatedArticles.length > 0) && (
           <section className="px-6 pb-16">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 italic">
-                Articles similaires
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {relatedArticles.map((related, index) => (
-                  <Link
-                    key={related.slug}
-                    href={`/blog/${related.slug}`}
-                    className="group block bg-[#252525] rounded-3xl overflow-hidden hover:bg-[#2a2a2a] transition-colors"
-                  >
-                    {/* Gradient header */}
-                    <div
-                      className="w-full h-40 flex items-center justify-center"
-                      style={{
-                        background: getCardGradient(index),
-                      }}
-                    >
-                      <div className="inline-flex items-center gap-2 bg-[#1a1a1a]/80 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full">
-                        {getCategoryIcon(related.category)}
-                        <span>{related.category}</span>
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-2 group-hover:text-orange-400 transition-colors line-clamp-2">
-                        {related.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm line-clamp-2 mb-4">
-                        {related.excerpt}
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white text-xs">
-                          {related.author.split(' ').map(n => n[0]).join('')}
+              {(semanticSuggestions?.relatedArticles?.length ?? 0) > 0 && semanticSuggestions?.relatedArticles ? (
+                // Use semantic suggestions (embedding-based)
+                <RelatedArticles
+                  articles={semanticSuggestions.relatedArticles}
+                  title="Articles recommandés"
+                />
+              ) : (
+                // Fallback to category-based related articles
+                <>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 italic">
+                    Articles similaires
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {relatedArticles.map((related, index) => (
+                      <Link
+                        key={related.slug}
+                        href={`/blog/${related.slug}`}
+                        className="group block bg-[#252525] rounded-3xl overflow-hidden hover:bg-[#2a2a2a] transition-colors"
+                      >
+                        {/* Gradient header */}
+                        <div
+                          className="w-full h-40 flex items-center justify-center"
+                          style={{
+                            background: getCardGradient(index),
+                          }}
+                        >
+                          <div className="inline-flex items-center gap-2 bg-[#1a1a1a]/80 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full">
+                            {getCategoryIcon(related.category)}
+                            <span>{related.category}</span>
+                          </div>
                         </div>
-                        <span className="text-gray-500 text-xs">{related.readTime}</span>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+                        <div className="p-6">
+                          <h3 className="text-white font-semibold mb-2 group-hover:text-orange-400 transition-colors line-clamp-2">
+                            {related.title}
+                          </h3>
+                          <p className="text-gray-400 text-sm line-clamp-2 mb-4">
+                            {related.excerpt}
+                          </p>
+                          <div className="flex items-center gap-2">
+                            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white text-xs">
+                              {related.author.split(' ').map(n => n[0]).join('')}
+                            </div>
+                            <span className="text-gray-500 text-xs">{related.readTime}</span>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </section>
         )}

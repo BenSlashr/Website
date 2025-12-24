@@ -1,4 +1,12 @@
+'use client';
+
+const CALENDLY_URL = 'https://calendly.com/quentin-slashr/appel-de-decouverte-client-by-slashr?back=1';
+
 const CTA = () => {
+  const openCalendly = () => {
+    window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="relative pt-20 sm:pt-28 md:pt-36 pb-0 px-4 sm:px-6 overflow-hidden">
       {/* Gradient Background - full height behind everything */}
@@ -26,13 +34,22 @@ const CTA = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
-          <button className="bg-[#252525] text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-[#353535] transition-colors">
-            Demander une démo des outils
-          </button>
-          <button className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors">
-            Nous briefer
-          </button>
-          <button className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+          <a
+            href="/prestations/devis"
+            className="bg-[#252525] text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-[#353535] transition-colors"
+          >
+            Demander un devis SEO
+          </a>
+          <a
+            href="/contact"
+            className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors"
+          >
+            Nous contacter
+          </a>
+          <button
+            onClick={openCalendly}
+            className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+          >
             Prendre RDV
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />

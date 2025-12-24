@@ -1,6 +1,15 @@
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
+
+const CALENDLY_URL = 'https://calendly.com/quentin-slashr/appel-de-decouverte-client-by-slashr?back=1';
 
 const Footer = () => {
+  const openCalendly = () => {
+    window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <footer className="bg-[#1a1a1a] pt-12 sm:pt-16 pb-8 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
@@ -9,15 +18,18 @@ const Footer = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 italic">
             Vous avez un projet ?
           </h2>
-          <button className="bg-transparent border border-gray-600 text-white px-6 sm:px-8 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors">
+          <button
+            onClick={openCalendly}
+            className="bg-transparent border border-gray-600 text-white px-6 sm:px-8 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors"
+          >
             Échanger avec des experts
           </button>
         </div>
 
         {/* Footer Content */}
         <div className="mb-12 sm:mb-16">
-          {/* Mobile: Locations in cards */}
-          <div className="grid grid-cols-2 gap-3 mb-8 sm:hidden">
+          {/* Mobile: Location card */}
+          <div className="mb-8 sm:hidden">
             <div className="bg-[#252525] rounded-xl p-4">
               <span className="inline-block text-orange-500 text-xs font-bold mb-2 uppercase">
                 Lille
@@ -26,16 +38,6 @@ const Footer = () => {
                 165 avenue de Bretagne,
                 <br />
                 59800 LILLE
-              </p>
-            </div>
-            <div className="bg-[#252525] rounded-xl p-4">
-              <span className="inline-block text-orange-500 text-xs font-bold mb-2 uppercase">
-                Paris
-              </span>
-              <p className="text-gray-400 text-xs leading-relaxed">
-                60 rue François 1er,
-                <br />
-                75008 PARIS
               </p>
             </div>
           </div>
@@ -48,24 +50,24 @@ const Footer = () => {
               </h4>
               <ul className="space-y-2.5">
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
+                  <Link href="/qui-sommes-nous" className="text-gray-400 text-sm hover:text-white transition-colors">
                     Qui sommes-nous ?
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Notre approche
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    La stratégie SLASHR
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
+                  <Link href="/cas-clients" className="text-gray-400 text-sm hover:text-white transition-colors">
                     Cas clients
-                  </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/recrutement" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    Recrutement
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -75,36 +77,26 @@ const Footer = () => {
               </h4>
               <ul className="space-y-2.5">
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Articles
-                  </a>
+                  <Link href="/blog" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    Blog
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Guides
-                  </a>
+                  <Link href="/r-and-d" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    R&D & Outils
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Vidéos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Podcasts
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Outils
-                  </a>
+                  <Link href="/seo/prestations" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    Prestations SEO
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Desktop: 4 columns */}
-          <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Desktop: 3 columns */}
+          <div className="hidden sm:grid sm:grid-cols-3 gap-8">
             {/* Lille */}
             <div>
               <span className="inline-block bg-[#252525] text-white text-xs font-medium px-3 py-1 rounded mb-3 uppercase">
@@ -117,18 +109,6 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Paris */}
-            <div>
-              <span className="inline-block bg-[#252525] text-white text-xs font-medium px-3 py-1 rounded mb-3 uppercase">
-                Paris
-              </span>
-              <p className="text-gray-400 text-sm">
-                60 rue François 1er,
-                <br />
-                75008 PARIS
-              </p>
-            </div>
-
             {/* À Propos */}
             <div>
               <h4 className="text-gray-500 text-xs font-medium uppercase tracking-wider mb-4">
@@ -136,24 +116,24 @@ const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
+                  <Link href="/qui-sommes-nous" className="text-gray-400 text-sm hover:text-white transition-colors">
                     Qui sommes-nous ?
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Notre approche
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    La stratégie SLASHR
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
+                  <Link href="/cas-clients" className="text-gray-400 text-sm hover:text-white transition-colors">
                     Cas clients
-                  </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/recrutement" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    Recrutement
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -165,29 +145,19 @@ const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Articles
-                  </a>
+                  <Link href="/blog" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    Blog
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Guides
-                  </a>
+                  <Link href="/r-and-d" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    R&D & Outils
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Vidéos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Podcasts
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Outils
-                  </a>
+                  <Link href="/seo/prestations" className="text-gray-400 text-sm hover:text-white transition-colors">
+                    Prestations SEO
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -198,7 +168,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-6 mb-8 sm:mb-12 pt-8 border-t border-gray-800 sm:border-0 sm:pt-0">
           {/* Logo */}
           <Image
-            src="https://agence-slashr.fr/wp-content/uploads/2024/03/logo-slashr-blanc.png"
+            src="https://agence-slashr.fr/wp-content/uploads/2024/03/LOGO-SLASHR-BLANC-1.png"
             alt="SLASHR"
             width={80}
             height={40}
@@ -233,12 +203,12 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            <a href="#" className="text-gray-500 text-xs hover:text-white transition-colors">
+            <Link href="/mentions-legales" className="text-gray-500 text-xs hover:text-white transition-colors">
               Mentions légales
-            </a>
-            <a href="#" className="text-gray-500 text-xs hover:text-white transition-colors">
+            </Link>
+            <Link href="/politique-de-cookies-ue" className="text-gray-500 text-xs hover:text-white transition-colors">
               Politique de cookies (UE)
-            </a>
+            </Link>
           </div>
           <div className="flex items-center gap-2 text-gray-500 text-xs">
             <span>Réalisé par l&apos;agence konfiture</span>

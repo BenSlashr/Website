@@ -395,14 +395,14 @@ export default function DevisPage() {
 
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              { name: "SEO E-commerce", href: "/prestations/seo-ecommerce" },
-              { name: "SEO Local", href: "/prestations/seo-local" },
-              { name: "SEO International", href: "/prestations/seo-international" },
-              { name: "Migration SEO", href: "/prestations/refonte-migration-seo" },
-              { name: "SEO Prestashop", href: "/prestations/seo-prestashop" },
-              { name: "SEO Shopify", href: "/prestations/seo-shopify" },
-              { name: "SEO WooCommerce", href: "/prestations/seo-woocommerce" },
-              { name: "Google Ads", href: "/prestations/google-ads" },
+              { name: "SEO E-commerce", href: "/seo/prestations/ecommerce" },
+              { name: "SEO Local", href: "/seo/prestations/local" },
+              { name: "SEO International", href: "/seo/prestations/international" },
+              { name: "Migration SEO", href: "/seo/prestations/refonte-migration" },
+              { name: "SEO Prestashop", href: "/seo/prestations/prestashop" },
+              { name: "SEO Shopify", href: "/seo/prestations/shopify" },
+              { name: "SEO WooCommerce", href: "/seo/prestations/woocommerce" },
+              { name: "Google Ads", href: "/ads/prestations/google-ads" },
             ].map((prestation) => (
               <Link
                 key={prestation.name}

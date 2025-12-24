@@ -12,7 +12,7 @@ const LogoBanner = () => {
     },
     {
       name: "Carter Cash",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/logo-carter-cash-rdfndiqzjge3q604lfb8av353tgbj672ne9tphr0g0.png",
+      url: "https://agence-slashr.fr/wp-content/uploads/2025/12/logo-carter-cash-fr.webp",
     },
     {
       name: "NaturaBuy",
@@ -40,7 +40,7 @@ const LogoBanner = () => {
     },
     {
       name: "Fourgon",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/fourgon-reouoamun3skp396c5gxbpcxoeewo3r117jafchiio.png",
+      url: "https://agence-slashr.fr/wp-content/uploads/2025/12/logo-fourgon-scaled.png",
     },
     {
       name: "Colisee",
@@ -48,7 +48,7 @@ const LogoBanner = () => {
     },
     {
       name: "Eurogifts",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/eurogifts-reouocij0rv5cb6g16a6govuv65n3hyhpgu9dweq68.png",
+      url: "https://agence-slashr.fr/wp-content/uploads/2025/12/eurogifts-logo.png",
     },
     {
       name: "Ennolys",

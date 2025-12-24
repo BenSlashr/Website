@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf .next && next build",
+    "prebuild": "npx tsx scripts/prebuild-embeddings.ts",
+    "build": "rm -rf .next && npm run prebuild && next build",
     "build:clean": "rm -rf .next node_modules/.cache && next build",
+    "build:skip-embeddings": "rm -rf .next && next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf .next node_modules/.cache"
+    "clean": "rm -rf .next node_modules/.cache",
+    "generate-embeddings": "npx tsx scripts/generate-embeddings.ts",
+    "check-embeddings": "npx tsx scripts/prebuild-embeddings.ts"
   },
   "dependencies": {
     "@types/three": "^0.182.0",

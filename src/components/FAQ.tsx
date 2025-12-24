@@ -16,41 +16,71 @@ const defaultFaqs: FAQItem[] = [
   {
     question: "En tant qu'agence search marketing, sur quels secteurs du digital est-ce que vous pouvez intervenir ?",
     answer: `En tant qu'agence SEM, nous pouvons intervenir sur les domaines du web suivant :
+
 • SEO : c'est notre cœur de métier
-• SEA : souvent lié au SEO, cela permet des synergies intéressantes)
-• Data : pour venir mesurer le ROI des autres leviers)
+• SEA : souvent lié au SEO, cela permet des synergies intéressantes
+• Data : pour venir mesurer le ROI des autres leviers
 • Création de contenu : Indispensable au SEO, nous utilisons des rédacteurs spécialisés comme de la rédaction IA via nos outils personnalisés
-• Social Media Optimization : De plus en plus indispensable lors des campagnes SEO, le SMO vient de greffer à nos audits SEO
+• Social Media Optimization : De plus en plus indispensable lors des campagnes SEO, le SMO vient se greffer à nos audits SEO
 
 Pour tout ce qui est Email Marketing, Marketing d'influence, Display, création de sites web etc nous travaillons avec un réseau de partenaires.`,
   },
   {
-    question: "Quelle est la différence entre le SEO et le SEA ?",
-    answer: `Le SEO (Search Engine Optimization) et le SEA (Search Engine Advertising) sont deux approches complémentaires :
-• Le SEO est le référencement naturel : il s'agit d'optimiser votre site pour apparaître dans les résultats organiques de Google
-• Le SEA est le référencement payant : vous payez pour apparaître en haut des résultats via Google Ads
+    question: "Le Search Marketing se limite-t-il à Google ?",
+    answer: `Le search marketing ne se limite plus à Google. On peut optimiser sa visibilité sur une multitude de plateformes où les utilisateurs effectuent des recherches, chacune avec ses propres règles et opportunités. Bien entendu, Google reste central (SEO/SEA, Google Shopping), mais des canaux comme YouTube, Amazon, Pinterest, ou TikTok sont devenus des moteurs de recherche à part entière.
 
-Le SEO est un investissement long terme avec des résultats durables, tandis que le SEA offre des résultats immédiats mais temporaires.`,
+Sur YouTube, il s'agit de SEO vidéo ; sur Amazon et les marketplaces, on parle de référencement produit avec un fort impact des conversions et des avis. Pinterest et TikTok jouent sur l'inspiration et l'engagement visuel. En B2B, LinkedIn devient aussi un terrain de jeu du search via l'optimisation des profils et des contenus. N'oublions pas les moteurs alternatifs comme Bing ou encore les app stores pour le SEO mobile (ASO). Depuis peu, les IA génératives comme ChatGPT, Gemini ou Perplexity introduisent une nouvelle forme de visibilité à gagner, en apparaissant dans les sources qu'elles utilisent pour formuler leurs réponses.`,
   },
   {
-    question: "Combien de temps faut-il pour voir les résultats du SEO ?",
-    answer: `Les premiers résultats SEO apparaissent généralement entre 3 et 6 mois, selon plusieurs facteurs :
-• L'état actuel de votre site et son historique
-• La concurrence sur vos mots-clés cibles
-• Les ressources allouées à la stratégie SEO
-• La fréquence des mises à jour de contenu
+    question: "Faut-il une stratégie spécifique pour chaque moteur ?",
+    answer: `Oui. Chaque moteur a ses règles, ses formats, ses intentions utilisateurs :
 
-Le SEO est un marathon, pas un sprint. Les résultats les plus significatifs se construisent sur 12 à 24 mois.`,
+• Google → SEO technique + contenu + autorité
+• Amazon → Taux de conversion, volume de ventes, avis clients
+• TikTok / YouTube → Rétention, engagement, contenu natif
+• Pinterest → Esthétique, mots-clés visuels, verticalité des contenus
+• ChatGPT / LLMs → Présence dans des sources fiables, branding, logique de citation`,
   },
   {
-    question: "Comment mesurez-vous le ROI de vos actions SEO ?",
-    answer: `Nous utilisons plusieurs indicateurs clés pour mesurer le retour sur investissement :
-• Évolution des positions sur les mots-clés stratégiques
-• Croissance du trafic organique qualifié
-• Taux de conversion et leads générés
-• Chiffre d'affaires attribuable au SEO
+    question: "Comment choisir son agence/prestataire de marketing digital ?",
+    answer: `Il est souvent difficile de choisir son agence ou prestataire webmarketing, et de prendre sa décision avec le maximum de certitudes.
 
-Nous mettons en place un tracking complet dès le début de la collaboration pour suivre précisément l'impact de nos actions.`,
+De nos expériences, voici quelques-uns de nos meilleurs conseils :
+
+• Posez beaucoup de questions sur les méthodologies, leur manière de fonctionner, d'effectuer les prestations SEO.
+• Tâchez de travailler avec un prestataire ayant des clients de votre même gabarit.
+• Tentez d'analyser les business cases en profondeur, de vérifier les références et témoignages.
+• Une relation Agence/Client est comme une association en entreprise. Posez les questions, demandez la vision/stratégie, faites confiance à votre feeling.
+• Si vous n'êtes pas pleinement sûr, évitez les périodes d'engagement longue durée (9/12 mois). Cela vous permettra de confirmer ou d'infirmer la relation et les méthodes avec eux.
+
+Enfin, nous sommes disponibles pour répondre à toutes vos questions, et répondre aux doutes ou réserves que vous pouvez avoir. Faites le choix d'une agence expérimentée avec Slashr.`,
+  },
+  {
+    question: "Comment appliquez-vous vos tarifs ?",
+    answer: `Les propositions se font généralement de deux manières différentes :
+
+• Vous avez un budget max défini et nous tentons de définir la meilleure démarche à suivre.
+• Vous avez un objectif précis et nous tentons de définir le budget le plus optimisé pour y parvenir.
+
+Le budget total présenté comporte à la fois le TJM (le besoin en temps Homme) et le budget de créations (contenus ou liens).
+
+Généralement, le temps Homme de consulting est divisé en trois grandes parties :
+
+• Partie Analyse et stratégie
+• Gestion de projet
+• Mise en place et intégration
+
+N'hésitez pas à nous poser toutes vos questions lors de nos rendez-vous. Vous pouvez également directement demander un devis SEO.`,
+  },
+  {
+    question: "Faites-vous des propositions commerciales personnalisées ?",
+    answer: `Chaque site a ses propres caractéristiques et opportunités. Vous avez des objectifs et un budget qui vous sont également propres.
+
+Nos propositions commerciales sont donc adaptées à chaque client et à chaque situation.
+
+Pour autant, notre expérience nous permet d'avoir une bonne estimation du temps à passer sur les différentes prestations, selon votre profil de sites web et votre problématique.
+
+La construction de la Roadmap selon votre besoin, et notre expérience nous permettent de construire une proposition commerciale pointue.`,
   },
 ];
 
