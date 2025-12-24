@@ -137,17 +137,6 @@ Le SEO est le processus d'obtenir du trafic à partir des résultats de recherch
   },
 ];
 
-const cmsExpertises = [
-  { name: 'WooCommerce', href: '/seo/prestations/woocommerce' },
-  { name: 'Shopify', href: '/seo/prestations/shopify' },
-  { name: 'PrestaShop', href: '/seo/prestations/prestashop' },
-  { name: 'Magento', href: '/seo/prestations/magento' },
-  { name: 'E-commerce', href: '/seo/prestations/ecommerce' },
-  { name: 'Local', href: '/seo/prestations/local' },
-  { name: 'International', href: '/seo/prestations/international' },
-  { name: 'Migration SEO', href: '/seo/prestations/refonte-migration' },
-];
-
 export default async function SEOPage() {
   const latestArticles = await getLatestArticlesFromWP(3);
 
@@ -190,11 +179,14 @@ export default async function SEOPage() {
               </p>
             </div>
 
-            <div className="bg-[#252525] rounded-2xl p-8">
-              <h3 className="text-white font-semibold text-xl mb-4">Notre mission</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Prendre le chemin le plus court pour vous rendre visible sur les moteurs de recherche.
-              </p>
+            <div className="bg-[#252525] rounded-2xl overflow-hidden">
+              <iframe
+                loading="lazy"
+                src="https://maps.google.com/maps?q=Slashr%20-%20Agence%20SEO%20Lille&amp;t=m&amp;z=14&amp;output=embed&amp;iwloc=near"
+                title="Slashr - Agence SEO Lille"
+                aria-label="Slashr - Agence SEO Lille"
+                className="w-full h-64 md:h-80"
+              />
             </div>
           </div>
         </div>
@@ -204,7 +196,20 @@ export default async function SEOPage() {
       <section className="bg-[#252525] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
-            <div>
+            {/* Moins de BLABLA */}
+            <div className="bg-[#1a1a1a] rounded-2xl p-8 relative overflow-hidden group">
+              {/* Illustration - Documents barrés */}
+              <div className="absolute top-6 right-6 opacity-20 group-hover:opacity-30 transition-opacity">
+                <svg className="w-24 h-24 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4l16 16" className="text-red-500" />
+                </svg>
+              </div>
+              <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                </svg>
+              </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Moins de BLABLA, Moins de PPT
               </h3>
@@ -214,7 +219,19 @@ export default async function SEOPage() {
               </p>
             </div>
 
-            <div>
+            {/* Plus d'actions */}
+            <div className="bg-[#1a1a1a] rounded-2xl p-8 relative overflow-hidden group">
+              {/* Illustration - Fusée */}
+              <div className="absolute top-6 right-6 opacity-20 group-hover:opacity-30 transition-opacity">
+                <svg className="w-24 h-24 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Plus d&apos;actions, Plus de perfs
               </h3>
@@ -349,87 +366,112 @@ export default async function SEOPage() {
         </div>
       </section>
 
-      {/* Expertises / Services */}
+      {/* Expertises / Services - Layout Sticky Scroll */}
       <section className="bg-[#1a1a1a] py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
-            Nos services
-          </span>
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+            {/* Colonne gauche - Sticky */}
+            <div className="md:sticky md:top-32 md:h-fit">
+              <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
+                Nos services
+              </span>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12">
-            Nos expertises SEO
-          </h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Nos expertises SEO
+              </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Audit Technique',
-                description: 'Analyse approfondie de la structure technique de votre site pour identifier les freins au référencement.',
-                icon: (
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
-                ),
-              },
-              {
-                title: 'Audit Popularité',
-                description: 'Évaluation de votre profil de liens et de votre autorité de domaine face à vos concurrents.',
-                icon: (
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                  </svg>
-                ),
-              },
-              {
-                title: 'Accompagnement',
-                description: 'Suivi régulier et mise en œuvre des recommandations pour une croissance SEO durable.',
-                icon: (
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                ),
-              },
-              {
-                title: 'Audit Stratégique',
-                description: 'Définition de votre stratégie SEO alignée sur vos objectifs business et votre marché.',
-                icon: (
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                ),
-              },
-              {
-                title: 'Coaching SEO',
-                description: 'Sessions personnalisées pour monter en compétence sur le SEO et devenir autonome.',
-                icon: (
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                ),
-              },
-              {
-                title: 'Formation SEO',
-                description: 'Formations sur-mesure pour vos équipes marketing, techniques ou éditoriales.',
-                icon: (
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                ),
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="group rounded-2xl p-[1px] transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:via-pink-500 hover:to-purple-500"
+              <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+                De l&apos;audit technique à la formation de vos équipes, nous vous accompagnons
+                sur tous les aspects du référencement naturel pour maximiser votre visibilité.
+              </p>
+
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
               >
-                <div className="bg-[#252525] rounded-2xl p-6 h-full">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
-                    {service.icon}
+                Discutons de votre projet
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Colonne droite - Cards qui défilent */}
+            <div className="space-y-6">
+              {[
+                {
+                  title: 'Audit Technique',
+                  description: 'Analyse approfondie de la structure technique de votre site pour identifier les freins au référencement. Vitesse, crawlabilité, indexation, Core Web Vitals.',
+                  icon: (
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: 'Audit Popularité',
+                  description: 'Évaluation de votre profil de liens et de votre autorité de domaine face à vos concurrents. Analyse du netlinking et opportunités de backlinks.',
+                  icon: (
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: 'Audit Stratégique',
+                  description: 'Définition de votre stratégie SEO alignée sur vos objectifs business. Analyse concurrentielle, recherche de mots-clés et priorisation des actions.',
+                  icon: (
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: 'Accompagnement SEO',
+                  description: 'Suivi régulier et mise en œuvre des recommandations pour une croissance SEO durable. Reporting mensuel et ajustements stratégiques continus.',
+                  icon: (
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: 'Coaching SEO',
+                  description: 'Sessions personnalisées pour monter en compétence sur le SEO et devenir autonome. Travail sur vos problématiques concrètes.',
+                  icon: (
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: 'Formation SEO',
+                  description: 'Formations sur-mesure pour vos équipes marketing, techniques ou éditoriales. De l&apos;initiation aux techniques avancées.',
+                  icon: (
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  ),
+                },
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className="group rounded-2xl p-[1px] transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:via-pink-500 hover:to-purple-500"
+                >
+                  <div className="bg-[#252525] rounded-2xl p-8 h-full">
+                    <div className="flex items-start gap-5">
+                      <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                        {service.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-white font-semibold text-xl mb-3">{service.title}</h3>
+                        <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-white font-semibold text-lg mb-2">{service.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -488,52 +530,12 @@ export default async function SEOPage() {
         </div>
       </section>
 
-      {/* CMS Supportés */}
-      <section className="bg-[#1a1a1a] py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
-            Technologies
-          </span>
-
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Experts sur tous les CMS
-          </h2>
-          <p className="text-gray-400 text-lg mb-12 max-w-2xl">
-            Quelle que soit la technologie de votre site, nous avons l&apos;expertise pour optimiser votre référencement.
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { name: 'WordPress / WooCommerce', href: '/seo/prestations/woocommerce' },
-              { name: 'Shopify', href: '/seo/prestations/shopify' },
-              { name: 'PrestaShop', href: '/seo/prestations/prestashop' },
-              { name: 'Magento', href: '/seo/prestations/magento' },
-              { name: 'Webflow', href: '/seo/prestations/webflow' },
-              { name: 'Framer', href: '/seo/prestations/framer' },
-              { name: 'Salesforce', href: '/seo/prestations/salesforce' },
-              { name: 'Drupal', href: '/seo/prestations/drupal' },
-            ].map((cms, index) => (
-              <a
-                key={index}
-                href={cms.href}
-                className="group rounded-2xl p-[1px] transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:via-pink-500 hover:to-purple-500"
-              >
-                <div className="bg-[#252525] rounded-2xl p-6 text-center h-full flex items-center justify-center">
-                  <span className="text-white font-medium group-hover:text-white transition-colors">
-                    {cms.name}
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Expertises CMS */}
+      {/* Toutes nos expertises SEO */}
       <OtherExpertisesSection
-        title="Nos expertises par CMS"
-        expertises={cmsExpertises}
-        currentExpertise=""
+        title="Toutes nos expertises SEO"
+        subtitle="Découvrez l'ensemble de nos prestations en référencement naturel."
+        currentSlug=""
+        category="seo"
       />
 
       {/* Blog / Articles récents */}

@@ -133,3 +133,31 @@ h1, h2, h3 {
     background-position: -200% 0%;
   }
 }
+
+/* Animated snake gradient border for CTA button */
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes snake-spin {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+.animate-gradient-border {
+  position: relative;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0deg,
+    transparent 240deg,
+    #f97316 250deg,
+    #ec4899 290deg,
+    #a855f7 330deg,
+    transparent 340deg,
+    transparent 360deg
+  );
+  animation: snake-spin 2s linear infinite;
+}

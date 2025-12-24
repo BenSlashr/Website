@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -8,7 +8,21 @@ const CALENDLY_URL = 'https://calendly.com/quentin-slashr/appel-de-decouverte-cl
 
 const Header = () => {
   const [isExpertisesOpen, setIsExpertisesOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Détecter si on a dépassé le hero (environ 100vh)
+      setHasScrolled(window.scrollY > window.innerHeight * 0.8);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const openCalendly = () => {
     window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
@@ -34,6 +48,14 @@ const Header = () => {
       { name: 'Formation SEO', description: 'Montée en compétences', href: '/seo/prestations/formation', icon: 'formation' },
     ],
   };
+
+  const aboutPages = [
+    { name: 'Qui sommes-nous', description: 'Notre histoire et notre équipe', href: '/qui-sommes-nous', icon: 'team' },
+    { name: 'R&D', description: 'Nos innovations et recherches', href: '/r-and-d', icon: 'data' },
+    { name: 'Blog', description: 'Actualités et ressources SEO', href: '/blog', icon: 'content' },
+    { name: 'Recrutement', description: 'Rejoignez l\'équipe', href: '/recrutement', icon: 'career' },
+    { name: 'Contact', description: 'Nous contacter', href: '/contact', icon: 'chat' },
+  ];
 
   const getIcon = (icon: string) => {
     switch (icon) {
@@ -110,6 +132,18 @@ const Header = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
           </svg>
         );
+      case 'team':
+        return (
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        );
+      case 'career':
+        return (
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        );
       default:
         return null;
     }
@@ -135,7 +169,7 @@ const Header = () => {
           <div className="relative">
             <button
               onClick={() => setIsExpertisesOpen(!isExpertisesOpen)}
-              onMouseEnter={() => setIsExpertisesOpen(true)}
+              onMouseEnter={() => { setIsExpertisesOpen(true); setIsAboutOpen(false); }}
               className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors text-sm"
             >
               Nos expertises
@@ -149,18 +183,26 @@ const Header = () => {
               </svg>
             </button>
           </div>
-          <Link href="#agence" className="text-gray-600 hover:text-black transition-colors text-sm">
-            L&apos;agence
-          </Link>
-          <Link href="#cas-clients" className="text-gray-600 hover:text-black transition-colors text-sm">
+          <Link href="/cas-clients" className="text-gray-600 hover:text-black transition-colors text-sm">
             Cas clients
           </Link>
-          <Link href="/blog" className="text-gray-600 hover:text-black transition-colors text-sm">
-            Blog
-          </Link>
-          <Link href="/r-and-d" className="text-gray-600 hover:text-black transition-colors text-sm">
-            R&D
-          </Link>
+          <div className="relative">
+            <button
+              onClick={() => setIsAboutOpen(!isAboutOpen)}
+              onMouseEnter={() => { setIsAboutOpen(true); setIsExpertisesOpen(false); }}
+              className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors text-sm"
+            >
+              À propos
+              <svg
+                className={`w-4 h-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -178,25 +220,31 @@ const Header = () => {
         </button>
 
         {/* CTA Button - Desktop */}
-        <button
-          onClick={openCalendly}
-          className="hidden md:flex items-center gap-2 bg-[#1a1a1a] hover:bg-black text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors"
-        >
-          Prendre RDV
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        </button>
+        <div className={`hidden md:block rounded-full transition-all duration-500 ${
+          hasScrolled
+            ? 'p-[3px] animate-gradient-border'
+            : ''
+        }`}>
+          <button
+            onClick={openCalendly}
+            className="flex items-center gap-2 bg-[#1a1a1a] hover:bg-black text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors"
+          >
+            Prendre RDV
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* Mega Menu - Expertises */}
       {isExpertisesOpen && (
         <div
-          className="hidden md:block absolute left-1/2 -translate-x-1/2 mt-2 w-full max-w-4xl"
+          className="hidden md:block absolute left-1/2 -translate-x-1/2 mt-2 w-full max-w-5xl"
           onMouseLeave={() => setIsExpertisesOpen(false)}
         >
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-4 gap-8">
               {/* SEO */}
               <div>
                 <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
@@ -228,13 +276,44 @@ const Header = () => {
                 </div>
               </div>
 
-              {/* GEO & Ads */}
+              {/* GEO */}
               <div>
                 <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
-                  GEO & Publicité
+                  GEO
                 </h3>
                 <div className="space-y-4">
-                  {[...expertises.geo, ...expertises.ads].map((item) => (
+                  {expertises.geo.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="flex items-start gap-3 group"
+                      onClick={() => setIsExpertisesOpen(false)}
+                    >
+                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
+                        {getIcon(item.icon)}
+                      </div>
+                      <div>
+                        <p className="text-gray-900 font-medium text-sm group-hover:text-black">
+                          {item.name}
+                        </p>
+                        {item.description && (
+                          <p className="text-gray-500 text-xs">
+                            {item.description}
+                          </p>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Ads */}
+              <div>
+                <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
+                  Publicité
+                </h3>
+                <div className="space-y-4">
+                  {expertises.ads.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -289,11 +368,44 @@ const Header = () => {
         </div>
       )}
 
+      {/* Mega Menu - À propos */}
+      {isAboutOpen && (
+        <div
+          className="hidden md:block absolute left-1/2 -translate-x-1/2 mt-2 w-full max-w-2xl"
+          onMouseLeave={() => setIsAboutOpen(false)}
+        >
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="grid grid-cols-2 gap-6">
+              {aboutPages.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-start gap-3 group"
+                  onClick={() => setIsAboutOpen(false)}
+                >
+                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
+                    {getIcon(item.icon)}
+                  </div>
+                  <div>
+                    <p className="text-gray-900 font-medium text-sm group-hover:text-black">
+                      {item.name}
+                    </p>
+                    <p className="text-gray-500 text-xs">
+                      {item.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden mt-2 bg-white rounded-2xl shadow-lg p-4 max-h-[80vh] overflow-y-auto">
           <div className="flex flex-col gap-2">
-            {/* Expertises Section */}
+            {/* SEO */}
             <div className="border-b border-gray-100 pb-3">
               <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">SEO</p>
               {expertises.seo.map((item) => (
@@ -310,9 +422,10 @@ const Header = () => {
                 </Link>
               ))}
             </div>
+            {/* GEO */}
             <div className="border-b border-gray-100 pb-3">
-              <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">GEO & Publicité</p>
-              {[...expertises.geo, ...expertises.ads].map((item) => (
+              <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">GEO</p>
+              {expertises.geo.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -326,6 +439,24 @@ const Header = () => {
                 </Link>
               ))}
             </div>
+            {/* Publicité */}
+            <div className="border-b border-gray-100 pb-3">
+              <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">Publicité</p>
+              {expertises.ads.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-3 py-2 text-gray-600 hover:text-black transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">
+                    {getIcon(item.icon)}
+                  </div>
+                  <span className="text-sm">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+            {/* Conseil */}
             <div className="border-b border-gray-100 pb-3">
               <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">Conseil</p>
               {expertises.conseil.map((item) => (
@@ -343,19 +474,29 @@ const Header = () => {
               ))}
             </div>
 
-            {/* Other Links */}
-            <Link href="#agence" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100" onClick={() => setIsMobileMenuOpen(false)}>
-              L&apos;agence
-            </Link>
-            <Link href="#cas-clients" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100" onClick={() => setIsMobileMenuOpen(false)}>
+            {/* Cas clients */}
+            <Link href="/cas-clients" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100" onClick={() => setIsMobileMenuOpen(false)}>
               Cas clients
             </Link>
-            <Link href="/blog" className="text-gray-600 hover:text-black transition-colors text-base py-3 border-b border-gray-100" onClick={() => setIsMobileMenuOpen(false)}>
-              Blog
-            </Link>
-            <Link href="/r-and-d" className="text-gray-600 hover:text-black transition-colors text-base py-3" onClick={() => setIsMobileMenuOpen(false)}>
-              R&D
-            </Link>
+
+            {/* À propos */}
+            <div className="border-b border-gray-100 pb-3">
+              <p className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-3">À propos</p>
+              {aboutPages.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center gap-3 py-2 text-gray-600 hover:text-black transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">
+                    {getIcon(item.icon)}
+                  </div>
+                  <span className="text-sm">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+
             <button
               onClick={() => {
                 setIsMobileMenuOpen(false);
