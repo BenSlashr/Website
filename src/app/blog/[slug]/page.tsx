@@ -8,6 +8,7 @@ import { loadEmbeddingsCache, getSuggestionsFromCache } from "@/lib/internalLink
 import Newsletter from "@/components/Newsletter";
 import RelatedServices from "@/components/RelatedServices";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleContent from "@/components/ArticleContent";
 import "./wordpress-content.css";
 
 // Revalide toutes les 60 secondes (ISR)
@@ -394,10 +395,12 @@ export default async function ArticlePage({ params }: Props) {
                   {article.excerpt}
                 </p>
 
-                {/* Article Content - WordPress HTML */}
-                <div
+                {/* Article Content - WordPress HTML avec Glossaire SEO */}
+                <ArticleContent
+                  html={article.content}
                   className="wp-content"
-                  dangerouslySetInnerHTML={{ __html: article.content }}
+                  enableGlossary={true}
+                  maxTerms={30}
                 />
 
                 {/* Tags */}

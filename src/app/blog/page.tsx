@@ -82,22 +82,22 @@ export default async function BlogPage() {
   return (
     <>
       {/* Blog Header */}
-      <section className="bg-[#1a1a1a] pt-32 pb-8 px-6">
+      <section className="bg-[#1a1a1a] pt-24 sm:pt-28 md:pt-32 pb-6 sm:pb-8 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white italic">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white italic">
             Blog
           </h1>
         </div>
       </section>
 
       {/* Filter Buttons */}
-      <section className="bg-[#1a1a1a] px-6 pb-12">
+      <section className="bg-[#1a1a1a] px-4 sm:px-6 pb-8 sm:pb-12">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {filterButtons.map((filter, index) => (
               <span
                 key={filter}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium ${
+                className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium min-h-[44px] flex items-center ${
                   index === 0
                     ? 'bg-white text-black'
                     : 'bg-transparent text-gray-400 border border-gray-600'
@@ -112,11 +112,11 @@ export default async function BlogPage() {
 
       {/* Featured Article */}
       {featuredArticle && (
-        <section className="bg-[#1a1a1a] px-6 pb-12">
+        <section className="bg-[#1a1a1a] px-4 sm:px-6 pb-8 sm:pb-12">
           <div className="max-w-6xl mx-auto">
             <Link
               href={`/blog/${featuredArticle.slug}`}
-              className="group block bg-[#252525] rounded-3xl overflow-hidden"
+              className="group block bg-[#252525] rounded-2xl sm:rounded-3xl overflow-hidden"
             >
               <div className="flex flex-col md:flex-row">
                 <div
@@ -142,11 +142,11 @@ export default async function BlogPage() {
                     <span>{featuredArticle.category}</span>
                   </div>
                 </div>
-                <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors leading-tight">
+                <div className="w-full md:w-1/2 p-5 sm:p-8 md:p-10 flex flex-col justify-center">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 group-hover:text-orange-400 transition-colors leading-tight">
                     {featuredArticle.title}
                   </h2>
-                  <p className="text-gray-400 mb-8 text-base leading-relaxed">
+                  <p className="text-gray-400 mb-5 sm:mb-8 text-sm sm:text-base leading-relaxed">
                     {featuredArticle.excerpt}
                   </p>
                   <div className="flex items-center gap-3">
@@ -166,14 +166,14 @@ export default async function BlogPage() {
       )}
 
       {/* Articles Grid */}
-      <section className="bg-[#1a1a1a] px-6 pb-16">
+      <section className="bg-[#1a1a1a] px-4 sm:px-6 pb-12 sm:pb-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {paginatedArticles.map((article, index) => (
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
-                className="group block bg-[#252525] rounded-3xl overflow-hidden hover:bg-[#2a2a2a] transition-colors"
+                className="group block bg-[#252525] rounded-2xl sm:rounded-3xl overflow-hidden hover:bg-[#2a2a2a] transition-colors"
               >
                 <div
                   className="relative w-full h-48 flex items-center justify-center overflow-hidden"
@@ -196,11 +196,11 @@ export default async function BlogPage() {
                     <span>{article.category}</span>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors line-clamp-2 leading-snug">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-base sm:text-lg font-semibold text-white mb-2 sm:mb-3 group-hover:text-orange-400 transition-colors line-clamp-2 leading-snug">
                     {article.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-6 line-clamp-2">
+                  <p className="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6 line-clamp-2">
                     {article.excerpt}
                   </p>
                   <div className="flex items-center gap-3">
@@ -221,7 +221,7 @@ export default async function BlogPage() {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <section className="bg-[#1a1a1a] px-6 pb-24">
+        <section className="bg-[#1a1a1a] px-4 sm:px-6 pb-16 sm:pb-24">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center justify-center gap-2">
               {/* Previous button - disabled on page 1 */}

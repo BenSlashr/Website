@@ -36,19 +36,19 @@ const CTA = () => {
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
           <a
             href="/prestations/devis"
-            className="bg-[#252525] text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-[#353535] transition-colors"
+            className="bg-[#252525] text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-[#353535] transition-colors min-h-[44px] flex items-center justify-center"
           >
             Demander un devis SEO
           </a>
           <a
             href="/contact"
-            className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors"
+            className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors min-h-[44px] flex items-center justify-center"
           >
             Nous contacter
           </a>
           <button
             onClick={openCalendly}
-            className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+            className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 min-h-[44px]"
           >
             Prendre RDV
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

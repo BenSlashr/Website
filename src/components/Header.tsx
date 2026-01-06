@@ -150,8 +150,8 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-4">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between bg-white rounded-2xl px-4 md:px-6 py-3 shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 md:px-6 py-3 sm:py-4">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between bg-white rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 shadow-lg">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -206,19 +206,19 @@ const Header = () => {
         </div>
 
         {/* Mobile: CTA + Menu Button */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex md:hidden items-center gap-1.5 sm:gap-2">
           <button
             onClick={openCalendly}
-            className="flex items-center gap-1.5 bg-[#1a1a1a] text-white px-4 py-2 rounded-full text-xs font-medium"
+            className="flex items-center gap-1 sm:gap-1.5 bg-[#1a1a1a] text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-medium min-h-[44px]"
           >
-            Prendre RDV
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span className="hidden xs:inline">Prendre</span> RDV
+            <svg className="w-3 sm:w-3.5 h-3 sm:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </button>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-gray-600"
+            className="p-2.5 text-gray-600 min-h-[44px] min-w-[44px] flex items-center justify-center"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMobileMenuOpen ? (
@@ -414,7 +414,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-2 bg-white rounded-2xl shadow-lg p-4 max-h-[80vh] overflow-y-auto">
+        <div className="md:hidden mt-2 bg-white rounded-xl sm:rounded-2xl shadow-lg p-3 sm:p-4 max-h-[80vh] overflow-y-auto">
           <div className="flex flex-col gap-2">
             {/* SEO */}
             <div className="border-b border-gray-100 pb-3">

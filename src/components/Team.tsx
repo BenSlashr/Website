@@ -98,9 +98,9 @@ const Team = () => {
         </p>
 
         {/* Team Cards Carousel */}
-        <div className="relative overflow-hidden -mx-4 sm:-mx-6 px-4 sm:px-6 md:mx-0 md:px-0">
+        <div className="relative -mx-4 sm:-mx-6 px-4 sm:px-6 md:mx-0 md:px-0">
           <div
-            className="flex gap-3 sm:gap-4 md:gap-6 transition-transform duration-300 ease-out overflow-x-auto md:overflow-visible scrollbar-hide"
+            className="flex gap-3 sm:gap-4 md:gap-6 transition-transform duration-300 ease-out overflow-x-auto md:overflow-visible scrollbar-hide py-4"
             style={{ transform: `translateX(-${currentIndex * (280 + 24)}px)` }}
           >
             {teamMembers.map((member, index) => (

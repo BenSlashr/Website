@@ -58,27 +58,27 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#1a1a1a]">
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-6">
             Contact
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
             Contactez-nous !
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
             Basée à Lille, l&apos;agence Slashr répond à vos projets dans toute la France.
           </p>
         </div>
       </section>
 
       {/* Content */}
-      <section className="py-16 px-6">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-bold text-white mb-8">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">
                 Nos coordonnées
               </h2>
 
@@ -114,8 +114,8 @@ export default function ContactPage() {
               </div>
 
               {/* Location */}
-              <h3 className="text-xl font-semibold text-white mb-6">Notre bureau</h3>
-              <div className="mb-12">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Notre bureau</h3>
+              <div className="mb-8 sm:mb-12">
                 <div className="bg-[#252525] rounded-2xl p-6">
                   <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-medium rounded-full mb-4">
                     Lille
@@ -129,11 +129,11 @@ export default function ContactPage() {
               </div>
 
               {/* CTA Calendly */}
-              <div className="bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-2xl p-8 border border-orange-500/20">
-                <h3 className="text-xl font-semibold text-white mb-3">
+              <div className="bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-orange-500/20">
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">
                   Préférez un appel ?
                 </h3>
-                <p className="text-gray-400 mb-6">
+                <p className="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6">
                   Réservez un créneau de 30 minutes pour discuter de votre projet avec nos experts.
                 </p>
                 <button
@@ -150,11 +150,11 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div>
-              <div className="bg-[#252525] rounded-3xl p-8 md:p-10">
-                <h2 className="text-2xl font-bold text-white mb-2">
+              <div className="bg-[#252525] rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10">
+                <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
                   Envoyez-nous un message
                 </h2>
-                <p className="text-gray-400 mb-8">
+                <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8">
                   Nous vous répondons sous 24h.
                 </p>
 
@@ -169,8 +169,8 @@ export default function ContactPage() {
                     <p className="text-gray-400">Nous vous répondrons très rapidement.</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-6">
+                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                       <div>
                         <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
                           Prénom *
@@ -201,7 +201,7 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                           Email *
@@ -232,7 +232,7 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                       <div>
                         <label htmlFor="website" className="block text-sm font-medium text-gray-300 mb-2">
                           Site web

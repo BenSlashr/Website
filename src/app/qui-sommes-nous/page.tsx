@@ -76,15 +76,15 @@ export default function QuiSommesNousPage() {
   return (
     <main className="min-h-screen bg-[#1a1a1a]">
       {/* Hero */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-6">
+          <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-4 sm:mb-6">
             L&apos;agence
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
             Qui sommes-nous ?
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Slashr est une agence SEO basée à Lille proposant un accompagnement sur mesure
             pour répondre au mieux à vos enjeux de croissance.
           </p>
@@ -92,14 +92,14 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* Story */}
-      <section className="py-20 px-6 bg-[#252525]">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#252525]">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
             <div>
-              <span className="inline-block px-4 py-2 bg-orange-500/20 rounded-full text-sm text-orange-400 mb-6">
+              <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-500/20 rounded-full text-sm text-orange-400 mb-4 sm:mb-6">
                 Notre histoire
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
                 Nés de l&apos;expérience terrain
               </h2>
               <div className="space-y-4 text-gray-400 leading-relaxed">
@@ -150,20 +150,20 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 px-6">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-4 sm:mb-6">
               Nos valeurs
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
               Ce qui nous différencie
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {values.map((value) => (
-              <div key={value.title} className="bg-[#252525] rounded-2xl p-8">
+              <div key={value.title} className="bg-[#252525] rounded-xl sm:rounded-2xl p-6 sm:p-8">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center text-white mb-6">
                   {getIcon(value.icon)}
                 </div>
@@ -176,22 +176,22 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* Modes */}
-      <section className="py-20 px-6 bg-[#252525]">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#252525]">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-4 sm:mb-6">
               Modes opératoires
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
               Trois façons de travailler ensemble
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {modes.map((mode, index) => (
               <div
                 key={mode.title}
-                className="relative bg-[#1a1a1a] rounded-2xl p-8 border border-gray-800 hover:border-orange-500/50 transition-colors"
+                className="relative bg-[#1a1a1a] rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-800 hover:border-orange-500/50 transition-colors"
               >
                 <span className="absolute -top-4 left-6 px-3 py-1 bg-gradient-to-r from-orange-500 to-pink-500 text-white text-sm font-medium rounded-full">
                   {index + 1}
@@ -208,18 +208,18 @@ export default function QuiSommesNousPage() {
       <Team />
 
       {/* Location */}
-      <section className="py-20 px-6 bg-[#252525]">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#252525]">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-6">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-4 sm:mb-6">
               Notre bureau
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
               Basés à Lille
             </h2>
           </div>
 
-          <div className="bg-[#1a1a1a] rounded-2xl p-8 text-center">
+          <div className="bg-[#1a1a1a] rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center">
             <span className="inline-block px-4 py-2 bg-orange-500/20 text-orange-400 text-sm font-medium rounded-full mb-6">
               Siège social
             </span>
