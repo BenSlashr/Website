@@ -3,6 +3,10 @@ import { NextResponse } from 'next/server';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Utilise le domaine vérifié Resend ou le domaine par défaut pour les tests
+const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'Slashr Contact <onboarding@resend.dev>';
+const TO_EMAIL = process.env.RESEND_TO_EMAIL || 'hello@slashr.fr';
+
 interface ContactFormData {
   firstName: string;
   lastName: string;
@@ -15,8 +19,16 @@ interface ContactFormData {
 
 export async function POST(request: Request) {
   try {
-    const body: ContactFormData = await request.json();
+    // Vérifier que la clé API est configurée
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { error: 'Configuration serveur manquante.' },
+        { status: 500 }
+      );
+    }
 
+    const body: ContactFormData = await request.json();
     const { firstName, lastName, email, phone, website, company, message } = body;
 
     // Validation basique
@@ -28,9 +40,9 @@ export async function POST(request: Request) {
     }
 
     // Email à l'équipe Slashr
-    const { error } = await resend.emails.send({
-      from: 'Slashr Contact <contact@slashr.fr>',
-      to: ['hello@slashr.fr'],
+    const { data, error } = await resend.emails.send({
+      from: FROM_EMAIL,
+      to: [TO_EMAIL],
       replyTo: email,
       subject: `Nouveau contact de ${firstName} ${lastName}${company ? ` - ${company}` : ''}`,
       html: `
@@ -59,14 +71,15 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error('Resend error:', JSON.stringify(error, null, 2));
       return NextResponse.json(
-        { error: 'Erreur lors de l\'envoi du message.' },
+        { error: `Erreur lors de l'envoi: ${error.message}` },
         { status: 500 }
       );
     }
 
-    return NextResponse.json({ success: true });
+    console.log('Email sent successfully:', data?.id);
+    return NextResponse.json({ success: true, id: data?.id });
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(

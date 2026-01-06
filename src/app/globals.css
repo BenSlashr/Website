@@ -178,15 +178,17 @@ h1, h2, h3 {
   animation: fadeIn 0.15s ease-out forwards;
 }
 
-/* Glossary term styling */
-.glossary-term {
-  border-bottom: 1px dashed rgba(249, 115, 22, 0.5);
-  color: rgb(251, 146, 60);
+/* Glossary highlight styling - vrai surlignage */
+.glossary-highlight {
+  background: linear-gradient(120deg, rgba(249, 115, 22, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+  color: inherit;
+  padding: 0.1em 0.25em;
+  margin: 0 -0.1em;
+  border-radius: 0.2em;
   cursor: help;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease;
 }
 
-.glossary-term:hover {
-  border-bottom-color: rgb(249, 115, 22);
-  color: rgb(253, 186, 116);
+.glossary-highlight:hover {
+  background: linear-gradient(120deg, rgba(249, 115, 22, 0.25) 0%, rgba(236, 72, 153, 0.25) 100%);
 }

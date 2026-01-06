@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { createPortal } from 'react-dom';
-import { getAllTermsForMatching, GlossaryTerm, glossaryCategories } from '@/lib/glossary';
+import { getAllTermsForMatching, GlossaryTerm } from '@/lib/glossary';
 
 interface ArticleContentProps {
   html: string;
@@ -19,17 +19,6 @@ interface TooltipState {
   position: 'top' | 'bottom';
 }
 
-const categoryColors: Record<string, string> = {
-  general: 'from-blue-500 to-cyan-500',
-  technical: 'from-orange-500 to-red-500',
-  content: 'from-green-500 to-emerald-500',
-  netlinking: 'from-purple-500 to-pink-500',
-  analytics: 'from-yellow-500 to-orange-500',
-  local: 'from-teal-500 to-green-500',
-  ecommerce: 'from-pink-500 to-rose-500',
-  ai: 'from-violet-500 to-purple-500',
-};
-
 export default function ArticleContent({
   html,
   className = '',
@@ -37,6 +26,7 @@ export default function ArticleContent({
   maxTerms = 30
 }: ArticleContentProps) {
   const contentRef = useRef<HTMLDivElement>(null);
+  const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [tooltip, setTooltip] = useState<TooltipState>({
     visible: false,
     term: null,
@@ -44,6 +34,33 @@ export default function ArticleContent({
     y: 0,
     position: 'top'
   });
+
+  const hideTooltip = useCallback(() => {
+    if (hideTimeoutRef.current) {
+      clearTimeout(hideTimeoutRef.current);
+    }
+    hideTimeoutRef.current = setTimeout(() => {
+      setTooltip(prev => ({ ...prev, visible: false }));
+    }, 100);
+  }, []);
+
+  const showTooltip = useCallback((termData: GlossaryTerm, rect: DOMRect) => {
+    if (hideTimeoutRef.current) {
+      clearTimeout(hideTimeoutRef.current);
+      hideTimeoutRef.current = null;
+    }
+
+    const spaceAbove = rect.top;
+    const spaceBelow = window.innerHeight - rect.bottom;
+
+    setTooltip({
+      visible: true,
+      term: termData,
+      x: rect.left + rect.width / 2,
+      y: spaceAbove < 150 && spaceBelow > spaceAbove ? rect.bottom : rect.top,
+      position: spaceAbove < 150 && spaceBelow > spaceAbove ? 'bottom' : 'top'
+    });
+  }, []);
 
   useEffect(() => {
     if (!enableGlossary || !contentRef.current) return;
@@ -53,10 +70,8 @@ export default function ArticleContent({
     const usedTerms = new Set<string>();
     let annotatedCount = 0;
 
-    // Fonction pour échapper les caractères spéciaux regex
     const escapeRegex = (str: string) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-    // Fonction récursive pour traiter les nœuds texte
     const processNode = (node: Node): void => {
       if (annotatedCount >= maxTerms) return;
 
@@ -64,20 +79,17 @@ export default function ArticleContent({
         const text = node.textContent || '';
         if (!text.trim()) return;
 
-        // Vérifier si le parent est un élément qu'on ne veut pas modifier
         const parent = node.parentElement;
         if (parent) {
           const tagName = parent.tagName.toUpperCase();
-          if (['A', 'CODE', 'PRE', 'SCRIPT', 'STYLE', 'H1', 'H2', 'H3', 'BUTTON'].includes(tagName)) {
+          if (['A', 'CODE', 'PRE', 'SCRIPT', 'STYLE', 'H1', 'H2', 'H3', 'H4', 'BUTTON', 'MARK'].includes(tagName)) {
             return;
           }
-          // Vérifier si déjà un terme de glossaire
           if (parent.hasAttribute('data-glossary')) {
             return;
           }
         }
 
-        // Chercher les termes dans le texte
         interface TermMatch {
           index: number;
           length: number;
@@ -93,7 +105,6 @@ export default function ArticleContent({
           let match;
 
           while ((match = pattern.exec(text)) !== null) {
-            // Vérifier qu'il n'y a pas déjà un match à cette position
             const hasOverlap = matches.some(
               m => (match!.index >= m.index && match!.index < m.index + m.length) ||
                    (m.index >= match!.index && m.index < match!.index + match![0].length)
@@ -106,37 +117,33 @@ export default function ArticleContent({
                 term: match[0],
                 entry: entry,
               });
-              break; // Un seul match par terme par nœud texte
+              break;
             }
           }
         });
 
         if (matches.length === 0) return;
 
-        // Trier par position
         matches.sort((a, b) => a.index - b.index);
 
-        // Créer les nouveaux nœuds
         const fragment = document.createDocumentFragment();
         let lastIndex = 0;
 
         matches.forEach(({ index, length, term: matchedTerm, entry }) => {
           if (annotatedCount >= maxTerms) return;
 
-          // Texte avant le match
           if (index > lastIndex) {
             fragment.appendChild(document.createTextNode(text.slice(lastIndex, index)));
           }
 
-          // Créer l'élément pour le terme
-          const span = document.createElement('span');
-          span.setAttribute('data-glossary', 'true');
-          span.setAttribute('data-term', entry.term);
-          span.setAttribute('data-definition', entry.definition);
-          span.setAttribute('data-category', entry.category);
-          span.className = 'glossary-term border-b border-dashed border-orange-500/50 text-orange-400 cursor-help transition-colors hover:border-orange-500 hover:text-orange-300';
-          span.textContent = matchedTerm;
-          fragment.appendChild(span);
+          const mark = document.createElement('mark');
+          mark.setAttribute('data-glossary', 'true');
+          mark.setAttribute('data-term', entry.term);
+          mark.setAttribute('data-definition', entry.definition);
+          mark.setAttribute('data-category', entry.category);
+          mark.className = 'glossary-highlight';
+          mark.textContent = matchedTerm;
+          fragment.appendChild(mark);
 
           usedTerms.add(entry.term);
           annotatedCount++;
@@ -144,53 +151,39 @@ export default function ArticleContent({
           lastIndex = index + length;
         });
 
-        // Texte restant
         if (lastIndex < text.length) {
           fragment.appendChild(document.createTextNode(text.slice(lastIndex)));
         }
 
-        // Remplacer le nœud texte original
         if (fragment.childNodes.length > 0) {
           node.parentNode?.replaceChild(fragment, node);
         }
       } else if (node.nodeType === Node.ELEMENT_NODE) {
-        // Traiter les enfants (copie pour éviter les problèmes de modification)
         const children = Array.from(node.childNodes);
         children.forEach(child => processNode(child));
       }
     };
 
-    // Traiter tout le contenu
     processNode(container);
 
-    // Ajouter les event listeners pour les tooltips
     const handleMouseEnter = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (!target.hasAttribute('data-glossary')) return;
 
       const rect = target.getBoundingClientRect();
-      const spaceAbove = rect.top;
-      const spaceBelow = window.innerHeight - rect.bottom;
-
       const termData: GlossaryTerm = {
         term: target.getAttribute('data-term') || '',
         definition: target.getAttribute('data-definition') || '',
         category: (target.getAttribute('data-category') || 'general') as GlossaryTerm['category'],
       };
 
-      setTooltip({
-        visible: true,
-        term: termData,
-        x: rect.left + rect.width / 2,
-        y: spaceAbove < 200 && spaceBelow > spaceAbove ? rect.bottom : rect.top,
-        position: spaceAbove < 200 && spaceBelow > spaceAbove ? 'bottom' : 'top'
-      });
+      showTooltip(termData, rect);
     };
 
     const handleMouseLeave = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (!target.hasAttribute('data-glossary')) return;
-      setTooltip(prev => ({ ...prev, visible: false }));
+      hideTooltip();
     };
 
     container.addEventListener('mouseenter', handleMouseEnter, true);
@@ -199,15 +192,11 @@ export default function ArticleContent({
     return () => {
       container.removeEventListener('mouseenter', handleMouseEnter, true);
       container.removeEventListener('mouseleave', handleMouseLeave, true);
+      if (hideTimeoutRef.current) {
+        clearTimeout(hideTimeoutRef.current);
+      }
     };
-  }, [html, enableGlossary, maxTerms]);
-
-  const categoryLabel = tooltip.term
-    ? glossaryCategories[tooltip.term.category as keyof typeof glossaryCategories]
-    : '';
-  const categoryColor = tooltip.term
-    ? categoryColors[tooltip.term.category] || 'from-gray-500 to-gray-600'
-    : '';
+  }, [html, enableGlossary, maxTerms, showTooltip, hideTooltip]);
 
   return (
     <>
@@ -217,45 +206,29 @@ export default function ArticleContent({
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
-      {/* Tooltip Portal */}
+      {/* Tooltip discret */}
       {tooltip.visible && tooltip.term && typeof window !== 'undefined' && createPortal(
         <div
-          className="fixed z-[9999] pointer-events-none"
+          className="fixed z-[9999] pointer-events-none animate-fadeIn"
           style={{
-            left: tooltip.x,
-            top: tooltip.position === 'top' ? tooltip.y - 8 : tooltip.y + 8,
+            left: Math.min(Math.max(tooltip.x, 160), window.innerWidth - 160),
+            top: tooltip.position === 'top' ? tooltip.y - 6 : tooltip.y + 6,
             transform: `translate(-50%, ${tooltip.position === 'top' ? '-100%' : '0'})`
           }}
         >
-          <div className="bg-[#1a1a1a] border border-gray-700 rounded-xl shadow-2xl overflow-hidden w-[280px] sm:w-[320px] animate-fadeIn">
-            {/* Header avec catégorie */}
-            <div className={`px-4 py-2 bg-gradient-to-r ${categoryColor}`}>
-              <div className="flex items-center justify-between">
-                <span className="text-white font-semibold text-sm">
-                  {tooltip.term.term}
-                </span>
-                <span className="text-white/80 text-xs px-2 py-0.5 bg-white/20 rounded-full">
-                  {categoryLabel}
-                </span>
-              </div>
-            </div>
-
-            {/* Définition */}
-            <div className="px-4 py-3">
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {tooltip.term.definition}
-              </p>
-            </div>
-
-            {/* Flèche */}
-            <div
-              className={`absolute left-1/2 -translate-x-1/2 w-3 h-3 bg-[#1a1a1a] border-gray-700 transform rotate-45 ${
-                tooltip.position === 'top'
-                  ? 'bottom-[-6px] border-r border-b'
-                  : 'top-[-6px] border-l border-t'
-              }`}
-            />
+          <div className="bg-[#252525] border border-gray-600/50 rounded-lg shadow-lg max-w-[300px] px-3 py-2">
+            <p className="text-gray-200 text-xs leading-relaxed">
+              {tooltip.term.definition}
+            </p>
           </div>
+          {/* Petite flèche */}
+          <div
+            className={`absolute left-1/2 -translate-x-1/2 w-2 h-2 bg-[#252525] border-gray-600/50 transform rotate-45 ${
+              tooltip.position === 'top'
+                ? '-bottom-1 border-r border-b'
+                : '-top-1 border-l border-t'
+            }`}
+          />
         </div>,
         document.body
       )}
