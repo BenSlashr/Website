@@ -15,23 +15,25 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         {/* Project CTA */}
         <div className="text-center mb-12 sm:mb-16 md:mb-24">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 md:mb-8 italic">
-            Vous avez un projet ?
+          <h2 className="font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight" style={{ fontSize: 'clamp(28px, 5vw, 45px)' }}>
+            Vous avez un projet&nbsp;?
           </h2>
-          <button
-            onClick={openCalendly}
-            className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 md:px-8 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors min-h-[44px]"
-          >
-            Échanger avec des experts
-          </button>
+          <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+            <button
+              onClick={openCalendly}
+              className="bg-white text-[#1a1a1a] px-5 sm:px-6 md:px-8 py-3 rounded-full text-sm font-medium transition-colors min-h-[44px]"
+            >
+              Échanger avec des experts
+            </button>
+          </div>
         </div>
 
         {/* Footer Content */}
         <div className="mb-12 sm:mb-16">
           {/* Mobile: Location card */}
           <div className="mb-8 sm:hidden">
-            <div className="bg-[#252525] rounded-xl p-4">
-              <span className="inline-block text-orange-500 text-xs font-bold mb-2 uppercase">
+            <div className="bg-[#2C2E34] rounded-xl p-4">
+              <span className="inline-block text-[#E74601] text-xs font-bold mb-2 uppercase">
                 Lille
               </span>
               <p className="text-gray-400 text-xs leading-relaxed">
@@ -51,7 +53,7 @@ const Footer = () => {
               <ul className="space-y-2.5">
                 <li>
                   <Link href="/qui-sommes-nous" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Qui sommes-nous ?
+                    Qui sommes-nous&nbsp;?
                   </Link>
                 </li>
                 <li>
@@ -96,10 +98,10 @@ const Footer = () => {
           </div>
 
           {/* Desktop: 3 columns */}
-          <div className="hidden sm:grid sm:grid-cols-3 gap-8">
-            {/* Lille */}
+          <div className="hidden sm:flex sm:justify-between gap-8">
+            {/* Lille - Left */}
             <div>
-              <span className="inline-block bg-[#252525] text-white text-xs font-medium px-3 py-1 rounded mb-3 uppercase">
+              <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-3 py-1 rounded mb-3 uppercase">
                 Lille
               </span>
               <p className="text-gray-400 text-sm">
@@ -109,57 +111,60 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* À Propos */}
-            <div>
-              <h4 className="text-gray-500 text-xs font-medium uppercase tracking-wider mb-4">
-                À Propos
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/qui-sommes-nous" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Qui sommes-nous ?
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/cas-clients" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Cas clients
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/recrutement" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Recrutement
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            {/* Right columns container */}
+            <div className="flex gap-16">
+              {/* À Propos */}
+              <div>
+                <h4 className="text-gray-500 text-xs font-medium uppercase tracking-wider mb-4">
+                  À Propos
+                </h4>
+                <ul className="space-y-3">
+                  <li>
+                    <Link href="/qui-sommes-nous" className="text-gray-400 text-sm hover:text-white transition-colors">
+                      Qui sommes-nous&nbsp;?
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/cas-clients" className="text-gray-400 text-sm hover:text-white transition-colors">
+                      Cas clients
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="text-gray-400 text-sm hover:text-white transition-colors">
+                      Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/recrutement" className="text-gray-400 text-sm hover:text-white transition-colors">
+                      Recrutement
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
-            {/* Ressources */}
-            <div>
-              <h4 className="text-gray-500 text-xs font-medium uppercase tracking-wider mb-4">
-                Ressources
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/blog" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/r-and-d" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    R&D & Outils
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/seo/prestations" className="text-gray-400 text-sm hover:text-white transition-colors">
-                    Prestations SEO
-                  </Link>
-                </li>
-              </ul>
+              {/* Ressources */}
+              <div>
+                <h4 className="text-gray-500 text-xs font-medium uppercase tracking-wider mb-4">
+                  Ressources
+                </h4>
+                <ul className="space-y-3">
+                  <li>
+                    <Link href="/blog" className="text-gray-400 text-sm hover:text-white transition-colors">
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/r-and-d" className="text-gray-400 text-sm hover:text-white transition-colors">
+                      R&D & Outils
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/seo/prestations" className="text-gray-400 text-sm hover:text-white transition-colors">
+                      Prestations SEO
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -170,9 +175,10 @@ const Footer = () => {
           <Image
             src="https://agence-slashr.fr/wp-content/uploads/2024/03/LOGO-SLASHR-BLANC-1.png"
             alt="SLASHR"
-            width={80}
-            height={40}
+            width={240}
+            height={120}
             className="h-12 sm:h-12 w-auto"
+            style={{ imageRendering: 'auto' }}
             unoptimized
           />
 
@@ -180,8 +186,10 @@ const Footer = () => {
           <div className="flex gap-2 sm:gap-3">
             {/* LinkedIn */}
             <a
-              href="#"
-              className="w-11 h-11 bg-[#252525] rounded-full flex items-center justify-center text-white hover:bg-[#353535] transition-colors"
+              href="https://www.linkedin.com/company/slashr-agence-seo-sem/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 h-11 bg-[#2C2E34] rounded-full flex items-center justify-center text-white hover:bg-[#353535] transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -191,8 +199,10 @@ const Footer = () => {
 
             {/* YouTube */}
             <a
-              href="#"
-              className="w-11 h-11 bg-[#252525] rounded-full flex items-center justify-center text-white hover:bg-[#353535] transition-colors"
+              href="https://www.youtube.com/channel/UCM8aEtYLfrKODLZOcFkjG2g"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 h-11 bg-[#2C2E34] rounded-full flex items-center justify-center text-white hover:bg-[#353535] transition-colors"
               aria-label="YouTube"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -214,7 +224,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-2 text-gray-500 text-xs">
             <span>Réalisé par l&apos;agence konfiture</span>
-            <div className="w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+            <div className="w-5 h-5 bg-[#E74601] rounded-full flex items-center justify-center text-white text-xs font-bold">
               k
             </div>
           </div>

@@ -46,28 +46,28 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative py-20 sm:py-28 md:py-36 px-4 sm:px-6">
+    <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       {/* Gradient background - centered between sections */}
       <div
-        className="absolute top-[80px] sm:top-[100px] md:top-[120px] left-0 right-0 h-[400px] sm:h-[500px] md:h-[600px] pointer-events-none z-0"
+        className="absolute top-[40px] sm:top-[50px] md:top-[60px] left-0 right-0 h-[350px] sm:h-[400px] md:h-[500px] pointer-events-none z-0"
         style={{
           background: `
-            radial-gradient(ellipse 40% 60% at 35% 50%, rgba(255, 60, 10, 0.85) 0%, transparent 55%),
-            radial-gradient(ellipse 40% 60% at 65% 50%, rgba(180, 40, 255, 0.85) 0%, transparent 55%)
+            radial-gradient(ellipse 30% 50% at 42% 50%, rgba(231, 70, 1, 0.9) 0%, transparent 70%),
+            radial-gradient(ellipse 30% 50% at 58% 50%, rgba(137, 98, 253, 0.9) 0%, transparent 70%)
           `,
-          filter: 'blur(30px)',
+          filter: 'blur(40px)',
         }}
       />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-6 sm:mb-8 md:mb-10 italic">
+        <h2 className="font-bold text-white text-center mb-6 sm:mb-8 md:mb-10 leading-tight" style={{ fontSize: 'clamp(28px, 5vw, 45px)' }}>
           Ils nous ont fait confiance
         </h2>
 
         {/* Google Rating Badge */}
         <div className="flex justify-center mb-10 sm:mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-3 sm:gap-4 bg-[#252525] rounded-full px-5 sm:px-6 md:px-8 py-3 sm:py-4">
+          <div className="inline-flex items-center gap-3 sm:gap-4 bg-[#2C2E34] rounded-full px-5 sm:px-6 md:px-8 py-3 sm:py-4">
             <span className="text-white text-2xl sm:text-3xl md:text-4xl font-bold">4.9</span>
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
@@ -101,11 +101,11 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[80vw] sm:w-[65vw] md:w-[calc(50%-12px)] bg-[#252525] rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5"
+                className="flex-shrink-0 w-[80vw] sm:w-[65vw] md:w-[calc(50%-12px)] bg-[#2C2E34] rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5"
               >
                 {/* Avatar */}
                 <div className="flex-shrink-0 hidden sm:block">
-                  <div className="w-16 h-24 sm:w-20 sm:h-28 md:w-24 md:h-32 bg-gradient-to-b from-[#4a4a4a] to-[#2a2a2a] rounded-lg overflow-hidden">
+                  <div className="w-16 h-24 sm:w-20 sm:h-28 md:w-24 md:h-32 bg-gradient-to-b from-[#4a4a4a] to-[#2C2E34] rounded-lg overflow-hidden">
                     {testimonial.image ? (
                       <Image
                         src={testimonial.image}
@@ -129,7 +129,7 @@ const Testimonials = () => {
                 <div className="flex-1 flex flex-col justify-between">
                   <div className="relative">
                     {/* Quote */}
-                    <p className="text-gray-300 text-xs sm:text-sm leading-relaxed pr-6 sm:pr-8">
+                    <p className="text-description text-white/70 pr-6 sm:pr-8">
                       {testimonial.quote}
                     </p>
                     {/* Quote marks */}

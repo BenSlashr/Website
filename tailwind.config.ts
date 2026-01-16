@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
+        inter: ['var(--font-inter)', 'sans-serif'],
+        funnel: ['"Funnel Display"', 'var(--font-inter)', 'sans-serif'],
+        geist: ['var(--font-geist-sans)', 'var(--font-inter)', 'sans-serif'],
       },
       colors: {
         background: "var(--background)",

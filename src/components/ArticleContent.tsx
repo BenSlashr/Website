@@ -216,14 +216,14 @@ export default function ArticleContent({
             transform: `translate(-50%, ${tooltip.position === 'top' ? '-100%' : '0'})`
           }}
         >
-          <div className="bg-[#252525] border border-gray-600/50 rounded-lg shadow-lg max-w-[300px] px-3 py-2">
+          <div className="bg-[#2C2E34] border border-gray-600/50 rounded-lg shadow-lg max-w-[300px] px-3 py-2">
             <p className="text-gray-200 text-xs leading-relaxed">
               {tooltip.term.definition}
             </p>
           </div>
           {/* Petite flèche */}
           <div
-            className={`absolute left-1/2 -translate-x-1/2 w-2 h-2 bg-[#252525] border-gray-600/50 transform rotate-45 ${
+            className={`absolute left-1/2 -translate-x-1/2 w-2 h-2 bg-[#2C2E34] border-gray-600/50 transform rotate-45 ${
               tooltip.position === 'top'
                 ? '-bottom-1 border-r border-b'
                 : '-top-1 border-l border-t'

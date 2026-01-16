@@ -66,26 +66,45 @@ const OtherExpertisesSection = (props: OtherExpertisesSectionProps) => {
   if (expertisesToRender.length === 0) return null;
 
   return (
-    <section className="bg-[#252525] py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+    <section className="bg-[#1a1a1a] py-12 sm:py-16 md:py-24 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="flex flex-col items-center gap-6 sm:gap-8 mb-10 sm:mb-12">
+          <h2
+            className="font-bold text-white text-center"
+            style={{
+              fontSize: 'clamp(28px, 5vw, 45px)',
+              lineHeight: '110%',
+              letterSpacing: '-0.04em',
+            }}
+          >
             {title}
           </h2>
-          <p className="text-gray-400 text-lg">{subtitle}</p>
+          {subtitle && (
+            <p
+              className="text-white/70 text-center max-w-xl"
+              style={{
+                fontFamily: "'Geist', sans-serif",
+                fontWeight: 400,
+                fontSize: '15px',
+                lineHeight: '145%',
+              }}
+            >
+              {subtitle}
+            </p>
+          )}
         </div>
 
         {/* Expertises Grid */}
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
           {expertisesToRender.map((expertise) => (
             <Link
               key={expertise.name}
               href={expertise.href}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all ${
+              className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                 expertise.isActive
-                  ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white'
-                  : 'bg-[#1a1a1a] text-gray-300 hover:text-white hover:bg-[#2a2a2a] border border-gray-700 hover:border-orange-500/50'
+                  ? 'bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white'
+                  : 'bg-[#2C2E34] text-white/90 hover:text-white border border-white/10 hover:border-white/30'
               }`}
             >
               {expertise.name}

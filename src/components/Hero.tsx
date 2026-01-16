@@ -1,49 +1,85 @@
-import dynamic from 'next/dynamic';
-
-const LiquidGradient = dynamic(() => import('./LiquidGradient'), {
-  ssr: false,
-});
-
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-20 sm:pt-24 pb-10 sm:pb-12 rounded-b-[32px] sm:rounded-b-[40px] overflow-hidden">
-      {/* Animated gradient background */}
-      <LiquidGradient className="rounded-b-[40px]" />
+    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 rounded-b-[40px] sm:rounded-b-[75px] overflow-hidden hero-gradient">
+      {/* Violet gradient layer */}
+      <div className="hero-gradient-violet" />
 
-      {/* Content - above the gradient */}
-      <div className="relative z-10">
-        {/* Tag */}
-        <span className="text-[10px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] text-white/60 uppercase mb-4 sm:mb-6 md:mb-8 block">
+      {/* Content - above the gradients */}
+      <div className="relative z-10 flex flex-col items-center gap-[60px] max-w-[952px] px-4">
+        {/* Tag - Geist 11.25px bold */}
+        <span
+          className="uppercase text-white"
+          style={{
+            fontFamily: "'Geist', sans-serif",
+            fontWeight: 700,
+            fontSize: '11.25px',
+            lineHeight: '140%',
+            letterSpacing: '-0.01em'
+          }}
+        >
           Agence SEO & Search Marketing
         </span>
 
-        {/* Main Title */}
-        <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-4 sm:mb-6 md:mb-8 max-w-5xl">
+        {/* Main Title - Funnel Display 90px */}
+        <h1
+          className="text-white max-w-[818px] font-semibold text-center"
+          style={{
+            fontFamily: '"Funnel Display", sans-serif',
+            fontSize: 'clamp(40px, 8vw, 90px)',
+            lineHeight: '95%',
+            letterSpacing: '-0.03em',
+          }}
+        >
           Prenez le contrôle
           <br />
           du Search
         </h1>
 
-        {/* Subtitle */}
-        <div className="space-y-1.5 sm:space-y-2 md:space-y-3 mb-6 sm:mb-8 md:mb-10 max-w-[90%] sm:max-w-lg md:max-w-xl mx-auto">
-          <p className="text-base sm:text-lg md:text-xl text-white font-medium">
-            L&apos;agence des marques qui veulent gagner la bataille de l&apos;attention.
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-white/80">
-            Google, ChatGPT, TikTok, YouTube...
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-white/80">
-            Où qu&apos;ils cherchent, vos clients doivent tomber sur vous.
-          </p>
-        </div>
+        {/* Subtitles container */}
+        <div className="flex flex-col items-center gap-[30px] w-full">
+          {/* Subtitle + Description */}
+          <div className="flex flex-col items-center gap-[7.5px]">
+            {/* Subtitle - Geist 18.75px semibold */}
+            <p
+              className="text-white"
+              style={{
+                fontFamily: "'Geist', sans-serif",
+                fontWeight: 600,
+                fontSize: 'clamp(14px, 2.5vw, 18.75px)',
+                lineHeight: '130%',
+                letterSpacing: '-0.01em',
+                textAlign: 'center'
+              }}
+            >
+              L&apos;agence des marques qui veulent gagner la bataille de l&apos;attention.
+            </p>
 
-        {/* CTA Button */}
-        <a
-          href="#contact"
-          className="bg-white text-black px-5 sm:px-6 md:px-8 py-3 sm:py-3.5 md:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-white/90 transition-colors inline-block min-h-[44px]"
-        >
-          Prenez l&apos;avantage maintenant
-        </a>
+            {/* Description - Geist 15px regular */}
+            <p
+              className="text-white/90"
+              style={{
+                fontFamily: "'Geist', sans-serif",
+                fontWeight: 400,
+                fontSize: 'clamp(13px, 2vw, 15px)',
+                lineHeight: '145%',
+                textAlign: 'center'
+              }}
+            >
+              Google, ChatGPT, TikTok, YouTube...<br />
+              Où qu&apos;ils cherchent, vos clients doivent tomber sur vous.
+            </p>
+          </div>
+
+          {/* CTA Button - Geist 15px semibold */}
+          <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-[30px] py-[15px] bg-white rounded-full text-[#2C2E34] font-semibold text-[15px] leading-[145%] transition-colors"
+            >
+              Prenez l&apos;avantage maintenant
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

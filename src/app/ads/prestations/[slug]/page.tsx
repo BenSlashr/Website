@@ -7,6 +7,7 @@ import {
 } from "@/lib/prestationsWP";
 import LogoBanner from "@/components/LogoBanner";
 import CTA from "@/components/CTA";
+import Newsletter from "@/components/Newsletter";
 import {
   ServiceHero,
   MethodologySection,
@@ -168,7 +169,6 @@ export default async function AdsPrestationPage({ params }: Props) {
 
       {/* Hero */}
       <ServiceHero
-        tag={prestation.tag}
         title={prestation.title}
         description={prestation.heroDescription}
       />
@@ -179,7 +179,6 @@ export default async function AdsPrestationPage({ params }: Props) {
       {/* Section Contenu Principal */}
       {prestation.contentSection && (
         <ContentSection
-          tag={prestation.contentSection.tag}
           title={prestation.contentSection.title}
           content={prestation.contentSection.content}
           bulletPoints={prestation.contentSection.bulletPoints}
@@ -200,7 +199,7 @@ export default async function AdsPrestationPage({ params }: Props) {
 
       {/* Section - Pourquoi choisir Slashr */}
       {prestation.whyChooseUs && (
-        <section className="bg-[#252525] py-24 px-6">
+        <section className="bg-[#2C2E34] py-24 px-6">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
               {prestation.whyChooseUs.title}
@@ -216,10 +215,10 @@ export default async function AdsPrestationPage({ params }: Props) {
             <div className="grid md:grid-cols-3 gap-6">
               {prestation.whyChooseUs.points.map((point, index) => (
                 <div key={index} className="bg-[#1a1a1a] rounded-2xl p-8">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4">
                     {index === 0 && (
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-6 h-6 text-black"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -234,7 +233,7 @@ export default async function AdsPrestationPage({ params }: Props) {
                     )}
                     {index === 1 && (
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-6 h-6 text-black"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -249,7 +248,7 @@ export default async function AdsPrestationPage({ params }: Props) {
                     )}
                     {index === 2 && (
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-6 h-6 text-black"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -361,7 +360,7 @@ export default async function AdsPrestationPage({ params }: Props) {
       {/* Points de vigilance */}
       {prestation.vigilancePoints && prestation.vigilancePoints.length > 0 && (
         <VigilanceSection
-          title={`Les points de vigilance sur ${prestation.tag}`}
+          title={`Les points de vigilance du ${prestation.tag}`}
           points={prestation.vigilancePoints}
         />
       )}
@@ -403,6 +402,9 @@ export default async function AdsPrestationPage({ params }: Props) {
 
       {/* CTA */}
       <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }

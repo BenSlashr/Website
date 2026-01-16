@@ -106,10 +106,10 @@ export default function RecrutementPage() {
       </section>
 
       {/* Notre culture */}
-      <section className="py-20 px-6 bg-[#252525]">
+      <section className="py-20 px-6 bg-[#2C2E34]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-orange-500/20 rounded-full text-sm text-orange-400 mb-6">
+            <span className="inline-block px-4 py-2 bg-[#E74601]/20 rounded-full text-sm text-[#E74601] mb-6">
               Notre culture
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -124,7 +124,7 @@ export default function RecrutementPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
               <div key={value.title} className="bg-[#1a1a1a] rounded-2xl p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-xl flex items-center justify-center text-white mx-auto mb-4">
                   {getIcon(value.icon)}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{value.title}</h3>
@@ -148,7 +148,7 @@ export default function RecrutementPage() {
           </div>
 
           {/* Pas d'offre actuellement */}
-          <div className="bg-[#252525] rounded-3xl p-12 text-center">
+          <div className="bg-[#2C2E34] rounded-3xl p-12 text-center">
             <div className="w-20 h-20 bg-[#1a1a1a] rounded-full flex items-center justify-center mx-auto mb-6">
               <svg className="w-10 h-10 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -165,12 +165,12 @@ export default function RecrutementPage() {
       </section>
 
       {/* Candidature spontanée */}
-      <section className="py-20 px-6 bg-[#252525]">
+      <section className="py-20 px-6 bg-[#2C2E34]">
         <div className="max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Info */}
             <div>
-              <span className="inline-block px-4 py-2 bg-orange-500/20 rounded-full text-sm text-orange-400 mb-6">
+              <span className="inline-block px-4 py-2 bg-[#E74601]/20 rounded-full text-sm text-[#E74601] mb-6">
                 Candidature spontanée
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -183,35 +183,35 @@ export default function RecrutementPage() {
 
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-orange-400 flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-[#E74601] flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
                     <p className="text-white font-medium">Email</p>
-                    <a href="mailto:hello@slashr.fr" className="text-gray-400 hover:text-orange-400 transition-colors">
+                    <a href="mailto:hello@slashr.fr" className="text-gray-400 hover:text-[#E74601] transition-colors">
                       hello@slashr.fr
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-orange-400 flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-[#E74601] flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
                     <p className="text-white font-medium">Téléphone</p>
-                    <a href="tel:+33632997719" className="text-gray-400 hover:text-orange-400 transition-colors">
+                    <a href="tel:+33632997719" className="text-gray-400 hover:text-[#E74601] transition-colors">
                       (+33) 06 32 99 77 19
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-orange-400 flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-[#E74601] flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -277,7 +277,7 @@ export default function RecrutementPage() {
                         required
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                        className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       />
                     </div>
                     <div>
@@ -291,7 +291,7 @@ export default function RecrutementPage() {
                         required
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                        className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       />
                     </div>
                   </div>
@@ -308,7 +308,7 @@ export default function RecrutementPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                        className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       />
                     </div>
                     <div>
@@ -321,7 +321,7 @@ export default function RecrutementPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                        className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       />
                     </div>
                   </div>
@@ -337,7 +337,7 @@ export default function RecrutementPage() {
                       value={formData.linkedin}
                       onChange={handleChange}
                       placeholder="https://linkedin.com/in/..."
-                      className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                     />
                   </div>
 
@@ -353,21 +353,21 @@ export default function RecrutementPage() {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Parlez-nous de votre parcours, vos compétences SEO, vos projets personnels..."
-                      className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-orange-500 to-pink-500 text-white py-4 rounded-xl font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white py-4 rounded-xl font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma candidature'}
                   </button>
 
                   <p className="text-gray-500 text-xs text-center">
                     Vos données sont protégées.{' '}
-                    <Link href="/politique-de-cookies-ue" className="text-orange-400 hover:underline">
+                    <Link href="/politique-de-cookies-ue" className="text-[#E74601] hover:underline">
                       Politique de confidentialité
                     </Link>
                   </p>

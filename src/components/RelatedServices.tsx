@@ -13,9 +13,9 @@ const RelatedServices = ({
   if (!services || services.length === 0) return null;
 
   return (
-    <section className="bg-[#252525] rounded-2xl p-8 mb-8">
+    <section className="bg-[#2C2E34] rounded-2xl p-8 mb-8">
       <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-3">
-        <span className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+        <span className="w-8 h-8 bg-gradient-to-br from-[#E74601] to-[#FF9011] rounded-lg flex items-center justify-center">
           <svg
             className="w-4 h-4 text-white"
             fill="none"
@@ -38,17 +38,17 @@ const RelatedServices = ({
           <Link
             key={result.item.id}
             href={result.item.url}
-            className="group block bg-[#1a1a1a] rounded-xl p-4 hover:bg-[#1f1f1f] transition-all duration-200 border border-transparent hover:border-orange-500/20"
+            className="group block bg-[#1a1a1a] rounded-xl p-4 hover:bg-[#1f1f1f] transition-all duration-200 border border-transparent hover:border-[#E74601]/20"
           >
             <div className="flex items-start gap-4">
               {/* Number indicator */}
-              <span className="flex-shrink-0 w-6 h-6 bg-orange-500/10 rounded-full flex items-center justify-center text-orange-400 text-xs font-medium">
+              <span className="flex-shrink-0 w-6 h-6 bg-[#E74601]/10 rounded-full flex items-center justify-center text-[#E74601] text-xs font-medium">
                 {index + 1}
               </span>
 
               <div className="flex-1 min-w-0">
                 {/* Title */}
-                <h4 className="text-white font-medium text-sm group-hover:text-orange-400 transition-colors line-clamp-1">
+                <h4 className="text-white font-medium text-sm group-hover:text-[#E74601] transition-colors line-clamp-1">
                   {result.item.title}
                 </h4>
 
@@ -60,7 +60,7 @@ const RelatedServices = ({
 
               {/* Arrow */}
               <svg
-                className="flex-shrink-0 w-4 h-4 text-gray-500 group-hover:text-orange-400 transition-colors mt-1"
+                className="flex-shrink-0 w-4 h-4 text-gray-500 group-hover:text-[#E74601] transition-colors mt-1"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

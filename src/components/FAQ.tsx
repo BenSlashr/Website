@@ -15,7 +15,7 @@ interface FAQProps {
 
 const defaultFaqs: FAQItem[] = [
   {
-    question: "En tant qu'agence search marketing, sur quels secteurs du digital est-ce que vous pouvez intervenir ?",
+    question: "En tant qu'agence search marketing, sur quels secteurs du digital est-ce que vous pouvez intervenir\u00A0?",
     answer: `En tant qu'agence SEM, nous pouvons intervenir sur les domaines du web suivant :
 
 • SEO : c'est notre cœur de métier
@@ -27,13 +27,13 @@ const defaultFaqs: FAQItem[] = [
 Pour tout ce qui est Email Marketing, Marketing d'influence, Display, création de sites web etc nous travaillons avec un réseau de partenaires.`,
   },
   {
-    question: "Le Search Marketing se limite-t-il à Google ?",
+    question: "Le Search Marketing se limite-t-il à Google\u00A0?",
     answer: `Le search marketing ne se limite plus à Google. On peut optimiser sa visibilité sur une multitude de plateformes où les utilisateurs effectuent des recherches, chacune avec ses propres règles et opportunités. Bien entendu, Google reste central (SEO/SEA, Google Shopping), mais des canaux comme YouTube, Amazon, Pinterest, ou TikTok sont devenus des moteurs de recherche à part entière.
 
 Sur YouTube, il s'agit de SEO vidéo ; sur Amazon et les marketplaces, on parle de référencement produit avec un fort impact des conversions et des avis. Pinterest et TikTok jouent sur l'inspiration et l'engagement visuel. En B2B, LinkedIn devient aussi un terrain de jeu du search via l'optimisation des profils et des contenus. N'oublions pas les moteurs alternatifs comme Bing ou encore les app stores pour le SEO mobile (ASO). Depuis peu, les IA génératives comme ChatGPT, Gemini ou Perplexity introduisent une nouvelle forme de visibilité à gagner, en apparaissant dans les sources qu'elles utilisent pour formuler leurs réponses.`,
   },
   {
-    question: "Faut-il une stratégie spécifique pour chaque moteur ?",
+    question: "Faut-il une stratégie spécifique pour chaque moteur\u00A0?",
     answer: `Oui. Chaque moteur a ses règles, ses formats, ses intentions utilisateurs :
 
 • Google → SEO technique + contenu + autorité
@@ -43,7 +43,7 @@ Sur YouTube, il s'agit de SEO vidéo ; sur Amazon et les marketplaces, on parle 
 • ChatGPT / LLMs → Présence dans des sources fiables, branding, logique de citation`,
   },
   {
-    question: "Comment choisir son agence/prestataire de marketing digital ?",
+    question: "Comment choisir son agence/prestataire de marketing digital\u00A0?",
     answer: `Il est souvent difficile de choisir son agence ou prestataire webmarketing, et de prendre sa décision avec le maximum de certitudes.
 
 De nos expériences, voici quelques-uns de nos meilleurs conseils :
@@ -57,7 +57,7 @@ De nos expériences, voici quelques-uns de nos meilleurs conseils :
 Enfin, nous sommes disponibles pour répondre à toutes vos questions, et répondre aux doutes ou réserves que vous pouvez avoir. Faites le choix d'une agence expérimentée avec Slashr.`,
   },
   {
-    question: "Comment appliquez-vous vos tarifs ?",
+    question: "Comment appliquez-vous vos tarifs\u00A0?",
     answer: `Les propositions se font généralement de deux manières différentes :
 
 • Vous avez un budget max défini et nous tentons de définir la meilleure démarche à suivre.
@@ -74,7 +74,7 @@ Généralement, le temps Homme de consulting est divisé en trois grandes partie
 N'hésitez pas à nous poser toutes vos questions lors de nos rendez-vous. Vous pouvez également directement demander un devis SEO.`,
   },
   {
-    question: "Faites-vous des propositions commerciales personnalisées ?",
+    question: "Faites-vous des propositions commerciales personnalisées\u00A0?",
     answer: `Chaque site a ses propres caractéristiques et opportunités. Vous avez des objectifs et un budget qui vous sont également propres.
 
 Nos propositions commerciales sont donc adaptées à chaque client et à chaque situation.
@@ -86,7 +86,7 @@ La construction de la Roadmap selon votre besoin, et notre expérience nous perm
 ];
 
 const FAQ = ({ title = "Questions fréquentes", faqs }: FAQProps) => {
-  const [openIndex, setOpenIndex] = useState<number>(0);
+  const [openIndex, setOpenIndex] = useState<number>(-1);
   const faqsToDisplay = faqs || defaultFaqs;
 
   const toggleFaq = (index: number) => {
@@ -94,13 +94,13 @@ const FAQ = ({ title = "Questions fréquentes", faqs }: FAQProps) => {
   };
 
   return (
-    <section className="bg-[#1a1a1a] py-20 sm:py-28 md:py-36 px-4 sm:px-6">
+    <section className="bg-[#1a1a1a] py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       {/* FAQ Schema for SEO */}
       <FAQSchema faqs={faqsToDisplay} />
 
       <div className="max-w-4xl mx-auto">
         {/* Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 sm:mb-10 md:mb-12 italic font-serif">
+        <h2 className="font-bold text-white text-center mb-8 sm:mb-10 md:mb-12 leading-tight" style={{ fontSize: 'clamp(28px, 5vw, 45px)' }}>
           {title}
         </h2>
 
@@ -111,11 +111,11 @@ const FAQ = ({ title = "Questions fréquentes", faqs }: FAQProps) => {
               key={index}
               className={`rounded-2xl overflow-hidden transition-all duration-300 ${
                 openIndex === index
-                  ? 'p-[1px] bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500'
+                  ? 'p-[1px]' + ' ' + 'bg-gradient-to-r from-[#E74601] via-[#CE08A9] to-[#8962FD]'
                   : ''
               }`}
             >
-              <div className={`bg-[#252525] rounded-2xl ${openIndex === index ? 'rounded-2xl' : ''}`}>
+              <div className={`bg-[#2C2E34] rounded-2xl ${openIndex === index ? 'rounded-2xl' : ''}`}>
                 {/* Question */}
                 <button
                   onClick={() => toggleFaq(index)}
@@ -147,7 +147,7 @@ const FAQ = ({ title = "Questions fréquentes", faqs }: FAQProps) => {
                     openIndex === index ? 'max-h-[800px]' : 'max-h-0'
                   }`}
                 >
-                  <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 text-gray-300 text-xs sm:text-sm leading-relaxed whitespace-pre-line">
+                  <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 text-description text-white/70 whitespace-pre-line">
                     {faq.answer}
                   </div>
                 </div>

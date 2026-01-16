@@ -32,7 +32,7 @@ export default function MentionsLegalesPage() {
       {/* Content */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#252525] rounded-3xl p-8 md:p-12 space-y-12">
+          <div className="bg-[#2C2E34] rounded-3xl p-8 md:p-12 space-y-12">
             {/* Éditeur */}
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">
@@ -63,7 +63,7 @@ export default function MentionsLegalesPage() {
                 Adresse
               </h2>
               <div className="bg-[#1a1a1a] rounded-2xl p-6">
-                <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-medium rounded-full mb-4">
+                <span className="inline-block px-3 py-1 bg-[#E74601]/20 text-[#E74601] text-xs font-medium rounded-full mb-4">
                   Siège social
                 </span>
                 <p className="text-gray-300">
@@ -83,21 +83,21 @@ export default function MentionsLegalesPage() {
                 <p>
                   <strong className="text-white">Responsable de la publication :</strong> Benoit Demonchaux
                   <br />
-                  <a href="mailto:hello@slashr.fr" className="text-orange-400 hover:underline">
+                  <a href="mailto:hello@slashr.fr" className="text-[#E74601] hover:underline">
                     hello@slashr.fr
                   </a>
                 </p>
                 <p>
                   <strong className="text-white">Webmaster :</strong> Benoit Demonchaux
                   <br />
-                  <a href="mailto:hello@slashr.fr" className="text-orange-400 hover:underline">
+                  <a href="mailto:hello@slashr.fr" className="text-[#E74601] hover:underline">
                     hello@slashr.fr
                   </a>
                 </p>
                 <p>
                   <strong className="text-white">Délégué à la protection des données (DPO) :</strong> Benoit Demonchaux
                   <br />
-                  <a href="mailto:maintenance@slashr.fr" className="text-orange-400 hover:underline">
+                  <a href="mailto:maintenance@slashr.fr" className="text-[#E74601] hover:underline">
                     maintenance@slashr.fr
                   </a>
                 </p>
@@ -149,7 +149,7 @@ export default function MentionsLegalesPage() {
             <div className="pt-8 border-t border-gray-700">
               <p className="text-gray-400 text-sm">
                 Voir aussi :{' '}
-                <Link href="/politique-de-cookies-ue" className="text-orange-400 hover:underline">
+                <Link href="/politique-de-cookies-ue" className="text-[#E74601] hover:underline">
                   Politique de cookies
                 </Link>
               </p>

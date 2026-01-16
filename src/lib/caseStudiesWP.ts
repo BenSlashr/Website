@@ -92,9 +92,9 @@ function stripHtml(html: string): string {
 function extractMetrics(html: string): CaseStudyStat[] {
   const stats: CaseStudyStat[] = [];
   const colors = [
-    'from-orange-500 to-orange-400',
-    'from-blue-500 to-purple-500',
-    'from-purple-500 to-pink-500',
+    'from-[#E74601] to-[#FF9011]',
+    'from-[#8962FD] to-[#AD21FE]',
+    'from-[#8962FD] to-[#CE08A9]',
   ];
 
   // Recherche simple des patterns courants
@@ -171,17 +171,17 @@ const fallbackCaseStudies: CaseStudy[] = [
       {
         value: '+162%',
         label: 'de trafic SEO après la fusion',
-        color: 'from-orange-500 to-orange-400',
+        color: 'from-[#E74601] to-[#FF9011]',
       },
       {
         value: '+1,6M',
         label: 'de mots-clés récupérés',
-        color: 'from-blue-500 to-purple-500',
+        color: 'from-[#8962FD] to-[#AD21FE]',
       },
       {
         value: '+10000',
         label: 'domaines référents récupérés',
-        color: 'from-purple-500 to-pink-500',
+        color: 'from-[#8962FD] to-[#CE08A9]',
       },
     ],
     expertises: ['Migration SEO', 'SEO International', 'SEO E-commerce', 'Audit SEO'],
@@ -272,9 +272,9 @@ const fallbackCaseStudies: CaseStudy[] = [
       testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/antoine-thomas.webp',
     },
     stats: [
-      { value: '+37%', label: 'mots-clés Top 3', color: 'from-orange-500 to-orange-400' },
-      { value: '+45%', label: 'mots-clés Top 4-10', color: 'from-blue-500 to-purple-500' },
-      { value: '+35%', label: 'mots-clés Top 11-20', color: 'from-purple-500 to-pink-500' },
+      { value: '+37%', label: 'mots-clés Top 3', color: 'from-[#E74601] to-[#FF9011]' },
+      { value: '+45%', label: 'mots-clés Top 4-10', color: 'from-[#8962FD] to-[#AD21FE]' },
+      { value: '+35%', label: 'mots-clés Top 11-20', color: 'from-[#8962FD] to-[#CE08A9]' },
     ],
     expertises: ['Migration SEO', 'SEO E-commerce', 'Audit SEO', 'Stratégie de redirection'],
     context: {
@@ -366,9 +366,9 @@ const fallbackCaseStudies: CaseStudy[] = [
       testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/morgane-lpb.png',
     },
     stats: [
-      { value: '+300', label: 'mots-clés en Top 3', color: 'from-orange-500 to-orange-400' },
-      { value: '+230%', label: 'trafic SEO global', color: 'from-blue-500 to-purple-500' },
-      { value: '+250%', label: 'trafic SEO pages transactionnelles', color: 'from-purple-500 to-pink-500' },
+      { value: '+300', label: 'mots-clés en Top 3', color: 'from-[#E74601] to-[#FF9011]' },
+      { value: '+230%', label: 'trafic SEO global', color: 'from-[#8962FD] to-[#AD21FE]' },
+      { value: '+250%', label: 'trafic SEO pages transactionnelles', color: 'from-[#8962FD] to-[#CE08A9]' },
     ],
     expertises: ['Migration SEO', 'SEO E-commerce', 'Audit SEO'],
     context: {
@@ -458,9 +458,9 @@ const fallbackCaseStudies: CaseStudy[] = [
       testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2024/11/1705481932895.jpeg',
     },
     stats: [
-      { value: '+903%', label: 'augmentation des clics mensuels', color: 'from-orange-500 to-orange-400' },
-      { value: '+1130%', label: 'Croissance des impressions', color: 'from-blue-500 to-purple-500' },
-      { value: '+1457%', label: 'Augmentation des mots-clés positionnés', color: 'from-purple-500 to-pink-500' },
+      { value: '+903%', label: 'augmentation des clics mensuels', color: 'from-[#E74601] to-[#FF9011]' },
+      { value: '+1130%', label: 'Croissance des impressions', color: 'from-[#8962FD] to-[#AD21FE]' },
+      { value: '+1457%', label: 'Augmentation des mots-clés positionnés', color: 'from-[#8962FD] to-[#CE08A9]' },
     ],
     expertises: ['SEO E-commerce', 'Stratégie SEO', 'Netlinking', 'Stratégie de contenu'],
     context: {
@@ -546,9 +546,9 @@ const fallbackCaseStudies: CaseStudy[] = [
       testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/morgane-lpb.png',
     },
     stats: [
-      { value: '+132%', label: 'Trafic SEO VS N-1', color: 'from-orange-500 to-orange-400' },
-      { value: '+102%', label: 'de mots-clés positionnés VS N-1', color: 'from-blue-500 to-purple-500' },
-      { value: '+83%', label: "d'impressions mensuelles VS N-1", color: 'from-purple-500 to-pink-500' },
+      { value: '+132%', label: 'Trafic SEO VS N-1', color: 'from-[#E74601] to-[#FF9011]' },
+      { value: '+102%', label: 'de mots-clés positionnés VS N-1', color: 'from-[#8962FD] to-[#AD21FE]' },
+      { value: '+83%', label: "d'impressions mensuelles VS N-1", color: 'from-[#8962FD] to-[#CE08A9]' },
     ],
     expertises: ['Audit stratégique', 'Création de contenu', 'SEO E-commerce', 'Netlinking'],
     context: {
@@ -647,9 +647,9 @@ const fallbackCaseStudies: CaseStudy[] = [
       testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2024/10/65d47aba8ca11c48fabbac14_Jo2.webp',
     },
     stats: [
-      { value: '+166%', label: 'De trafic SEO VS N-1', color: 'from-orange-500 to-orange-400' },
-      { value: '#1', label: 'position sur les 4 mots-clés stratégiques', color: 'from-blue-500 to-purple-500' },
-      { value: '+71%', label: 'de mots-clés positionnés', color: 'from-purple-500 to-pink-500' },
+      { value: '+166%', label: 'De trafic SEO VS N-1', color: 'from-[#E74601] to-[#FF9011]' },
+      { value: '#1', label: 'position sur les 4 mots-clés stratégiques', color: 'from-[#8962FD] to-[#AD21FE]' },
+      { value: '+71%', label: 'de mots-clés positionnés', color: 'from-[#8962FD] to-[#CE08A9]' },
     ],
     expertises: ['Audit Stratégique', 'Accompagnement SEO', 'Netlinking', 'Stratégie de contenu'],
     context: {
@@ -741,9 +741,9 @@ const fallbackCaseStudies: CaseStudy[] = [
       testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2024/10/XAVIER-MEPLON.jpg',
     },
     stats: [
-      { value: '+10000%', label: 'De trafic SEO, de 1000 à 160 000 clics mensuels', color: 'from-orange-500 to-orange-400' },
-      { value: '+8330%', label: "d'impressions mensuelles", color: 'from-blue-500 to-purple-500' },
-      { value: '+8233%', label: 'De 3 000 à 250 000 mots-clés positionnés', color: 'from-purple-500 to-pink-500' },
+      { value: '+10000%', label: 'De trafic SEO, de 1000 à 160 000 clics mensuels', color: 'from-[#E74601] to-[#FF9011]' },
+      { value: '+8330%', label: "d'impressions mensuelles", color: 'from-[#8962FD] to-[#AD21FE]' },
+      { value: '+8233%', label: 'De 3 000 à 250 000 mots-clés positionnés', color: 'from-[#8962FD] to-[#CE08A9]' },
     ],
     expertises: ['Audit technique', 'SEO Technique', 'Optimisation de crawl', 'Maillage interne'],
     context: {

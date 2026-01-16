@@ -9,3 +9,5 @@ export { default as OtherExpertisesSection } from './OtherExpertises';
 export { default as EnjeuxSection } from './EnjeuxSection';
 export { default as GEOExclusiveSections } from './GEOExclusiveSections';
 export { default as GEOToolShowcase } from './GEOToolShowcase';
+export { default as IrritantSection } from './IrritantSection';
+export { default as PrestationsSection } from './PrestationsSection';

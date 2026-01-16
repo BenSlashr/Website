@@ -25,7 +25,7 @@ const RelatedArticles = ({
   return (
     <section className="mt-16 mb-8">
       <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-        <span className="w-10 h-10 bg-gradient-to-br from-orange-500 to-purple-600 rounded-xl flex items-center justify-center">
+        <span className="w-10 h-10 bg-gradient-to-br from-[#E74601] to-[#8962FD] rounded-xl flex items-center justify-center">
           <svg
             className="w-5 h-5 text-white"
             fill="none"
@@ -50,7 +50,7 @@ const RelatedArticles = ({
             href={result.item.url}
             className="group block"
           >
-            <article className="relative overflow-hidden rounded-2xl bg-[#252525] h-full transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/10 hover:-translate-y-1">
+            <article className="relative overflow-hidden rounded-2xl bg-[#2C2E34] h-full transition-all duration-300 hover:shadow-xl hover:shadow-[#E74601]/10 hover:-translate-y-1">
               {/* Gradient header */}
               <div
                 className="h-2"
@@ -66,7 +66,7 @@ const RelatedArticles = ({
                 )}
 
                 {/* Title */}
-                <h4 className="text-white font-semibold text-lg mb-3 group-hover:text-orange-400 transition-colors line-clamp-2">
+                <h4 className="text-white font-semibold text-lg mb-3 group-hover:text-[#E74601] transition-colors line-clamp-2">
                   {result.item.title}
                 </h4>
 
@@ -76,7 +76,7 @@ const RelatedArticles = ({
                 </p>
 
                 {/* Read more */}
-                <div className="flex items-center text-orange-400 text-sm font-medium">
+                <div className="flex items-center text-[#E74601] text-sm font-medium">
                   <span>Lire l&apos;article</span>
                   <svg
                     className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
@@ -95,7 +95,7 @@ const RelatedArticles = ({
               </div>
 
               {/* Hover gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 to-purple-600/0 group-hover:from-orange-500/5 group-hover:to-purple-600/5 transition-all duration-300 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#E74601]/0 to-[#8962FD]/0 group-hover:from-[#E74601]/5 group-hover:to-[#8962FD]/5 transition-all duration-300 pointer-events-none" />
             </article>
           </Link>
         ))}

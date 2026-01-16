@@ -10,13 +10,13 @@ interface GlossaryTermProps {
 
 const categoryColors: Record<string, string> = {
   general: 'from-blue-500 to-cyan-500',
-  technical: 'from-orange-500 to-red-500',
+  technical: 'from-[#E74601] to-[#CE08A9]',
   content: 'from-green-500 to-emerald-500',
-  netlinking: 'from-purple-500 to-pink-500',
-  analytics: 'from-yellow-500 to-orange-500',
+  netlinking: 'from-[#8962FD] to-[#CE08A9]',
+  analytics: 'from-[#FF9011] to-[#E74601]',
   local: 'from-teal-500 to-green-500',
-  ecommerce: 'from-pink-500 to-rose-500',
-  ai: 'from-violet-500 to-purple-500',
+  ecommerce: 'from-[#CE08A9] to-[#CE16B5]',
+  ai: 'from-[#AD21FE] to-[#8962FD]',
 };
 
 export default function GlossaryTerm({ term, children }: GlossaryTermProps) {
@@ -59,7 +59,7 @@ export default function GlossaryTerm({ term, children }: GlossaryTermProps) {
       onMouseLeave={handleMouseLeave}
     >
       {/* Terme surligné */}
-      <span className="border-b border-dashed border-orange-500/50 text-orange-400 cursor-help transition-colors hover:border-orange-500 hover:text-orange-300">
+      <span className="border-b border-dashed border-[#E74601]/50 text-[#E74601] cursor-help transition-colors hover:border-[#E74601] hover:text-[#FF9011]">
         {children}
       </span>
 

@@ -975,15 +975,15 @@ export const prestationsData: Prestation[] = [
   },
   {
     slug: 'ecommerce',
-    title: 'Agence SEO E-commerce',
-    tag: 'E-commerce',
+    title: 'Agence SEO E‑commerce',
+    tag: 'E‑commerce',
     category: 'seo',
     heroDescription: "93% des expériences en ligne commencent par un moteur de recherche. Maximisez les ventes de votre boutique en ligne grâce à une stratégie SEO e-commerce adaptée à vos enjeux.",
     metaTitle: 'Agence SEO E-commerce à Lille | Slashr',
     metaDescription: 'Agence SEO e-commerce à Lille. Boostez les ventes de votre boutique en ligne avec un référencement adapté. Optimisation fiches produits, catégories et architecture.',
     contentSection: {
-      tag: 'E-commerce',
-      title: 'Le SEO, levier de croissance e-commerce',
+      tag: 'E‑commerce',
+      title: 'Transformez chaque recherche en opportunité de vente',
       content: "Le SEO e-commerce a ses spécificités : gestion de catalogues volumineux, fiches produits optimisées, navigation à facettes, saisonnalité... Notre expertise vous permet de transformer le search en canal d'acquisition rentable et durable.",
       bulletPoints: [
         "93% des expériences en ligne commencent par un moteur de recherche.",

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import LogoBanner from '@/components/LogoBanner';
 import CTA from '@/components/CTA';
+import Newsletter from '@/components/Newsletter';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -286,7 +287,6 @@ export default function AdsPage() {
 
       {/* Hero */}
       <ServiceHero
-        tag="Agence Ads à Lille"
         title="Boostez la visibilité de votre marque avec la publicité digitale"
         description="Google Ads, Facebook Ads, LinkedIn Ads... Notre agence à Lille crée et gère vos campagnes publicitaires pour atteindre vos objectifs de croissance. Une stratégie marketing sur mesure pour maximiser votre retour sur investissement."
       />
@@ -297,7 +297,7 @@ export default function AdsPage() {
       {/* Section Notre agence */}
       <section className="bg-[#1a1a1a] py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
+          <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
             Notre agence
           </span>
 
@@ -308,36 +308,36 @@ export default function AdsPage() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Slashr est une <strong className="text-white">agence Ads à Lille</strong> spécialisée dans la création et la gestion de campagnes publicitaires digitales. Notre équipe accompagne les entreprises dans leur stratégie d&apos;acquisition sur <Link href="/ads/sea/google-ads" className="text-orange-400 hover:text-orange-300 underline">Google Ads</Link>, <Link href="/ads/social" className="text-orange-400 hover:text-orange-300 underline">Facebook Ads, LinkedIn Ads</Link> et les autres plateformes.
+                Slashr est une <strong className="text-white">agence Ads à Lille</strong> spécialisée dans la création et la gestion de campagnes publicitaires digitales. Notre équipe accompagne les entreprises dans leur stratégie d&apos;acquisition sur <Link href="/ads/sea/google-ads" className="text-[#E74601] hover:text-[#FF9011] underline">Google Ads</Link>, <Link href="/ads/social" className="text-[#E74601] hover:text-[#FF9011] underline">Facebook Ads, LinkedIn Ads</Link> et les autres plateformes.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Notre expertise en marketing digital nous permet de définir une <Link href="/ads/social" className="text-orange-400 hover:text-orange-300 underline">stratégie Social Ads</Link> personnalisée pour chaque projet, avec un objectif clair : <strong className="text-white">maximiser votre retour sur investissement</strong> et générer des leads qualifiés. Nous maîtrisons également le <Link href="/ads/sea" className="text-orange-400 hover:text-orange-300 underline">référencement payant (SEA)</Link> pour capter les recherches intentionnistes.
+                Notre expertise en marketing digital nous permet de définir une <Link href="/ads/social" className="text-[#E74601] hover:text-[#FF9011] underline">stratégie Social Ads</Link> personnalisée pour chaque projet, avec un objectif clair : <strong className="text-white">maximiser votre retour sur investissement</strong> et générer des leads qualifiés. Nous maîtrisons également le <Link href="/ads/sea" className="text-[#E74601] hover:text-[#FF9011] underline">référencement payant (SEA)</Link> pour capter les recherches intentionnistes.
               </p>
             </div>
 
-            <div className="bg-[#252525] rounded-2xl p-8">
+            <div className="bg-[#2C2E34] rounded-2xl p-8">
               <h3 className="text-white font-semibold text-xl mb-4">Pourquoi choisir notre agence ?</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Expertise Google Ads & Social Ads
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Stratégie sur mesure selon vos objectifs
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Optimisation continue des performances
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Reporting transparent et mesure du ROI
@@ -349,7 +349,7 @@ export default function AdsPage() {
       </section>
 
       {/* Section Les piliers du Paid Media */}
-      <section className="bg-[#252525] py-24 px-6">
+      <section className="bg-[#2C2E34] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-[#1a1a1a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
             Nos expertises
@@ -364,12 +364,12 @@ export default function AdsPage() {
               <Link
                 key={index}
                 href={pillar.href}
-                className="group text-center bg-[#1a1a1a] rounded-2xl p-8 hover:bg-[#2a2a2a] transition-colors"
+                className="group text-center bg-[#1a1a1a] rounded-2xl p-8 hover:bg-[#2C2E34] transition-colors"
               >
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
                   {pillar.icon}
                 </div>
-                <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-orange-400 transition-colors">
+                <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-[#E74601] transition-colors">
                   {pillar.title}
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{pillar.description}</p>
@@ -387,27 +387,27 @@ export default function AdsPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Google Ads</h3>
               <p className="text-gray-400 text-sm">Search, Shopping, Display, YouTube, Performance Max. Campagnes Google Ads optimisées pour la conversion.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Facebook Ads</h3>
               <p className="text-gray-400 text-sm">Campagnes publicitaires sur Facebook et Instagram pour toucher votre audience sur les réseaux sociaux.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">LinkedIn Ads</h3>
               <p className="text-gray-400 text-sm">Publicité B2B pour cibler les décideurs et professionnels. Idéal pour la génération de leads qualifiés.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Bing Ads</h3>
               <p className="text-gray-400 text-sm">Microsoft Advertising pour compléter votre stratégie SEA et toucher une audience complémentaire.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">TikTok Ads</h3>
               <p className="text-gray-400 text-sm">Formats vidéo engageants pour la notoriété et la visibilité auprès des audiences jeunes.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Remarketing</h3>
               <p className="text-gray-400 text-sm">Reciblage cross-plateforme pour convertir les visiteurs de votre site web en clients.</p>
             </div>
@@ -449,7 +449,7 @@ export default function AdsPage() {
               <Link
                 key={expertise.name}
                 href={expertise.href}
-                className="bg-[#252525] hover:bg-[#2a2a2a] text-white px-6 py-3 rounded-full text-sm font-medium transition-colors hover:text-orange-400"
+                className="bg-[#2C2E34] hover:bg-[#2C2E34] text-white px-6 py-3 rounded-full text-sm font-medium transition-colors hover:text-[#E74601]"
               >
                 {expertise.name}
               </Link>
@@ -471,6 +471,9 @@ export default function AdsPage() {
 
       {/* CTA */}
       <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }

@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { getCaseStudyBySlug, getOtherCaseStudies, CaseStudy, CaseStudyCard } from '@/lib/caseStudiesWP';
+import CTA from '@/components/CTA';
+import Newsletter from '@/components/Newsletter';
 
 const CALENDLY_URL = 'https://calendly.com/quentin-slashr/appel-de-decouverte-client-by-slashr?back=1';
 
@@ -55,8 +57,8 @@ export default function CaseStudyDetail() {
     return (
       <main className="min-h-screen bg-[#1a1a1a] flex items-center justify-center">
         <div className="animate-pulse">
-          <div className="w-48 h-8 bg-[#252525] rounded mb-4 mx-auto" />
-          <div className="w-32 h-4 bg-[#252525] rounded mx-auto" />
+          <div className="w-48 h-8 bg-[#2C2E34] rounded mb-4 mx-auto" />
+          <div className="w-32 h-4 bg-[#2C2E34] rounded mx-auto" />
         </div>
       </main>
     );
@@ -68,7 +70,7 @@ export default function CaseStudyDetail() {
       <main className="min-h-screen bg-[#1a1a1a] flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Cas client non trouvé</h1>
-          <Link href="/cas-clients" className="text-orange-500 hover:underline">
+          <Link href="/cas-clients" className="text-[#E74601] hover:underline">
             Retour aux cas clients
           </Link>
         </div>
@@ -135,7 +137,7 @@ export default function CaseStudyDetail() {
 
             {/* Right - Logo Card */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md aspect-[4/3] bg-[#252525] rounded-3xl flex items-center justify-center overflow-hidden">
+              <div className="relative w-full max-w-md aspect-[4/3] bg-[#2C2E34] rounded-3xl flex items-center justify-center overflow-hidden">
                 {/* Glow effect */}
                 <div
                   className="absolute bottom-0 left-0 right-0 h-1/2 pointer-events-none"
@@ -297,8 +299,8 @@ export default function CaseStudyDetail() {
                   <ul className="space-y-4">
                     {caseStudyData.challenges.items.map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <span className="w-6 h-6 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                          <svg className="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <span className="w-6 h-6 rounded-full bg-[#E74601]/10 flex items-center justify-center flex-shrink-0 mt-1">
+                          <svg className="w-4 h-4 text-[#E74601]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                           </svg>
                         </span>
@@ -409,8 +411,8 @@ export default function CaseStudyDetail() {
                       </p>
                       {/* Quote marks */}
                       <div className="absolute top-0 right-0 flex gap-1">
-                        <span className="text-5xl text-orange-500 font-serif">&quot;</span>
-                        <span className="text-5xl text-purple-400 font-serif">&quot;</span>
+                        <span className="text-5xl text-[#E74601] font-serif">&quot;</span>
+                        <span className="text-5xl text-[#8962FD] font-serif">&quot;</span>
                       </div>
                     </div>
                   </div>
@@ -432,7 +434,7 @@ export default function CaseStudyDetail() {
         <section className="bg-[#1a1a1a] py-24 px-6">
           <div className="max-w-7xl mx-auto">
             {/* Tag */}
-            <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-4 py-2 rounded-full mb-8 uppercase tracking-wider">
+            <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-4 py-2 rounded-full mb-8 uppercase tracking-wider">
               Cas Clients
             </span>
 
@@ -482,7 +484,7 @@ export default function CaseStudyDetail() {
                   <Link
                     href={`/cas-clients/${caseItem.slug}`}
                     key={index}
-                    className="flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] bg-[#252525] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
+                    className="flex-shrink-0 w-[300px] sm:w-[350px] md:w-[400px] bg-[#2C2E34] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300"
                     onMouseEnter={() => setHoveredCardIndex(index)}
                     onMouseLeave={() => setHoveredCardIndex(null)}
                   >
@@ -517,7 +519,7 @@ export default function CaseStudyDetail() {
                           hoveredCardIndex === index ? 'bottom-[-830px]' : 'bottom-[-870px]'
                         }`}
                         style={{
-                          background: '#252525',
+                          background: '#2C2E34',
                         }}
                       />
                     </div>
@@ -549,6 +551,12 @@ export default function CaseStudyDetail() {
           </div>
         </section>
       )}
+
+      {/* CTA */}
+      <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }

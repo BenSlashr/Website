@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import LogoBanner from '@/components/LogoBanner';
 import CTA from '@/components/CTA';
+import Newsletter from '@/components/Newsletter';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -297,7 +298,6 @@ export default function GoogleAdsPage() {
 
       {/* Hero */}
       <ServiceHero
-        tag="Agence Google Ads à Lille"
         title="Votre expert Google Ads certifié Google Partner"
         description="Campagnes Google Ads Search, Shopping, Performance Max et Display. Notre agence Google Ads à Lille crée et gère vos campagnes publicitaires pour atteindre vos objectifs de croissance. Une stratégie marketing sur mesure pour maximiser votre retour sur investissement."
       />
@@ -308,7 +308,7 @@ export default function GoogleAdsPage() {
       {/* Section Notre agence */}
       <section className="bg-[#1a1a1a] py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
+          <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
             Notre expertise
           </span>
 
@@ -319,36 +319,36 @@ export default function GoogleAdsPage() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Slashr est une <strong className="text-white">agence Google Ads à Lille</strong> certifiée Google Partner, spécialisée dans la création et la gestion de campagnes publicitaires sur le moteur de recherche Google. Notre équipe d&apos;experts accompagne les entreprises dans leur <Link href="/ads/sea" className="text-orange-400 hover:text-orange-300 underline">stratégie SEA</Link> pour générer des prospects qualifiés et maximiser les conversions.
+                Slashr est une <strong className="text-white">agence Google Ads à Lille</strong> certifiée Google Partner, spécialisée dans la création et la gestion de campagnes publicitaires sur le moteur de recherche Google. Notre équipe d&apos;experts accompagne les entreprises dans leur <Link href="/ads/sea" className="text-[#E74601] hover:text-[#FF9011] underline">stratégie SEA</Link> pour générer des prospects qualifiés et maximiser les conversions.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Notre expertise en marketing digital nous permet de définir une <strong className="text-white">stratégie Google Ads personnalisée</strong> selon vos objectifs et vos besoins. Nous proposons également des campagnes <Link href="/ads/social" className="text-orange-400 hover:text-orange-300 underline">Social Ads</Link> pour une <Link href="/ads" className="text-orange-400 hover:text-orange-300 underline">stratégie publicitaire globale</Link>.
+                Notre expertise en marketing digital nous permet de définir une <strong className="text-white">stratégie Google Ads personnalisée</strong> selon vos objectifs et vos besoins. Nous proposons également des campagnes <Link href="/ads/social" className="text-[#E74601] hover:text-[#FF9011] underline">Social Ads</Link> pour une <Link href="/ads" className="text-[#E74601] hover:text-[#FF9011] underline">stratégie publicitaire globale</Link>.
               </p>
             </div>
 
-            <div className="bg-[#252525] rounded-2xl p-8">
+            <div className="bg-[#2C2E34] rounded-2xl p-8">
               <h3 className="text-white font-semibold text-xl mb-4">Pourquoi choisir notre agence Google Ads ?</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Agence certifiée Google Partner
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Stratégie sur mesure selon vos objectifs
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Optimisation continue des performances
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Mesure précise du ROI et reporting transparent
@@ -360,7 +360,7 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* Section Types de campagnes */}
-      <section className="bg-[#252525] py-24 px-6">
+      <section className="bg-[#2C2E34] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-[#1a1a1a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
             Nos expertises
@@ -374,12 +374,12 @@ export default function GoogleAdsPage() {
             {googleAdsPillars.map((pillar, index) => (
               <div
                 key={index}
-                className="group text-center bg-[#1a1a1a] rounded-2xl p-8 hover:bg-[#2a2a2a] transition-colors"
+                className="group text-center bg-[#1a1a1a] rounded-2xl p-8 hover:bg-[#2C2E34] transition-colors"
               >
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
                   {pillar.icon}
                 </div>
-                <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-orange-400 transition-colors">
+                <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-[#E74601] transition-colors">
                   {pillar.title}
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{pillar.description}</p>
@@ -397,27 +397,27 @@ export default function GoogleAdsPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Search Ads</h3>
               <p className="text-gray-400 text-sm">Annonces textuelles sur les résultats de recherche Google. Le levier principal pour capter une audience avec intention d&apos;achat.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Google Shopping</h3>
               <p className="text-gray-400 text-sm">Campagnes Shopping pour les entreprises e-commerce. Visuels produits optimisés pour maximiser les conversions.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Performance Max</h3>
               <p className="text-gray-400 text-sm">Campagnes IA Google diffusées sur tous les supports : Search, Display, YouTube, Gmail, Maps, Discover.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Display Ads</h3>
               <p className="text-gray-400 text-sm">Bannières visuelles sur le réseau de sites partenaires Google pour la visibilité et le remarketing.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">YouTube Ads</h3>
               <p className="text-gray-400 text-sm">Annonces vidéo pour la communication de marque et la génération de leads via la plateforme YouTube.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Remarketing</h3>
               <p className="text-gray-400 text-sm">Reciblage des visiteurs de votre site web pour maximiser les opportunités de conversion.</p>
             </div>
@@ -426,7 +426,7 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* Stats Google Ads */}
-      <section className="bg-[#252525] py-24 px-6">
+      <section className="bg-[#2C2E34] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
             Pourquoi investir dans Google Ads ?
@@ -434,19 +434,19 @@ export default function GoogleAdsPage() {
 
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div>
-              <p className="text-5xl font-bold text-orange-400 mb-2">90%</p>
+              <p className="text-5xl font-bold text-[#E74601] mb-2">90%</p>
               <p className="text-gray-400 text-sm">Part de marché Google en France</p>
             </div>
             <div>
-              <p className="text-5xl font-bold text-orange-400 mb-2">8.5Mds</p>
+              <p className="text-5xl font-bold text-[#E74601] mb-2">8.5Mds</p>
               <p className="text-gray-400 text-sm">Recherches Google par jour</p>
             </div>
             <div>
-              <p className="text-5xl font-bold text-orange-400 mb-2">65%</p>
+              <p className="text-5xl font-bold text-[#E74601] mb-2">65%</p>
               <p className="text-gray-400 text-sm">Clics sur les 3 premiers résultats</p>
             </div>
             <div>
-              <p className="text-5xl font-bold text-orange-400 mb-2">200%</p>
+              <p className="text-5xl font-bold text-[#E74601] mb-2">200%</p>
               <p className="text-gray-400 text-sm">ROI moyen des campagnes Google Ads</p>
             </div>
           </div>
@@ -487,7 +487,7 @@ export default function GoogleAdsPage() {
               <Link
                 key={expertise.name}
                 href={expertise.href}
-                className="bg-[#252525] hover:bg-[#2a2a2a] text-white px-6 py-3 rounded-full text-sm font-medium transition-colors hover:text-orange-400"
+                className="bg-[#2C2E34] hover:bg-[#2C2E34] text-white px-6 py-3 rounded-full text-sm font-medium transition-colors hover:text-[#E74601]"
               >
                 {expertise.name}
               </Link>
@@ -511,6 +511,9 @@ export default function GoogleAdsPage() {
 
       {/* CTA */}
       <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }

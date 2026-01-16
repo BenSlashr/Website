@@ -102,11 +102,11 @@ export default function LeadFormSEO() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-white mb-4">Demande envoyée !</h3>
+        <h3 className="text-2xl font-bold text-white mb-4">Demande envoyée&nbsp;!</h3>
         <p className="text-gray-400 mb-6">
           Merci pour votre demande. Notre équipe vous contactera sous 24h pour discuter de votre projet SEO.
         </p>
-        <div className="inline-flex items-center gap-2 text-orange-400">
+        <div className="inline-flex items-center gap-2 text-[#E74601]">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -122,11 +122,11 @@ export default function LeadFormSEO() {
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs text-gray-500 uppercase tracking-wider">Étape {step}/{totalSteps}</span>
-          <span className="text-xs text-orange-400">{Math.round((step / totalSteps) * 100)}%</span>
+          <span className="text-xs text-[#E74601]">{Math.round((step / totalSteps) * 100)}%</span>
         </div>
         <div className="h-1 bg-gray-800 rounded-full overflow-hidden">
           <div
-            className="h-full bg-gradient-to-r from-orange-500 to-pink-500 transition-all duration-500 ease-out"
+            className="h-full bg-gradient-to-r from-[#E74601] to-[#CE08A9] transition-all duration-500 ease-out"
             style={{ width: `${(step / totalSteps) * 100}%` }}
           />
         </div>
@@ -150,11 +150,11 @@ export default function LeadFormSEO() {
                 <select
                   value={formData.service}
                   onChange={(e) => setFormData(prev => ({ ...prev, service: e.target.value }))}
-                  className="w-full px-4 py-4 bg-[#252525] border border-gray-700 rounded-xl text-white appearance-none cursor-pointer focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-4 py-4 bg-[#2C2E34] border border-gray-700 rounded-xl text-white appearance-none cursor-pointer focus:outline-none focus:border-[#E74601] transition-colors"
                   required
                 >
                   {serviceOptions.map((option) => (
-                    <option key={option.value} value={option.value} className="bg-[#252525]">
+                    <option key={option.value} value={option.value} className="bg-[#2C2E34]">
                       {option.label}
                     </option>
                   ))}
@@ -176,10 +176,10 @@ export default function LeadFormSEO() {
                 <select
                   value={formData.budget}
                   onChange={(e) => setFormData(prev => ({ ...prev, budget: e.target.value }))}
-                  className="w-full px-4 py-4 bg-[#252525] border border-gray-700 rounded-xl text-white appearance-none cursor-pointer focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-4 py-4 bg-[#2C2E34] border border-gray-700 rounded-xl text-white appearance-none cursor-pointer focus:outline-none focus:border-[#E74601] transition-colors"
                 >
                   {budgetOptions.map((option) => (
-                    <option key={option.value} value={option.value} className="bg-[#252525]">
+                    <option key={option.value} value={option.value} className="bg-[#2C2E34]">
                       {option.label}
                     </option>
                   ))}
@@ -196,16 +196,16 @@ export default function LeadFormSEO() {
             </div>
 
             {/* Quick info */}
-            <div className="bg-[#252525] rounded-xl p-4 border border-gray-700">
+            <div className="bg-[#2C2E34] rounded-xl p-4 border border-gray-700">
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 bg-[#E74601]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4 text-[#E74601]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
                   <p className="text-sm text-gray-300">
-                    Notre TJM se situe entre <span className="text-orange-400 font-medium">550€ et 900€</span> selon la complexité du projet.
+                    Notre TJM se situe entre <span className="text-[#E74601] font-medium">550€ et 900€</span> selon la complexité du projet.
                   </p>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function LeadFormSEO() {
                   type="text"
                   value={formData.company}
                   onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
-                  className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                   placeholder="Votre entreprise"
                   required
                 />
@@ -246,7 +246,7 @@ export default function LeadFormSEO() {
                     type="text"
                     value={formData.website}
                     onChange={(e) => setFormData(prev => ({ ...prev, website: e.target.value }))}
-                    className="w-full pl-20 pr-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                    className="w-full pl-20 pr-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                     placeholder="votresite.com"
                     required
                   />
@@ -265,8 +265,8 @@ export default function LeadFormSEO() {
                       onClick={() => setFormData(prev => ({ ...prev, timeline: option.value }))}
                       className={`p-3 rounded-xl border transition-all duration-200 text-center ${
                         formData.timeline === option.value
-                          ? 'bg-gradient-to-r from-orange-500/20 to-pink-500/20 border-orange-500/50 text-white'
-                          : 'bg-[#252525] border-gray-700 text-gray-400 hover:border-gray-600'
+                          ? 'bg-gradient-to-r from-[#E74601]/20 to-[#CE08A9]/20 border-[#E74601]/50 text-white'
+                          : 'bg-[#2C2E34] border-gray-700 text-gray-400 hover:border-gray-600'
                       }`}
                     >
                       <span className="text-sm">{option.label}</span>
@@ -282,7 +282,7 @@ export default function LeadFormSEO() {
                 <textarea
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                  className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors resize-none"
                   placeholder="Décrivez vos objectifs, défis actuels, ou toute information utile..."
                   rows={3}
                 />
@@ -308,7 +308,7 @@ export default function LeadFormSEO() {
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                  className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                   placeholder="Jean Dupont"
                   required
                 />
@@ -322,7 +322,7 @@ export default function LeadFormSEO() {
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                  className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                   placeholder="jean@entreprise.com"
                   required
                 />
@@ -336,14 +336,14 @@ export default function LeadFormSEO() {
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                  className="w-full px-4 py-3 bg-[#252525] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                  className="w-full px-4 py-3 bg-[#2C2E34] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                   placeholder="06 12 34 56 78"
                 />
               </div>
             </div>
 
             {/* Summary */}
-            <div className="bg-[#252525] rounded-xl p-4 border border-gray-700">
+            <div className="bg-[#2C2E34] rounded-xl p-4 border border-gray-700">
               <h4 className="text-sm font-medium text-gray-300 mb-3">Récapitulatif</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
@@ -411,7 +411,7 @@ export default function LeadFormSEO() {
               disabled={!canProceed()}
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all ${
                 canProceed()
-                  ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:opacity-90'
+                  ? 'bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white hover:opacity-90'
                   : 'bg-gray-800 text-gray-500 cursor-not-allowed'
               }`}
             >
@@ -426,7 +426,7 @@ export default function LeadFormSEO() {
               disabled={!canProceed() || isSubmitting}
               className={`flex items-center gap-2 px-8 py-3 rounded-full font-medium transition-all ${
                 canProceed() && !isSubmitting
-                  ? 'bg-gradient-to-r from-orange-500 to-pink-500 text-white hover:opacity-90'
+                  ? 'bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white hover:opacity-90'
                   : 'bg-gray-800 text-gray-500 cursor-not-allowed'
               }`}
             >

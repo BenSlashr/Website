@@ -7,7 +7,7 @@ const Resources = () => {
         </svg>
       ),
       title: 'Guides',
-      description: 'Curabitur ac lorem Vivamus non justo in dui mattis posuere Etiam accumsan ligula id pede',
+      description: 'Méthodologies, frameworks et best practices pour structurer votre stratégie Search et passer à l\'action.',
       cta: 'Suivre les guides',
       borderColor: 'border-gray-700',
     },
@@ -18,9 +18,9 @@ const Resources = () => {
         </svg>
       ),
       title: 'Vidéos',
-      description: 'Curabitur ac lorem Vivamus non justo in dui mattis posuere Etiam accumsan ligula id pede',
+      description: 'Décryptages, interviews d\'experts et retours d\'expérience pour comprendre les enjeux du Search moderne.',
       cta: 'Regarder les vidéos',
-      borderColor: 'border-purple-500/50',
+      borderColor: 'border-[#8962FD]/50',
     },
     {
       icon: (
@@ -29,36 +29,53 @@ const Resources = () => {
         </svg>
       ),
       title: 'Outils',
-      description: 'Curabitur ac lorem Vivamus non justo in dui mattis posuere Etiam accumsan ligula id pede',
+      description: 'Notre stack propriétaire pour analyser, prioriser et exécuter vos actions SEO plus vite que la concurrence.',
       cta: 'Découvrir nos outils',
       borderColor: 'border-gray-700',
     },
   ];
 
   return (
-    <section className="bg-[#1a1a1a] py-20 sm:py-28 md:py-36 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-[#1a1a1a] py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto flex flex-col items-center gap-12">
         {/* Tag */}
-        <div className="flex justify-center mb-8">
-          <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-4 py-2 rounded-full uppercase tracking-wider">
+        <div className="flex justify-center">
+          <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-4 py-2 rounded-full uppercase tracking-wider">
             Ressources
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-12 italic">
-          Apprenez grâce à des experts
+        <h2 className="font-bold text-white text-center leading-tight" style={{ fontSize: 'clamp(28px, 5vw, 45px)' }}>
+          Apprenez grâce à nos experts
         </h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="flex flex-wrap md:flex-nowrap justify-center gap-4">
           {/* Social Media Card with gradient border */}
-          <div className="relative rounded-2xl p-[1px] bg-gradient-to-b from-orange-500 via-purple-500 to-purple-600">
-            <div className="bg-[#252525] rounded-2xl p-8 h-full flex flex-col items-center justify-center text-center">
+          <div
+            className="relative overflow-hidden"
+            style={{
+              width: '313px',
+              height: '392px',
+              borderRadius: '11.25px',
+              background: 'linear-gradient(90deg, #E74601 0%, #FF9011 25%, #CE08A9 50%, #CE16B5 70%, #8962FD 85%, #AD21FE 100%)',
+              padding: '2px',
+            }}
+          >
+            <div
+              className="h-full flex flex-col items-center justify-center text-center"
+              style={{
+                background: '#2C2E34',
+                borderRadius: '10px',
+                padding: '59px 69px',
+                gap: '30px',
+              }}
+            >
               <p className="text-white font-medium mb-6">
                 Suivez-nous sur toutes
                 <br />
-                nos plateformes !
+                nos plateformes&nbsp;!
               </p>
 
               {/* Social Icons Grid */}
@@ -75,7 +92,9 @@ const Resources = () => {
 
                 {/* YouTube */}
                 <a
-                  href="#"
+                  href="https://www.youtube.com/channel/UCM8aEtYLfrKODLZOcFkjG2g"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
                 >
                   <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
@@ -85,7 +104,9 @@ const Resources = () => {
 
                 {/* LinkedIn */}
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/slashr-agence-seo-sem/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
                 >
                   <svg className="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 24 24">
@@ -110,25 +131,55 @@ const Resources = () => {
           {resources.map((resource) => (
             <div
               key={resource.title}
-              className={`bg-[#252525] rounded-2xl p-6 flex flex-col border ${resource.borderColor}`}
+              className="flex flex-col"
+              style={{
+                width: '311.33px',
+                height: '392px',
+                background: '#2C2E34',
+                borderRadius: '6px',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                padding: '24px',
+                gap: '24px',
+              }}
             >
               {/* Icon */}
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-black mb-6">
+              <div
+                className="flex items-center justify-center text-black"
+                style={{
+                  width: '52px',
+                  height: '52px',
+                  background: '#FFFFFF',
+                  borderRadius: '6px',
+                  padding: '14px',
+                }}
+              >
                 {resource.icon}
               </div>
 
-              {/* Title */}
-              <h3 className="text-white font-semibold text-lg mb-3">
-                {resource.title}
-              </h3>
+              {/* Text content - centered vertically */}
+              <div className="flex flex-col flex-1 justify-center" style={{ gap: '12px' }}>
+                {/* Title */}
+                <h3 className="text-white font-semibold text-lg">
+                  {resource.title}
+                </h3>
 
-              {/* Description */}
-              <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
-                {resource.description}
-              </p>
+                {/* Description */}
+                <p className="text-description text-white/70">
+                  {resource.description}
+                </p>
+              </div>
 
               {/* CTA Button */}
-              <button className="self-start bg-transparent border border-gray-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 transition-colors">
+              <button
+                className="self-start bg-transparent text-white text-sm font-medium hover:bg-white/10 transition-colors"
+                style={{
+                  width: '183px',
+                  height: '52px',
+                  borderRadius: '20px',
+                  border: '1px solid #FFFFFF',
+                  padding: '8px 16px',
+                }}
+              >
                 {resource.cta}
               </button>
             </div>

@@ -1,17 +1,13 @@
 const Newsletter = () => {
   return (
-    <section className="relative px-4 sm:px-6 py-20 sm:py-28 md:py-36">
+    <section className="relative px-4 sm:px-6 pt-0 pb-12 sm:pb-16 md:pb-20 -mt-[50px] sm:-mt-[60px] md:-mt-[75px] z-20">
       <div className="max-w-5xl mx-auto">
         {/* Newsletter Card */}
-        <div className="bg-[#2a2a2a] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12">
+        <div className="bg-[#2C2E34] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12">
           {/* Left Content */}
           <div className="flex-1">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 italic leading-tight">
-              Restez informés
-              <br />
-              des tendances et des
-              <br />
-              meilleures pratiques
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+              Restez informés des tendances et des meilleures pratiques
             </h3>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
               Vous avez besoin d&apos;un partenaire de confiance, pour développer votre trafic
@@ -38,9 +34,9 @@ const Newsletter = () => {
             <div className="flex items-center gap-3">
               {/* Avatars */}
               <div className="flex -space-x-2 flex-shrink-0">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 border-2 border-[#2a2a2a]" />
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-[#2a2a2a]" />
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-green-400 to-teal-500 border-2 border-[#2a2a2a]" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#2C2E34]" style={{ background: 'linear-gradient(135deg, #E74601, #FF9011)' }} />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#2C2E34]" style={{ background: 'linear-gradient(135deg, #CE08A9, #CE16B5)' }} />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#2C2E34]" style={{ background: 'linear-gradient(135deg, #8962FD, #AD21FE)' }} />
               </div>
               <p className="text-gray-400 text-xs sm:text-sm">
                 <span className="text-white font-medium">+100 personnes</span> sont abonnés à notre newsletter

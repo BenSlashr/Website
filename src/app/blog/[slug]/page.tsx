@@ -348,19 +348,19 @@ export default async function ArticlePage({ params }: Props) {
                         sizes="40px"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-medium text-sm">
+                      <div className="w-full h-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-medium text-sm">
                         {article.author.split(' ').map(n => n[0]).join('')}
                       </div>
                     )}
                   </Link>
                 ) : (
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-medium text-sm">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-medium text-sm">
                     {article.author.split(' ').map(n => n[0]).join('')}
                   </div>
                 )}
                 <div>
                   {authorSlug ? (
-                    <Link href={`/blog/author/${authorSlug}`} className="text-white font-medium text-sm hover:text-orange-400 transition-colors">
+                    <Link href={`/blog/author/${authorSlug}`} className="text-white font-medium text-sm hover:text-[#E74601] transition-colors">
                       {article.author}
                     </Link>
                   ) : (
@@ -410,7 +410,7 @@ export default async function ArticlePage({ params }: Props) {
                     {article.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="bg-[#252525] text-gray-400 text-sm px-4 py-2 rounded-full hover:bg-[#2a2a2a] transition-colors"
+                        className="bg-[#2C2E34] text-gray-400 text-sm px-4 py-2 rounded-full hover:bg-[#2C2E34] transition-colors"
                       >
                         {tag}
                       </span>
@@ -419,7 +419,7 @@ export default async function ArticlePage({ params }: Props) {
                 </div>
 
                 {/* Author Box */}
-                <div className="mt-12 bg-[#252525] rounded-3xl p-8">
+                <div className="mt-12 bg-[#2C2E34] rounded-3xl p-8">
                   <div className="flex items-start gap-4">
                     {authorSlug ? (
                       <Link href={`/blog/author/${authorSlug}`} className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
@@ -432,19 +432,19 @@ export default async function ArticlePage({ params }: Props) {
                             sizes="64px"
                           />
                         ) : (
-                          <div className="w-full h-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-bold text-xl">
+                          <div className="w-full h-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-bold text-xl">
                             {article.author.split(' ').map(n => n[0]).join('')}
                           </div>
                         )}
                       </Link>
                     ) : (
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
                         {article.author.split(' ').map(n => n[0]).join('')}
                       </div>
                     )}
                     <div className="flex-1">
                       {authorSlug ? (
-                        <Link href={`/blog/author/${authorSlug}`} className="text-white font-bold text-lg mb-1 hover:text-orange-400 transition-colors inline-block">
+                        <Link href={`/blog/author/${authorSlug}`} className="text-white font-bold text-lg mb-1 hover:text-[#E74601] transition-colors inline-block">
                           {article.author}
                         </Link>
                       ) : (
@@ -452,7 +452,7 @@ export default async function ArticlePage({ params }: Props) {
                           {article.author}
                         </h3>
                       )}
-                      <p className="text-orange-400 text-sm mb-3">
+                      <p className="text-[#E74601] text-sm mb-3">
                         {authorInfo?.role || 'Expert SEO @ SLASHR'}
                       </p>
                       <p className="text-gray-400 text-sm leading-relaxed">
@@ -462,7 +462,7 @@ export default async function ArticlePage({ params }: Props) {
                       {authorSlug && (
                         <Link
                           href={`/blog/author/${authorSlug}`}
-                          className="inline-flex items-center gap-2 text-orange-400 text-sm font-medium mt-4 hover:text-orange-300 transition-colors"
+                          className="inline-flex items-center gap-2 text-[#E74601] text-sm font-medium mt-4 hover:text-[#FF9011] transition-colors"
                         >
                           Voir tous ses articles
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -481,7 +481,7 @@ export default async function ArticlePage({ params }: Props) {
 
                   {/* Table of Contents - Dynamic from WordPress H2s */}
                   {article.headings && article.headings.length > 0 && (
-                    <div className="bg-[#252525] rounded-2xl p-6">
+                    <div className="bg-[#2C2E34] rounded-2xl p-6">
                       <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
@@ -507,9 +507,9 @@ export default async function ArticlePage({ params }: Props) {
                   )}
 
                   {/* Newsletter CTA */}
-                  <div className="bg-gradient-to-br from-orange-500/20 to-pink-500/20 rounded-2xl p-6 border border-orange-500/30">
+                  <div className="bg-gradient-to-br from-[#E74601]/20 to-[#CE08A9]/20 rounded-2xl p-6 border border-[#E74601]/30">
                     <div className="flex items-center gap-2 mb-3">
-                      <svg className="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-[#E74601]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                       <h3 className="text-white font-bold text-sm">Newsletter SEO</h3>
@@ -520,7 +520,7 @@ export default async function ArticlePage({ params }: Props) {
                     <input
                       type="email"
                       placeholder="Votre email"
-                      className="w-full bg-[#1a1a1a] border border-gray-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-orange-500 mb-3"
+                      className="w-full bg-[#1a1a1a] border border-gray-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#E74601] mb-3"
                     />
                     <button className="w-full bg-white text-black px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
                       Je m'inscris
@@ -528,7 +528,7 @@ export default async function ArticlePage({ params }: Props) {
                   </div>
 
                   {/* Afterwork CTA */}
-                  <div className="bg-[#252525] rounded-2xl p-6 relative overflow-hidden">
+                  <div className="bg-[#2C2E34] rounded-2xl p-6 relative overflow-hidden">
                     <div
                       className="absolute inset-0 opacity-20"
                       style={{
@@ -537,10 +537,10 @@ export default async function ArticlePage({ params }: Props) {
                     />
                     <div className="relative">
                       <div className="flex items-center gap-2 mb-2">
-                        <svg className="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 text-[#CE08A9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <span className="text-pink-400 text-xs font-medium uppercase tracking-wider">Prochain Event</span>
+                        <span className="text-[#CE08A9] text-xs font-medium uppercase tracking-wider">Prochain Event</span>
                       </div>
                       <h3 className="text-white font-bold mb-2">
                         Afterwork SEO Lille
@@ -553,7 +553,7 @@ export default async function ArticlePage({ params }: Props) {
                       </p>
                       <Link
                         href="#"
-                        className="inline-flex items-center gap-2 text-white text-sm font-medium hover:text-orange-400 transition-colors"
+                        className="inline-flex items-center gap-2 text-white text-sm font-medium hover:text-[#E74601] transition-colors"
                       >
                         S'inscrire gratuitement
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -564,7 +564,7 @@ export default async function ArticlePage({ params }: Props) {
                   </div>
 
                   {/* Recent Articles */}
-                  <div className="bg-[#252525] rounded-2xl p-6">
+                  <div className="bg-[#2C2E34] rounded-2xl p-6">
                     <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -578,7 +578,7 @@ export default async function ArticlePage({ params }: Props) {
                           href={`/blog/${recentArticle.slug}`}
                           className="block group"
                         >
-                          <h4 className="text-gray-300 text-sm font-medium group-hover:text-orange-400 transition-colors line-clamp-2 mb-1">
+                          <h4 className="text-gray-300 text-sm font-medium group-hover:text-[#E74601] transition-colors line-clamp-2 mb-1">
                             {recentArticle.title}
                           </h4>
                           <p className="text-gray-500 text-xs">
@@ -624,7 +624,7 @@ export default async function ArticlePage({ params }: Props) {
                       <Link
                         key={related.slug}
                         href={`/blog/${related.slug}`}
-                        className="group block bg-[#252525] rounded-3xl overflow-hidden hover:bg-[#2a2a2a] transition-colors"
+                        className="group block bg-[#2C2E34] rounded-3xl overflow-hidden hover:bg-[#2C2E34] transition-colors"
                       >
                         {/* Gradient header */}
                         <div
@@ -639,14 +639,14 @@ export default async function ArticlePage({ params }: Props) {
                           </div>
                         </div>
                         <div className="p-6">
-                          <h3 className="text-white font-semibold mb-2 group-hover:text-orange-400 transition-colors line-clamp-2">
+                          <h3 className="text-white font-semibold mb-2 group-hover:text-[#E74601] transition-colors line-clamp-2">
                             {related.title}
                           </h3>
                           <p className="text-gray-400 text-sm line-clamp-2 mb-4">
                             {related.excerpt}
                           </p>
                           <div className="flex items-center gap-2">
-                            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white text-xs">
+                            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white text-xs">
                               {related.author.split(' ').map(n => n[0]).join('')}
                             </div>
                             <span className="text-gray-500 text-xs">{related.readTime}</span>

@@ -59,14 +59,34 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#1a1a1a]">
       {/* Hero */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-14 md:pb-16 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-6">
+        <div className="max-w-5xl mx-auto flex flex-col items-center gap-6 sm:gap-8">
+          {/* Tag */}
+          <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full uppercase tracking-wider">
             Contact
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-            Contactez-nous !
+
+          {/* Title */}
+          <h1
+            className="font-bold text-white text-center"
+            style={{
+              fontSize: 'clamp(32px, 6vw, 55px)',
+              lineHeight: '110%',
+              letterSpacing: '-0.04em',
+            }}
+          >
+            Contactez-nous
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+
+          {/* Description */}
+          <p
+            className="text-white/70 text-center max-w-2xl"
+            style={{
+              fontFamily: "'Geist', sans-serif",
+              fontWeight: 400,
+              fontSize: '15px',
+              lineHeight: '145%',
+            }}
+          >
             Basée à Lille, l&apos;agence Slashr répond à vos projets dans toute la France.
           </p>
         </div>
@@ -78,35 +98,78 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             {/* Contact Info */}
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">
+              <h2
+                className="font-bold text-white mb-6 sm:mb-8"
+                style={{
+                  fontSize: 'clamp(24px, 4vw, 32px)',
+                  lineHeight: '110%',
+                  letterSpacing: '-0.04em',
+                }}
+              >
                 Nos coordonnées
               </h2>
 
               {/* Phone & Email */}
               <div className="space-y-6 mb-12">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-xl flex items-center justify-center text-white flex-shrink-0">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-white font-medium mb-1">Téléphone</p>
-                    <a href="tel:+33632997719" className="text-gray-400 hover:text-white transition-colors">
+                    <h3
+                      className="text-white font-bold mb-1"
+                      style={{
+                        fontSize: '18px',
+                        lineHeight: '130%',
+                        letterSpacing: '-0.01em',
+                      }}
+                    >
+                      Téléphone
+                    </h3>
+                    <a
+                      href="tel:+33632997719"
+                      className="text-white/70 hover:text-white transition-colors"
+                      style={{
+                        fontFamily: "'Geist', sans-serif",
+                        fontWeight: 400,
+                        fontSize: '15px',
+                        lineHeight: '145%',
+                      }}
+                    >
                       (+33) 06 32 99 77 19
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-xl flex items-center justify-center text-white flex-shrink-0">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-white font-medium mb-1">Email</p>
-                    <a href="mailto:hello@slashr.fr" className="text-gray-400 hover:text-white transition-colors">
+                    <h3
+                      className="text-white font-bold mb-1"
+                      style={{
+                        fontSize: '18px',
+                        lineHeight: '130%',
+                        letterSpacing: '-0.01em',
+                      }}
+                    >
+                      Email
+                    </h3>
+                    <a
+                      href="mailto:hello@slashr.fr"
+                      className="text-white/70 hover:text-white transition-colors"
+                      style={{
+                        fontFamily: "'Geist', sans-serif",
+                        fontWeight: 400,
+                        fontSize: '15px',
+                        lineHeight: '145%',
+                      }}
+                    >
                       hello@slashr.fr
                     </a>
                   </div>
@@ -114,13 +177,30 @@ export default function ContactPage() {
               </div>
 
               {/* Location */}
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Notre bureau</h3>
+              <h3
+                className="text-white font-bold mb-4 sm:mb-6"
+                style={{
+                  fontSize: '20px',
+                  lineHeight: '130%',
+                  letterSpacing: '-0.01em',
+                }}
+              >
+                Notre bureau
+              </h3>
               <div className="mb-8 sm:mb-12">
-                <div className="bg-[#252525] rounded-2xl p-6">
-                  <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-medium rounded-full mb-4">
+                <div className="bg-[#2C2E34] rounded-2xl p-6 border border-white/10">
+                  <span className="inline-block px-3 py-1 bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white text-xs font-medium rounded-full mb-4">
                     Lille
                   </span>
-                  <p className="text-gray-300">
+                  <p
+                    className="text-white/70"
+                    style={{
+                      fontFamily: "'Geist', sans-serif",
+                      fontWeight: 400,
+                      fontSize: '15px',
+                      lineHeight: '145%',
+                    }}
+                  >
                     165 avenue de Bretagne
                     <br />
                     59800 LILLE
@@ -129,32 +209,68 @@ export default function ContactPage() {
               </div>
 
               {/* CTA Calendly */}
-              <div className="bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-orange-500/20">
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">
+              <div className="bg-[#2C2E34] rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-white/10">
+                <h3
+                  className="text-white font-bold mb-2 sm:mb-3"
+                  style={{
+                    fontSize: '20px',
+                    lineHeight: '130%',
+                    letterSpacing: '-0.01em',
+                  }}
+                >
                   Préférez un appel ?
                 </h3>
-                <p className="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6">
+                <p
+                  className="text-white/70 mb-4 sm:mb-6"
+                  style={{
+                    fontFamily: "'Geist', sans-serif",
+                    fontWeight: 400,
+                    fontSize: '15px',
+                    lineHeight: '145%',
+                  }}
+                >
                   Réservez un créneau de 30 minutes pour discuter de votre projet avec nos experts.
                 </p>
-                <button
-                  onClick={openCalendly}
-                  className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-white/90 transition-colors"
-                >
-                  Prendre RDV
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </button>
+                <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+                  <button
+                    onClick={openCalendly}
+                    className="inline-flex items-center justify-center gap-2 px-[30px] py-[15px] bg-white rounded-full text-[#2C2E34] font-semibold transition-colors"
+                    style={{
+                      fontSize: '15px',
+                      lineHeight: '145%',
+                    }}
+                  >
+                    Prendre RDV
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
 
             {/* Contact Form */}
             <div>
-              <div className="bg-[#252525] rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10">
-                <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
+              <div className="bg-[#2C2E34] rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 border border-white/10">
+                <h2
+                  className="font-bold text-white mb-2"
+                  style={{
+                    fontSize: 'clamp(24px, 4vw, 32px)',
+                    lineHeight: '110%',
+                    letterSpacing: '-0.04em',
+                  }}
+                >
                   Envoyez-nous un message
                 </h2>
-                <p className="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8">
+                <p
+                  className="text-white/70 mb-6 sm:mb-8"
+                  style={{
+                    fontFamily: "'Geist', sans-serif",
+                    fontWeight: 400,
+                    fontSize: '15px',
+                    lineHeight: '145%',
+                  }}
+                >
                   Nous vous répondons sous 24h.
                 </p>
 
@@ -165,14 +281,42 @@ export default function ContactPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Message envoyé !</h3>
-                    <p className="text-gray-400">Nous vous répondrons très rapidement.</p>
+                    <h3
+                      className="text-white font-bold mb-2"
+                      style={{
+                        fontSize: '20px',
+                        lineHeight: '130%',
+                        letterSpacing: '-0.01em',
+                      }}
+                    >
+                      Message envoyé !
+                    </h3>
+                    <p
+                      className="text-white/70"
+                      style={{
+                        fontFamily: "'Geist', sans-serif",
+                        fontWeight: 400,
+                        fontSize: '15px',
+                        lineHeight: '145%',
+                      }}
+                    >
+                      Nous vous répondrons très rapidement.
+                    </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                     <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                       <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label
+                          htmlFor="firstName"
+                          className="block text-white/70 mb-2"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontWeight: 500,
+                            fontSize: '14px',
+                            lineHeight: '145%',
+                          }}
+                        >
                           Prénom *
                         </label>
                         <input
@@ -182,11 +326,24 @@ export default function ContactPage() {
                           required
                           value={formData.firstName}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#E74601] transition-colors"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontSize: '15px',
+                          }}
                         />
                       </div>
                       <div>
-                        <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label
+                          htmlFor="lastName"
+                          className="block text-white/70 mb-2"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontWeight: 500,
+                            fontSize: '14px',
+                            lineHeight: '145%',
+                          }}
+                        >
                           Nom *
                         </label>
                         <input
@@ -196,14 +353,27 @@ export default function ContactPage() {
                           required
                           value={formData.lastName}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#E74601] transition-colors"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontSize: '15px',
+                          }}
                         />
                       </div>
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label
+                          htmlFor="email"
+                          className="block text-white/70 mb-2"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontWeight: 500,
+                            fontSize: '14px',
+                            lineHeight: '145%',
+                          }}
+                        >
                           Email *
                         </label>
                         <input
@@ -213,11 +383,24 @@ export default function ContactPage() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#E74601] transition-colors"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontSize: '15px',
+                          }}
                         />
                       </div>
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label
+                          htmlFor="phone"
+                          className="block text-white/70 mb-2"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontWeight: 500,
+                            fontSize: '14px',
+                            lineHeight: '145%',
+                          }}
+                        >
                           Téléphone *
                         </label>
                         <input
@@ -227,14 +410,27 @@ export default function ContactPage() {
                           required
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#E74601] transition-colors"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontSize: '15px',
+                          }}
                         />
                       </div>
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                       <div>
-                        <label htmlFor="website" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label
+                          htmlFor="website"
+                          className="block text-white/70 mb-2"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontWeight: 500,
+                            fontSize: '14px',
+                            lineHeight: '145%',
+                          }}
+                        >
                           Site web
                         </label>
                         <input
@@ -244,11 +440,24 @@ export default function ContactPage() {
                           value={formData.website}
                           onChange={handleChange}
                           placeholder="https://"
-                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#E74601] transition-colors"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontSize: '15px',
+                          }}
                         />
                       </div>
                       <div>
-                        <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label
+                          htmlFor="company"
+                          className="block text-white/70 mb-2"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontWeight: 500,
+                            fontSize: '14px',
+                            lineHeight: '145%',
+                          }}
+                        >
                           Entreprise
                         </label>
                         <input
@@ -257,13 +466,26 @@ export default function ContactPage() {
                           name="company"
                           value={formData.company}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                          className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#E74601] transition-colors"
+                          style={{
+                            fontFamily: "'Geist', sans-serif",
+                            fontSize: '15px',
+                          }}
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label
+                        htmlFor="message"
+                        className="block text-white/70 mb-2"
+                        style={{
+                          fontFamily: "'Geist', sans-serif",
+                          fontWeight: 500,
+                          fontSize: '14px',
+                          lineHeight: '145%',
+                        }}
+                      >
                         Message *
                       </label>
                       <textarea
@@ -274,7 +496,11 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Décrivez votre projet..."
-                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors resize-none"
+                        className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#E74601] transition-colors resize-none"
+                        style={{
+                          fontFamily: "'Geist', sans-serif",
+                          fontSize: '15px',
+                        }}
                       />
                     </div>
 
@@ -287,14 +513,26 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-orange-500 to-pink-500 text-white py-4 rounded-xl font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white py-4 rounded-full font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                      style={{
+                        fontSize: '15px',
+                        lineHeight: '145%',
+                      }}
                     >
                       {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                     </button>
 
-                    <p className="text-gray-500 text-xs text-center">
+                    <p
+                      className="text-white/50 text-center"
+                      style={{
+                        fontFamily: "'Geist', sans-serif",
+                        fontWeight: 400,
+                        fontSize: '13px',
+                        lineHeight: '145%',
+                      }}
+                    >
                       Vos données personnelles sont protégées. Consultez notre{' '}
-                      <Link href="/politique-de-cookies-ue" className="text-orange-400 hover:underline">
+                      <Link href="/politique-de-cookies-ue" className="text-[#E74601] hover:underline">
                         politique de confidentialité
                       </Link>
                       .

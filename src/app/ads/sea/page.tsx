@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import LogoBanner from '@/components/LogoBanner';
 import CTA from '@/components/CTA';
+import Newsletter from '@/components/Newsletter';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -281,7 +282,6 @@ export default function SEAPage() {
 
       {/* Hero */}
       <ServiceHero
-        tag="Agence SEA à Lille"
         title="Dominez les résultats de recherche avec Google Ads"
         description="Campagnes Google Ads, Bing Ads, Shopping et Performance Max. Notre agence SEA à Lille crée et gère vos campagnes publicitaires pour atteindre vos objectifs de croissance. Une stratégie sur mesure pour maximiser votre retour sur investissement."
       />
@@ -292,7 +292,7 @@ export default function SEAPage() {
       {/* Section Notre agence */}
       <section className="bg-[#1a1a1a] py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
+          <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
             Notre expertise
           </span>
 
@@ -303,36 +303,36 @@ export default function SEAPage() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Slashr est une <strong className="text-white">agence SEA à Lille</strong> spécialisée dans la création et la gestion de campagnes sur les moteurs de recherche. Notre équipe accompagne les entreprises dans leur stratégie de référencement payant via <Link href="/ads/sea/google-ads" className="text-orange-400 hover:text-orange-300 underline">Google Ads</Link> et Bing Ads pour générer des leads qualifiés.
+                Slashr est une <strong className="text-white">agence SEA à Lille</strong> spécialisée dans la création et la gestion de campagnes sur les moteurs de recherche. Notre équipe accompagne les entreprises dans leur stratégie de référencement payant via <Link href="/ads/sea/google-ads" className="text-[#E74601] hover:text-[#FF9011] underline">Google Ads</Link> et Bing Ads pour générer des leads qualifiés.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Notre expertise en marketing digital nous permet de définir une <strong className="text-white">stratégie SEA personnalisée</strong> selon vos objectifs : visibilité, acquisition de leads, e-commerce. Nous proposons également des campagnes <Link href="/ads/social" className="text-orange-400 hover:text-orange-300 underline">Social Ads</Link> pour une <Link href="/ads" className="text-orange-400 hover:text-orange-300 underline">stratégie publicitaire complète</Link>.
+                Notre expertise en marketing digital nous permet de définir une <strong className="text-white">stratégie SEA personnalisée</strong> selon vos objectifs : visibilité, acquisition de leads, e-commerce. Nous proposons également des campagnes <Link href="/ads/social" className="text-[#E74601] hover:text-[#FF9011] underline">Social Ads</Link> pour une <Link href="/ads" className="text-[#E74601] hover:text-[#FF9011] underline">stratégie publicitaire complète</Link>.
               </p>
             </div>
 
-            <div className="bg-[#252525] rounded-2xl p-8">
+            <div className="bg-[#2C2E34] rounded-2xl p-8">
               <h3 className="text-white font-semibold text-xl mb-4">Pourquoi choisir notre agence SEA ?</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Consultants certifiés Google Partner
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Stratégie sur mesure selon vos objectifs
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Optimisation continue des performances
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Reporting transparent et mesure du ROI
@@ -344,7 +344,7 @@ export default function SEAPage() {
       </section>
 
       {/* Section Les piliers SEA */}
-      <section className="bg-[#252525] py-24 px-6">
+      <section className="bg-[#2C2E34] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-[#1a1a1a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
             Nos expertises SEA
@@ -359,12 +359,12 @@ export default function SEAPage() {
               <Link
                 key={index}
                 href={pillar.href}
-                className="group text-center bg-[#1a1a1a] rounded-2xl p-8 hover:bg-[#2a2a2a] transition-colors"
+                className="group text-center bg-[#1a1a1a] rounded-2xl p-8 hover:bg-[#2C2E34] transition-colors"
               >
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform">
                   {pillar.icon}
                 </div>
-                <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-orange-400 transition-colors">
+                <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-[#E74601] transition-colors">
                   {pillar.title}
                 </h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{pillar.description}</p>
@@ -382,27 +382,27 @@ export default function SEAPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Google Search</h3>
               <p className="text-gray-400 text-sm">Annonces textuelles sur les résultats de recherche Google. Le levier principal pour capter une audience intentionniste.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Google Shopping</h3>
               <p className="text-gray-400 text-sm">Campagnes Shopping pour les entreprises e-commerce. Catalogue produits optimisé pour maximiser les ventes.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Performance Max</h3>
               <p className="text-gray-400 text-sm">Campagnes IA Google Ads diffusées sur tous les canaux : Search, Display, YouTube, Gmail, Maps.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Bing Ads</h3>
               <p className="text-gray-400 text-sm">Microsoft Advertising pour compléter votre stratégie et toucher une audience complémentaire qualifiée.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">Google Display</h3>
               <p className="text-gray-400 text-sm">Campagnes Display pour la visibilité de marque et le remarketing sur les sites partenaires Google.</p>
             </div>
-            <div className="bg-[#252525] rounded-2xl p-6">
+            <div className="bg-[#2C2E34] rounded-2xl p-6">
               <h3 className="text-white font-semibold text-lg mb-2">YouTube Ads</h3>
               <p className="text-gray-400 text-sm">Annonces vidéo pour la communication de marque et la génération de leads via YouTube.</p>
             </div>
@@ -444,7 +444,7 @@ export default function SEAPage() {
               <Link
                 key={expertise.name}
                 href={expertise.href}
-                className="bg-[#252525] hover:bg-[#2a2a2a] text-white px-6 py-3 rounded-full text-sm font-medium transition-colors hover:text-orange-400"
+                className="bg-[#2C2E34] hover:bg-[#2C2E34] text-white px-6 py-3 rounded-full text-sm font-medium transition-colors hover:text-[#E74601]"
               >
                 {expertise.name}
               </Link>
@@ -467,6 +467,9 @@ export default function SEAPage() {
 
       {/* CTA */}
       <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }

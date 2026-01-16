@@ -11,10 +11,6 @@ const LogoBanner = () => {
       url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/logo-vestiaire-collective-rdfndjotqafe1ryrfxpuvculp7boqvaszixb6rpm9s.png",
     },
     {
-      name: "Carter Cash",
-      url: "https://agence-slashr.fr/wp-content/uploads/2025/12/logo-carter-cash-fr.webp",
-    },
-    {
       name: "NaturaBuy",
       url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/naturabuy-modified-rdfnduyw0autx3idm2ldpa04tts3b8jl12r4y38w74.png",
     },
@@ -23,44 +19,40 @@ const LogoBanner = () => {
       url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/la-gazette-france-rdfndq9p24oeb1p7dik8ut6tuwf98r0xcfhpjpfv28.png",
     },
     {
-      name: "SwissCaution",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/swisscaution-rdfndq9p24oeb1p7dik8ut6tuwf98r0xcfhpjpfv28.png",
+      name: "SKEMA",
+      url: "https://agence-slashr.fr/wp-content/uploads/2026/01/SKEMA_Business_Schools_logo-scaled.png",
     },
     {
-      name: "Sencrop",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/Logo-Sencrop-rdfndmicasj90lunzgxqku4zhcxsdylzzwvrmllfr4.png",
-    },
-    {
-      name: "Les Petites Billes",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/Logo-LesPetitesBilles-rdfndmicasj90lunzgxqku4zhcxsdylzzwvrmllfr4.webp",
+      name: "Somfy",
+      url: "https://agence-slashr.fr/wp-content/uploads/2026/01/Somfy_logo.svg_.png",
     },
     {
       name: "Agryco",
       url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/agryco-1-reouo9p0g9radhajhn2ar7lh30jjgenap2vsy2iwow.png",
     },
     {
-      name: "Fourgon",
-      url: "https://agence-slashr.fr/wp-content/uploads/2025/12/logo-fourgon-scaled.png",
+      name: "EPF",
+      url: "https://agence-slashr.fr/wp-content/uploads/2026/01/EPF_logo_2021.png",
     },
     {
       name: "Colisee",
       url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/colisee-reouobkotxtv0p7t6nvjw74e9sa9vsurdc6rwmg4cg.png",
     },
     {
-      name: "Eurogifts",
-      url: "https://agence-slashr.fr/wp-content/uploads/2025/12/eurogifts-logo.png",
-    },
-    {
       name: "Ennolys",
       url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/ennolys-reouodgd7lwfnx52voot16nbgk10b7281lhqv6dc00.png",
     },
     {
-      name: "Usabilis",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/logo-colors-usabilis-reouofc1l9z0b52ckpi26668nbrqql9opusptqajnk.png",
+      name: "Maison du Billard",
+      url: "https://agence-slashr.fr/wp-content/uploads/2026/01/logo.png",
     },
     {
-      name: "Somfy",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/SOMFY-Domotique-reouog9vs40amr0zf7woqnxp8pn3yadf1zg7b095hc.png",
+      name: "Les Petites Billes",
+      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/Logo-LesPetitesBilles-rdfndmicasj90lunzgxqku4zhcxsdylzzwvrmllfr4.webp",
+    },
+    {
+      name: "Usabilis",
+      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/logo-colors-usabilis-reouofc1l9z0b52ckpi26668nbrqql9opusptqajnk.png",
     },
     {
       name: "Verisure",

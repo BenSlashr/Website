@@ -122,7 +122,7 @@ const GEOToolShowcase = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block text-xs tracking-[0.3em] text-orange-500 uppercase mb-4 font-medium">
+          <span className="inline-block text-xs tracking-[0.3em] text-[#E74601] uppercase mb-4 font-medium">
             OUTIL PROPRIÉTAIRE
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -136,19 +136,19 @@ const GEOToolShowcase = () => {
 
         {/* Stats Banner */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          <div className="bg-[#252525] rounded-2xl p-6 text-center">
-            <div className="text-3xl font-bold text-orange-500 mb-1">6</div>
+          <div className="bg-[#2C2E34] rounded-2xl p-6 text-center">
+            <div className="text-3xl font-bold text-[#E74601] mb-1">6</div>
             <div className="text-gray-400 text-sm">Modèles IA testés</div>
           </div>
-          <div className="bg-[#252525] rounded-2xl p-6 text-center">
-            <div className="text-3xl font-bold text-pink-500 mb-1">350+</div>
+          <div className="bg-[#2C2E34] rounded-2xl p-6 text-center">
+            <div className="text-3xl font-bold text-[#CE08A9] mb-1">350+</div>
             <div className="text-gray-400 text-sm">Analyses par projet</div>
           </div>
-          <div className="bg-[#252525] rounded-2xl p-6 text-center">
-            <div className="text-3xl font-bold text-purple-500 mb-1">10+</div>
+          <div className="bg-[#2C2E34] rounded-2xl p-6 text-center">
+            <div className="text-3xl font-bold text-[#8962FD] mb-1">10+</div>
             <div className="text-gray-400 text-sm">Concurrents suivis</div>
           </div>
-          <div className="bg-[#252525] rounded-2xl p-6 text-center">
+          <div className="bg-[#2C2E34] rounded-2xl p-6 text-center">
             <div className="text-3xl font-bold text-blue-500 mb-1">24/7</div>
             <div className="text-gray-400 text-sm">Monitoring continu</div>
           </div>
@@ -165,8 +165,8 @@ const GEOToolShowcase = () => {
                   ref={(el) => { featureRefs.current[index] = el; }}
                   className={`p-6 rounded-2xl transition-all duration-300 cursor-pointer ${
                     activeIndex === index
-                      ? 'bg-gradient-to-r from-orange-500/10 to-pink-500/10 border border-orange-500/30'
-                      : 'bg-[#252525] border border-transparent hover:border-gray-700'
+                      ? 'bg-gradient-to-r from-[#E74601]/10 to-[#CE08A9]/10 border border-[#E74601]/30'
+                      : 'bg-[#2C2E34] border border-transparent hover:border-gray-700'
                   }`}
                   onClick={() => setActiveIndex(index)}
                 >
@@ -174,7 +174,7 @@ const GEOToolShowcase = () => {
                     <div
                       className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
                         activeIndex === index
-                          ? 'bg-gradient-to-r from-orange-500 to-pink-500'
+                          ? 'bg-gradient-to-r from-[#E74601] to-[#CE08A9]'
                           : 'bg-[#1a1a1a]'
                       }`}
                     >
@@ -191,7 +191,7 @@ const GEOToolShowcase = () => {
                       </p>
                       <span className={`inline-block text-xs px-3 py-1 rounded-full ${
                         activeIndex === index
-                          ? 'bg-orange-500/20 text-orange-400'
+                          ? 'bg-[#E74601]/20 text-[#E74601]'
                           : 'bg-[#1a1a1a] text-gray-500'
                       }`}>
                         {feature.highlight}
@@ -207,7 +207,7 @@ const GEOToolShowcase = () => {
               <div className="sticky top-24">
                 <div className="relative rounded-2xl overflow-hidden border border-gray-700/50 shadow-2xl">
                   {/* Browser mockup header */}
-                  <div className="bg-[#2a2a2a] px-4 py-3 flex items-center gap-2">
+                  <div className="bg-[#2C2E34] px-4 py-3 flex items-center gap-2">
                     <div className="flex gap-1.5">
                       <div className="w-3 h-3 rounded-full bg-red-500"></div>
                       <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -249,7 +249,7 @@ const GEOToolShowcase = () => {
                       onClick={() => setActiveIndex(index)}
                       className={`w-2 h-2 rounded-full transition-all duration-300 ${
                         activeIndex === index
-                          ? 'bg-orange-500 w-6'
+                          ? 'bg-[#E74601] w-6'
                           : 'bg-gray-600 hover:bg-gray-500'
                       }`}
                     />
@@ -276,15 +276,14 @@ const GEOToolShowcase = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <a
-            href="/prestations/devis"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-full font-medium hover:opacity-90 transition-opacity"
-          >
-            Demander une démo
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+          <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+            <a
+              href="/prestations/devis"
+              className="inline-flex items-center justify-center px-[30px] py-[15px] bg-white rounded-full text-[#2C2E34] font-semibold text-[15px] leading-[145%] transition-colors"
+            >
+              Demander une démo
+            </a>
+          </div>
         </div>
       </div>
     </section>

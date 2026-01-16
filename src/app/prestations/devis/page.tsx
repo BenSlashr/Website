@@ -131,21 +131,21 @@ export default function DevisPage() {
         <div className="absolute inset-0 hero-gradient" />
 
         {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/20 rounded-full blur-[100px]" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px]" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#E74601]/20 rounded-full blur-[100px]" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#CE08A9]/20 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-[#8962FD]/10 rounded-full blur-[80px]" />
 
         <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             {/* Left side - Content */}
             <div className="lg:sticky lg:top-32">
-              <span className="inline-block text-xs tracking-[0.3em] text-orange-400 uppercase mb-6 font-medium">
+              <span className="inline-block text-xs tracking-[0.3em] text-[#E74601] uppercase mb-6 font-medium">
                 DEVIS GRATUIT
               </span>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
                 Obtenez votre devis SEO
-                <span className="block bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-[#E74601] to-[#CE08A9] bg-clip-text text-transparent">
                   en 2 minutes
                 </span>
               </h1>
@@ -206,7 +206,7 @@ export default function DevisPage() {
       <section className="bg-[#1a1a1a] py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block text-xs tracking-[0.3em] text-orange-500 uppercase mb-4 font-medium">
+            <span className="inline-block text-xs tracking-[0.3em] text-[#E74601] uppercase mb-4 font-medium">
               COMPRENDRE NOS TARIFS
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -222,9 +222,9 @@ export default function DevisPage() {
             {pricingFactors.map((factor, index) => (
               <div
                 key={index}
-                className="bg-[#252525] rounded-2xl p-8 hover:bg-[#2a2a2a] transition-colors group"
+                className="bg-[#2C2E34] rounded-2xl p-8 hover:bg-[#2C2E34] transition-colors group"
               >
-                <div className="w-12 h-12 bg-[#1a1a1a] rounded-xl flex items-center justify-center mb-6 text-gray-400 group-hover:text-orange-500 transition-colors">
+                <div className="w-12 h-12 bg-[#1a1a1a] rounded-xl flex items-center justify-center mb-6 text-gray-400 group-hover:text-[#E74601] transition-colors">
                   {factor.icon && getIcon(factor.icon)}
                 </div>
                 <h3 className="text-white font-semibold text-lg mb-3">{factor.title}</h3>
@@ -238,7 +238,7 @@ export default function DevisPage() {
       </section>
 
       {/* Freelance vs Agence */}
-      <section className="bg-[#252525] py-24 px-6">
+      <section className="bg-[#2C2E34] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -287,16 +287,16 @@ export default function DevisPage() {
             </div>
 
             {/* Agence */}
-            <div className="relative bg-gradient-to-br from-orange-500/10 to-pink-500/10 rounded-2xl p-8 border border-orange-500/30">
+            <div className="relative bg-gradient-to-br from-[#E74601]/10 to-[#CE08A9]/10 rounded-2xl p-8 border border-[#E74601]/30">
               <div className="absolute -top-3 left-6">
-                <span className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-medium px-3 py-1 rounded-full">
+                <span className="bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white text-xs font-medium px-3 py-1 rounded-full">
                   SLASHR
                 </span>
               </div>
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-white font-semibold text-xl">Agence</h3>
                 <div className="text-right">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-[#E74601] to-[#CE08A9] bg-clip-text text-transparent">
                     550 - 900€
                   </span>
                   <p className="text-gray-500 text-sm">TJM moyen</p>
@@ -307,7 +307,7 @@ export default function DevisPage() {
                   (item, index) => (
                     <li key={index} className="flex items-center gap-3 text-gray-300">
                       <svg
-                        className="w-5 h-5 text-orange-500 flex-shrink-0"
+                        className="w-5 h-5 text-[#E74601] flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -333,7 +333,7 @@ export default function DevisPage() {
       <FAQ title="Questions fréquentes sur nos tarifs" faqs={faqItems} />
 
       {/* Why Slashr */}
-      <section className="bg-[#252525] py-24 px-6">
+      <section className="bg-[#2C2E34] py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Pourquoi choisir Slashr ?
@@ -345,7 +345,7 @@ export default function DevisPage() {
 
           <div className="grid md:grid-cols-3 gap-6 text-left">
             <div className="bg-[#1a1a1a] rounded-2xl p-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -357,7 +357,7 @@ export default function DevisPage() {
             </div>
 
             <div className="bg-[#1a1a1a] rounded-2xl p-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
@@ -369,7 +369,7 @@ export default function DevisPage() {
             </div>
 
             <div className="bg-[#1a1a1a] rounded-2xl p-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-lg flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -407,7 +407,7 @@ export default function DevisPage() {
               <Link
                 key={prestation.name}
                 href={prestation.href}
-                className="px-6 py-3 rounded-full text-sm font-medium bg-[#252525] text-gray-300 hover:text-white hover:bg-[#2a2a2a] border border-gray-700 hover:border-orange-500/50 transition-all"
+                className="px-6 py-3 rounded-full text-sm font-medium bg-[#2C2E34] text-gray-300 hover:text-white hover:bg-[#2C2E34] border border-gray-700 hover:border-[#E74601]/50 transition-all"
               >
                 {prestation.name}
               </Link>

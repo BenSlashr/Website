@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
+import Newsletter from '@/components/Newsletter';
 
 // Outils gratuits
 const freeTools = [
@@ -305,8 +306,8 @@ const getIcon = (iconName: string) => {
 const getStatusBadge = (status: string) => {
   const badges: Record<string, { bg: string; text: string; label: string }> = {
     live: { bg: 'bg-green-500/20', text: 'text-green-400', label: 'Live' },
-    beta: { bg: 'bg-orange-500/20', text: 'text-orange-400', label: 'Beta' },
-    research: { bg: 'bg-purple-500/20', text: 'text-purple-400', label: 'Research' },
+    beta: { bg: 'bg-[#E74601]/20', text: 'text-[#E74601]', label: 'Beta' },
+    research: { bg: 'bg-[#8962FD]/20', text: 'text-[#8962FD]', label: 'Research' },
     development: { bg: 'bg-blue-500/20', text: 'text-blue-400', label: 'Dev' },
   };
   const badge = badges[status] || badges.development;
@@ -319,14 +320,14 @@ const getStatusBadge = (status: string) => {
 
 const getCategoryColor = (category: string) => {
   const colors: Record<string, string> = {
-    'Sémantique': 'from-purple-500 to-pink-500',
+    'Sémantique': 'from-[#8962FD] to-[#CE08A9]',
     'Technique': 'from-blue-500 to-cyan-500',
-    'Stratégie': 'from-orange-500 to-yellow-500',
+    'Stratégie': 'from-[#E74601] to-[#FF9011]',
     'Contenu': 'from-green-500 to-emerald-500',
-    'On-page': 'from-pink-500 to-rose-500',
-    'Data': 'from-indigo-500 to-purple-500',
+    'On-page': 'from-[#CE08A9] to-[#CE16B5]',
+    'Data': 'from-[#8962FD] to-[#AD21FE]',
     'GEO': 'from-cyan-500 to-blue-500',
-    'E-commerce': 'from-amber-500 to-orange-500',
+    'E-commerce': 'from-[#FF9011] to-[#E74601]',
   };
   return colors[category] || 'from-gray-500 to-gray-600';
 };
@@ -434,9 +435,9 @@ export default function RAndDPage() {
         <ParticleField />
 
         {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[150px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-[200px]" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#E74601]/10 rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#CE08A9]/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#8962FD]/5 rounded-full blur-[200px]" />
 
         <div className="relative z-10 text-center max-w-5xl mx-auto">
           {/* Badge */}
@@ -447,7 +448,7 @@ export default function RAndDPage() {
 
           {/* Title */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-[1.1]">
-            <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#E74601] via-[#CE08A9] to-[#8962FD] bg-clip-text text-transparent">
               R&D
             </span>
             <span className="text-white/90"> & Outils</span>
@@ -501,7 +502,7 @@ export default function RAndDPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Le SEO est un métier
                 <br />
-                <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">technique</span>
+                <span className="bg-gradient-to-r from-[#E74601] to-[#CE08A9] bg-clip-text text-transparent">technique</span>
               </h2>
               <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                 Nous croyons que l&apos;excellence SEO passe par la maîtrise technique et l&apos;innovation.
@@ -515,7 +516,7 @@ export default function RAndDPage() {
                   { title: 'Open source & partage', desc: 'Contribuer à la communauté SEO' },
                 ].map((item) => (
                   <li key={item.title} className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
@@ -539,12 +540,12 @@ export default function RAndDPage() {
                   <span className="text-gray-600 text-xs ml-2">slashr-toolkit.py</span>
                 </div>
                 <div className="space-y-2 text-xs">
-                  <p><span className="text-purple-400">from</span> <span className="text-green-400">slashr</span> <span className="text-purple-400">import</span> SEOAnalyzer</p>
-                  <p><span className="text-purple-400">from</span> <span className="text-green-400">slashr.geo</span> <span className="text-purple-400">import</span> LLMTracker</p>
+                  <p><span className="text-[#8962FD]">from</span> <span className="text-green-400">slashr</span> <span className="text-[#8962FD]">import</span> SEOAnalyzer</p>
+                  <p><span className="text-[#8962FD]">from</span> <span className="text-green-400">slashr.geo</span> <span className="text-[#8962FD]">import</span> LLMTracker</p>
                   <p className="text-gray-600"># Initialize semantic analysis</p>
                   <p><span className="text-blue-400">analyzer</span> = SEOAnalyzer(</p>
-                  <p className="pl-4"><span className="text-orange-400">embeddings</span>=<span className="text-yellow-400">&quot;multilingual&quot;</span>,</p>
-                  <p className="pl-4"><span className="text-orange-400">entity_detection</span>=<span className="text-cyan-400">True</span></p>
+                  <p className="pl-4"><span className="text-[#E74601]">embeddings</span>=<span className="text-yellow-400">&quot;multilingual&quot;</span>,</p>
+                  <p className="pl-4"><span className="text-[#E74601]">entity_detection</span>=<span className="text-cyan-400">True</span></p>
                   <p>)</p>
                   <p className="text-gray-600"># Track LLM visibility</p>
                   <p><span className="text-blue-400">geo</span> = LLMTracker([</p>
@@ -609,7 +610,7 @@ export default function RAndDPage() {
 
             {/* Point 2 */}
             <div className="bg-gradient-to-br from-white/[0.03] to-transparent border border-white/10 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#8962FD] to-[#CE08A9] rounded-xl flex items-center justify-center text-white mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
                 </svg>
@@ -620,13 +621,13 @@ export default function RAndDPage() {
                 Knowledge Graph, NER, entity linking... la sémantique computationnelle est au cœur du ranking moderne.
               </p>
               <p className="text-gray-500 text-sm">
-                Nos outils extraient et mappent vos entités pour maximiser la <span className="text-purple-400">topical authority</span> et le <span className="text-purple-400">E-E-A-T</span>.
+                Nos outils extraient et mappent vos entités pour maximiser la <span className="text-[#8962FD]">topical authority</span> et le <span className="text-[#8962FD]">E-E-A-T</span>.
               </p>
             </div>
 
             {/* Point 3 */}
             <div className="bg-gradient-to-br from-white/[0.03] to-transparent border border-white/10 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-xl flex items-center justify-center text-white mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#E74601] to-[#FF9011] rounded-xl flex items-center justify-center text-white mb-6">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -637,7 +638,7 @@ export default function RAndDPage() {
                 RAG, dense retrieval, neural search... comprendre ces mécanismes est essentiel pour optimiser le contenu.
               </p>
               <p className="text-gray-500 text-sm">
-                Nous utilisons des <span className="text-orange-400">embeddings multilingues</span> pour analyser la proximité sémantique et détecter les gaps de contenu.
+                Nous utilisons des <span className="text-[#E74601]">embeddings multilingues</span> pour analyser la proximité sémantique et détecter les gaps de contenu.
               </p>
             </div>
 
@@ -718,7 +719,7 @@ export default function RAndDPage() {
       <section id="premium-tools" className="relative py-32 px-6 bg-gradient-to-b from-transparent via-white/[0.01] to-transparent">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-orange-500/10 rounded-full text-sm text-orange-400 mb-6 border border-orange-500/20">
+            <span className="inline-block px-4 py-2 bg-[#E74601]/10 rounded-full text-sm text-[#E74601] mb-6 border border-[#E74601]/20">
               Clients Slashr
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -750,7 +751,7 @@ export default function RAndDPage() {
             {filteredPremiumTools.map((tool) => (
               <div
                 key={tool.name}
-                className="group relative bg-white/[0.02] border border-white/10 rounded-xl p-5 hover:border-orange-500/30 transition-all duration-300"
+                className="group relative bg-white/[0.02] border border-white/10 rounded-xl p-5 hover:border-[#E74601]/30 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className={`w-10 h-10 bg-gradient-to-br ${getCategoryColor(tool.category)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>
@@ -758,7 +759,7 @@ export default function RAndDPage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      <h3 className="text-white font-medium truncate group-hover:text-orange-400 transition-colors">
+                      <h3 className="text-white font-medium truncate group-hover:text-[#E74601] transition-colors">
                         {tool.name}
                       </h3>
                     </div>
@@ -785,7 +786,7 @@ export default function RAndDPage() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-purple-500/10 rounded-full text-sm text-purple-400 mb-6 border border-purple-500/20">
+            <span className="inline-block px-4 py-2 bg-[#8962FD]/10 rounded-full text-sm text-[#8962FD] mb-6 border border-[#8962FD]/20">
               Laboratoire
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -800,12 +801,12 @@ export default function RAndDPage() {
             {rdProjects.map((project, index) => (
               <div
                 key={project.name}
-                className="group relative bg-gradient-to-br from-white/[0.03] to-transparent border border-white/10 rounded-2xl p-6 hover:border-purple-500/30 transition-all"
+                className="group relative bg-gradient-to-br from-white/[0.03] to-transparent border border-white/10 rounded-2xl p-6 hover:border-[#8962FD]/30 transition-all"
               >
                 <div className="flex items-start gap-4">
                   {/* Project number */}
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/10 rounded-xl flex items-center justify-center border border-purple-500/20 flex-shrink-0">
-                    <span className="text-lg font-bold text-purple-400">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#8962FD]/20 to-[#CE08A9]/10 rounded-xl flex items-center justify-center border border-[#8962FD]/20 flex-shrink-0">
+                    <span className="text-lg font-bold text-[#8962FD]">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                   </div>
@@ -834,7 +835,7 @@ export default function RAndDPage() {
                       <div className="flex items-center gap-2">
                         <div className="w-20 h-1.5 bg-white/10 rounded-full overflow-hidden">
                           <div
-                            className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+                            className="h-full bg-gradient-to-r from-[#8962FD] to-[#CE08A9] rounded-full"
                             style={{ width: `${project.progress}%` }}
                           />
                         </div>
@@ -852,7 +853,7 @@ export default function RAndDPage() {
       {/* CTA Section */}
       <section className="relative py-32 px-6">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-[800px] h-[800px] bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-full blur-[200px]" />
+          <div className="w-[800px] h-[800px] bg-gradient-to-r from-[#E74601]/10 to-[#CE08A9]/10 rounded-full blur-[200px]" />
         </div>
 
         <div className="max-w-3xl mx-auto text-center relative z-10">
@@ -873,6 +874,9 @@ export default function RAndDPage() {
           </Link>
         </div>
       </section>
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }

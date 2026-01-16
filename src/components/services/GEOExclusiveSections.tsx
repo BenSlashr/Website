@@ -17,7 +17,7 @@ const GEOExclusiveSections = ({ content }: GEOExclusiveSectionsProps) => {
       {content.howChatGPTSearches && (
         <section className="bg-[#1a1a1a] py-24 px-6">
           <div className="max-w-6xl mx-auto">
-            <span className="inline-block text-xs tracking-[0.3em] text-orange-500 uppercase mb-4 font-medium">
+            <span className="inline-block text-xs tracking-[0.3em] text-[#E74601] uppercase mb-4 font-medium">
               {content.howChatGPTSearches.tag}
             </span>
 
@@ -33,10 +33,10 @@ const GEOExclusiveSections = ({ content }: GEOExclusiveSectionsProps) => {
               {content.howChatGPTSearches.points.map((point, index) => (
                 <div
                   key={index}
-                  className="group rounded-2xl p-[1px] transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-500 hover:via-pink-500 hover:to-purple-500"
+                  className="group rounded-2xl p-[1px] transition-all duration-300 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD]"
                 >
-                  <div className="bg-[#252525] rounded-2xl p-8 h-full">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
+                  <div className="bg-[#2C2E34] rounded-2xl p-8 h-full">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-xl flex items-center justify-center mb-4">
                       {index === 0 && (
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -72,9 +72,9 @@ const GEOExclusiveSections = ({ content }: GEOExclusiveSectionsProps) => {
           SECTION 2: Query Fan-out (données exclusives)
           ============================================ */}
       {content.queryFanOut && (
-        <section className="bg-[#252525] py-24 px-6">
+        <section className="bg-[#2C2E34] py-24 px-6">
           <div className="max-w-6xl mx-auto">
-            <span className="inline-block text-xs tracking-[0.3em] text-orange-500 uppercase mb-4 font-medium">
+            <span className="inline-block text-xs tracking-[0.3em] text-[#E74601] uppercase mb-4 font-medium">
               {content.queryFanOut.tag}
             </span>
 
@@ -93,11 +93,11 @@ const GEOExclusiveSections = ({ content }: GEOExclusiveSectionsProps) => {
                   <h3 className="text-white font-bold text-xl mb-4">{stat.label}</h3>
                   <div className="flex gap-4 mb-4">
                     <div className="flex-1">
-                      <div className="text-3xl font-bold text-orange-500">{stat.singleQuery}</div>
+                      <div className="text-3xl font-bold text-[#E74601]">{stat.singleQuery}</div>
                       <div className="text-gray-400 text-sm">requête unique</div>
                     </div>
                     <div className="flex-1">
-                      <div className="text-3xl font-bold text-pink-500">{stat.multiQuery}</div>
+                      <div className="text-3xl font-bold text-[#CE08A9]">{stat.multiQuery}</div>
                       <div className="text-gray-400 text-sm">requêtes multiples</div>
                     </div>
                   </div>
@@ -123,14 +123,14 @@ const GEOExclusiveSections = ({ content }: GEOExclusiveSectionsProps) => {
                       <tr key={index} className="border-b border-gray-800">
                         <td className="py-3 px-4 text-white font-medium">{word.word}</td>
                         <td className="py-3 px-4">
-                          <span className="text-orange-400 font-bold">{word.avgQueries}</span>
+                          <span className="text-[#E74601] font-bold">{word.avgQueries}</span>
                         </td>
                         <td className="py-3 px-4">
                           <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
                             word.impact === 'Très élevé'
-                              ? 'bg-orange-500/20 text-orange-400'
+                              ? 'bg-[#E74601]/20 text-[#E74601]'
                               : word.impact === 'Élevé'
-                                ? 'bg-pink-500/20 text-pink-400'
+                                ? 'bg-[#CE08A9]/20 text-[#CE08A9]'
                                 : 'bg-gray-500/20 text-gray-400'
                           }`}>
                             {word.impact}
@@ -142,9 +142,9 @@ const GEOExclusiveSections = ({ content }: GEOExclusiveSectionsProps) => {
                 </table>
               </div>
 
-              <div className="mt-6 p-4 bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-xl border border-orange-500/20">
+              <div className="mt-6 p-4 bg-gradient-to-r from-[#E74601]/10 to-[#CE08A9]/10 rounded-xl border border-[#E74601]/20">
                 <p className="text-gray-300 text-sm">
-                  <span className="text-orange-400 font-semibold">Insight :</span> {content.queryFanOut.insight}
+                  <span className="text-[#E74601] font-semibold">Insight :</span> {content.queryFanOut.insight}
                 </p>
               </div>
             </div>

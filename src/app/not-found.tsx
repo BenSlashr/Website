@@ -27,7 +27,7 @@ export default function NotFound() {
         {/* 4 _ 4 layout - the ball becomes the 0 */}
         <div className="flex items-center justify-center gap-0">
           {/* First 4 */}
-          <span className="text-[120px] md:text-[180px] lg:text-[220px] font-bold leading-none text-orange-500 select-none">
+          <span className="text-[120px] md:text-[180px] lg:text-[220px] font-bold leading-none text-[#E74601] select-none">
             4
           </span>
 
@@ -69,7 +69,7 @@ export default function NotFound() {
           </div>
 
           {/* Second 4 */}
-          <span className="text-[120px] md:text-[180px] lg:text-[220px] font-bold leading-none text-orange-500 select-none">
+          <span className="text-[120px] md:text-[180px] lg:text-[220px] font-bold leading-none text-[#E74601] select-none">
             4
           </span>
         </div>

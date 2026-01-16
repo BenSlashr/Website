@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import CTA from '@/components/CTA';
+import Newsletter from '@/components/Newsletter';
 import Team from '@/components/Team';
 
 export const metadata: Metadata = {
@@ -92,11 +93,11 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* Story */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#252525]">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#2C2E34]">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
             <div>
-              <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-500/20 rounded-full text-sm text-orange-400 mb-4 sm:mb-6">
+              <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-[#E74601]/20 rounded-full text-sm text-[#E74601] mb-4 sm:mb-6">
                 Notre histoire
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
@@ -122,22 +123,22 @@ export default function QuiSommesNousPage() {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-orange-500/20 to-pink-500/20 rounded-3xl p-1">
+              <div className="bg-gradient-to-br from-[#E74601]/20 to-[#CE08A9]/20 rounded-3xl p-1">
                 <div className="bg-[#1a1a1a] rounded-3xl p-8">
                   <div className="grid grid-cols-2 gap-4 text-center">
-                    <div className="bg-[#252525] rounded-2xl p-6">
+                    <div className="bg-[#2C2E34] rounded-2xl p-6">
                       <p className="text-4xl font-bold text-white mb-2">2020</p>
                       <p className="text-gray-500 text-sm">Création</p>
                     </div>
-                    <div className="bg-[#252525] rounded-2xl p-6">
+                    <div className="bg-[#2C2E34] rounded-2xl p-6">
                       <p className="text-4xl font-bold text-white mb-2">5</p>
                       <p className="text-gray-500 text-sm">Experts SEO</p>
                     </div>
-                    <div className="bg-[#252525] rounded-2xl p-6">
+                    <div className="bg-[#2C2E34] rounded-2xl p-6">
                       <p className="text-4xl font-bold text-white mb-2">2</p>
                       <p className="text-gray-500 text-sm">Bureaux</p>
                     </div>
-                    <div className="bg-[#252525] rounded-2xl p-6">
+                    <div className="bg-[#2C2E34] rounded-2xl p-6">
                       <p className="text-4xl font-bold text-white mb-2">50+</p>
                       <p className="text-gray-500 text-sm">Clients</p>
                     </div>
@@ -163,8 +164,8 @@ export default function QuiSommesNousPage() {
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {values.map((value) => (
-              <div key={value.title} className="bg-[#252525] rounded-xl sm:rounded-2xl p-6 sm:p-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center text-white mb-6">
+              <div key={value.title} className="bg-[#2C2E34] rounded-xl sm:rounded-2xl p-6 sm:p-8">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-xl flex items-center justify-center text-white mb-6">
                   {getIcon(value.icon)}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
@@ -176,7 +177,7 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* Modes */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#252525]">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#2C2E34]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
             <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-4 sm:mb-6">
@@ -191,9 +192,9 @@ export default function QuiSommesNousPage() {
             {modes.map((mode, index) => (
               <div
                 key={mode.title}
-                className="relative bg-[#1a1a1a] rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-800 hover:border-orange-500/50 transition-colors"
+                className="relative bg-[#1a1a1a] rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-800 hover:border-[#E74601]/50 transition-colors"
               >
-                <span className="absolute -top-4 left-6 px-3 py-1 bg-gradient-to-r from-orange-500 to-pink-500 text-white text-sm font-medium rounded-full">
+                <span className="absolute -top-4 left-6 px-3 py-1 bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white text-sm font-medium rounded-full">
                   {index + 1}
                 </span>
                 <h3 className="text-xl font-semibold text-white mb-3 mt-2">{mode.title}</h3>
@@ -208,7 +209,7 @@ export default function QuiSommesNousPage() {
       <Team />
 
       {/* Location */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#252525]">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#2C2E34]">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
             <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-4 sm:mb-6">
@@ -220,7 +221,7 @@ export default function QuiSommesNousPage() {
           </div>
 
           <div className="bg-[#1a1a1a] rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center">
-            <span className="inline-block px-4 py-2 bg-orange-500/20 text-orange-400 text-sm font-medium rounded-full mb-6">
+            <span className="inline-block px-4 py-2 bg-[#E74601]/20 text-[#E74601] text-sm font-medium rounded-full mb-6">
               Siège social
             </span>
             <h3 className="text-2xl font-bold text-white mb-4">Lille</h3>
@@ -233,7 +234,7 @@ export default function QuiSommesNousPage() {
               href="https://maps.google.com/?q=165+avenue+de+Bretagne+59800+Lille"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors"
+              className="inline-flex items-center gap-2 text-[#E74601] hover:text-[#FF9011] transition-colors"
             >
               Voir sur Google Maps
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -246,6 +247,9 @@ export default function QuiSommesNousPage() {
 
       {/* CTA */}
       <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }

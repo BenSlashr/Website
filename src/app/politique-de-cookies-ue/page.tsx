@@ -84,7 +84,7 @@ export default function PolitiqueCookiesPage() {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Introduction */}
-          <div className="bg-[#252525] rounded-3xl p-8 md:p-12">
+          <div className="bg-[#2C2E34] rounded-3xl p-8 md:p-12">
             <h2 className="text-2xl font-bold text-white mb-6">
               Qu&apos;est-ce qu&apos;un cookie ?
             </h2>
@@ -102,11 +102,11 @@ export default function PolitiqueCookiesPage() {
               Types de cookies utilisés
             </h2>
             {cookieTypes.map((type) => (
-              <div key={type.title} className="bg-[#252525] rounded-3xl p-8">
+              <div key={type.title} className="bg-[#2C2E34] rounded-3xl p-8">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">{type.title}</h3>
                   {type.required ? (
-                    <span className="px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-medium rounded-full">
+                    <span className="px-3 py-1 bg-[#E74601]/20 text-[#E74601] text-xs font-medium rounded-full">
                       Requis
                     </span>
                   ) : (
@@ -135,7 +135,7 @@ export default function PolitiqueCookiesPage() {
                       {type.cookies.map((cookie) => (
                         <tr key={cookie.name} className="border-b border-gray-800">
                           <td className="py-4 pr-4">
-                            <code className="text-orange-400 text-sm bg-orange-500/10 px-2 py-1 rounded">
+                            <code className="text-[#E74601] text-sm bg-[#E74601]/10 px-2 py-1 rounded">
                               {cookie.name}
                             </code>
                           </td>
@@ -155,7 +155,7 @@ export default function PolitiqueCookiesPage() {
           </div>
 
           {/* Gestion des cookies */}
-          <div className="bg-[#252525] rounded-3xl p-8 md:p-12">
+          <div className="bg-[#2C2E34] rounded-3xl p-8 md:p-12">
             <h2 className="text-2xl font-bold text-white mb-6">
               Comment gérer vos cookies ?
             </h2>
@@ -170,7 +170,7 @@ export default function PolitiqueCookiesPage() {
           </div>
 
           {/* Droits des utilisateurs */}
-          <div className="bg-[#252525] rounded-3xl p-8 md:p-12">
+          <div className="bg-[#2C2E34] rounded-3xl p-8 md:p-12">
             <h2 className="text-2xl font-bold text-white mb-6">
               Vos droits
             </h2>
@@ -188,7 +188,7 @@ export default function PolitiqueCookiesPage() {
           </div>
 
           {/* Contact */}
-          <div className="bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-3xl p-8 md:p-12 border border-orange-500/20">
+          <div className="bg-gradient-to-r from-[#E74601]/10 to-[#CE08A9]/10 rounded-3xl p-8 md:p-12 border border-[#E74601]/20">
             <h2 className="text-2xl font-bold text-white mb-4">
               Une question ?
             </h2>
@@ -201,13 +201,13 @@ export default function PolitiqueCookiesPage() {
               </p>
               <p className="text-gray-400">
                 Email :{' '}
-                <a href="mailto:hello@slashr.fr" className="text-orange-400 hover:underline">
+                <a href="mailto:hello@slashr.fr" className="text-[#E74601] hover:underline">
                   hello@slashr.fr
                 </a>
               </p>
               <p className="text-gray-400">
                 Téléphone :{' '}
-                <a href="tel:+33658879065" className="text-orange-400 hover:underline">
+                <a href="tel:+33658879065" className="text-[#E74601] hover:underline">
                   +33 6 58 87 90 65
                 </a>
               </p>
@@ -215,7 +215,7 @@ export default function PolitiqueCookiesPage() {
           </div>
 
           {/* Réclamation */}
-          <div className="bg-[#252525] rounded-3xl p-8 md:p-12">
+          <div className="bg-[#2C2E34] rounded-3xl p-8 md:p-12">
             <h2 className="text-2xl font-bold text-white mb-6">
               Réclamation
             </h2>
@@ -228,7 +228,7 @@ export default function PolitiqueCookiesPage() {
           <div className="text-center">
             <p className="text-gray-500 text-sm">
               Voir aussi :{' '}
-              <Link href="/mentions-legales" className="text-orange-400 hover:underline">
+              <Link href="/mentions-legales" className="text-[#E74601] hover:underline">
                 Mentions légales
               </Link>
             </p>

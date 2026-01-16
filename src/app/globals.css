@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -12,48 +10,141 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   background-color: #1a1a1a;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  font-family: 'Inter', sans-serif;
+h1 {
+  font-family: 'Funnel Display', var(--font-inter), sans-serif;
+  font-weight: 700;
+  text-rendering: geometricPrecision;
 }
 
-/* Gradient mesh background */
+h2, h3 {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 700;
+  text-rendering: geometricPrecision;
+}
+
+/* Hero section gradient background container */
 .hero-gradient {
-  background:
-    /* Noir en haut */
-    linear-gradient(to bottom, #1a1a1a 0%, transparent 35%),
-    /* Orange à gauche */
-    radial-gradient(ellipse 80% 80% at 0% 80%, rgba(220, 100, 30, 0.95) 0%, rgba(220, 100, 30, 0.5) 35%, transparent 65%),
-    /* Violet au centre */
-    radial-gradient(ellipse 90% 90% at 50% 100%, rgba(160, 50, 200, 0.95) 0%, rgba(140, 40, 180, 0.6) 40%, transparent 70%),
-    /* Rose/Magenta à droite */
-    radial-gradient(ellipse 100% 100% at 100% 60%, rgba(236, 72, 153, 1) 0%, rgba(220, 60, 140, 0.6) 40%, transparent 70%),
-    /* Transition orange-violet */
-    radial-gradient(ellipse 70% 60% at 25% 95%, rgba(180, 60, 120, 0.8) 0%, transparent 60%),
-    #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
 }
 
-/* Tools section gradient - eclipse effect */
+/* Gradient layers - recreating Figma design with blur */
+.hero-gradient::before,
+.hero-gradient::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Orange (bottom left corner) */
+.hero-gradient::before {
+  width: 50%;
+  height: 50%;
+  left: -15%;
+  bottom: -10%;
+  background: linear-gradient(239.24deg, #E74601 43.16%, #FF9011 70.85%);
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+/* Magenta/Pink (center-bottom) */
+.hero-gradient::after {
+  width: 70%;
+  height: 45%;
+  left: 20%;
+  bottom: 0%;
+  background: linear-gradient(239.24deg, #CE08A9 43.16%, #CE16B5 70.85%);
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+/* Violet (right side) */
+.hero-gradient-violet {
+  position: absolute;
+  width: 50%;
+  height: 55%;
+  right: -10%;
+  bottom: -5%;
+  background: linear-gradient(180deg, #8962FD 0%, #AD21FE 100%);
+  filter: blur(175px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Service Hero gradient background - gradient from bottom-right corner, fades quickly to black */
+.service-hero-gradient {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.service-hero-gradient::before,
+.service-hero-gradient::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Orange (bottom right corner, compact) */
+.service-hero-gradient::before {
+  width: 30%;
+  height: 45%;
+  right: -5%;
+  bottom: -15%;
+  background: linear-gradient(239.24deg, #E74601 43.16%, #FF9011 70.85%);
+  filter: blur(80px);
+  border-radius: 50%;
+}
+
+/* Magenta/Pink (slightly extends from corner) */
+.service-hero-gradient::after {
+  width: 35%;
+  height: 50%;
+  right: 2%;
+  bottom: -10%;
+  background: linear-gradient(239.24deg, #CE08A9 43.16%, #CE16B5 70.85%);
+  filter: blur(90px);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+/* Violet (contained, fades well before center) */
+.service-hero-gradient-violet {
+  position: absolute;
+  width: 38%;
+  height: 55%;
+  right: 8%;
+  bottom: -5%;
+  background: linear-gradient(180deg, #8962FD 0%, #AD21FE 100%);
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.45;
+}
+
+/* Tools section gradient */
 .tools-gradient {
-  background:
-    /* Orange glow from left of circle */
-    radial-gradient(ellipse 45% 60% at 30% 50%, rgba(255, 120, 40, 1) 0%, rgba(240, 100, 30, 0.7) 25%, rgba(220, 80, 20, 0.3) 45%, transparent 65%),
-    /* Violet/purple glow from right of circle */
-    radial-gradient(ellipse 45% 60% at 70% 50%, rgba(180, 70, 230, 1) 0%, rgba(160, 50, 200, 0.7) 25%, rgba(140, 40, 180, 0.3) 45%, transparent 65%),
-    /* Top glow - where colors meet */
-    radial-gradient(ellipse 40% 30% at 50% 20%, rgba(200, 80, 150, 0.8) 0%, rgba(180, 60, 130, 0.4) 40%, transparent 70%),
-    /* Bottom glow - where colors meet */
-    radial-gradient(ellipse 40% 30% at 50% 80%, rgba(200, 80, 150, 0.8) 0%, rgba(180, 60, 130, 0.4) 40%, transparent 70%),
-    #1a1a1a;
+  background: #1a1a1a;
 }
 
 /* Orbit animation */
@@ -104,13 +195,13 @@ h1, h2, h3 {
   inset: 0;
   background: linear-gradient(
     125deg,
-    rgba(255, 120, 40, 0) 0%,
-    rgba(255, 200, 100, 0.1) 15%,
-    rgba(180, 70, 230, 0.15) 30%,
-    rgba(236, 72, 153, 0.1) 45%,
-    rgba(100, 200, 255, 0.15) 60%,
-    rgba(255, 200, 100, 0.1) 75%,
-    rgba(255, 120, 40, 0) 100%
+    rgba(231, 70, 1, 0) 0%,
+    rgba(255, 144, 17, 0.15) 15%,
+    rgba(206, 8, 169, 0.15) 35%,
+    rgba(206, 22, 181, 0.1) 50%,
+    rgba(137, 98, 253, 0.15) 65%,
+    rgba(173, 33, 254, 0.1) 80%,
+    rgba(137, 98, 253, 0) 100%
   );
   background-size: 200% 200%;
   opacity: 0;
@@ -153,9 +244,9 @@ h1, h2, h3 {
     from var(--border-angle),
     transparent 0deg,
     transparent 240deg,
-    #f97316 250deg,
-    #ec4899 290deg,
-    #a855f7 330deg,
+    #E74601 250deg,
+    #CE08A9 290deg,
+    #8962FD 330deg,
     transparent 340deg,
     transparent 360deg
   );
@@ -180,7 +271,7 @@ h1, h2, h3 {
 
 /* Glossary highlight styling - vrai surlignage */
 .glossary-highlight {
-  background: linear-gradient(120deg, rgba(249, 115, 22, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+  background: linear-gradient(120deg, rgba(231, 70, 1, 0.15) 0%, rgba(206, 8, 169, 0.15) 100%);
   color: inherit;
   padding: 0.1em 0.25em;
   margin: 0 -0.1em;
@@ -190,5 +281,35 @@ h1, h2, h3 {
 }
 
 .glossary-highlight:hover {
-  background: linear-gradient(120deg, rgba(249, 115, 22, 0.25) 0%, rgba(236, 72, 153, 0.25) 100%);
+  background: linear-gradient(120deg, rgba(231, 70, 1, 0.25) 0%, rgba(206, 8, 169, 0.25) 100%);
+}
+
+/* Standard description text - Geist 15px regular */
+.text-description {
+  font-family: var(--font-geist-sans), var(--font-inter), sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 145%;
+  letter-spacing: 0;
+}
+
+/* Premium text rendering for all text elements */
+p, span, a, button, input, textarea, label {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* High quality image rendering - removed crisp-edges for better logo quality */
+
+/* Smooth gradient rendering */
+.hero-gradient::before,
+.hero-gradient::after,
+.hero-gradient-violet,
+.service-hero-gradient::before,
+.service-hero-gradient::after,
+.service-hero-gradient-violet,
+.tools-gradient::before {
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }

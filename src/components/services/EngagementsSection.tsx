@@ -11,7 +11,7 @@ interface EngagementsSectionProps {
 
 const EngagementsSection = ({
   title = "Nos 3 engagements",
-  subtitle = "Pourquoi choisir Slashr ?",
+  subtitle = "Pourquoi choisir Slashr\u00A0?",
   engagements
 }: EngagementsSectionProps) => {
   return (
@@ -19,11 +19,28 @@ const EngagementsSection = ({
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2
+            className="font-bold text-white mb-4"
+            style={{
+              fontSize: 'clamp(28px, 5vw, 45px)',
+              lineHeight: '110%',
+              letterSpacing: '-0.04em',
+            }}
+          >
             {title}
           </h2>
           {subtitle && (
-            <p className="text-gray-400 text-lg">{subtitle}</p>
+            <p
+              className="text-white/70"
+              style={{
+                fontFamily: "'Geist', sans-serif",
+                fontWeight: 400,
+                fontSize: '15px',
+                lineHeight: '145%',
+              }}
+            >
+              {subtitle}
+            </p>
           )}
         </div>
 
@@ -35,7 +52,7 @@ const EngagementsSection = ({
               className="text-center group"
             >
               {/* Number */}
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-2xl flex items-center justify-center text-white font-bold text-2xl group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-2xl flex items-center justify-center text-white font-bold text-2xl group-hover:scale-110 transition-transform">
                 {index + 1}
               </div>
 

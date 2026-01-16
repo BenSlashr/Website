@@ -151,26 +151,31 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 md:px-6 py-3 sm:py-4">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between bg-white rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 shadow-lg">
+      <nav className="w-full flex items-center justify-between bg-white rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-8 py-2.5 sm:py-3 shadow-lg">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="https://agence-slashr.fr/wp-content/uploads/2024/03/LOGO-SLASHR-NOIR.png"
             alt="SLASHR"
-            width={100}
-            height={32}
+            width={300}
+            height={96}
             className="h-7 sm:h-8 w-auto"
+            style={{ imageRendering: 'auto' }}
+            priority
             unoptimized
           />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={() => { setIsExpertisesOpen(true); setIsAboutOpen(false); }}
+            onMouseLeave={() => setIsExpertisesOpen(false)}
+          >
             <button
               onClick={() => setIsExpertisesOpen(!isExpertisesOpen)}
-              onMouseEnter={() => { setIsExpertisesOpen(true); setIsAboutOpen(false); }}
-              className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors text-sm"
+              className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors text-sm py-2"
             >
               Nos expertises
               <svg
@@ -182,15 +187,149 @@ const Header = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
+
+            {/* Mega Menu - Expertises */}
+            {isExpertisesOpen && (
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[900px]">
+                <div className="bg-white rounded-2xl shadow-xl p-8">
+                  <div className="grid grid-cols-4 gap-8">
+                    {/* SEO */}
+                    <div>
+                      <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
+                        SEO
+                      </h3>
+                      <div className="space-y-4">
+                        {expertises.seo.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-start gap-3 group"
+                            onClick={() => setIsExpertisesOpen(false)}
+                          >
+                            <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
+                              {getIcon(item.icon)}
+                            </div>
+                            <div>
+                              <p className="text-gray-900 font-medium text-sm group-hover:text-black">
+                                {item.name}
+                              </p>
+                              {item.description && (
+                                <p className="text-gray-500 text-xs">
+                                  {item.description}
+                                </p>
+                              )}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* GEO */}
+                    <div>
+                      <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
+                        GEO
+                      </h3>
+                      <div className="space-y-4">
+                        {expertises.geo.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-start gap-3 group"
+                            onClick={() => setIsExpertisesOpen(false)}
+                          >
+                            <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
+                              {getIcon(item.icon)}
+                            </div>
+                            <div>
+                              <p className="text-gray-900 font-medium text-sm group-hover:text-black">
+                                {item.name}
+                              </p>
+                              {item.description && (
+                                <p className="text-gray-500 text-xs">
+                                  {item.description}
+                                </p>
+                              )}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Ads */}
+                    <div>
+                      <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
+                        Publicité
+                      </h3>
+                      <div className="space-y-4">
+                        {expertises.ads.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-start gap-3 group"
+                            onClick={() => setIsExpertisesOpen(false)}
+                          >
+                            <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
+                              {getIcon(item.icon)}
+                            </div>
+                            <div>
+                              <p className="text-gray-900 font-medium text-sm group-hover:text-black">
+                                {item.name}
+                              </p>
+                              {item.description && (
+                                <p className="text-gray-500 text-xs">
+                                  {item.description}
+                                </p>
+                              )}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Conseil */}
+                    <div>
+                      <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
+                        Conseil
+                      </h3>
+                      <div className="space-y-4">
+                        {expertises.conseil.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-start gap-3 group"
+                            onClick={() => setIsExpertisesOpen(false)}
+                          >
+                            <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
+                              {getIcon(item.icon)}
+                            </div>
+                            <div>
+                              <p className="text-gray-900 font-medium text-sm group-hover:text-black">
+                                {item.name}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          <Link href="/cas-clients" className="text-gray-600 hover:text-black transition-colors text-sm">
+          <Link
+            href="/cas-clients"
+            className="text-gray-600 text-sm transition-all duration-300 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] hover:bg-clip-text hover:text-transparent"
+          >
             Cas clients
           </Link>
-          <div className="relative">
+          <div
+            className="relative"
+            onMouseEnter={() => { setIsAboutOpen(true); setIsExpertisesOpen(false); }}
+            onMouseLeave={() => setIsAboutOpen(false)}
+          >
             <button
               onClick={() => setIsAboutOpen(!isAboutOpen)}
-              onMouseEnter={() => { setIsAboutOpen(true); setIsExpertisesOpen(false); }}
-              className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors text-sm"
+              className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors text-sm py-2"
             >
               À propos
               <svg
@@ -202,6 +341,36 @@ const Header = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
+
+            {/* Mega Menu - À propos */}
+            {isAboutOpen && (
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[500px]">
+                <div className="bg-white rounded-2xl shadow-xl p-8">
+                  <div className="grid grid-cols-2 gap-6">
+                    {aboutPages.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="flex items-start gap-3 group"
+                        onClick={() => setIsAboutOpen(false)}
+                      >
+                        <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
+                          {getIcon(item.icon)}
+                        </div>
+                        <div>
+                          <p className="text-gray-900 font-medium text-sm group-hover:text-black">
+                            {item.name}
+                          </p>
+                          <p className="text-gray-500 text-xs">
+                            {item.description}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -247,170 +416,6 @@ const Header = () => {
           </button>
         </div>
       </nav>
-
-      {/* Mega Menu - Expertises */}
-      {isExpertisesOpen && (
-        <div
-          className="hidden md:block absolute left-1/2 -translate-x-1/2 mt-2 w-full max-w-5xl"
-          onMouseLeave={() => setIsExpertisesOpen(false)}
-        >
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <div className="grid grid-cols-4 gap-8">
-              {/* SEO */}
-              <div>
-                <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
-                  SEO
-                </h3>
-                <div className="space-y-4">
-                  {expertises.seo.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-start gap-3 group"
-                      onClick={() => setIsExpertisesOpen(false)}
-                    >
-                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
-                        {getIcon(item.icon)}
-                      </div>
-                      <div>
-                        <p className="text-gray-900 font-medium text-sm group-hover:text-black">
-                          {item.name}
-                        </p>
-                        {item.description && (
-                          <p className="text-gray-500 text-xs">
-                            {item.description}
-                          </p>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* GEO */}
-              <div>
-                <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
-                  GEO
-                </h3>
-                <div className="space-y-4">
-                  {expertises.geo.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-start gap-3 group"
-                      onClick={() => setIsExpertisesOpen(false)}
-                    >
-                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
-                        {getIcon(item.icon)}
-                      </div>
-                      <div>
-                        <p className="text-gray-900 font-medium text-sm group-hover:text-black">
-                          {item.name}
-                        </p>
-                        {item.description && (
-                          <p className="text-gray-500 text-xs">
-                            {item.description}
-                          </p>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Ads */}
-              <div>
-                <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
-                  Publicité
-                </h3>
-                <div className="space-y-4">
-                  {expertises.ads.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-start gap-3 group"
-                      onClick={() => setIsExpertisesOpen(false)}
-                    >
-                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
-                        {getIcon(item.icon)}
-                      </div>
-                      <div>
-                        <p className="text-gray-900 font-medium text-sm group-hover:text-black">
-                          {item.name}
-                        </p>
-                        {item.description && (
-                          <p className="text-gray-500 text-xs">
-                            {item.description}
-                          </p>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Conseil */}
-              <div>
-                <h3 className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-4">
-                  Conseil
-                </h3>
-                <div className="space-y-4">
-                  {expertises.conseil.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-start gap-3 group"
-                      onClick={() => setIsExpertisesOpen(false)}
-                    >
-                      <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
-                        {getIcon(item.icon)}
-                      </div>
-                      <div>
-                        <p className="text-gray-900 font-medium text-sm group-hover:text-black">
-                          {item.name}
-                        </p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Mega Menu - À propos */}
-      {isAboutOpen && (
-        <div
-          className="hidden md:block absolute left-1/2 -translate-x-1/2 mt-2 w-full max-w-2xl"
-          onMouseLeave={() => setIsAboutOpen(false)}
-        >
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <div className="grid grid-cols-2 gap-6">
-              {aboutPages.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-start gap-3 group"
-                  onClick={() => setIsAboutOpen(false)}
-                >
-                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 group-hover:bg-gray-200 transition-colors">
-                    {getIcon(item.icon)}
-                  </div>
-                  <div>
-                    <p className="text-gray-900 font-medium text-sm group-hover:text-black">
-                      {item.name}
-                    </p>
-                    <p className="text-gray-500 text-xs">
-                      {item.description}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (

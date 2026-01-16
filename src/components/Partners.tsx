@@ -5,7 +5,7 @@ import { useState } from 'react';
 interface Partner {
   name: string;
   type: string;
-  metier: string;
+  metiers: string[];
   specialisation?: string;
 }
 
@@ -13,32 +13,37 @@ const Partners = () => {
   const [activeFilter, setActiveFilter] = useState<string>('Tous');
 
   const partners: Partner[] = [
-    { name: 'Usabilis', type: 'Agence UI/UX', metier: 'UI/UX', specialisation: 'UX Design' },
-    { name: 'Konfiture', type: 'Agence web', metier: 'Création de site' },
-    { name: 'Les fabricants', type: 'Agence web', metier: 'Création de site' },
-    { name: 'Cocoa', type: 'Agence web', metier: 'Création de site', specialisation: 'WordPress' },
-    { name: 'OVM Communication', type: 'Agence web', metier: 'Création de site' },
-    { name: 'OnCrawl', type: 'SaaS', metier: 'SEO Tech', specialisation: 'Crawler, logs' },
-    { name: 'Lafoule', type: 'Agence Branding', metier: 'Branding' },
-    { name: 'Fractory', type: 'Agence web', metier: 'Création de site', specialisation: 'E-commerce' },
-    { name: 'Digiwiks', type: 'Indépendant', metier: 'SEA / SMA' },
-    { name: 'Maeven', type: 'Agence media', metier: 'SEA / SMA' },
-    { name: 'Super8', type: 'Agence Branding', metier: 'Branding', specialisation: 'Brand, Design' },
-    { name: 'Studio CAD', type: 'Agence web', metier: 'Création de site', specialisation: 'WordPress' },
-    { name: 'Neoweb', type: 'Agence web', metier: 'Création de site', specialisation: 'WordPress' },
+    { name: 'Usabilis', type: 'Agence UI/UX', metiers: ['UI/UX'], specialisation: 'UX Design' },
+    { name: 'Konfiture', type: 'Agence web', metiers: ['Création de site'] },
+    { name: 'Les fabricants', type: 'Agence web', metiers: ['Création de site'] },
+    { name: 'Cocoa', type: 'Agence web', metiers: ['Création de site', 'Branding'], specialisation: 'WordPress' },
+    { name: 'OVM Communication', type: 'Agence web', metiers: ['Création de site'] },
+    { name: 'OnCrawl', type: 'SaaS', metiers: ['SEO Tech'], specialisation: 'Crawler, logs' },
+    { name: 'Lafoule', type: 'Agence Branding', metiers: ['Branding'] },
+    { name: 'Fractory', type: 'Agence web', metiers: ['Création de site'], specialisation: 'E-commerce' },
+    { name: 'Digiwiks', type: 'Indépendant', metiers: ['SEA / SMA', 'Data'] },
+    { name: 'Maeven', type: 'Agence media', metiers: ['SEA / SMA'] },
+    { name: 'Super8', type: 'Agence Branding', metiers: ['Branding', 'UI/UX'], specialisation: 'Brand, Design' },
+    { name: 'Studio CAD', type: 'Agence web', metiers: ['Création de site', 'UI/UX'], specialisation: 'WordPress' },
+    { name: 'Neoweb', type: 'Agence web', metiers: ['Création de site'], specialisation: 'WordPress' },
+    { name: 'Panorama Prod', type: 'Agence', metiers: ['Contenu'] },
+    { name: 'Pipo & Lola', type: 'Agence', metiers: ['Contenu'] },
+    { name: 'Ocho Creative Studio', type: 'Agence', metiers: ['Contenu'] },
+    { name: 'OP1C', type: 'Agence', metiers: ['SEA / SMA', 'Influence'] },
+    { name: 'BASH/', type: 'Agence', metiers: ['Création de site', 'Contenu'] },
   ];
 
-  const filters = ['Tous', 'Création de site', 'UI/UX', 'Branding', 'SEA / SMA', 'SEO Tech'];
+  const filters = ['Tous', 'Création de site', 'Contenu', 'UI/UX', 'Branding', 'SEA / SMA', 'Influence', 'Data', 'SEO Tech'];
 
   const filteredPartners = activeFilter === 'Tous'
     ? partners
-    : partners.filter(p => p.metier === activeFilter);
+    : partners.filter(p => p.metiers.includes(activeFilter));
 
   return (
-    <section className="bg-[#1a1a1a] py-20 sm:py-28 md:py-36 px-4 sm:px-6">
+    <section className="bg-[#1a1a1a] py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-3 sm:mb-4 italic leading-tight">
+        <h2 className="font-bold text-white text-center mb-3 sm:mb-4 leading-tight" style={{ fontSize: 'clamp(28px, 5vw, 45px)' }}>
           Une équipe All-star. Orchestrée
           <br className="hidden sm:block" />
           <span className="sm:hidden"> </span>
@@ -47,10 +52,10 @@ const Partners = () => {
 
         {/* Subtitle */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <p className="text-gray-400 text-xs sm:text-sm">
+          <p className="text-description text-white/70">
             UX, contenu, tracking, campagnes, branding...
           </p>
-          <p className="text-gray-400 text-xs sm:text-sm">
+          <p className="text-description text-white/70">
             On réunit les meilleurs. Et on les fait jouer ensemble.
           </p>
         </div>
@@ -59,16 +64,32 @@ const Partners = () => {
         <div className="mb-10 sm:mb-12 md:mb-16">
           {/* Desktop: inline filters */}
           <div className="hidden sm:flex justify-center">
-            <div className="inline-flex bg-[#2a2a2a] rounded-full p-1 flex-nowrap">
+            <div
+              className="inline-flex bg-[#2C2E34] flex-nowrap"
+              style={{
+                padding: '7.5px 15px',
+                borderRadius: '37.5px',
+              }}
+            >
               {filters.map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`px-4 md:px-5 py-2 rounded-full text-xs font-medium transition-all duration-300 uppercase tracking-wider whitespace-nowrap ${
+                  className={`transition-all duration-300 whitespace-nowrap ${
                     activeFilter === filter
-                      ? 'bg-white text-black'
-                      : 'text-gray-400 hover:text-white'
+                      ? 'bg-white text-[#2C2E34]'
+                      : 'text-white hover:text-white/80'
                   }`}
+                  style={{
+                    padding: '7.5px 22.5px',
+                    borderRadius: '22.5px',
+                    fontFamily: "'Geist', sans-serif",
+                    fontWeight: 700,
+                    fontSize: '11.25px',
+                    lineHeight: '145%',
+                    letterSpacing: '-0.01em',
+                    textTransform: 'uppercase',
+                  }}
                 >
                   {filter}
                 </button>
@@ -81,11 +102,21 @@ const Partners = () => {
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-3 py-1.5 rounded-full text-[10px] font-medium transition-all duration-300 uppercase tracking-wider ${
+                className={`transition-all duration-300 ${
                   activeFilter === filter
-                    ? 'bg-white text-black'
-                    : 'bg-[#2a2a2a] text-gray-400'
+                    ? 'bg-white text-[#2C2E34]'
+                    : 'bg-[#2C2E34] text-white'
                 }`}
+                style={{
+                  padding: '7.5px 15px',
+                  borderRadius: '22.5px',
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 700,
+                  fontSize: '10px',
+                  lineHeight: '145%',
+                  letterSpacing: '-0.01em',
+                  textTransform: 'uppercase',
+                }}
               >
                 {filter}
               </button>
@@ -93,30 +124,18 @@ const Partners = () => {
           </div>
         </div>
 
-        {/* Partners Grid - Glassmorphism pills */}
+        {/* Partners Grid - Transparent pills with white border */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
           {filteredPartners.map((partner) => (
             <div
               key={partner.name}
-              className="group relative px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full cursor-default transition-all duration-300 hover:scale-105"
-              style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
-                backdropFilter: 'blur(10px)',
-                WebkitBackdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255,255,255,0.18)',
-                boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255,255,255,0.1)',
-              }}
+              className="group relative rounded-full cursor-default transition-all duration-300 p-[1px] bg-white/30 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD]"
             >
-              {/* Inner glow on hover */}
-              <div
-                className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(249,115,22,0.15) 0%, rgba(168,85,247,0.15) 100%)',
-                }}
-              />
-              <span className="relative text-white/90 text-xs sm:text-sm font-medium group-hover:text-white transition-colors">
-                {partner.name}
-              </span>
+              <div className="px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full bg-[#1a1a1a]">
+                <span className="relative text-white/90 text-xs sm:text-sm font-medium group-hover:text-white transition-colors">
+                  {partner.name}
+                </span>
+              </div>
             </div>
           ))}
         </div>

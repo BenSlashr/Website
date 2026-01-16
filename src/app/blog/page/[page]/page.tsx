@@ -136,7 +136,7 @@ export default async function BlogPaginatedPage({ params }: { params: { page: st
           <div className="max-w-6xl mx-auto">
             <Link
               href={`/blog/${featuredArticle.slug}`}
-              className="group block bg-[#252525] rounded-3xl overflow-hidden"
+              className="group block bg-[#2C2E34] rounded-3xl overflow-hidden"
             >
               <div className="flex flex-col md:flex-row">
                 <div
@@ -151,14 +151,14 @@ export default async function BlogPaginatedPage({ params }: { params: { page: st
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors leading-tight">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 group-hover:text-[#E74601] transition-colors leading-tight">
                     {featuredArticle.title}
                   </h2>
                   <p className="text-gray-400 mb-8 text-base leading-relaxed">
                     {featuredArticle.excerpt}
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-medium text-sm">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-medium text-sm">
                       {featuredArticle.author.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
@@ -181,7 +181,7 @@ export default async function BlogPaginatedPage({ params }: { params: { page: st
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
-                className="group block bg-[#252525] rounded-3xl overflow-hidden hover:bg-[#2a2a2a] transition-colors"
+                className="group block bg-[#2C2E34] rounded-3xl overflow-hidden hover:bg-[#2C2E34] transition-colors"
               >
                 <div
                   className="w-full h-48 flex items-center justify-center"
@@ -195,14 +195,14 @@ export default async function BlogPaginatedPage({ params }: { params: { page: st
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors line-clamp-2 leading-snug">
+                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-[#E74601] transition-colors line-clamp-2 leading-snug">
                     {article.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-6 line-clamp-2">
                     {article.excerpt}
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-white font-medium text-xs">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-medium text-xs">
                       {article.author.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
@@ -226,7 +226,7 @@ export default async function BlogPaginatedPage({ params }: { params: { page: st
               {currentPage > 1 ? (
                 <Link
                   href={currentPage === 2 ? '/blog' : `/blog/page/${currentPage - 1}`}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-400 hover:text-white hover:bg-[#252525] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-400 hover:text-white hover:bg-[#2C2E34] transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -251,7 +251,7 @@ export default async function BlogPaginatedPage({ params }: { params: { page: st
                     className={`w-10 h-10 rounded-full text-sm font-medium flex items-center justify-center transition-colors ${
                       currentPage === page
                         ? 'bg-white text-black'
-                        : 'text-gray-400 hover:bg-[#252525] hover:text-white'
+                        : 'text-gray-400 hover:bg-[#2C2E34] hover:text-white'
                     }`}
                   >
                     {page}
@@ -263,7 +263,7 @@ export default async function BlogPaginatedPage({ params }: { params: { page: st
               {currentPage < totalPages ? (
                 <Link
                   href={`/blog/page/${currentPage + 1}`}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-400 hover:text-white hover:bg-[#252525] transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-400 hover:text-white hover:bg-[#2C2E34] transition-colors"
                 >
                   Page suivante
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

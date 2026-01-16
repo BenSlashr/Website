@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getCaseStudyCards, CaseStudyCard } from '@/lib/caseStudiesWP';
+import CTA from '@/components/CTA';
+import Newsletter from '@/components/Newsletter';
 
 // Types pour les filtres
 interface FilterOption {
@@ -98,7 +100,7 @@ const CasClientsPage = () => {
       <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           {/* Tag */}
-          <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 uppercase tracking-wider">
+          <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 uppercase tracking-wider">
             Cas Clients
           </span>
 
@@ -130,7 +132,7 @@ const CasClientsPage = () => {
 
                 {/* Dropdown Menu */}
                 {openDropdown === category.name && (
-                  <div className="absolute top-full left-0 mt-2 bg-[#252525] border border-gray-700 rounded-xl py-2 min-w-[180px] z-50">
+                  <div className="absolute top-full left-0 mt-2 bg-[#2C2E34] border border-gray-700 rounded-xl py-2 min-w-[180px] z-50">
                     {category.options.map((option) => (
                       <button
                         key={option.value}
@@ -139,7 +141,7 @@ const CasClientsPage = () => {
                           setOpenDropdown(null);
                         }}
                         className={`w-full text-left px-4 py-2 text-sm hover:bg-white/10 transition-colors ${
-                          activeFilters.includes(option.value) ? 'text-orange-500' : 'text-white'
+                          activeFilters.includes(option.value) ? 'text-[#E74601]' : 'text-white'
                         }`}
                       >
                         {option.label}
@@ -157,7 +159,7 @@ const CasClientsPage = () => {
               <button
                 key={filter}
                 onClick={() => removeFilter(filter)}
-                className="flex items-center gap-2 bg-[#2a2a2a] text-white px-4 py-2 rounded-full text-sm hover:bg-[#333] transition-colors"
+                className="flex items-center gap-2 bg-[#2C2E34] text-white px-4 py-2 rounded-full text-sm hover:bg-[#333] transition-colors"
               >
                 {filter}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -184,12 +186,12 @@ const CasClientsPage = () => {
           {isLoading ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="bg-[#252525] rounded-2xl overflow-hidden animate-pulse">
-                  <div className="h-48 md:h-56 bg-[#2a2a2a]" />
+                <div key={i} className="bg-[#2C2E34] rounded-2xl overflow-hidden animate-pulse">
+                  <div className="h-48 md:h-56 bg-[#2C2E34]" />
                   <div className="p-6 space-y-4">
-                    <div className="h-6 bg-[#2a2a2a] rounded w-3/4" />
-                    <div className="h-4 bg-[#2a2a2a] rounded w-full" />
-                    <div className="h-4 bg-[#2a2a2a] rounded w-2/3" />
+                    <div className="h-6 bg-[#2C2E34] rounded w-3/4" />
+                    <div className="h-4 bg-[#2C2E34] rounded w-full" />
+                    <div className="h-4 bg-[#2C2E34] rounded w-2/3" />
                   </div>
                 </div>
               ))}
@@ -199,7 +201,7 @@ const CasClientsPage = () => {
               <p className="text-gray-400 text-lg">Aucun cas client ne correspond à vos critères.</p>
               <button
                 onClick={resetFilters}
-                className="mt-4 text-orange-500 hover:text-orange-400 transition-colors"
+                className="mt-4 text-[#E74601] hover:text-[#E74601] transition-colors"
               >
                 Réinitialiser les filtres
               </button>
@@ -210,7 +212,7 @@ const CasClientsPage = () => {
                 <Link
                   href={`/cas-clients/${caseItem.slug}`}
                   key={caseItem.slug}
-                  className="bg-[#252525] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.02] block"
+                  className="bg-[#2C2E34] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.02] block"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
@@ -245,7 +247,7 @@ const CasClientsPage = () => {
                         hoveredIndex === index ? 'bottom-[-830px]' : 'bottom-[-870px]'
                       }`}
                       style={{
-                        background: '#252525',
+                        background: '#2C2E34',
                       }}
                     />
                   </div>
@@ -276,6 +278,12 @@ const CasClientsPage = () => {
           )}
         </div>
       </section>
+
+      {/* CTA */}
+      <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 };

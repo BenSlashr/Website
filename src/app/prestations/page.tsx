@@ -19,7 +19,6 @@ export default function PrestationsPage() {
     <>
       {/* Hero Section with Animation */}
       <ServiceHero
-        tag="Nos Expertises"
         title="Des experts à votre service"
         description="De l'audit à l'exécution, nous vous accompagnons sur tous les leviers du Search Marketing."
       />
@@ -32,15 +31,15 @@ export default function PrestationsPage() {
               <Link
                 key={prestation.slug}
                 href={`/prestations/${prestation.slug}`}
-                className="group bg-[#252525] rounded-2xl p-6 hover:bg-[#2a2a2a] transition-all duration-300 border border-transparent hover:border-gray-700"
+                className="group bg-[#2C2E34] rounded-2xl p-6 hover:bg-[#2C2E34] transition-all duration-300 border border-transparent hover:border-gray-700"
               >
-                <h2 className="text-xl font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors">
+                <h2 className="text-xl font-semibold text-white mb-3 group-hover:text-[#E74601] transition-colors">
                   {prestation.title}
                 </h2>
                 <p className="text-gray-400 text-sm leading-relaxed mb-4">
                   {prestation.metaDescription}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm text-orange-400 group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm text-[#E74601] group-hover:gap-3 transition-all">
                   En savoir plus
                   <svg
                     className="w-4 h-4"

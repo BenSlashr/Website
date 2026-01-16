@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import LogoBanner from "@/components/LogoBanner";
 import CTA from "@/components/CTA";
+import Newsletter from "@/components/Newsletter";
 import Breadcrumb from "@/components/Breadcrumb";
 import { ServiceHero } from "@/components/services";
 import { getSEOPrestations } from "@/lib/prestationsWP";
@@ -243,7 +244,6 @@ export default function SEOPrestationsPage() {
 
       {/* Hero */}
       <ServiceHero
-        tag="Agence SEO à Lille"
         title="Vos experts SEO pour booster votre visibilité"
         description="Agence SEO à Lille : découvrez nos prestations de référencement naturel. Audit, accompagnement, formation : nous adaptons notre offre à vos besoins pour améliorer votre positionnement sur Google."
       />
@@ -271,9 +271,9 @@ export default function SEOPrestationsPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-[#252525] rounded-2xl p-8 hover:bg-[#2a2a2a] transition-colors"
+                className="bg-[#2C2E34] rounded-2xl p-8 hover:bg-[#2C2E34] transition-colors"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-pink-500 rounded-xl flex items-center justify-center text-white mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-xl flex items-center justify-center text-white mb-6">
                   {getIcon(service.icon)}
                 </div>
                 <h3 className="text-white font-semibold text-xl mb-3">
@@ -287,7 +287,7 @@ export default function SEOPrestationsPage() {
       </section>
 
       {/* Prestations List */}
-      <section className="bg-[#252525] py-24 px-6">
+      <section className="bg-[#2C2E34] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 mb-6">
@@ -311,10 +311,10 @@ export default function SEOPrestationsPage() {
               >
                 <div className="flex items-start justify-between">
                   <div>
-                    <span className="inline-block px-3 py-1 bg-gradient-to-r from-orange-500/20 to-pink-500/20 rounded-full text-sm text-orange-400 mb-4">
+                    <span className="inline-block px-3 py-1 bg-gradient-to-r from-[#E74601]/20 to-[#CE08A9]/20 rounded-full text-sm text-[#E74601] mb-4">
                       {prestation.tag}
                     </span>
-                    <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-orange-400 transition-colors">
+                    <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-[#E74601] transition-colors">
                       {prestation.title}
                     </h3>
                     <p className="text-gray-400 text-sm line-clamp-2">
@@ -346,7 +346,7 @@ export default function SEOPrestationsPage() {
       {/* Pricing Info */}
       <section className="bg-[#1a1a1a] py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-3xl p-12 border border-orange-500/20">
+          <div className="bg-gradient-to-r from-[#E74601]/10 to-[#CE08A9]/10 rounded-3xl p-12 border border-[#E74601]/20">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">
@@ -436,6 +436,9 @@ export default function SEOPrestationsPage() {
 
       {/* CTA */}
       <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }

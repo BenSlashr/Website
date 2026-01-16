@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import LogoBanner from '@/components/LogoBanner';
 import CTA from '@/components/CTA';
+import Newsletter from '@/components/Newsletter';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -282,7 +283,6 @@ export default function SocialAdsPage() {
 
       {/* Hero */}
       <ServiceHero
-        tag="Agence Social Ads à Lille"
         title="Boostez votre visibilité sur les réseaux sociaux"
         description="Meta Ads, LinkedIn Ads, TikTok Ads... Notre agence Social Ads à Lille crée et gère vos campagnes publicitaires sur les réseaux sociaux. Une stratégie social media sur mesure pour atteindre vos objectifs de leads et de notoriété."
       />
@@ -293,7 +293,7 @@ export default function SocialAdsPage() {
       {/* Section Notre agence */}
       <section className="bg-[#1a1a1a] py-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
+          <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
             Notre expertise
           </span>
 
@@ -307,39 +307,39 @@ export default function SocialAdsPage() {
                 Slashr est une <strong className="text-white">agence Social Ads à Lille</strong> spécialisée dans la création et la gestion de campagnes publicitaires sur les réseaux sociaux. Notre équipe d&apos;experts accompagne les entreprises dans leur stratégie de communication digitale pour générer des leads qualifiés et développer leur visibilité.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Notre expertise en marketing digital nous permet de définir une <strong className="text-white">stratégie Social Ads personnalisée</strong> selon vos objectifs : notoriété de marque, acquisition de leads, conversion e-commerce. Nous proposons également des campagnes <Link href="/ads/sea" className="text-orange-400 hover:text-orange-300 underline">SEA</Link> et <Link href="/ads/sea/google-ads" className="text-orange-400 hover:text-orange-300 underline">Google Ads</Link> pour une <Link href="/ads" className="text-orange-400 hover:text-orange-300 underline">stratégie publicitaire complète</Link>.
+                Notre expertise en marketing digital nous permet de définir une <strong className="text-white">stratégie Social Ads personnalisée</strong> selon vos objectifs : notoriété de marque, acquisition de leads, conversion e-commerce. Nous proposons également des campagnes <Link href="/ads/sea" className="text-[#E74601] hover:text-[#FF9011] underline">SEA</Link> et <Link href="/ads/sea/google-ads" className="text-[#E74601] hover:text-[#FF9011] underline">Google Ads</Link> pour une <Link href="/ads" className="text-[#E74601] hover:text-[#FF9011] underline">stratégie publicitaire complète</Link>.
               </p>
             </div>
 
-            <div className="bg-[#252525] rounded-2xl p-8">
+            <div className="bg-[#2C2E34] rounded-2xl p-8">
               <h3 className="text-white font-semibold text-xl mb-4">Pourquoi choisir notre agence Social Ads ?</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Experts certifiés sur toutes les plateformes</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Création de contenu publicitaire incluse</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Mesure précise des performances et résultats</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Suivi des tendances et optimisation continue</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E74601] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Accompagnement stratégique et conseil</span>
@@ -351,7 +351,7 @@ export default function SocialAdsPage() {
       </section>
 
       {/* Plateformes */}
-      <section className="bg-[#252525] py-24 px-6">
+      <section className="bg-[#2C2E34] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <span className="inline-block bg-[#1a1a1a] text-white text-xs font-medium px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
             Plateformes
@@ -367,13 +367,13 @@ export default function SocialAdsPage() {
                 key={index}
                 className="bg-[#1a1a1a] rounded-2xl p-8 text-center hover:bg-[#1f1f1f] transition-colors"
               >
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-2xl flex items-center justify-center">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-[#E74601] to-[#CE08A9] rounded-2xl flex items-center justify-center">
                   {platform.icon}
                 </div>
                 <h3 className="text-white font-semibold text-xl mb-1">
                   {platform.name}
                 </h3>
-                <p className="text-orange-400 text-sm mb-4">{platform.platforms}</p>
+                <p className="text-[#E74601] text-sm mb-4">{platform.platforms}</p>
                 <p className="text-gray-400 text-sm leading-relaxed">{platform.description}</p>
               </div>
             ))}
@@ -404,7 +404,7 @@ export default function SocialAdsPage() {
       />
 
       {/* Services complémentaires */}
-      <section className="bg-[#252525] py-24 px-6">
+      <section className="bg-[#2C2E34] py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Services complémentaires
@@ -415,7 +415,7 @@ export default function SocialAdsPage() {
               href="/ads/sea"
               className="group bg-[#1a1a1a] rounded-2xl p-8 hover:bg-[#1f1f1f] transition-colors"
             >
-              <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-orange-400 transition-colors">
+              <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-[#E74601] transition-colors">
                 SEA / Référencement payant
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -427,7 +427,7 @@ export default function SocialAdsPage() {
               href="/ads/sea/google-ads"
               className="group bg-[#1a1a1a] rounded-2xl p-8 hover:bg-[#1f1f1f] transition-colors"
             >
-              <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-orange-400 transition-colors">
+              <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-[#E74601] transition-colors">
                 Google Ads
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -439,7 +439,7 @@ export default function SocialAdsPage() {
               href="/ads"
               className="group bg-[#1a1a1a] rounded-2xl p-8 hover:bg-[#1f1f1f] transition-colors"
             >
-              <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-orange-400 transition-colors">
+              <h3 className="text-white font-semibold text-xl mb-3 group-hover:text-[#E74601] transition-colors">
                 Toutes nos solutions Ads
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -464,6 +464,9 @@ export default function SocialAdsPage() {
 
       {/* CTA */}
       <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }

@@ -45,11 +45,11 @@ export default function AuditSEOOffertPage() {
       {/* Hero Section */}
       <section className="relative py-24 px-6 overflow-hidden">
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-pink-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#E74601]/10 via-transparent to-[#CE08A9]/10" />
 
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500/20 to-pink-500/20 rounded-full text-sm text-orange-400 mb-6">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#E74601]/20 to-[#CE08A9]/20 rounded-full text-sm text-[#E74601] mb-6">
               Offre exclusive
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -62,7 +62,7 @@ export default function AuditSEOOffertPage() {
           </div>
 
           {/* Form Card */}
-          <div className="bg-[#252525] rounded-3xl p-8 md:p-12 border border-gray-800">
+          <div className="bg-[#2C2E34] rounded-3xl p-8 md:p-12 border border-gray-800">
             {isSubmitted ? (
               <div className="text-center py-12">
                 <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -84,7 +84,7 @@ export default function AuditSEOOffertPage() {
                   {/* Prénom */}
                   <div>
                     <label htmlFor="prenom" className="block text-sm font-medium text-gray-300 mb-2">
-                      Prénom <span className="text-orange-500">*</span>
+                      Prénom <span className="text-[#E74601]">*</span>
                     </label>
                     <input
                       type="text"
@@ -93,7 +93,7 @@ export default function AuditSEOOffertPage() {
                       required
                       value={formData.prenom}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       placeholder="Votre prénom"
                     />
                   </div>
@@ -101,7 +101,7 @@ export default function AuditSEOOffertPage() {
                   {/* Nom */}
                   <div>
                     <label htmlFor="nom" className="block text-sm font-medium text-gray-300 mb-2">
-                      Nom <span className="text-orange-500">*</span>
+                      Nom <span className="text-[#E74601]">*</span>
                     </label>
                     <input
                       type="text"
@@ -110,7 +110,7 @@ export default function AuditSEOOffertPage() {
                       required
                       value={formData.nom}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       placeholder="Votre nom"
                     />
                   </div>
@@ -120,7 +120,7 @@ export default function AuditSEOOffertPage() {
                   {/* Email */}
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      E-mail <span className="text-orange-500">*</span>
+                      E-mail <span className="text-[#E74601]">*</span>
                     </label>
                     <input
                       type="email"
@@ -129,7 +129,7 @@ export default function AuditSEOOffertPage() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       placeholder="votre@email.com"
                     />
                   </div>
@@ -137,7 +137,7 @@ export default function AuditSEOOffertPage() {
                   {/* Téléphone */}
                   <div>
                     <label htmlFor="telephone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Téléphone <span className="text-orange-500">*</span>
+                      Téléphone <span className="text-[#E74601]">*</span>
                     </label>
                     <input
                       type="tel"
@@ -146,7 +146,7 @@ export default function AuditSEOOffertPage() {
                       required
                       value={formData.telephone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       placeholder="06 12 34 56 78"
                     />
                   </div>
@@ -164,7 +164,7 @@ export default function AuditSEOOffertPage() {
                       name="siteWeb"
                       value={formData.siteWeb}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       placeholder="https://votresite.fr"
                     />
                   </div>
@@ -180,7 +180,7 @@ export default function AuditSEOOffertPage() {
                       name="entreprise"
                       value={formData.entreprise}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 bg-[#1a1a1a] border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#E74601] transition-colors"
                       placeholder="Nom de votre entreprise"
                     />
                   </div>
@@ -195,7 +195,7 @@ export default function AuditSEOOffertPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+                  className="w-full py-4 bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white font-semibold rounded-xl hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
                 >
                   {isSubmitting ? (
                     <>
@@ -227,8 +227,8 @@ export default function AuditSEOOffertPage() {
           {/* Benefits */}
           <div className="mt-16 grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-14 h-14 bg-gradient-to-r from-orange-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-14 h-14 bg-gradient-to-r from-[#E74601]/20 to-[#CE08A9]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-[#E74601]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -237,8 +237,8 @@ export default function AuditSEOOffertPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-14 h-14 bg-gradient-to-r from-orange-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-14 h-14 bg-gradient-to-r from-[#E74601]/20 to-[#CE08A9]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-[#E74601]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -247,8 +247,8 @@ export default function AuditSEOOffertPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-14 h-14 bg-gradient-to-r from-orange-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-14 h-14 bg-gradient-to-r from-[#E74601]/20 to-[#CE08A9]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-[#E74601]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
               </div>

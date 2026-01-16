@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAuthorBySlug, getAllAuthorSlugs } from '@/lib/authors';
 import { getArticlesByAuthorFromWP } from '@/lib/wordpress';
+import CTA from '@/components/CTA';
+import Newsletter from '@/components/Newsletter';
 
 // Revalide toutes les 60 secondes (ISR)
 export const revalidate = 60;
@@ -173,7 +175,7 @@ export default async function AuthorPage({
           </nav>
 
           {/* Author Card */}
-          <div className="bg-[#252525] rounded-3xl p-8 md:p-12">
+          <div className="bg-[#2C2E34] rounded-3xl p-8 md:p-12">
             <div className="flex flex-col md:flex-row gap-8 items-start">
               {/* Avatar */}
               <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden flex-shrink-0">
@@ -192,14 +194,14 @@ export default async function AuthorPage({
                 <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {author.name}
                 </h1>
-                <p className="text-orange-400 font-medium mb-4">{author.role}</p>
+                <p className="text-[#E74601] font-medium mb-4">{author.role}</p>
                 <p className="text-gray-400 leading-relaxed mb-6">{author.bio}</p>
 
                 {/* Achievements */}
                 <div className="space-y-2 mb-6">
                   {author.achievements.map((achievement, index) => (
                     <div key={index} className="flex items-center gap-2 text-sm text-gray-300">
-                      <svg className="w-4 h-4 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-[#E74601] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       {achievement}
@@ -256,7 +258,7 @@ export default async function AuthorPage({
                 <Link
                   key={article.slug}
                   href={`/blog/${article.slug}`}
-                  className="group block bg-[#252525] rounded-3xl overflow-hidden hover:bg-[#2a2a2a] transition-colors"
+                  className="group block bg-[#2C2E34] rounded-3xl overflow-hidden hover:bg-[#2C2E34] transition-colors"
                 >
                   <div
                     className="relative w-full h-48 flex items-center justify-center overflow-hidden"
@@ -280,7 +282,7 @@ export default async function AuthorPage({
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors line-clamp-2 leading-snug">
+                    <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-[#E74601] transition-colors line-clamp-2 leading-snug">
                       {article.title}
                     </h3>
                     <p className="text-gray-400 text-sm mb-4 line-clamp-2">
@@ -299,12 +301,18 @@ export default async function AuthorPage({
               ))}
             </div>
           ) : (
-            <div className="text-center py-16 bg-[#252525] rounded-3xl">
+            <div className="text-center py-16 bg-[#2C2E34] rounded-3xl">
               <p className="text-gray-400">Aucun article pour le moment.</p>
             </div>
           )}
         </div>
       </section>
+
+      {/* CTA */}
+      <CTA />
+
+      {/* Newsletter */}
+      <Newsletter />
     </>
   );
 }

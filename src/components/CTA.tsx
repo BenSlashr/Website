@@ -8,53 +8,56 @@ const CTA = () => {
   };
 
   return (
-    <section className="relative pt-20 sm:pt-28 md:pt-36 pb-0 px-4 sm:px-6 overflow-hidden">
-      {/* Gradient Background - full height behind everything */}
+    <section className="relative pt-12 sm:pt-16 md:pt-20 pb-0 px-4 sm:px-6 overflow-hidden">
+      {/* Gradient Background - Ellipse 38 centered, bottom half hidden */}
       <div
-        className="absolute inset-0 top-0"
+        className="absolute left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-[800px] -bottom-[550px]"
         style={{
-          background: `
-            linear-gradient(to bottom, #1a1a1a 0%, transparent 20%),
-            radial-gradient(ellipse 100% 80% at 20% 100%, rgba(255, 120, 40, 1) 0%, rgba(255, 100, 30, 0.7) 25%, transparent 50%),
-            radial-gradient(ellipse 80% 80% at 50% 100%, rgba(236, 72, 153, 1) 0%, rgba(200, 50, 150, 0.7) 25%, transparent 50%),
-            radial-gradient(ellipse 100% 80% at 80% 100%, rgba(160, 50, 200, 1) 0%, rgba(140, 40, 180, 0.7) 25%, transparent 50%),
-            #1a1a1a
-          `,
+          background: 'linear-gradient(90deg, #E74601 0%, #FF9011 25%, #CE08A9 50%, #CE16B5 70%, #8962FD 85%, #AD21FE 100%)',
+          filter: 'blur(87.5px)',
+          borderRadius: '50%',
         }}
       />
 
       {/* Content */}
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 sm:mb-10 italic">
-          Et vous,
-          <br />
-          que cherchez-vous ?
+        <h2 className="font-bold text-white mb-8 sm:mb-10 leading-tight" style={{ fontSize: 'clamp(28px, 5vw, 45px)' }}>
+          Et vous, que cherchez-vous&nbsp;?
         </h2>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-[11.25px]">
+          {/* Button Secondary - Demander une démo des outils */}
           <a
             href="/prestations/devis"
-            className="bg-[#252525] text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-[#353535] transition-colors min-h-[44px] flex items-center justify-center"
+            className="flex items-center justify-center px-[30px] py-[15px] border border-white rounded-[37.5px] text-white font-semibold text-[15px] leading-[145%] hover:bg-white/10 transition-colors"
           >
-            Demander un devis SEO
+            Demander une démo des outils
           </a>
-          <a
-            href="/contact"
-            className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors min-h-[44px] flex items-center justify-center"
-          >
-            Nous contacter
-          </a>
-          <button
-            onClick={openCalendly}
-            className="bg-transparent border border-gray-600 text-white px-5 sm:px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors flex items-center justify-center gap-2 min-h-[44px]"
-          >
-            Prendre RDV
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </button>
+
+          {/* Button Primary - Nous briefer */}
+          <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+            <a
+              href="/contact"
+              className="flex items-center justify-center px-[30px] py-[15px] bg-white rounded-full text-[#2C2E34] font-semibold text-[15px] leading-[145%] transition-colors"
+            >
+              Nous briefer
+            </a>
+          </div>
+
+          {/* Button Primary - Prendre RDV with calendar icon */}
+          <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+            <button
+              onClick={openCalendly}
+              className="flex items-center justify-center gap-[7.5px] px-[30px] py-[15px] bg-white rounded-full text-[#2C2E34] font-semibold text-[15px] leading-[145%] transition-colors"
+            >
+              Prendre RDV
+              <svg className="w-[13px] h-[13px]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 

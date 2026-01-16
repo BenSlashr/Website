@@ -135,7 +135,7 @@
 
 /* Code */
 .wp-content code {
-  background: #252525;
+  background: #2C2E34;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.875rem;
@@ -143,7 +143,7 @@
 }
 
 .wp-content pre {
-  background: #252525;
+  background: #2C2E34;
   padding: 1.5rem;
   border-radius: 0.75rem;
   overflow-x: auto;
@@ -170,7 +170,7 @@
 }
 
 .wp-content th {
-  background: #252525;
+  background: #2C2E34;
   color: white;
   font-weight: 600;
 }

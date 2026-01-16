@@ -11,38 +11,45 @@ const Team = () => {
   const teamMembers = [
     {
       name: 'Lucas',
-      role: 'GROWTH MANAGER',
+      role: 'ACCOUNT MANAGER',
       number: '01',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/lucas-150x150.png',
+      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/lucas.png',
       stats: { exp: '5+', projects: '120+', rank: 'MVP' },
     },
     {
       name: 'Tom',
-      role: 'SEO TACTICIEN',
+      role: 'SEO CONSULTANT',
       number: '07',
-      image: null,
+      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/tom-chemin.jpeg',
       stats: { exp: '4+', projects: '80+', rank: 'ALL-STAR' },
     },
     {
       name: 'Anthony',
       role: 'CONSULTING DIRECTOR',
       number: '23',
-      image: null,
+      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/anthony-lecas.jpeg',
       stats: { exp: '8+', projects: '200+', rank: 'LEGEND' },
     },
     {
       name: 'Quentin',
       role: 'BUSINESS PARTNER',
       number: '10',
-      image: null,
+      image: 'https://agence-slashr.fr/wp-content/uploads/2026/01/Capture-decran-2026-01-14-a-11.11.07-e1768387199199.png',
       stats: { exp: '6+', projects: '150+', rank: 'MVP' },
     },
     {
       name: 'Pierre-Antoine',
-      role: 'SEO TACTICIEN',
+      role: 'SEO CONSULTANT',
       number: '33',
-      image: null,
+      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/pierre-antoine.jpeg',
       stats: { exp: '3+', projects: '60+', rank: 'RISING' },
+    },
+    {
+      name: 'Benoit',
+      role: 'SEO DIRECTOR',
+      number: '99',
+      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/benoit-demonchaux-smx-e1711037394539.jpeg',
+      stats: { exp: '10+', projects: '300+', rank: 'LEGEND' },
     },
   ];
 
@@ -77,22 +84,20 @@ const Team = () => {
   };
 
   return (
-    <section className="bg-[#1a1a1a] py-20 sm:py-28 md:py-36 px-4 sm:px-6">
+    <section className="bg-[#1a1a1a] py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Tag */}
-        <span className="inline-block bg-[#2a2a2a] text-white text-xs font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 uppercase tracking-wider">
+        <span className="inline-block bg-[#2C2E34] text-white text-xs font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 uppercase tracking-wider">
           L'équipe
         </span>
 
         {/* Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 italic">
-          Une équipe de stratèges.
-          <br />
-          Animée par la gagne.
+        <h2 className="font-bold text-white mb-3 sm:mb-4 leading-tight" style={{ fontSize: 'clamp(28px, 5vw, 45px)' }}>
+          Une équipe de stratèges. Animée par la gagne.
         </h2>
 
         {/* Subtitle */}
-        <p className="text-gray-400 text-sm sm:text-base mb-8 sm:mb-10 md:mb-12 max-w-2xl">
+        <p className="text-description text-white/70 mb-8 sm:mb-10 md:mb-12 max-w-2xl">
           Les consultants SLASHR combinent une expertise technique SEO éprouvée et un mindset orienté business,
           acquis au contact des plus grands groupes comme des startups les plus performantes.
         </p>
@@ -101,12 +106,12 @@ const Team = () => {
         <div className="relative -mx-4 sm:-mx-6 px-4 sm:px-6 md:mx-0 md:px-0">
           <div
             className="flex gap-3 sm:gap-4 md:gap-6 transition-transform duration-300 ease-out overflow-x-auto md:overflow-visible scrollbar-hide py-4"
-            style={{ transform: `translateX(-${currentIndex * (280 + 24)}px)` }}
+            style={{ transform: `translateX(-${currentIndex * (270 + 24)}px)` }}
           >
             {teamMembers.map((member, index) => (
               <div
                 key={member.name}
-                className="flex-shrink-0 w-[200px] sm:w-[230px] md:w-[260px] lg:w-[280px] cursor-pointer"
+                className="flex-shrink-0 w-[270px] cursor-pointer"
                 style={{
                   transform: getCardTransform(index),
                   transition: hoveredCard === index ? 'transform 0.1s ease-out' : 'transform 0.3s ease-out',
@@ -115,62 +120,51 @@ const Team = () => {
                 onMouseMove={(e) => handleMouseMove(e, index)}
                 onMouseLeave={handleMouseLeave}
               >
-                {/* NBA Card Container - Gradient border wrapper */}
-                <div className="p-[2px] rounded-xl bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500">
-                  <div className="bg-[#1a1a1a] rounded-xl overflow-hidden">
-                    {/* Top Header Bar */}
-                    <div className="relative bg-[#252525] px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between border-b border-gray-700/50">
-                      <Image
-                        src="https://agence-slashr.fr/wp-content/uploads/2024/03/logo-slashr-blanc.png"
-                        alt="SLASHR"
-                        width={50}
-                        height={16}
-                        className="h-3 sm:h-4 w-auto opacity-60"
-                        unoptimized
-                      />
-                      <span className="text-white font-black text-xl sm:text-2xl">{member.number}</span>
-                    </div>
-
+                {/* Card Container - Gradient border wrapper */}
+                <div
+                  className="relative rounded-lg overflow-hidden"
+                  style={{
+                    width: '270px',
+                    background: 'linear-gradient(360deg, #2C2E34 16.67%, #E74601 34.29%, #CE08A9 45.91%, #8962FD 66.67%, #AD21FE 83.33%)',
+                    padding: '1px',
+                  }}
+                >
+                  <div
+                    className="rounded-lg"
+                    style={{
+                      background: '#2C2E34',
+                      padding: '4px 4px 8px 4px',
+                    }}
+                  >
                     {/* Main Image Area */}
-                    <div className="relative h-[150px] sm:h-[180px] md:h-[200px] lg:h-[220px] overflow-hidden bg-gradient-to-b from-[#252525] to-[#1a1a1a]">
+                    <div
+                      className="relative overflow-hidden w-full"
+                      style={{
+                        height: '298px',
+                        borderRadius: '4px',
+                        background: 'linear-gradient(180.44deg, rgba(44, 46, 52, 0.75) -1.13%, rgba(217, 217, 217, 0.75) 99.62%)',
+                      }}
+                    >
                       {/* Player photo or silhouette */}
-                      <div className="absolute inset-0 flex items-end justify-center">
-                        {member.image ? (
-                          <Image
-                            src={member.image}
-                            alt={member.name}
-                            fill
-                            className="object-cover object-top"
-                            unoptimized
-                          />
-                        ) : (
-                          <svg className="w-40 h-40 text-gray-600/50" fill="currentColor" viewBox="0 0 24 24">
+                      {member.image ? (
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          className="object-cover object-top grayscale"
+                          unoptimized
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <svg className="w-32 h-32 text-gray-600/50" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                           </svg>
-                        )}
-                      </div>
-
-                      {/* Rank Badge */}
-                      <div className="absolute top-3 right-3 z-20">
-                        <span
-                          className="text-[10px] font-bold px-2 py-1 rounded-full bg-[#2a2a2a] border border-gray-600"
-                          style={{
-                            color: member.stats.rank === 'LEGEND'
-                              ? '#ffd700'
-                              : member.stats.rank === 'MVP'
-                              ? '#f97316'
-                              : member.stats.rank === 'ALL-STAR'
-                              ? '#a855f7'
-                              : '#22c55e',
-                          }}
-                        >
-                          {member.stats.rank}
-                        </span>
-                      </div>
+                        </div>
+                      )}
 
                       {/* Holographic overlay */}
                       <div
-                        className="absolute inset-0 pointer-events-none transition-opacity duration-300 z-10"
+                        className="absolute inset-0 pointer-events-none transition-opacity duration-300 z-10 rounded-[4px]"
                         style={{
                           opacity: hoveredCard === index ? 1 : 0,
                           background: hoveredCard === index ? `
@@ -190,7 +184,7 @@ const Team = () => {
 
                       {/* Shine effect */}
                       <div
-                        className="absolute inset-0 pointer-events-none transition-opacity duration-300 z-10"
+                        className="absolute inset-0 pointer-events-none transition-opacity duration-300 z-10 rounded-[4px]"
                         style={{
                           opacity: hoveredCard === index ? 0.6 : 0,
                           background: `
@@ -208,7 +202,7 @@ const Team = () => {
 
                       {/* Rainbow bands */}
                       <div
-                        className="absolute inset-0 pointer-events-none transition-opacity duration-300 z-10"
+                        className="absolute inset-0 pointer-events-none transition-opacity duration-300 z-10 rounded-[4px]"
                         style={{
                           opacity: hoveredCard === index ? 0.5 : 0,
                           background: `
@@ -229,26 +223,13 @@ const Team = () => {
                     </div>
 
                     {/* Name Plate */}
-                    <div className="relative bg-[#252525] px-3 sm:px-4 py-3 sm:py-4 border-t border-gray-700/50">
-                      <h3 className="text-white font-bold text-base sm:text-lg text-center uppercase tracking-wide">
+                    <div className="px-3 pt-4 pb-2">
+                      <h3 className="text-white font-bold text-lg text-center tracking-wide">
                         {member.name}
                       </h3>
-                      <p className="text-xs sm:text-sm text-center font-medium uppercase tracking-wider bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
+                      <p className="text-sm text-center font-medium uppercase tracking-wider bg-gradient-to-r from-[#E74601] via-[#CE08A9] to-[#8962FD] bg-clip-text text-transparent">
                         {member.role}
                       </p>
-                    </div>
-
-                    {/* Stats Bar */}
-                    <div className="bg-[#1a1a1a] px-3 sm:px-4 py-2 sm:py-3 flex justify-around border-t border-gray-700/50">
-                      <div className="text-center">
-                        <span className="block text-white font-bold text-base sm:text-lg">{member.stats.exp}</span>
-                        <span className="text-gray-500 text-[9px] sm:text-[10px] uppercase tracking-wider">Ans XP</span>
-                      </div>
-                      <div className="w-px bg-gray-700" />
-                      <div className="text-center">
-                        <span className="block text-white font-bold text-base sm:text-lg">{member.stats.projects}</span>
-                        <span className="text-gray-500 text-[9px] sm:text-[10px] uppercase tracking-wider">Projets</span>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -258,7 +239,7 @@ const Team = () => {
         </div>
 
         {/* Navigation Arrows */}
-        <div className="hidden md:flex gap-3 mt-8">
+        <div className="hidden md:flex justify-center gap-3 mt-8">
           <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
