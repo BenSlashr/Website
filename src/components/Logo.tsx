@@ -1,5 +1,3 @@
-'use client';
-
 interface LogoProps {
   variant?: 'black' | 'white';
   className?: string;

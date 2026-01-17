@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Benefit } from '@/lib/prestationsWP';
 
 interface BenefitsSectionProps {
@@ -115,11 +116,8 @@ const BenefitsSection = ({ title, subtitle, benefits, ctaText, ctaHref = '/conta
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="group relative rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300"
-            >
+          {benefits.map((benefit, index) => {
+            const CardContent = (
               <div className="bg-[#2C2E34] rounded-[14px] p-6 sm:p-8 h-full flex flex-col">
                 {/* Icon */}
                 <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-black">
@@ -151,25 +149,49 @@ const BenefitsSection = ({ title, subtitle, benefits, ctaText, ctaHref = '/conta
                   {benefit.description}
                 </p>
 
-                {/* Arrow icon on hover */}
-                <div className="mt-4 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                  <svg
-                    className="w-5 h-5 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </div>
+                {/* Arrow icon on hover - only show if there's a link */}
+                {benefit.href && (
+                  <div className="mt-4 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg
+                      className="w-5 h-5 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+
+            // Wrap in Link if href is provided
+            if (benefit.href) {
+              return (
+                <Link
+                  key={index}
+                  href={benefit.href}
+                  className="group relative rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300"
+                >
+                  {CardContent}
+                </Link>
+              );
+            }
+
+            return (
+              <div
+                key={index}
+                className="group relative rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300"
+              >
+                {CardContent}
+              </div>
+            );
+          })}
         </div>
 
         {/* CTA */}

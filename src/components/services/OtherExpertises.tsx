@@ -66,8 +66,8 @@ const OtherExpertisesSection = (props: OtherExpertisesSectionProps) => {
   if (expertisesToRender.length === 0) return null;
 
   return (
-    <section className="bg-[#1a1a1a] py-12 sm:py-16 md:py-24 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#1a1a1a] py-12 sm:py-16 md:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="flex flex-col items-center gap-6 sm:gap-8 mb-10 sm:mb-12">
           <h2
@@ -94,21 +94,31 @@ const OtherExpertisesSection = (props: OtherExpertisesSectionProps) => {
             </p>
           )}
         </div>
+      </div>
 
-        {/* Expertises Grid */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-          {expertisesToRender.map((expertise) => (
-            <Link
-              key={expertise.name}
-              href={expertise.href}
-              className={`px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                expertise.isActive
-                  ? 'bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white'
-                  : 'bg-[#2C2E34] text-white/90 hover:text-white border border-white/10 hover:border-white/30'
-              }`}
-            >
-              {expertise.name}
-            </Link>
+      {/* Infinite scroll container - CSS animation */}
+      <div className="relative overflow-hidden">
+        <div
+          className="flex gap-3 sm:gap-4 animate-infinite-scroll"
+          style={{
+            width: 'max-content',
+          }}
+        >
+          {/* Repeat 4 times for seamless infinite loop */}
+          {[...Array(4)].map((_, setIndex) => (
+            expertisesToRender.map((expertise, index) => (
+              <Link
+                key={`set-${setIndex}-${expertise.name}-${index}`}
+                href={expertise.href}
+                className={`flex-shrink-0 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  expertise.isActive
+                    ? 'bg-gradient-to-r from-[#E74601] to-[#CE08A9] text-white'
+                    : 'bg-[#2C2E34] text-white/90 hover:text-white border border-white/10 hover:border-white/30'
+                }`}
+              >
+                {expertise.name}
+              </Link>
+            ))
           ))}
         </div>
       </div>

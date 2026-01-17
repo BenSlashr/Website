@@ -1,5 +1,3 @@
-'use client';
-
 import { EmbeddingsCache, getSuggestionsFromCache } from '@/lib/internalLinking';
 import RelatedServices from './RelatedServices';
 import RelatedArticles from './RelatedArticles';

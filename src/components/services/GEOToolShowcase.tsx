@@ -87,8 +87,11 @@ const features: Feature[] = [
 const GEOToolShowcase = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const featureRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const imageColumnRef = useRef<HTMLDivElement>(null);
+  const leftColumnRef = useRef<HTMLDivElement>(null);
 
+  // Observer pour détecter quelle feature est visible
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
 
@@ -97,14 +100,14 @@ const GEOToolShowcase = () => {
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+              if (entry.isIntersecting) {
                 setActiveIndex(index);
               }
             });
           },
           {
             threshold: 0.5,
-            rootMargin: '-20% 0px -20% 0px',
+            rootMargin: '-30% 0px -30% 0px',
           }
         );
         observer.observe(ref);
@@ -117,8 +120,59 @@ const GEOToolShowcase = () => {
     };
   }, []);
 
+  // Effet sticky manuel avec JS (car overflow-x: hidden sur html/body casse CSS sticky)
+  useEffect(() => {
+    const imageColumn = imageColumnRef.current;
+    const leftColumn = leftColumnRef.current;
+    const rightColumnWrapper = document.getElementById('geo-right-column');
+
+    if (!imageColumn || !leftColumn || !rightColumnWrapper) return;
+
+    const topOffset = 112; // top-28 = 7rem = 112px
+
+    const handleScroll = () => {
+      const leftColumnRect = leftColumn.getBoundingClientRect();
+      const wrapperRect = rightColumnWrapper.getBoundingClientRect();
+      const imageHeight = imageColumn.offsetHeight;
+
+      // Position de départ : quand le wrapper atteint le top offset
+      const shouldBeFixed = wrapperRect.top <= topOffset;
+
+      // Position de fin : quand le bas de la colonne gauche ne permet plus de fixer
+      const maxScroll = leftColumnRect.bottom - imageHeight - topOffset;
+      const shouldBeAbsolute = maxScroll < 0;
+
+      if (!shouldBeFixed) {
+        // Mode normal - en haut de la colonne
+        imageColumn.style.position = 'relative';
+        imageColumn.style.top = '0';
+        imageColumn.style.width = '100%';
+      } else if (shouldBeFixed && !shouldBeAbsolute) {
+        // Mode fixed - collé en haut de l'écran
+        imageColumn.style.position = 'fixed';
+        imageColumn.style.top = `${topOffset}px`;
+        imageColumn.style.width = `${wrapperRect.width}px`;
+      } else {
+        // Mode absolute - collé en bas du wrapper
+        imageColumn.style.position = 'absolute';
+        imageColumn.style.top = 'auto';
+        imageColumn.style.bottom = '0';
+        imageColumn.style.width = '100%';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+    handleScroll(); // Initial call
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
-    <section className="bg-[#1a1a1a] py-24 px-6">
+    <section ref={sectionRef} className="bg-[#1a1a1a] py-24 px-6 overflow-visible">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -154,22 +208,22 @@ const GEOToolShowcase = () => {
           </div>
         </div>
 
-        {/* Scroll-sync layout */}
-        <div ref={containerRef} className="relative">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
-            {/* Left: Features list */}
-            <div className="lg:w-2/5 space-y-8">
-              {features.map((feature, index) => (
-                <div
-                  key={feature.id}
-                  ref={(el) => { featureRefs.current[index] = el; }}
-                  className={`p-6 rounded-2xl transition-all duration-300 cursor-pointer ${
-                    activeIndex === index
-                      ? 'bg-gradient-to-r from-[#E74601]/10 to-[#CE08A9]/10 border border-[#E74601]/30'
-                      : 'bg-[#2C2E34] border border-transparent hover:border-gray-700'
-                  }`}
-                  onClick={() => setActiveIndex(index)}
-                >
+        {/* Desktop: Two column layout with sticky */}
+        <div className="hidden lg:flex lg:gap-12 relative">
+          {/* Left: Features list */}
+          <div ref={leftColumnRef} className="w-2/5 space-y-6">
+            {features.map((feature, index) => (
+              <div
+                key={feature.id}
+                ref={(el) => { featureRefs.current[index] = el; }}
+                className={`rounded-2xl p-[1px] transition-colors duration-300 cursor-pointer ${
+                  activeIndex === index
+                    ? 'bg-gradient-to-r from-[#E74601] via-[#CE08A9] to-[#8962FD]'
+                    : 'bg-white/10 hover:bg-white/20'
+                }`}
+                onClick={() => setActiveIndex(index)}
+              >
+                <div className="bg-[#2C2E34] rounded-[15px] p-6">
                   <div className="flex items-start gap-4">
                     <div
                       className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
@@ -199,79 +253,104 @@ const GEOToolShowcase = () => {
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
 
-            {/* Right: Sticky image */}
-            <div className="lg:w-3/5 hidden lg:block">
-              <div className="sticky top-24">
-                <div className="relative rounded-2xl overflow-hidden border border-gray-700/50 shadow-2xl">
-                  {/* Browser mockup header */}
-                  <div className="bg-[#2C2E34] px-4 py-3 flex items-center gap-2">
-                    <div className="flex gap-1.5">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <div className="flex-1 ml-4">
-                      <div className="bg-[#1a1a1a] rounded-lg px-4 py-1.5 text-gray-500 text-sm">
-                        app.slashr.fr/geo-tracker
-                      </div>
-                    </div>
+          {/* Right: Sticky image */}
+          <div id="geo-right-column" className="w-3/5 relative">
+            <div
+              ref={imageColumnRef}
+            >
+              <div className="relative rounded-2xl overflow-hidden border border-gray-700/50 shadow-2xl">
+                {/* Browser mockup header */}
+                <div className="bg-[#2C2E34] px-4 py-3 flex items-center gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-
-                  {/* Screenshot with transition */}
-                  <div className="relative aspect-[16/9] bg-white">
-                    {features.map((feature, index) => (
-                      <div
-                        key={feature.id}
-                        className={`absolute inset-0 transition-opacity duration-500 ${
-                          activeIndex === index ? 'opacity-100' : 'opacity-0'
-                        }`}
-                      >
-                        <Image
-                          src={feature.image}
-                          alt={feature.title}
-                          fill
-                          className="object-contain"
-                          priority={index === 0}
-                        />
-                      </div>
-                    ))}
+                  <div className="flex-1 ml-4">
+                    <div className="bg-[#1a1a1a] rounded-lg px-4 py-1.5 text-gray-500 text-sm">
+                      app.slashr.fr/geo-tracker
+                    </div>
                   </div>
                 </div>
 
-                {/* Feature indicator */}
-                <div className="flex justify-center mt-6 gap-2">
-                  {features.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        activeIndex === index
-                          ? 'bg-[#E74601] w-6'
-                          : 'bg-gray-600 hover:bg-gray-500'
+                {/* Screenshot with transition */}
+                <div className="relative aspect-[16/10] bg-[#1a1a1a]">
+                  {features.map((feature, index) => (
+                    <div
+                      key={feature.id}
+                      className={`absolute inset-0 transition-opacity duration-500 ${
+                        activeIndex === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
                       }`}
-                    />
+                    >
+                      <Image
+                        src={feature.image}
+                        alt={feature.title}
+                        fill
+                        className="object-contain"
+                        priority={index === 0}
+                      />
+                    </div>
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Mobile: Show current image */}
-          <div className="lg:hidden mt-8">
-            <div className="relative rounded-2xl overflow-hidden border border-gray-700/50 bg-white">
-              <div className="relative aspect-[16/9]">
-                <Image
-                  src={features[activeIndex].image}
-                  alt={features[activeIndex].title}
-                  fill
-                  className="object-contain"
-                />
+              {/* Feature indicator */}
+              <div className="flex justify-center mt-6 gap-2">
+                {features.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveIndex(index)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      activeIndex === index
+                        ? 'bg-[#E74601] w-6'
+                        : 'bg-gray-600 hover:bg-gray-500 w-2'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Mobile layout */}
+        <div className="lg:hidden space-y-6">
+          {features.map((feature, index) => (
+            <div
+              key={feature.id}
+              className="p-6 rounded-2xl bg-[#2C2E34] border border-transparent"
+            >
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-gradient-to-r from-[#E74601] to-[#CE08A9]">
+                  <span className="font-bold text-white">
+                    {index + 1}
+                  </span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-lg mb-2 text-white">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-gray-400">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+              {/* Image for each card on mobile */}
+              <div className="relative rounded-xl overflow-hidden border border-gray-700/50 bg-[#1a1a1a]">
+                <div className="relative aspect-[16/10]">
+                  <Image
+                    src={feature.image}
+                    alt={feature.title}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* CTA */}

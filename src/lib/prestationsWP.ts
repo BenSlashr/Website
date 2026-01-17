@@ -14,6 +14,7 @@ export interface Benefit {
   highlight?: string; // Mot ou phrase à mettre en surbrillance dans le titre
   icon: 'user' | 'code' | 'check' | 'clipboard' | 'chart' | 'rocket' | 'shield' | 'target' | 'globe' | 'zap';
   size: 'small' | 'medium' | 'large'; // Taille de la card dans le bento grid
+  href?: string; // Lien optionnel pour transformer la card en lien
 }
 
 // Interface pour les points de vigilance

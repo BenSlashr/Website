@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { getCaseStudyCards, CaseStudyCard } from '@/lib/caseStudiesWP';
 import CTA from '@/components/CTA';
 import Newsletter from '@/components/Newsletter';
+import Breadcrumb from '@/components/Breadcrumb';
 
 // Types pour les filtres
 interface FilterOption {
@@ -278,6 +279,14 @@ const CasClientsPage = () => {
           )}
         </div>
       </section>
+
+      {/* Fil d'Ariane */}
+      <Breadcrumb
+        items={[
+          { label: 'Accueil', href: '/' },
+          { label: 'Cas clients' },
+        ]}
+      />
 
       {/* CTA */}
       <CTA />

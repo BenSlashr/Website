@@ -1,11 +1,6 @@
-'use client';
-
-import { useState } from 'react';
 import Image from 'next/image';
 
 const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const testimonials = [
     {
       quote: "SLASHR m'accompagne en SEO dans le cadre de notre fusion de sites : Roadmap, spec techniques, échanges internes, gestion des redirections entre autres. Je recommande cette agence SEO à taille humaine, disponible, réactive et réellement experte sur le sujet.",
@@ -36,14 +31,6 @@ const Testimonials = () => {
       image: 'https://agence-slashr.fr/wp-content/uploads/2023/11/vestiaire-collective-jean-eric-blas-chatelain.webp',
     },
   ];
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % Math.max(1, testimonials.length - 1));
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + Math.max(1, testimonials.length - 1)) % Math.max(1, testimonials.length - 1));
-  };
 
   return (
     <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
@@ -92,16 +79,13 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Testimonials Carousel */}
+        {/* Testimonials - CSS-only horizontal scroll */}
         <div className="relative overflow-hidden -mx-4 sm:-mx-6 px-4 sm:px-6 md:mx-0 md:px-0">
-          <div
-            className="flex gap-3 sm:gap-4 md:gap-6 transition-transform duration-300 ease-out overflow-x-auto md:overflow-visible scrollbar-hide"
-            style={{ transform: `translateX(-${currentIndex * (50)}%)` }}
-          >
+          <div className="flex gap-3 sm:gap-4 md:gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[80vw] sm:w-[65vw] md:w-[calc(50%-12px)] bg-[#2C2E34] rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5"
+                className="flex-shrink-0 w-[80vw] sm:w-[65vw] md:w-[calc(50%-12px)] bg-[#2C2E34] rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5 snap-start"
               >
                 {/* Avatar */}
                 <div className="flex-shrink-0 hidden sm:block">
@@ -112,8 +96,8 @@ const Testimonials = () => {
                         alt={testimonial.name}
                         width={96}
                         height={128}
-                        className="w-full h-full object-cover"
-                        unoptimized
+                        className="w-full h-full object-cover grayscale"
+                        loading="lazy"
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
@@ -153,26 +137,13 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Navigation Arrows */}
-        <div className="hidden md:flex justify-center gap-3 mt-8 sm:mt-10">
-          <button
-            onClick={prevSlide}
-            className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
-            aria-label="Précédent"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
-            aria-label="Suivant"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+        {/* Scroll indicator for mobile */}
+        <div className="flex justify-center mt-4 md:hidden">
+          <div className="flex gap-2">
+            {testimonials.map((_, i) => (
+              <div key={i} className="w-2 h-2 rounded-full bg-white/30" />
+            ))}
+          </div>
         </div>
       </div>
     </section>

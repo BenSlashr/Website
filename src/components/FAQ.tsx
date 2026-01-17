@@ -86,11 +86,11 @@ La construction de la Roadmap selon votre besoin, et notre expérience nous perm
 ];
 
 const FAQ = ({ title = "Questions fréquentes", faqs }: FAQProps) => {
-  const [openIndex, setOpenIndex] = useState<number>(-1);
   const faqsToDisplay = faqs || defaultFaqs;
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? -1 : index);
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
@@ -104,56 +104,61 @@ const FAQ = ({ title = "Questions fréquentes", faqs }: FAQProps) => {
           {title}
         </h2>
 
-        {/* FAQ Items */}
+        {/* FAQ Items - Smooth animated accordion */}
         <div className="space-y-3 sm:space-y-4">
-          {faqsToDisplay.map((faq, index) => (
-            <div
-              key={index}
-              className={`rounded-2xl overflow-hidden transition-all duration-300 ${
-                openIndex === index
-                  ? 'p-[1px]' + ' ' + 'bg-gradient-to-r from-[#E74601] via-[#CE08A9] to-[#8962FD]'
-                  : ''
-              }`}
-            >
-              <div className={`bg-[#2C2E34] rounded-2xl ${openIndex === index ? 'rounded-2xl' : ''}`}>
-                {/* Question */}
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between p-4 sm:p-5 md:p-6 text-left"
-                >
-                  <span className="text-white text-xs sm:text-sm md:text-base pr-3 sm:pr-4 font-medium">
-                    {faq.question}
-                  </span>
-                  <svg
-                    className={`w-5 h-5 text-white flex-shrink-0 transition-transform duration-300 ${
-                      openIndex === index ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+          {faqsToDisplay.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div
+                key={index}
+                className={`rounded-2xl overflow-hidden p-[1px] transition-all duration-300 ${
+                  isOpen
+                    ? 'bg-gradient-to-r from-[#E74601] via-[#CE08A9] to-[#8962FD]'
+                    : 'bg-white/10'
+                }`}
+              >
+                <div className="bg-[#2C2E34] rounded-[15px]">
+                  {/* Question */}
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="flex items-center justify-between w-full p-4 sm:p-5 md:p-6 cursor-pointer text-left"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
+                    <span className="text-white text-xs sm:text-sm md:text-base pr-3 sm:pr-4 font-medium">
+                      {faq.question}
+                    </span>
+                    <svg
+                      className={`w-5 h-5 text-white flex-shrink-0 transition-transform duration-300 ${
+                        isOpen ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
 
-                {/* Answer */}
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openIndex === index ? 'max-h-[800px]' : 'max-h-0'
-                  }`}
-                >
-                  <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 text-description text-white/70 whitespace-pre-line">
-                    {faq.answer}
+                  {/* Answer with smooth animation */}
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 text-description text-white/70 whitespace-pre-line">
+                        {faq.answer}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

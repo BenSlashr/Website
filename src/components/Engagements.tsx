@@ -1,5 +1,3 @@
-'use client';
-
 interface EngagementCard {
   icon: React.ReactNode;
   title: string;
@@ -84,43 +82,41 @@ const Engagements = ({
           {cards.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col items-start p-8 sm:p-[60px_45px] gap-[37.5px] rounded-[15px] border border-white/10"
-              style={{
-                background: 'rgba(44, 46, 52, 0.5)',
-                backdropFilter: 'blur(12.5px)',
-              }}
+              className="group rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-colors duration-300"
             >
-              {/* Icon */}
-              <div className="flex items-center justify-center w-[52px] h-[52px] bg-white rounded-[11.25px]">
-                {card.icon}
-              </div>
+              <div className="flex flex-col items-start p-8 sm:p-[60px_45px] gap-[37.5px] rounded-[14px] h-full bg-[#2C2E34]">
+                {/* Icon */}
+                <div className="flex items-center justify-center w-[52px] h-[52px] bg-white rounded-[11.25px]">
+                  {card.icon}
+                </div>
 
-              {/* Content */}
-              <div className="flex flex-col items-start gap-[15px]">
-                {/* Title */}
-                <h3
-                  className="text-white font-bold"
-                  style={{
-                    fontSize: '20px',
-                    lineHeight: '130%',
-                    letterSpacing: '-0.01em',
-                  }}
-                >
-                  {card.title}
-                </h3>
+                {/* Content */}
+                <div className="flex flex-col items-start gap-[15px]">
+                  {/* Title */}
+                  <h3
+                    className="text-white font-bold"
+                    style={{
+                      fontSize: '20px',
+                      lineHeight: '130%',
+                      letterSpacing: '-0.01em',
+                    }}
+                  >
+                    {card.title}
+                  </h3>
 
-                {/* Description */}
-                <p
-                  className="text-white/70"
-                  style={{
-                    fontFamily: "'Geist', sans-serif",
-                    fontWeight: 400,
-                    fontSize: '15px',
-                    lineHeight: '145%',
-                  }}
-                >
-                  {card.description}
-                </p>
+                  {/* Description */}
+                  <p
+                    className="text-white/70"
+                    style={{
+                      fontFamily: "'Geist', sans-serif",
+                      fontWeight: 400,
+                      fontSize: '15px',
+                      lineHeight: '145%',
+                    }}
+                  >
+                    {card.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

@@ -1,15 +1,9 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
 const CALENDLY_URL = 'https://calendly.com/quentin-slashr/appel-de-decouverte-client-by-slashr?back=1';
 
 const Footer = () => {
-  const openCalendly = () => {
-    window.open(CALENDLY_URL, '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <footer className="bg-[#1a1a1a] pt-12 sm:pt-16 pb-8 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
@@ -19,12 +13,14 @@ const Footer = () => {
             Vous avez un projet&nbsp;?
           </h2>
           <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
-            <button
-              onClick={openCalendly}
-              className="bg-white text-[#1a1a1a] px-5 sm:px-6 md:px-8 py-3 rounded-full text-sm font-medium transition-colors min-h-[44px]"
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-[#1a1a1a] px-5 sm:px-6 md:px-8 py-3 rounded-full text-sm font-medium transition-colors min-h-[44px]"
             >
               Échanger avec des experts
-            </button>
+            </a>
           </div>
         </div>
 

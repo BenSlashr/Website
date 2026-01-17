@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getArticles } from '@/lib/blog';
 import Newsletter from '@/components/Newsletter';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const ARTICLES_PER_PAGE = 12;
 
@@ -272,6 +273,14 @@ export default async function BlogPage() {
           </div>
         </section>
       )}
+
+      {/* Fil d'Ariane */}
+      <Breadcrumb
+        items={[
+          { label: 'Accueil', href: '/' },
+          { label: 'Blog' },
+        ]}
+      />
 
       <Newsletter />
     </>

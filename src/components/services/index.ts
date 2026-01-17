@@ -11,3 +11,5 @@ export { default as GEOExclusiveSections } from './GEOExclusiveSections';
 export { default as GEOToolShowcase } from './GEOToolShowcase';
 export { default as IrritantSection } from './IrritantSection';
 export { default as PrestationsSection } from './PrestationsSection';
+export { default as WhyChooseUsSection } from './WhyChooseUsSection';
+export { default as QualificationSection } from './QualificationSection';

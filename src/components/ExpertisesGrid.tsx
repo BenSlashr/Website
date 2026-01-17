@@ -35,6 +35,7 @@ const ExpertisesGrid = ({
     description: item.description,
     icon: item.icon || 'check' as const,
     size: 'medium' as const,
+    href: item.href,
   }));
 
   return (

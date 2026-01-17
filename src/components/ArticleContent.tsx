@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { getAllTermsForMatching, GlossaryTerm } from '@/lib/glossary';
 
@@ -26,7 +26,7 @@ export default function ArticleContent({
   maxTerms = 30
 }: ArticleContentProps) {
   const contentRef = useRef<HTMLDivElement>(null);
-  const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const activeElementRef = useRef<HTMLElement | null>(null);
   const [tooltip, setTooltip] = useState<TooltipState>({
     visible: false,
     term: null,
@@ -34,34 +34,14 @@ export default function ArticleContent({
     y: 0,
     position: 'top'
   });
+  const [isMounted, setIsMounted] = useState(false);
 
-  const hideTooltip = useCallback(() => {
-    if (hideTimeoutRef.current) {
-      clearTimeout(hideTimeoutRef.current);
-    }
-    hideTimeoutRef.current = setTimeout(() => {
-      setTooltip(prev => ({ ...prev, visible: false }));
-    }, 100);
+  // Marquer le composant comme monté côté client
+  useEffect(() => {
+    setIsMounted(true);
   }, []);
 
-  const showTooltip = useCallback((termData: GlossaryTerm, rect: DOMRect) => {
-    if (hideTimeoutRef.current) {
-      clearTimeout(hideTimeoutRef.current);
-      hideTimeoutRef.current = null;
-    }
-
-    const spaceAbove = rect.top;
-    const spaceBelow = window.innerHeight - rect.bottom;
-
-    setTooltip({
-      visible: true,
-      term: termData,
-      x: rect.left + rect.width / 2,
-      y: spaceAbove < 150 && spaceBelow > spaceAbove ? rect.bottom : rect.top,
-      position: spaceAbove < 150 && spaceBelow > spaceAbove ? 'bottom' : 'top'
-    });
-  }, []);
-
+  // Annoter les termes du glossaire dans le HTML
   useEffect(() => {
     if (!enableGlossary || !contentRef.current) return;
 
@@ -165,38 +145,68 @@ export default function ArticleContent({
     };
 
     processNode(container);
+  }, [html, enableGlossary, maxTerms]);
 
-    const handleMouseEnter = (e: MouseEvent) => {
+  // Gestion des événements de survol - séparée de l'annotation
+  useEffect(() => {
+    if (!enableGlossary || !contentRef.current) return;
+
+    const container = contentRef.current;
+
+    const handleMouseEnter = (e: Event) => {
       const target = e.target as HTMLElement;
       if (!target.hasAttribute('data-glossary')) return;
 
+      // Stocker l'élément actif
+      activeElementRef.current = target;
+
       const rect = target.getBoundingClientRect();
+      const spaceAbove = rect.top;
+      const spaceBelow = window.innerHeight - rect.bottom;
+
       const termData: GlossaryTerm = {
         term: target.getAttribute('data-term') || '',
         definition: target.getAttribute('data-definition') || '',
         category: (target.getAttribute('data-category') || 'general') as GlossaryTerm['category'],
       };
 
-      showTooltip(termData, rect);
+      setTooltip({
+        visible: true,
+        term: termData,
+        x: rect.left + rect.width / 2,
+        y: spaceAbove < 150 && spaceBelow > spaceAbove ? rect.bottom : rect.top,
+        position: spaceAbove < 150 && spaceBelow > spaceAbove ? 'bottom' : 'top'
+      });
     };
 
-    const handleMouseLeave = (e: MouseEvent) => {
+    const handleMouseLeave = (e: Event) => {
       const target = e.target as HTMLElement;
       if (!target.hasAttribute('data-glossary')) return;
-      hideTooltip();
-    };
 
-    container.addEventListener('mouseenter', handleMouseEnter, true);
-    container.addEventListener('mouseleave', handleMouseLeave, true);
-
-    return () => {
-      container.removeEventListener('mouseenter', handleMouseEnter, true);
-      container.removeEventListener('mouseleave', handleMouseLeave, true);
-      if (hideTimeoutRef.current) {
-        clearTimeout(hideTimeoutRef.current);
+      // Si c'est bien l'élément actif qui est quitté, masquer le tooltip
+      if (activeElementRef.current === target) {
+        activeElementRef.current = null;
+        setTooltip(prev => ({ ...prev, visible: false }));
       }
     };
-  }, [html, enableGlossary, maxTerms, showTooltip, hideTooltip]);
+
+    // Utiliser event delegation avec mouseenter/mouseleave
+    // Ces événements ne bubblent pas, donc on doit les attacher aux éléments individuels
+    const glossaryElements = container.querySelectorAll('[data-glossary]');
+
+    glossaryElements.forEach(element => {
+      element.addEventListener('mouseenter', handleMouseEnter);
+      element.addEventListener('mouseleave', handleMouseLeave);
+    });
+
+    return () => {
+      glossaryElements.forEach(element => {
+        element.removeEventListener('mouseenter', handleMouseEnter);
+        element.removeEventListener('mouseleave', handleMouseLeave);
+      });
+      activeElementRef.current = null;
+    };
+  }, [html, enableGlossary, maxTerms]);
 
   return (
     <>
@@ -206,8 +216,8 @@ export default function ArticleContent({
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
-      {/* Tooltip discret */}
-      {tooltip.visible && tooltip.term && typeof window !== 'undefined' && createPortal(
+      {/* Tooltip - rendu uniquement côté client */}
+      {isMounted && tooltip.visible && tooltip.term && createPortal(
         <div
           className="fixed z-[9999] pointer-events-none animate-fadeIn"
           style={{

@@ -481,61 +481,59 @@ export default async function ArticlePage({ params }: Props) {
 
                   {/* Table of Contents - Dynamic from WordPress H2s */}
                   {article.headings && article.headings.length > 0 && (
-                    <div className="bg-[#2C2E34] rounded-2xl p-6">
-                      <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
-                        </svg>
-                        Sommaire
-                      </h3>
-                      <nav>
-                        <ul className="space-y-2">
-                          {article.headings.map((item, index) => (
-                            <li key={item.id}>
-                              <a
-                                href={`#${item.id}`}
-                                className="text-gray-400 text-sm hover:text-white transition-colors flex items-center gap-2 py-1"
-                              >
-                                <span className="text-gray-600 text-xs">{String(index + 1).padStart(2, '0')}</span>
-                                {item.title}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </nav>
+                    <div className="group rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+                      <div className="bg-[#2C2E34] rounded-[14px] p-6">
+                        <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
+                          </svg>
+                          Sommaire
+                        </h3>
+                        <nav>
+                          <ul className="space-y-2">
+                            {article.headings.map((item, index) => (
+                              <li key={item.id}>
+                                <a
+                                  href={`#${item.id}`}
+                                  className="text-gray-400 text-sm hover:text-white transition-colors flex items-center gap-2 py-1"
+                                >
+                                  <span className="text-gray-600 text-xs">{String(index + 1).padStart(2, '0')}</span>
+                                  {item.title}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </nav>
+                      </div>
                     </div>
                   )}
 
                   {/* Newsletter CTA */}
-                  <div className="bg-gradient-to-br from-[#E74601]/20 to-[#CE08A9]/20 rounded-2xl p-6 border border-[#E74601]/30">
-                    <div className="flex items-center gap-2 mb-3">
-                      <svg className="w-5 h-5 text-[#E74601]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                      <h3 className="text-white font-bold text-sm">Newsletter SEO</h3>
+                  <div className="group rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+                    <div className="bg-[#2C2E34] rounded-[14px] p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <svg className="w-5 h-5 text-[#E74601]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <h3 className="text-white font-bold text-sm">Newsletter SEO</h3>
+                      </div>
+                      <p className="text-gray-400 text-sm mb-4">
+                        Recevez nos meilleurs conseils SEO chaque semaine.
+                      </p>
+                      <input
+                        type="email"
+                        placeholder="Votre email"
+                        className="w-full bg-[#1a1a1a] border border-gray-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#E74601] mb-3"
+                      />
+                      <button className="w-full bg-white text-black px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
+                        Je m'inscris
+                      </button>
                     </div>
-                    <p className="text-gray-400 text-sm mb-4">
-                      Recevez nos meilleurs conseils SEO chaque semaine.
-                    </p>
-                    <input
-                      type="email"
-                      placeholder="Votre email"
-                      className="w-full bg-[#1a1a1a] border border-gray-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#E74601] mb-3"
-                    />
-                    <button className="w-full bg-white text-black px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
-                      Je m'inscris
-                    </button>
                   </div>
 
                   {/* Afterwork CTA */}
-                  <div className="bg-[#2C2E34] rounded-2xl p-6 relative overflow-hidden">
-                    <div
-                      className="absolute inset-0 opacity-20"
-                      style={{
-                        background: 'linear-gradient(135deg, #FF7828 0%, #EC4899 50%, #A032C8 100%)',
-                      }}
-                    />
-                    <div className="relative">
+                  <div className="group rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+                    <div className="bg-[#2C2E34] rounded-[14px] p-6">
                       <div className="flex items-center gap-2 mb-2">
                         <svg className="w-5 h-5 text-[#CE08A9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -564,28 +562,30 @@ export default async function ArticlePage({ params }: Props) {
                   </div>
 
                   {/* Recent Articles */}
-                  <div className="bg-[#2C2E34] rounded-2xl p-6">
-                    <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Articles récents
-                    </h3>
-                    <div className="space-y-4">
-                      {recentArticles.map((recentArticle) => (
-                        <Link
-                          key={recentArticle.slug}
-                          href={`/blog/${recentArticle.slug}`}
-                          className="block group"
-                        >
-                          <h4 className="text-gray-300 text-sm font-medium group-hover:text-[#E74601] transition-colors line-clamp-2 mb-1">
-                            {recentArticle.title}
-                          </h4>
-                          <p className="text-gray-500 text-xs">
-                            {recentArticle.readTime} de lecture
-                          </p>
-                        </Link>
-                      ))}
+                  <div className="group rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+                    <div className="bg-[#2C2E34] rounded-[14px] p-6">
+                      <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Articles récents
+                      </h3>
+                      <div className="space-y-4">
+                        {recentArticles.map((recentArticle) => (
+                          <Link
+                            key={recentArticle.slug}
+                            href={`/blog/${recentArticle.slug}`}
+                            className="block"
+                          >
+                            <h4 className="text-gray-300 text-sm font-medium hover:text-[#E74601] transition-colors line-clamp-2 mb-1">
+                              {recentArticle.title}
+                            </h4>
+                            <p className="text-gray-500 text-xs">
+                              {recentArticle.readTime} de lecture
+                            </p>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
 

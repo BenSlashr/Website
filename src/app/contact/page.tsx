@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const CALENDLY_URL = 'https://calendly.com/quentin-slashr/appel-de-decouverte-client-by-slashr?back=1';
 
@@ -544,6 +545,14 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Fil d'Ariane */}
+      <Breadcrumb
+        items={[
+          { label: 'Accueil', href: '/' },
+          { label: 'Contact' },
+        ]}
+      />
     </main>
   );
 }

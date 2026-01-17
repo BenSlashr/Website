@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import CTA from '@/components/CTA';
 import Newsletter from '@/components/Newsletter';
 import Team from '@/components/Team';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Agence SEO Lille - L\'équipe Slashr',
@@ -244,6 +245,14 @@ export default function QuiSommesNousPage() {
           </div>
         </div>
       </section>
+
+      {/* Fil d'Ariane */}
+      <Breadcrumb
+        items={[
+          { label: 'Accueil', href: '/' },
+          { label: 'Qui sommes-nous' },
+        ]}
+      />
 
       {/* CTA */}
       <CTA />

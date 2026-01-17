@@ -4,13 +4,19 @@ import LogoBanner from '@/components/LogoBanner';
 import CTA from '@/components/CTA';
 import Newsletter from '@/components/Newsletter';
 import Testimonials from '@/components/Testimonials';
+import CaseStudies from '@/components/CaseStudies';
 import FAQ from '@/components/FAQ';
 import Breadcrumb from '@/components/Breadcrumb';
+import Articles from '@/components/Articles';
+import MaillagePrestation from '@/components/MaillagePrestation';
+import Engagements from '@/components/Engagements';
+import { caseStudies } from '@/lib/caseStudiesWP';
 import {
   ServiceHero,
   MethodologySection,
   BenefitsSection,
   VigilanceSection,
+  OtherExpertisesSection,
 } from '@/components/services';
 import { Benefit } from '@/lib/prestationsWP';
 
@@ -211,6 +217,45 @@ const vigilancePoints = [
   },
 ];
 
+const platformBenefits: Benefit[] = [
+  {
+    icon: 'target',
+    title: 'Google Ads',
+    description: 'Search, Shopping, Display, YouTube, Performance Max. Campagnes Google Ads optimisées pour la conversion.',
+    size: 'medium',
+  },
+  {
+    icon: 'rocket',
+    title: 'Facebook Ads',
+    description: 'Campagnes publicitaires sur Facebook et Instagram pour toucher votre audience sur les réseaux sociaux.',
+    size: 'medium',
+  },
+  {
+    icon: 'chart',
+    title: 'LinkedIn Ads',
+    description: 'Publicité B2B pour cibler les décideurs et professionnels. Idéal pour la génération de leads qualifiés.',
+    size: 'medium',
+  },
+  {
+    icon: 'zap',
+    title: 'Bing Ads',
+    description: 'Microsoft Advertising pour compléter votre stratégie SEA et toucher une audience complémentaire.',
+    size: 'medium',
+  },
+  {
+    icon: 'globe',
+    title: 'TikTok Ads',
+    description: 'Formats vidéo engageants pour la notoriété et la visibilité auprès des audiences jeunes.',
+    size: 'medium',
+  },
+  {
+    icon: 'shield',
+    title: 'Remarketing',
+    description: 'Reciblage cross-plateforme pour convertir les visiteurs de votre site web en clients.',
+    size: 'medium',
+  },
+];
+
 // Schema.org structured data
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -380,40 +425,10 @@ export default function AdsPage() {
       </section>
 
       {/* Section Plateformes */}
-      <section className="bg-[#1a1a1a] py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Les plateformes que nous maîtrisons
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-[#2C2E34] rounded-2xl p-6">
-              <h3 className="text-white font-semibold text-lg mb-2">Google Ads</h3>
-              <p className="text-gray-400 text-sm">Search, Shopping, Display, YouTube, Performance Max. Campagnes Google Ads optimisées pour la conversion.</p>
-            </div>
-            <div className="bg-[#2C2E34] rounded-2xl p-6">
-              <h3 className="text-white font-semibold text-lg mb-2">Facebook Ads</h3>
-              <p className="text-gray-400 text-sm">Campagnes publicitaires sur Facebook et Instagram pour toucher votre audience sur les réseaux sociaux.</p>
-            </div>
-            <div className="bg-[#2C2E34] rounded-2xl p-6">
-              <h3 className="text-white font-semibold text-lg mb-2">LinkedIn Ads</h3>
-              <p className="text-gray-400 text-sm">Publicité B2B pour cibler les décideurs et professionnels. Idéal pour la génération de leads qualifiés.</p>
-            </div>
-            <div className="bg-[#2C2E34] rounded-2xl p-6">
-              <h3 className="text-white font-semibold text-lg mb-2">Bing Ads</h3>
-              <p className="text-gray-400 text-sm">Microsoft Advertising pour compléter votre stratégie SEA et toucher une audience complémentaire.</p>
-            </div>
-            <div className="bg-[#2C2E34] rounded-2xl p-6">
-              <h3 className="text-white font-semibold text-lg mb-2">TikTok Ads</h3>
-              <p className="text-gray-400 text-sm">Formats vidéo engageants pour la notoriété et la visibilité auprès des audiences jeunes.</p>
-            </div>
-            <div className="bg-[#2C2E34] rounded-2xl p-6">
-              <h3 className="text-white font-semibold text-lg mb-2">Remarketing</h3>
-              <p className="text-gray-400 text-sm">Reciblage cross-plateforme pour convertir les visiteurs de votre site web en clients.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BenefitsSection
+        title="Les plateformes que nous maîtrisons"
+        benefits={platformBenefits}
+      />
 
       {/* Avantages - Bento Grid */}
       <BenefitsSection
@@ -428,6 +443,9 @@ export default function AdsPage() {
         points={vigilancePoints}
       />
 
+      {/* Cas Clients */}
+      <CaseStudies caseStudies={caseStudies} />
+
       {/* Témoignages */}
       <Testimonials />
 
@@ -437,29 +455,23 @@ export default function AdsPage() {
         steps={methodologySteps}
       />
 
-      {/* Expertises */}
-      <section className="bg-[#1a1a1a] py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Nos expertises Ads
-          </h2>
+      {/* Nos Engagements */}
+      <Engagements />
 
-          <div className="flex flex-wrap justify-center gap-4">
-            {expertises.map((expertise) => (
-              <Link
-                key={expertise.name}
-                href={expertise.href}
-                className="bg-[#2C2E34] hover:bg-[#2C2E34] text-white px-6 py-3 rounded-full text-sm font-medium transition-colors hover:text-[#E74601]"
-              >
-                {expertise.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Synergies / Maillage Prestations */}
+      <MaillagePrestation />
+
+      {/* Expertises Ads */}
+      <OtherExpertisesSection
+        title="Nos expertises Ads"
+        expertises={expertises}
+      />
 
       {/* FAQ */}
       <FAQ title="Questions fréquentes sur notre agence Ads à Lille" faqs={faqs} />
+
+      {/* Articles récents */}
+      <Articles title="Nos derniers articles" />
 
       {/* Breadcrumb */}
       <Breadcrumb

@@ -3,6 +3,7 @@ import LogoBanner from '@/components/LogoBanner';
 import CTA from '@/components/CTA';
 import Newsletter from '@/components/Newsletter';
 import CaseStudies from '@/components/CaseStudies';
+import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Articles from '@/components/Articles';
 import { caseStudies } from '@/lib/caseStudiesWP';
@@ -17,6 +18,7 @@ import MaillagePrestation from '@/components/MaillagePrestation';
 import Engagements from '@/components/Engagements';
 import Methode from '@/components/Methode';
 import ExpertisesGrid from '@/components/ExpertisesGrid';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Agence SEO à Lille | Référencement Naturel Google | Slashr',
@@ -235,6 +237,9 @@ export default async function SEOPage() {
       {/* Cas Clients */}
       <CaseStudies caseStudies={caseStudies} />
 
+      {/* Témoignages clients */}
+      <Testimonials />
+
       {/* Méthodologie */}
       <MethodologySection
         title="Comment se déroule une prestation SEO ?"
@@ -252,12 +257,12 @@ export default async function SEOPage() {
         title="Notre savoir-faire SEO"
         description="Des stratégies SEO adaptées à vos enjeux business, que vous visiez l'international, le e-commerce ou le marché local."
         items={[
-          { icon: 'globe', title: 'SEO International', description: 'Développez votre visibilité à l\'échelle mondiale avec une stratégie SEO multilingue et multi-pays.' },
-          { icon: 'chart', title: 'SEO E‑commerce', description: 'Optimisez votre boutique en ligne pour générer plus de trafic qualifié et augmenter vos ventes.' },
-          { icon: 'target', title: 'SEO Local', description: 'Dominez les recherches locales et attirez des clients près de chez vous.' },
+          { icon: 'globe', title: 'SEO International', description: 'Développez votre visibilité à l\'échelle mondiale avec une stratégie SEO multilingue et multi-pays.', href: '/seo/prestations/international' },
+          { icon: 'chart', title: 'SEO E‑commerce', description: 'Optimisez votre boutique en ligne pour générer plus de trafic qualifié et augmenter vos ventes.', href: '/seo/prestations/ecommerce' },
+          { icon: 'target', title: 'SEO Local', description: 'Dominez les recherches locales et attirez des clients près de chez vous.', href: '/seo/prestations/local' },
           { icon: 'code', title: 'SEO Technique', description: 'Optimisez les fondations techniques de votre site pour maximiser son crawl et son indexation.' },
-          { icon: 'shield', title: 'Migration SEO', description: 'Sécurisez vos projets de refonte pour préserver et renforcer votre référencement.' },
-          { icon: 'user', title: 'Formation SEO', description: 'Montez en compétences avec nos formations SEO adaptées à votre niveau et vos objectifs.' },
+          { icon: 'shield', title: 'Migration SEO', description: 'Sécurisez vos projets de refonte pour préserver et renforcer votre référencement.', href: '/seo/prestations/refonte-migration' },
+          { icon: 'user', title: 'Formation SEO', description: 'Montez en compétences avec nos formations SEO adaptées à votre niveau et vos objectifs.', href: '/seo/prestations/formation' },
         ]}
         ctaText="Présentez nous votre projet"
       />
@@ -325,6 +330,14 @@ export default async function SEOPage() {
 
       {/* FAQ */}
       <FAQ title="Questions fréquentes" faqs={faqs} />
+
+      {/* Fil d'Ariane */}
+      <Breadcrumb
+        items={[
+          { label: 'Accueil', href: '/' },
+          { label: 'SEO' },
+        ]}
+      />
 
       {/* CTA */}
       <CTA />

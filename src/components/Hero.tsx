@@ -24,7 +24,7 @@ const Hero = () => {
         <h1
           className="text-white max-w-[818px] font-semibold text-center"
           style={{
-            fontFamily: '"Funnel Display", sans-serif',
+            fontFamily: 'var(--font-funnel-display), sans-serif',
             fontSize: 'clamp(40px, 8vw, 90px)',
             lineHeight: '95%',
             letterSpacing: '-0.03em',

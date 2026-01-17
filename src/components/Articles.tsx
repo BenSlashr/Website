@@ -4,10 +4,12 @@ import { getLatestArticlesFromWP, Article } from "@/lib/wordpress";
 
 interface ArticlesProps {
   title?: string;
+  articles?: Article[]; // Si fourni, utilise ces articles ; sinon, fetch les derniers
 }
 
-const Articles = async ({ title = "Nos articles" }: ArticlesProps) => {
-  const articles = await getLatestArticlesFromWP(3);
+const Articles = async ({ title = "Nos articles", articles: providedArticles }: ArticlesProps) => {
+  // Si des articles sont fournis (via embedding), les utiliser ; sinon fetch les derniers
+  const articles = providedArticles ?? await getLatestArticlesFromWP(3);
 
   if (articles.length === 0) {
     return null;

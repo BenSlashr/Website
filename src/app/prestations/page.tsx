@@ -4,6 +4,43 @@ import { prestationsData as prestations } from "@/lib/prestationsWP";
 import CTA from "@/components/CTA";
 import Newsletter from "@/components/Newsletter";
 import { ServiceHero } from "@/components/services";
+import Breadcrumb from "@/components/Breadcrumb";
+
+// Schema.org for ItemList
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Nos Expertises SEO & Search Marketing",
+  description:
+    "Découvrez toutes nos expertises en SEO et Search Marketing : audit, stratégie, SEO technique, contenu, netlinking, SEO local, e-commerce et international.",
+  url: "https://www.slashr.fr/prestations",
+  numberOfItems: prestations.length,
+  itemListElement: prestations.map((prestation, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: prestation.title,
+    url: `https://www.slashr.fr/prestations/${prestation.slug}`,
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Accueil",
+      item: "https://www.slashr.fr",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Prestations",
+      item: "https://www.slashr.fr/prestations",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Nos Expertises SEO & Search Marketing",
@@ -17,6 +54,16 @@ export const metadata: Metadata = {
 export default function PrestationsPage() {
   return (
     <>
+      {/* Schema.org structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Hero Section with Animation */}
       <ServiceHero
         title="Des experts à votre service"
@@ -60,6 +107,14 @@ export default function PrestationsPage() {
           </div>
         </div>
       </section>
+
+      {/* Fil d'Ariane */}
+      <Breadcrumb
+        items={[
+          { label: 'Accueil', href: '/' },
+          { label: 'Prestations' },
+        ]}
+      />
 
       <CTA />
       <Newsletter />

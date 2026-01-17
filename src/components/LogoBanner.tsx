@@ -74,8 +74,11 @@ const LogoBanner = () => {
               alt={logo.name}
               width={120}
               height={60}
-              className="object-contain max-h-[35px] sm:max-h-[40px] md:max-h-[50px] w-auto brightness-0 invert"
-              unoptimized
+              className="object-contain max-h-[35px] sm:max-h-[40px] md:max-h-[50px] w-auto grayscale brightness-0 invert hover:grayscale-0 hover:brightness-100 hover:invert-0 transition-all duration-300"
+              loading="lazy"
+              // Optimisation : taille réduite et qualité optimisée pour les logos
+              sizes="120px"
+              quality={75}
             />
           </div>
         ))}
