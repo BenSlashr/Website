@@ -132,7 +132,7 @@ const HeaderClient = ({ expertises, aboutPages }: HeaderClientProps) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             <div
               className="relative"
               onMouseEnter={() => { setIsExpertisesOpen(true); setIsAboutOpen(false); }}
@@ -140,11 +140,11 @@ const HeaderClient = ({ expertises, aboutPages }: HeaderClientProps) => {
             >
               <button
                 onClick={() => setIsExpertisesOpen(!isExpertisesOpen)}
-                className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors text-sm py-2"
+                className="flex items-center gap-1.5 text-gray-600 hover:text-black transition-colors text-sm py-2 whitespace-nowrap"
               >
                 Nos expertises
                 <svg
-                  className={`w-4 h-4 transition-transform ${isExpertisesOpen ? 'rotate-180' : ''}`}
+                  className={`w-3.5 h-3.5 transition-transform flex-shrink-0 ${isExpertisesOpen ? 'rotate-180' : ''}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -234,7 +234,7 @@ const HeaderClient = ({ expertises, aboutPages }: HeaderClientProps) => {
               )}
             </div>
 
-            <Link href="/cas-clients" className="text-gray-600 text-sm transition-all duration-300 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] hover:bg-clip-text hover:text-transparent">
+            <Link href="/cas-clients" className="text-gray-600 text-sm py-2 whitespace-nowrap transition-all duration-300 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] hover:bg-clip-text hover:text-transparent">
               Cas clients
             </Link>
 
@@ -245,10 +245,10 @@ const HeaderClient = ({ expertises, aboutPages }: HeaderClientProps) => {
             >
               <button
                 onClick={() => setIsAboutOpen(!isAboutOpen)}
-                className="flex items-center gap-1 text-gray-600 hover:text-black transition-colors text-sm py-2"
+                className="flex items-center gap-1.5 text-gray-600 hover:text-black transition-colors text-sm py-2 whitespace-nowrap"
               >
                 À propos
-                <svg className={`w-4 h-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`w-3.5 h-3.5 transition-transform flex-shrink-0 ${isAboutOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>

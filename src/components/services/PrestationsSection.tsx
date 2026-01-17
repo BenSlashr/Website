@@ -2,7 +2,7 @@
 
 interface PrestationLink {
   label: string;
-  href: string;
+  href?: string;
 }
 
 interface PrestationCard {
@@ -79,43 +79,62 @@ const PrestationsSection = ({
 
               {/* Links list */}
               <div className="flex flex-col items-start gap-[15px]">
-                {card.links.map((link, linkIndex) => (
-                  <a
-                    key={linkIndex}
-                    href={link.href}
-                    className="flex items-center gap-[11px] group"
-                  >
-                    {/* Arrow circle */}
-                    <div className="w-[21px] h-[21px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg
-                        width="9"
-                        height="8"
-                        viewBox="0 0 9 8"
-                        fill="none"
-                        className="text-[#2C2E34]"
+                {card.links.map((link, linkIndex) => {
+                  const content = (
+                    <>
+                      {/* Arrow circle */}
+                      <div className="w-[21px] h-[21px] bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg
+                          width="9"
+                          height="8"
+                          viewBox="0 0 9 8"
+                          fill="none"
+                          className="text-[#2C2E34]"
+                        >
+                          <path
+                            d="M1 4H8M8 4L5 1M8 4L5 7"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      {/* Link text */}
+                      <span
+                        className={`text-white font-semibold ${link.href ? 'border-b border-white transition-colors group-hover:text-white/80 group-hover:border-white/80' : ''}`}
+                        style={{
+                          fontSize: '15px',
+                          lineHeight: '145%',
+                          letterSpacing: '-0.01em',
+                        }}
                       >
-                        <path
-                          d="M1 4H8M8 4L5 1M8 4L5 7"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    {/* Link text with underline */}
-                    <span
-                      className="text-white font-semibold border-b border-white transition-colors group-hover:text-white/80 group-hover:border-white/80"
-                      style={{
-                        fontSize: '15px',
-                        lineHeight: '145%',
-                        letterSpacing: '-0.01em',
-                      }}
+                        {link.label}
+                      </span>
+                    </>
+                  );
+
+                  if (link.href) {
+                    return (
+                      <a
+                        key={linkIndex}
+                        href={link.href}
+                        className="flex items-center gap-[11px] group"
+                      >
+                        {content}
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <div
+                      key={linkIndex}
+                      className="flex items-center gap-[11px]"
                     >
-                      {link.label}
-                    </span>
-                  </a>
-                ))}
+                      {content}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}

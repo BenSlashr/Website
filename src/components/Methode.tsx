@@ -22,9 +22,9 @@ const Methode = ({
   return (
     <section className="bg-[#1a1a1a] py-12 sm:py-16 md:py-24 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-[100px]">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 xl:gap-24 lg:items-start">
           {/* Colonne gauche - Sticky */}
-          <div className="md:sticky md:top-32 md:h-fit md:w-[400px] flex-shrink-0">
+          <div className="lg:sticky lg:top-28 lg:w-[380px] xl:w-[420px] flex-shrink-0 self-start">
             <h2
               className="font-bold text-white mb-6"
               style={{
@@ -37,7 +37,7 @@ const Methode = ({
             </h2>
 
             <p
-              className="text-white mb-8"
+              className="text-white/70 mb-8"
               style={{
                 fontFamily: "'Geist', sans-serif",
                 fontWeight: 400,
@@ -59,7 +59,7 @@ const Methode = ({
           </div>
 
           {/* Colonne droite - Liste numérotée */}
-          <div className="flex-1 flex flex-col gap-4">
+          <div className="flex-1 flex flex-col gap-4 lg:min-h-[800px]">
             {items.map((item, index) => (
               <div
                 key={index}

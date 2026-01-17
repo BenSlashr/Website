@@ -195,40 +195,40 @@ export default async function SEOPage() {
             title: "Audit SEO",
             description: "Réalisez un audit SEO complet pour déterminer les forces et faiblesses de votre site et construire une stratégie SEO efficace.",
             links: [
-              { label: "Audit de positionnement", href: "/seo/prestations/audit-positionnement" },
-              { label: "Audit technique", href: "/seo/prestations/audit-technique" },
-              { label: "Audit sémantique", href: "/seo/prestations/audit-semantique" },
-              { label: "Diagnostic de perte de trafic", href: "/seo/prestations/diagnostic-trafic" },
+              { label: "Audit de positionnement" },
+              { label: "Audit technique" },
+              { label: "Audit sémantique" },
+              { label: "Diagnostic de perte de trafic" },
             ]
           },
           {
             title: "Stratégie SEO",
             description: "Définissez une feuille de route claire pour atteindre vos objectifs de visibilité.",
             links: [
-              { label: "Stratégie de contenu SEO", href: "/seo/prestations/strategie-contenu" },
-              { label: "Stratégie technique SEO", href: "/seo/prestations/strategie-technique" },
-              { label: "Stratégie de popularité / netlinking", href: "/seo/prestations/strategie-netlinking" },
-              { label: "Stratégie SEO globale / roadmap", href: "/seo/prestations/strategie-globale" },
+              { label: "Stratégie de contenu SEO" },
+              { label: "Stratégie technique SEO" },
+              { label: "Stratégie de popularité / netlinking" },
+              { label: "Stratégie SEO globale / roadmap" },
             ]
           },
           {
             title: "Conseil et exécution SEO",
             description: "Bénéficiez d'un accompagnement expert pour mettre en œuvre vos actions SEO.",
             links: [
-              { label: "Conseil & accompagnement SEO", href: "/seo/prestations/accompagnement" },
-              { label: "Création & optimisation de contenus", href: "/seo/prestations/contenus" },
-              { label: "Achat de liens & de mentions", href: "/seo/prestations/netlinking" },
-              { label: "Coaching & Formation SEO", href: "/seo/prestations/coaching-formation" },
+              { label: "Conseil & accompagnement SEO" },
+              { label: "Création & optimisation de contenus" },
+              { label: "Achat de liens & de mentions" },
+              { label: "Coaching & Formation SEO" },
             ]
           },
           {
             title: "Refonte de sites",
             description: "Sécurisez vos projets techniques pour préserver votre référencement.",
             links: [
-              { label: "Cahier des charges SEO (AMOA)", href: "/seo/prestations/cahier-des-charges" },
-              { label: "Recette préprod SEO", href: "/seo/prestations/recette-preprod" },
-              { label: "Recette prod SEO", href: "/seo/prestations/recette-prod" },
-              { label: "Aide aux redirections", href: "/seo/prestations/redirections" },
+              { label: "Cahier des charges SEO (AMOA)" },
+              { label: "Recette préprod SEO" },
+              { label: "Recette prod SEO" },
+              { label: "Aide aux redirections" },
             ]
           },
         ]}

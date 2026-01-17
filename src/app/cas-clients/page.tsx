@@ -213,15 +213,15 @@ const CasClientsPage = () => {
                 <Link
                   href={`/cas-clients/${caseItem.slug}`}
                   key={caseItem.slug}
-                  className="bg-[#2C2E34] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.02] block"
+                  className="bg-[#2C2E34] rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:scale-[1.02] flex flex-col"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  {/* Card Header with Logo */}
-                  <div className="relative h-48 md:h-56 flex items-center justify-center overflow-hidden">
+                  {/* Card Header with Logo - Fixed height */}
+                  <div className="relative h-48 md:h-56 flex items-center justify-center overflow-hidden flex-shrink-0">
                     {/* Logo - always on top, moves up on hover */}
                     <span
-                      className={`relative z-30 text-white text-2xl font-serif italic font-bold transition-transform duration-700 ease-out ${
+                      className={`relative z-30 text-white text-xl sm:text-2xl font-serif italic font-bold transition-transform duration-700 ease-out text-center px-4 max-w-full truncate ${
                         hoveredIndex === index ? '-translate-y-6' : 'translate-y-0'
                       }`}
                     >
@@ -253,16 +253,16 @@ const CasClientsPage = () => {
                     />
                   </div>
 
-                  {/* Card Content */}
-                  <div className="p-6">
-                    {/* Company Name */}
-                    <h3 className="text-white font-semibold text-lg mb-2">{caseItem.title}</h3>
+                  {/* Card Content - Flex grow to fill remaining space */}
+                  <div className="p-6 flex flex-col flex-grow">
+                    {/* Company Name - Fixed height with line clamp */}
+                    <h3 className="text-white font-semibold text-lg mb-2 line-clamp-2 min-h-[3.5rem]">{caseItem.title}</h3>
 
-                    {/* Description */}
-                    <p className="text-gray-400 text-sm mb-6 leading-relaxed">{caseItem.description}</p>
+                    {/* Description - Fixed height with line clamp */}
+                    <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3 min-h-[4.5rem]">{caseItem.description}</p>
 
-                    {/* Divider */}
-                    <div className="border-t border-dashed border-gray-600 mb-4" />
+                    {/* Divider - Push to bottom with margin-top auto */}
+                    <div className="border-t border-dashed border-gray-600 mb-4 mt-auto" />
 
                     {/* Stats */}
                     <div className="space-y-1">

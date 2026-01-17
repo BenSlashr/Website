@@ -10,7 +10,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
 }
@@ -22,7 +22,7 @@ body {
   font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   background-color: #1a1a1a;
   color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1 {

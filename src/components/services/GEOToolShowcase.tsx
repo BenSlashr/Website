@@ -87,9 +87,6 @@ const features: Feature[] = [
 const GEOToolShowcase = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const featureRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const sectionRef = useRef<HTMLElement>(null);
-  const imageColumnRef = useRef<HTMLDivElement>(null);
-  const leftColumnRef = useRef<HTMLDivElement>(null);
 
   // Observer pour détecter quelle feature est visible
   useEffect(() => {
@@ -120,59 +117,8 @@ const GEOToolShowcase = () => {
     };
   }, []);
 
-  // Effet sticky manuel avec JS (car overflow-x: hidden sur html/body casse CSS sticky)
-  useEffect(() => {
-    const imageColumn = imageColumnRef.current;
-    const leftColumn = leftColumnRef.current;
-    const rightColumnWrapper = document.getElementById('geo-right-column');
-
-    if (!imageColumn || !leftColumn || !rightColumnWrapper) return;
-
-    const topOffset = 112; // top-28 = 7rem = 112px
-
-    const handleScroll = () => {
-      const leftColumnRect = leftColumn.getBoundingClientRect();
-      const wrapperRect = rightColumnWrapper.getBoundingClientRect();
-      const imageHeight = imageColumn.offsetHeight;
-
-      // Position de départ : quand le wrapper atteint le top offset
-      const shouldBeFixed = wrapperRect.top <= topOffset;
-
-      // Position de fin : quand le bas de la colonne gauche ne permet plus de fixer
-      const maxScroll = leftColumnRect.bottom - imageHeight - topOffset;
-      const shouldBeAbsolute = maxScroll < 0;
-
-      if (!shouldBeFixed) {
-        // Mode normal - en haut de la colonne
-        imageColumn.style.position = 'relative';
-        imageColumn.style.top = '0';
-        imageColumn.style.width = '100%';
-      } else if (shouldBeFixed && !shouldBeAbsolute) {
-        // Mode fixed - collé en haut de l'écran
-        imageColumn.style.position = 'fixed';
-        imageColumn.style.top = `${topOffset}px`;
-        imageColumn.style.width = `${wrapperRect.width}px`;
-      } else {
-        // Mode absolute - collé en bas du wrapper
-        imageColumn.style.position = 'absolute';
-        imageColumn.style.top = 'auto';
-        imageColumn.style.bottom = '0';
-        imageColumn.style.width = '100%';
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', handleScroll, { passive: true });
-    handleScroll(); // Initial call
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleScroll);
-    };
-  }, []);
-
   return (
-    <section ref={sectionRef} className="bg-[#1a1a1a] py-24 px-6 overflow-visible">
+    <section className="bg-[#1a1a1a] py-24 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -209,9 +155,9 @@ const GEOToolShowcase = () => {
         </div>
 
         {/* Desktop: Two column layout with sticky */}
-        <div className="hidden lg:flex lg:gap-12 relative">
+        <div className="hidden lg:flex lg:gap-12 lg:items-start">
           {/* Left: Features list */}
-          <div ref={leftColumnRef} className="w-2/5 space-y-6">
+          <div className="w-2/5 space-y-6">
             {features.map((feature, index) => (
               <div
                 key={feature.id}
@@ -258,60 +204,56 @@ const GEOToolShowcase = () => {
           </div>
 
           {/* Right: Sticky image */}
-          <div id="geo-right-column" className="w-3/5 relative">
-            <div
-              ref={imageColumnRef}
-            >
-              <div className="relative rounded-2xl overflow-hidden border border-gray-700/50 shadow-2xl">
-                {/* Browser mockup header */}
-                <div className="bg-[#2C2E34] px-4 py-3 flex items-center gap-2">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  </div>
-                  <div className="flex-1 ml-4">
-                    <div className="bg-[#1a1a1a] rounded-lg px-4 py-1.5 text-gray-500 text-sm">
-                      app.slashr.fr/geo-tracker
-                    </div>
-                  </div>
+          <div className="w-3/5 sticky top-28 self-start">
+            <div className="relative rounded-2xl overflow-hidden border border-gray-700/50 shadow-2xl">
+              {/* Browser mockup header */}
+              <div className="bg-[#2C2E34] px-4 py-3 flex items-center gap-2">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
-
-                {/* Screenshot with transition */}
-                <div className="relative aspect-[16/10] bg-[#1a1a1a]">
-                  {features.map((feature, index) => (
-                    <div
-                      key={feature.id}
-                      className={`absolute inset-0 transition-opacity duration-500 ${
-                        activeIndex === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                      }`}
-                    >
-                      <Image
-                        src={feature.image}
-                        alt={feature.title}
-                        fill
-                        className="object-contain"
-                        priority={index === 0}
-                      />
-                    </div>
-                  ))}
+                <div className="flex-1 ml-4">
+                  <div className="bg-[#1a1a1a] rounded-lg px-4 py-1.5 text-gray-500 text-sm">
+                    app.slashr.fr/geo-tracker
+                  </div>
                 </div>
               </div>
 
-              {/* Feature indicator */}
-              <div className="flex justify-center mt-6 gap-2">
-                {features.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveIndex(index)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      activeIndex === index
-                        ? 'bg-[#E74601] w-6'
-                        : 'bg-gray-600 hover:bg-gray-500 w-2'
+              {/* Screenshot with transition */}
+              <div className="relative aspect-[16/10] bg-[#1a1a1a]">
+                {features.map((feature, index) => (
+                  <div
+                    key={feature.id}
+                    className={`absolute inset-0 transition-opacity duration-500 ${
+                      activeIndex === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
                     }`}
-                  />
+                  >
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      fill
+                      className="object-contain"
+                      priority={index === 0}
+                    />
+                  </div>
                 ))}
               </div>
+            </div>
+
+            {/* Feature indicator */}
+            <div className="flex justify-center mt-6 gap-2">
+              {features.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveIndex(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    activeIndex === index
+                      ? 'bg-[#E74601] w-6'
+                      : 'bg-gray-600 hover:bg-gray-500 w-2'
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
