@@ -90,14 +90,26 @@ const Newsletter = () => {
 
             {/* Social Proof */}
             <div className="flex items-center gap-3">
-              {/* Avatars */}
+              {/* Avatar heads */}
               <div className="flex -space-x-2 flex-shrink-0">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#2C2E34]" style={{ background: 'linear-gradient(135deg, #E74601, #FF9011)' }} />
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#2C2E34]" style={{ background: 'linear-gradient(135deg, #CE08A9, #CE16B5)' }} />
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#2C2E34]" style={{ background: 'linear-gradient(135deg, #8962FD, #AD21FE)' }} />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#2C2E34] bg-[#3a3d47] flex items-center justify-center">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg>
+                </div>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#2C2E34] bg-[#3a3d47] flex items-center justify-center">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg>
+                </div>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#2C2E34] bg-[#3a3d47] flex items-center justify-center">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                  </svg>
+                </div>
               </div>
               <p className="text-gray-400 text-xs sm:text-sm">
-                <span className="text-white font-medium">+100 personnes</span> sont abonnés à notre newsletter
+                <span className="text-white font-medium">+500 personnes</span> suivent la news
               </p>
             </div>
           </div>

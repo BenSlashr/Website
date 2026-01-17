@@ -35,6 +35,7 @@ export default function ArticleContent({
     position: 'top'
   });
   const [isMounted, setIsMounted] = useState(false);
+  const [annotationKey, setAnnotationKey] = useState(0);
 
   // Marquer le composant comme monté côté client
   useEffect(() => {
@@ -145,11 +146,14 @@ export default function ArticleContent({
     };
 
     processNode(container);
+
+    // Signaler que l'annotation est terminée pour attacher les event listeners
+    setAnnotationKey(prev => prev + 1);
   }, [html, enableGlossary, maxTerms]);
 
-  // Gestion des événements de survol - séparée de l'annotation
+  // Gestion des événements de survol - s'exécute après l'annotation via annotationKey
   useEffect(() => {
-    if (!enableGlossary || !contentRef.current) return;
+    if (!enableGlossary || !contentRef.current || annotationKey === 0) return;
 
     const container = contentRef.current;
 
@@ -206,7 +210,7 @@ export default function ArticleContent({
       });
       activeElementRef.current = null;
     };
-  }, [html, enableGlossary, maxTerms]);
+  }, [enableGlossary, annotationKey]);
 
   return (
     <>

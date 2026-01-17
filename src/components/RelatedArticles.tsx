@@ -23,23 +23,8 @@ const RelatedArticles = ({
   if (!articles || articles.length === 0) return null;
 
   return (
-    <section className="mt-16 mb-8">
-      <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-        <span className="w-10 h-10 bg-gradient-to-br from-[#E74601] to-[#8962FD] rounded-xl flex items-center justify-center">
-          <svg
-            className="w-5 h-5 text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-            />
-          </svg>
-        </span>
+    <section className="mt-16 mb-32">
+      <h3 className="text-2xl font-bold text-white mb-8">
         {title}
       </h3>
 
@@ -53,7 +38,7 @@ const RelatedArticles = ({
             <article className="relative overflow-hidden rounded-2xl bg-[#2C2E34] h-full transition-all duration-300 hover:shadow-xl hover:shadow-[#E74601]/10 hover:-translate-y-1">
               {/* Gradient header */}
               <div
-                className="h-2"
+                className="h-3"
                 style={{ background: getCardGradient(index) }}
               />
 

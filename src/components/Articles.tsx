@@ -99,10 +99,8 @@ const Articles = async ({ title = "Nos articles", articles: providedArticles }: 
                       unoptimized
                     />
                   ) : (
-                    <div className="w-8 h-8 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full border border-white/50 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                      </svg>
+                    <div className="w-8 h-8 bg-gradient-to-br from-[#E74601] to-[#CE08A9] rounded-full border border-white/50 flex items-center justify-center text-white font-medium text-xs">
+                      {featuredArticle.author.split(' ').map(n => n[0]).join('')}
                     </div>
                   )}
                   <span className="text-white text-[15px] leading-[145%]">{featuredArticle.author}</span>
@@ -150,10 +148,8 @@ const Articles = async ({ title = "Nos articles", articles: providedArticles }: 
                         unoptimized
                       />
                     ) : (
-                      <div className="w-8 h-8 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full border border-black/50 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                        </svg>
+                      <div className="w-8 h-8 bg-gradient-to-br from-[#E74601] to-[#CE08A9] rounded-full border border-black/50 flex items-center justify-center text-white font-medium text-xs">
+                        {article.author.split(' ').map(n => n[0]).join('')}
                       </div>
                     )}
                     <span className="text-white text-[15px] leading-[145%]">{article.author}</span>
