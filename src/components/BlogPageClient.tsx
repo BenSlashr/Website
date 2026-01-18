@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Article } from '@/lib/wordpress';
+import { Article } from '@/lib/mdx';
 import BlogFilters from './BlogFilters';
 
 const ARTICLES_PER_PAGE = 12;

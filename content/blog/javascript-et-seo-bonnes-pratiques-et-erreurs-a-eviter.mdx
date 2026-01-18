@@ -1,0 +1,232 @@
+---
+title: "Javascript et SEO : bonnes pratiques et erreurs à éviter"
+slug: "javascript-et-seo-bonnes-pratiques-et-erreurs-a-eviter"
+date: "2023-10-22 09:10:34"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<p>Le JavaScript et le SEO sont deux domaines distincts mais néanmoins liés. Javascript est un langage de programmation apportant une dynamique au web moderne. Le SEO est une multitude d’actions destinées à améliorer le référencement et la visibilité d’un site internet.</p>
+
+<p>Javascript SEO se situe au cœur des pratiques garantissant à un site web, d’être indexé et bien positionné sur les moteurs de recherche. Une bonne compréhension du mode de traitement de JavaScript et de l’optimisation SEO est la garantie d’obtenir des performances maximales.</p>
+
+<h2 class="wp-block-heading">Comprendre le JavaScript SEO</h2>
+
+<h3 class="wp-block-heading">Définition et importance du JavaScript SEO</h3>
+
+<p>Le JavaScript SEO concerne uniquement l’optimisation des sites web qui utilisent le JavaScript. Il garantit l’accessibilité, l’indexation, l’optimisation SEO. Contrairement à l’HTML statique, JavaScript, en raison de sa nature dynamique, présente des défis uniques et spécifiques. Mal géré, il peut masquer le contenu, rendre les liens inaccessibles et nuire à la visibilité d’un site web dans les moteurs de recherche.</p>
+
+<h3 class="wp-block-heading">Comment les moteurs de recherche traitent-ils le JavaScript ?</h3>
+
+<figure class="wp-block-image"><img src="https://lh6.googleusercontent.com/-kDmN5jOZ2mSVafUwcwRVOHNIdf9WBfFjGfUqLyXCI70X7T1mHKhK3HL_JaqwwH8DOw3Z5lM_DCvCNFfDxIKVD0s9JgUNLUbn6WgsXyHLUIODW2NpECvnkOpRX6Qiqe9o7RVVdzvwfGzzxMnuPMAa1M" alt=""/></figure>
+
+<p>Google et tous les autres moteurs de recherche sont capables d’<a href="https://www.youtube.com/watch?v=PFwUbgvpdaQ&amp;feature=youtu.be">exécuter et de comprendre le JavaScript</a>. Le processus est néanmoins différent de l’analyse d’une page HTML statique. Lorsqu’un robot d’exploration rencontre du JavaScript, il met le script de côté pour l’exécuter ultérieurement. On parle de différé. Une fois le JavaScript exécuté, les moteurs de recherche découvrent et indexent le contenu généré dynamiquement. Retrouvez des explications supplémentaires dans cette <a href="https://developers.google.com/search/docs/guides/rendering">documentation de Google</a>.</p>
+
+<p>Le rendu différé présente un désavantage car il est susceptible d’être traité plus tardivement que du contenu HTML statique. Certains moteurs de recherche ont des capacités moindres pour traiter le JavaScript. Cela peut entraîner des différences dans l’indexation et le classement entre les moteurs. </p>
+
+<h2 class="wp-block-heading">Défis courants du JavaScript pour le SEO</h2>
+
+<h3 class="wp-block-heading">Problèmes d'indexation</h3>
+
+<p>Même si Google traite efficacement le JavaScript, l’indexation du contenu généré par ce dernier peut prendre du temps. Ce décalage est généré par le fait que le moteur de recherche exécute le script, attend que tout contenu dynamique soit rendu, puis indexe le contenu.</p>
+
+<p>Un site web dépendant de JavaScript peut donc constater que son contenu met plus de temps à apparaître dans les résultats de recherche par rapport à un site utilisant principalement du HTML statique.</p>
+
+<p>Vous prévoyez une refonte de votre site web avec beaucoup de Javascript ? Assurez vous de conserver votre trafic avec notre <a href="https://agence-slashr.fr/seo/prestations/refonte-seo/">accompagnement SEO à la refonte de sites web</a>.</p>
+
+<h2 class="wp-block-heading">Problèmes de rendu du JavaScript par Googlebot</h2>
+
+<h3 class="wp-block-heading">La capacité de Google à traiter le JavaScript</h3>
+
+<p>Google est équipé pour comprendre et exécuter le JavaScript mais le processus n’est pas aussi direct que pour l’HTML classique. Les sites web modernes conçus avec JavaScript peuvent être tributaires de délais d’attente plus longs en matière d’indexation et de rendu.</p>
+
+<h4 class="wp-block-heading">Temps de rendu du JavaScript par Googlebot</h4>
+
+<p>Martin Splitt, chargé de relation chez Google, a souligné que le temps moyen de rendu de GoogleBot pour une page JavaScript est de 5 secondes. Les webmasters ont donc peu à s’inquiéter des délais pour le rendu d’un contenu, une fois que GoogleBot ait exploré la page.</p>
+
+<h4 class="wp-block-heading">Problèmes spécifiques aux sites entièrement basés sur JavaScript</h4>
+
+<p>Même si aujourd’hui, Google a effectué de nettes améliorations dans le rendu du JavaScript, il faut bien constater que parfois, les sites générés par JavaScript rencontrent quelques aléas d’indexation. Contrairement aux dires du chargé de relation Google, certaines études ont démontré que Google peut prendre jusqu’à 9 fois plus de temps pour indexer la page ! Voir par exemple l’<a href="https://www.onely.com/blog/google-needs-9x-more-time-to-crawl-js-than-html/">étude de Onely.</a></p>
+
+<p>Cette différence de temps d'indexation peut avoir des implications majeures pour la visibilité de ces sites dans les résultats de recherche. </p>
+
+<h3 class="wp-block-heading">Contenu chargé dynamiquement</h3>
+
+<p>Le JavaScript, suivant son degré de capacité à charger du contenu de manière dynamique, est un atout majeur pour l’expérience utilisateur. Mais si les pages sont chargées en décalage, l’exploration et le rendu de la page&nbsp; vont indéniablement en souffrir. Voir précédemment <a href="https://searchengineland.com/tested-googlebot-crawls-javascript-heres-learned-220157">diverses analyses</a>.</p>
+
+<h3 class="wp-block-heading">Difficultés liées aux Single Page Applications (SPAs)</h3>
+
+<p>Les SPAs sont des applications à page unique. L’écriture des pages web est reprise en ajoutant de nouvelles données mais en conservant le format d’une page unique. L’expérience utilisateur n’en est que plus fluide et plus rapide. Ces applications peuvent compliquer la tâche des moteurs de recherche pour explorer et indexer correctement chaque « page » ou vue d’une SPA, comme évoqué par <a href="https://moz.com/blog/seo-guide-to-google-webmaster-recommendations-for-pagination">Moz</a>.</p>
+
+<h2 class="wp-block-heading">Les solutions pour une meilleure optimisation du JavaScript en SEO</h2>
+
+<h3 class="wp-block-heading">Rendu côté serveur (SSR)</h3>
+
+<p>La solution la plus efficace pour résoudre les problèmes d’indexation associés au JavaScript est le rendu côté serveur (SSR). Le serveur exécute le JavaScript et génère la page HTML complète avant de l’envoyer au navigateur de l’utilisateur. Les moteurs de recherche reçoivent une page de l’entièreté du contenu rendu, éliminant ainsi le besoin d’un rendu différé. Cette méthode est reconnue et recommandée par les experts SEO et par Google.</p>
+
+<h3 class="wp-block-heading">Génération de site statique (SSG)</h3>
+
+<p>La génération de site statique (SSG) est une stratégie pour les sites basés sur JavaScript. Le rendu des pages est effectué à l’avance lors de la construction du site. Lorsqu’un utilisateur ou un moteur de recherche demande une page, le serveur livre une version statique pré-rendue de cette page.&nbsp;</p>
+
+<h3 class="wp-block-heading">Utiliser des balises <code>&lt;noscript&gt;</code></h3>
+
+<p>Les balises &lt;noscript&gt; permettent d’afficher du contenu spécifique aux utilisateurs ou aux robots d’exploration qui n’exécutent pas JavaScript. Cette solution n’est pas idéale pour le contenu principal d’une page mais elle est intéressante comme mesure de sauvegarde pour garantir que certains éléments essentiels soient visibles sans forcément lancer&nbsp; JavaScript.</p>
+
+<h3 class="wp-block-heading">Réhydratation</h3>
+
+<p>La réhydratation est une technique s’effectuant du côté serveur. Elle a pour but d’optimiser les performances. Le serveur envoie le contenu en HTML&nbsp; au navigateur qui va « réhydrater » cette page statique en une application web complète, grâce à JavaScript. Cette méthode est une solution efficace de gestion de contenu généré par JavaScript. Elle est recommandée par <a href="https://developers.google.com/search/docs/guides/dynamic-rendering">Google</a>.</p>
+
+<h2 class="wp-block-heading">Outils et techniques pour diagnostiquer et résoudre les problèmes de SEO liés au JavaScript</h2>
+
+<h3 class="wp-block-heading">Test de rendu Google</h3>
+
+<p>L’outil <strong>Test de rendu Google</strong>, présent dans la <strong>Google Search Console</strong>, est un moyen efficace pour vérifier le travail du <strong>Googlebot</strong>. Vous pouvez ainsi détecter les éléments bloqués ou non chargés.</p>
+
+<h3 class="wp-block-heading">Vérification du code source et du DOM</h3>
+
+<p>Comparer le code source d’une page avec le DOM aide à identifier quel contenu est ajouté ou modifié par JavaScript. Si des éléments essentiels au SEO, tels que le contenu principal ou les liens internes, sont absents du code source mais présents dans le DOM, cela indique clairement qu’ils sont générés par JavaScript. Des outils comme <a href="https://chrome.google.com/webstore/detail/view-rendered-source/ejgngohbdedoabanmclafpkoogegdpob?hl=en">View Rendered Source</a> peuvent faciliter la comparaison.</p>
+
+<h3 class="wp-block-heading">Audit SEO</h3>
+
+<p>Des outils d’audit SEO tels que <strong>Screaming Frog, DeepCrawl ou Botify</strong> sont capables d’identifier les problèmes de rendu JavaScript. Ils crawlent les sites en exécutant le JavaScript vous donnant ainsi une vision juste du contenu accessible et de sa structure.</p>
+
+<h3 class="wp-block-heading">Surveillance de la performance</h3>
+
+<p><strong>Google Lighthouse ou WebPageTest</strong> sont des outils d<strong>’audit SEO</strong> destinés à identifier les problèmes de performance liés au JavaScript. Ces outils évaluent la vitesse de chargement, le temps d’exécution du JavaScript et d’autres métriques qui peuvent avoir un impact sur l’expérience utilisateur et, par extension, sur le SEO.</p>
+
+<h3 class="wp-block-heading">Documentation officielle et communautaire</h3>
+
+<p>La <a href="https://developers.google.com/search/docs/guides/javascript-seo-basics">documentation officielle de Google sur le JavaScript et le SEO</a> est une ressource intéressante pour comprendre comment Google traite le JavaScript. Se tenir informé en suivant de près les forums, les blogs et les communautés dédiées au SEO et au développement web est indispensable pour acquérir des insights précieux.</p>
+
+<h2 class="wp-block-heading">Les frameworks JavaScript et leurs implications pour le SEO</h2>
+
+<h3 class="wp-block-heading">React</h3>
+
+<p>React est une bibliothèque JavaScript largement utilisée pour construire des interfaces utilisateur. Bien que React offre une expérience utilisateur fluide, il repose sur JavaScript, ce qui peut poser des défis pour le SEO. Avec l’application Next.js, il est possible d’implémenter le rendu côté serveur. Le contenu est ainsi accessible aux moteurs de recherche. Notez que la communauté React est active et offre de nombreuses solutions et astuces pour optimiser le SEO des applications React.</p>
+
+<h3 class="wp-block-heading">Vue.js</h3>
+
+<p>Vue.js est un autre framework populaire pour la création d’interfaces utilisateur riches. Tout comme React, Vue peut poser des défis pour le SEO si le contenu est principalement généré côté client. Nuxt.js est une solution utilisée par les développeurs pour implémenter le rendu côté serveur pour les applications Vue.&nbsp;</p>
+
+<h3 class="wp-block-heading">Angular</h3>
+
+<p>Angular, développé par Google, est un framework complet et puissant pour la création d’applications web. Angular Universal est une technologie qui permet le rendu côté serveur afin de défier les défaillances d’Angular en termes de SEO.&nbsp;</p>
+
+<h3 class="wp-block-heading">Conseils généraux pour les frameworks</h3>
+
+<ol class="wp-block-list">
+<li>Rendu côté serveur (SSR) : Quel que soit le framework utilisé, l’implémentation du rendu côté serveur est fortement recommandée pour garantir l’accessibilité immédiate du contenu aux moteurs de recherche.</li>
+
+<li>Balises meta dynamiques : Elles doivent être définies dynamiquement en fonction du contenu de la page.&nbsp;&nbsp;</li>
+
+<li>Utilisation de prérendu : Pour les sites qui ne peuvent pas implémenter le SSR, le prérendu est une alternative qui génère des versions statiques des pages.</li>
+
+<li>Tenir compte de la documentation : Consultez régulièrement ces ressources de chaque framework (documentation et communauté) afin de rester informé des meilleures pratiques en matière de SEO.</li>
+</ol>
+
+<h2 class="wp-block-heading">Conseils pratiques pour optimiser le SEO de sites basés sur JavaScript</h2>
+
+<h3 class="wp-block-heading">1. Évitez le contenu essentiel en JavaScript</h3>
+
+<p>Le contenu essentiel tels que les en-têtes, le texte principal, les liens internes doit être chargé sans dépendre du JavaScript. C’est une garantie pour qu’il reste accessible aux moteurs de recherche même si le JavaScript n’est pas exécuté ou s’il est retardé.</p>
+
+<h3 class="wp-block-heading">2. Implémentez le rendu côté serveur (SSR)</h3>
+
+<p>Le SSR est la solution pour résoudre de nombreux problèmes liés au SEO et au JavaScript. Vous assurez ainsi la disponibilité de votre contenu pour les moteurs de recherche dès le premier chargement.</p>
+
+<h3 class="wp-block-heading">3. Utilisez des balises <code>&lt;noscript&gt;</code></h3>
+
+<p>Intégrer ces balises comme une mesure de sauvegarde est recommandé pour afficher du contenu lorsque JavaScript n’est pas exécuté.</p>
+
+<h3 class="wp-block-heading">4. Minimisez le temps d'exécution du JavaScript</h3>
+
+<p>Optimiser le code JavaScript pour réduire le temps d’exécution et améliorer la performance de la page est bénéfique pour le SEO et l’expérience utilisateur.</p>
+
+<h3 class="wp-block-heading">5. Considérez l'adoption de la génération de site statique (SSG)</h3>
+
+<p>Le SSG peut offrir un équilibre entre la dynamique du JavaScript et les besoins statiques du SEO. Il faut l’envisager et l’étudier.</p>
+
+<h3 class="wp-block-heading">6. Testez votre site avec des outils d'audit</h3>
+
+<p>Des outils comme Test de rendu Google, Lighthouse, etc. ont la possibilité d’identifier comment les moteurs de recherche perçoivent votre site.</p>
+
+<h3 class="wp-block-heading">7. Soyez attentif aux mises à jour et aux meilleures pratiques</h3>
+
+<p>Un suivi des mises à jour est nécessaire pour garantir une bonne pratique en matière de SEO et de JavaScript. <a href="https://developers.google.com/search/docs/guides/javascript-seo-basics">Google</a> fournit des recommandations régulièrement.</p>
+
+<h3 class="wp-block-heading">8. Formez votre équipe</h3>
+
+<p>Votre équipe de développement doit être formée sur les incidences de&nbsp; JavaScript pour le SEO.</p>
+
+<h3 class="wp-block-heading">9. Priorisez le contenu visible lors du premier chargement</h3>
+
+<p>Un contenu affiché lors du premier chargement, avant toute interaction, est plus pertinent. Il ne doit pas dépendre de JavaScript pour être rendu.</p>
+
+<h3 class="wp-block-heading">10. Faites attention aux frameworks utilisés</h3>
+
+<p>L’utilisation de frameworks JavaScript garantit les meilleures pratiques pour optimiser le SEO.</p>
+
+<h3 class="wp-block-heading">11. Surveillez régulièrement l'indexation de votre site</h3>
+
+<p>Une surveillance constante de l’indexation du contenu par les moteurs de recherche permet une réactivité pour apporter des ajustements.</p>
+
+<h2 class="wp-block-heading">Erreurs courantes et comment les éviter</h2>
+
+<h3 class="wp-block-heading">1. Bloquer les fichiers JavaScript et CSS</h3>
+
+<p><strong>Conséquence</strong> : Cette erreur empêche Googlebot de voir et de comprendre correctement votre page, affectant ainsi l’indexation.</p>
+
+<p><strong>Solution</strong> : Utilisez la Google Search Console pour vérifier l’accès de Googlebot à votre site.</p>
+
+<h3 class="wp-block-heading"><strong>2. </strong>Se fier uniquement au JavaScript pour charger le contenu principal de la page.</h3>
+
+<p><strong>Conséquence</strong> : Les moteurs de recherche risquent d’avoir du mal à accéder à ce contenu, ce qui va retarder ou empêcher l’indexation.</p>
+
+<p><strong>Solution</strong> : Utilisez le SSR ou le SSG pour garantir que le contenu essentiel soit accessible, même sans exécution de JavaScript.</p>
+
+<h3 class="wp-block-heading"><strong>3. </strong>Avoir des pages qui se chargent lentement en raison d’un JavaScript lourd ou mal optimisé.</h3>
+
+<p><strong>Conséquence</strong> : L’expérience utilisateur et le SEO peuvent en être affectés.</p>
+
+<p><strong>Solution</strong> : Optimisez et réduisez vos scripts. Envisagez d’utiliser des méthodes de chargement différé pour le JavaScript non essentiel.</p>
+
+<h3 class="wp-block-heading">4. Utiliser des frameworks JavaScript sans tenir compte de leurs implications pour le SEO.</h3>
+
+<p><strong>Conséquence</strong> : Des problèmes d’indexation et de visibilité dans les moteurs de recherche peuvent être la conséquence de cette erreur.</p>
+
+<p><strong>Solution</strong> : Envisagez des solutions comme le SSR pour améliorer le SEO. Un suivi des spécificités du framework est indispensable.&nbsp;</p>
+
+<h3 class="wp-block-heading">5. Ne pas tester régulièrement la perception et l’indexation des moteurs de&nbsp;recherche</h3>
+
+<p><strong>Conséquence</strong> : D’éventuels problèmes peuvent passer inaperçus, affectant la performance SEO.</p>
+
+<p><strong>Solution</strong> : Des outils d’audit (exemple : Test de rendu Google) offrent la possibilité de vérifier la visibilité du site.</p>
+
+<h3 class="wp-block-heading">6. S’appuyer sur des interactions spécifiques de l’utilisateur pour charger du contenu.</h3>
+
+<p><strong>Conséquence</strong> : Googlebot ne détectant pas toujours les interactions (défilement, clics, etc.), le contenu chargé de cette manière pourrait ne pas être indexé.</p>
+
+<p><strong>Solution</strong> : Le contenu essentiel doit impérativement être chargé sans nécessiter d’interactions spécifiques de l’utilisateur.</p>
+
+<h3 class="wp-block-heading">7. Ne pas gérer correctement les erreurs dans votre code Javascript</h3>
+
+<p><strong>Conséquence</strong> : Une erreur mal gérée entraîne des échecs de chargement de contenu ou des fonctionnalités cassées. L’indexation des pages en pâtit.</p>
+
+<p><strong>Solution</strong> : Une solide gestion des erreurs dans votre code JavaScript et l’utilisation d’outils de surveillance permet d’être alerté des erreurs en temps réel.</p>
+
+<h3 class="wp-block-heading">8. Écrire du JavaScript non compatible avec le navigateur utilisé par Googlebot.</h3>
+
+<p><strong>Conséquence</strong> : En ignorant les problèmes de compatibilité, &nbsp;Googlebot peut, ne pas exécuter correctement JavaScript. Des répercussions sur l’indexation sont inévitables.</p>
+
+<p><strong>Solution</strong> : L’utilisation d’un code compatible avec les versions de navigateurs utilisées par les moteurs de recherche et un contrôle régulier dans différents environnements vous préservera de ce type d’erreurs.</p>
+
+<h3 class="wp-block-heading">9. Oublier d’ajouter ou de mettre à jour les balises meta et les liens internes lors de la génération dynamique</h3>
+
+<p><strong>Conséquence</strong> : Omettre ou configurer incorrectement ces éléments peut nuire au classement de la page.</p>
+
+<p><strong>Solution</strong> : JavaScript doit absolument gérer correctement la mise à jour des balises meta et des liens lors de la génération dynamique de contenu.</p>
+
+<p>Le SEO et JavaScript ont longtemps été considérés comme des domaines opposés. Avec l’évolution de la technologie et des moteurs de recherche, cette perception a changé. Aujourd’hui, il est tout à fait possible de créer des sites web riches et interactifs avec JavaScript tout en garantissant une excellente visibilité dans les moteurs de recherche.&nbsp;</p>
+
+<p>Une compréhension approfondie des deux domaines et une collaboration étroite entre développeurs et experts SEO, évitent des erreurs néfastes à l’optimisation du site.</p>

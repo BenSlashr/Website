@@ -169,7 +169,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-6 mb-8 sm:mb-12 pt-8 border-t border-gray-800 sm:border-0 sm:pt-0">
           {/* Logo */}
           <Image
-            src="https://agence-slashr.fr/wp-content/uploads/2024/03/LOGO-SLASHR-BLANC-1.png"
+            src="/blog/images/2024/03/LOGO-SLASHR-BLANC-1.png"
             alt="SLASHR"
             width={240}
             height={120}

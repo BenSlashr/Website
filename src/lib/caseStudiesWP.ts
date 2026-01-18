@@ -157,15 +157,15 @@ const fallbackCaseStudies: CaseStudy[] = [
     description:
       "Le rachat d'une entreprise représente un moment charnière pour tout acquéreur. Au-delà des enjeux purement marketing et business, il représente un challenge pour le référencement naturel.",
     logo: 'Vestiaire Collective',
-    logoImage: 'https://agence-slashr.fr/wp-content/uploads/2024/02/vestiaire-collectif-w.png',
+    logoImage: '/blog/images/2024/02/vestiaire-collectif-w.png',
     images: {
-      hero: 'https://agence-slashr.fr/wp-content/uploads/2024/03/Vestiaire-CO-1024x732.jpeg',
+      hero: '/blog/images/2024/03/Vestiaire-CO-1024x732.jpeg',
       content: [
-        'https://agence-slashr.fr/wp-content/uploads/2024/02/vestiaire-collectif-screen-1.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/02/vestiaire-collectif-screen-2.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/03/33912894-1024x770.webp',
+        '/blog/images/2024/02/vestiaire-collectif-screen-1.png',
+        '/blog/images/2024/02/vestiaire-collectif-screen-2.png',
+        '/blog/images/2024/03/33912894-1024x770.webp',
       ],
-      testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/vestiaire-collective-jean-eric-blas-chatelain.webp',
+      testimonialAvatar: '/blog/images/2023/11/vestiaire-collective-jean-eric-blas-chatelain.webp',
     },
     stats: [
       {
@@ -224,7 +224,7 @@ const fallbackCaseStudies: CaseStudy[] = [
         "SLASHR a su gérer cette migration complexe avec une méthodologie rigoureuse et des outils automatisés qui nous ont permis de respecter nos délais tout en minimisant les risques. Les résultats parlent d'eux-mêmes : +162% de trafic SEO.",
       name: 'Jean-Éric Blas-Châtelain',
       role: 'Principal Engineer Buyer Experience, Vestiaire Collective',
-      avatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/vestiaire-collective-jean-eric-blas-chatelain.webp',
+      avatar: '/blog/images/2023/11/vestiaire-collective-jean-eric-blas-chatelain.webp',
     },
     actionPlan: {
       title: "Notre plan d'action",
@@ -263,13 +263,13 @@ const fallbackCaseStudies: CaseStudy[] = [
       'La fusion de Yakarouler vers Carter Cash a nécessité une stratégie de redirection complexe pour consolider les actifs SEO tout en maximisant les opportunités de ventes sur une plateforme unifiée.',
     logo: 'Carter Cash',
     images: {
-      hero: 'https://agence-slashr.fr/wp-content/uploads/2024/03/Carter-Cash-magasin-1200x628-1-1024x536.jpeg',
+      hero: '/blog/images/2024/03/Carter-Cash-magasin-1200x628-1-1024x536.jpeg',
       content: [
-        'https://agence-slashr.fr/wp-content/uploads/2024/03/Photo-Officielle-Comptoir-Arras-1-1024x768.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/03/message-yakarouler-devient-carter-cash-1024x761.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/03/DSC05207.JPG-1024x557-1.jpg',
+        '/blog/images/2024/03/Photo-Officielle-Comptoir-Arras-1-1024x768.png',
+        '/blog/images/2024/03/message-yakarouler-devient-carter-cash-1024x761.png',
+        '/blog/images/2024/03/DSC05207.JPG-1024x557-1.jpg',
       ],
-      testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/antoine-thomas.webp',
+      testimonialAvatar: '/blog/images/2023/11/antoine-thomas.webp',
     },
     stats: [
       { value: '+37%', label: 'mots-clés Top 3', color: 'from-[#E74601] to-[#FF9011]' },
@@ -318,7 +318,7 @@ const fallbackCaseStudies: CaseStudy[] = [
         "SLASHR nous a accompagnés tout au long de cette fusion complexe. Leur méthodologie rigoureuse et leurs outils automatisés nous ont permis de respecter nos délais tout en minimisant les risques. Les gains de positionnement parlent d'eux-mêmes.",
       name: 'Antoine Thomas',
       role: 'SEO Manager, Carter Cash',
-      avatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/antoine-thomas.webp',
+      avatar: '/blog/images/2023/11/antoine-thomas.webp',
     },
     actionPlan: {
       title: "Notre plan d'action",
@@ -356,14 +356,14 @@ const fallbackCaseStudies: CaseStudy[] = [
     description:
       "Revenir plus fort d'une migration loupée. Marque française E-commerce de linge pour bébé ayant perdu la moitié de son trafic suite à une migration WordPress vers Shopify mal gérée.",
     logo: 'Les Petites Billes',
-    logoImage: 'https://agence-slashr.fr/wp-content/uploads/2024/03/Logo-LesPetitesBilles-1024x429-1.webp',
+    logoImage: '/blog/images/2024/03/Logo-LesPetitesBilles-1024x429-1.webp',
     images: {
-      hero: 'https://agence-slashr.fr/wp-content/uploads/2024/03/les-petites-billes-1024x512.webp',
+      hero: '/blog/images/2024/03/les-petites-billes-1024x512.webp',
       content: [
-        'https://agence-slashr.fr/wp-content/uploads/2024/03/Capture-decran-2024-03-22-a-17.05.13-1024x500.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/03/avis-les-petites-billes_unzvub.jpeg',
+        '/blog/images/2024/03/Capture-decran-2024-03-22-a-17.05.13-1024x500.png',
+        '/blog/images/2024/03/avis-les-petites-billes_unzvub.jpeg',
       ],
-      testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/morgane-lpb.png',
+      testimonialAvatar: '/blog/images/2023/11/morgane-lpb.png',
     },
     stats: [
       { value: '+300', label: 'mots-clés en Top 3', color: 'from-[#E74601] to-[#FF9011]' },
@@ -410,7 +410,7 @@ const fallbackCaseStudies: CaseStudy[] = [
         "Excellente agence que je recommande les yeux fermés. Equipe très très pro, réactive et à l'écoute. Si vous voulez créer un business solide : Foncez voir Slashr vous ne le regretterez pas. Un immense merci à Anthony et son équipe.",
       name: 'Morgane Tardivel',
       role: 'Fondatrice, Les Petites Billes',
-      avatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/morgane-lpb.png',
+      avatar: '/blog/images/2023/11/morgane-lpb.png',
     },
     actionPlan: {
       title: "Notre plan d'action",
@@ -448,14 +448,14 @@ const fallbackCaseStudies: CaseStudy[] = [
     description:
       "La Belle Fragrance propose des reproductions légales de parfums connus à 90%. Malgré une gamme de produits suffisante et des volumes de recherche importants pour leur secteur, le site manquait de visibilité SEO face à des concurrents déjà bien établis.",
     logo: 'La Belle Fragrance',
-    logoImage: 'https://agence-slashr.fr/wp-content/uploads/2024/11/logo-lbf.webp',
+    logoImage: '/blog/images/2024/11/logo-lbf.webp',
     images: {
-      hero: 'https://agence-slashr.fr/wp-content/uploads/2024/11/la-belle-fragrance-background-1024x512.webp',
+      hero: '/blog/images/2024/11/la-belle-fragrance-background-1024x512.webp',
       content: [
-        'https://agence-slashr.fr/wp-content/uploads/2024/11/Capture-decran-2024-11-20-a-15.37.42-1024x442.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/11/P1310295.webp',
+        '/blog/images/2024/11/Capture-decran-2024-11-20-a-15.37.42-1024x442.png',
+        '/blog/images/2024/11/P1310295.webp',
       ],
-      testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2024/11/1705481932895.jpeg',
+      testimonialAvatar: '/blog/images/2024/11/1705481932895.jpeg',
     },
     stats: [
       { value: '+903%', label: 'augmentation des clics mensuels', color: 'from-[#E74601] to-[#FF9011]' },
@@ -502,7 +502,7 @@ const fallbackCaseStudies: CaseStudy[] = [
         "SLASHR nous a permis de passer d'un site invisible à une véritable machine à trafic SEO. Les résultats parlent d'eux-mêmes avec une croissance de +903% des clics mensuels.",
       name: 'Ismael',
       role: 'Co-fondateur, La Belle Fragrance',
-      avatar: 'https://agence-slashr.fr/wp-content/uploads/2024/11/1705481932895.jpeg',
+      avatar: '/blog/images/2024/11/1705481932895.jpeg',
     },
     actionPlan: {
       title: "Notre plan d'action",
@@ -540,10 +540,10 @@ const fallbackCaseStudies: CaseStudy[] = [
     description:
       "Les Petites Billes propose des gigoteuses innovantes, adaptables à différentes saisons et évolutives selon l'âge de l'enfant. Malgré un produit unique répondant à de multiples besoins, le site manquait de visibilité sur une large gamme de requêtes potentielles.",
     logo: 'Les Petites Billes',
-    logoImage: 'https://agence-slashr.fr/wp-content/uploads/2024/03/Logo-LesPetitesBilles-1024x429-1.webp',
+    logoImage: '/blog/images/2024/03/Logo-LesPetitesBilles-1024x429-1.webp',
     images: {
-      hero: 'https://agence-slashr.fr/wp-content/uploads/2024/03/les-petites-billes-1024x512.webp',
-      testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/morgane-lpb.png',
+      hero: '/blog/images/2024/03/les-petites-billes-1024x512.webp',
+      testimonialAvatar: '/blog/images/2023/11/morgane-lpb.png',
     },
     stats: [
       { value: '+132%', label: 'Trafic SEO VS N-1', color: 'from-[#E74601] to-[#FF9011]' },
@@ -590,7 +590,7 @@ const fallbackCaseStudies: CaseStudy[] = [
         "L'accompagnement de SLASHR nous a permis de structurer notre stratégie SEO et de développer une présence forte sur les requêtes clés de notre secteur. Les résultats sont au rendez-vous !",
       name: 'Morgane Tardivel',
       role: 'Fondatrice, Les Petites Billes',
-      avatar: 'https://agence-slashr.fr/wp-content/uploads/2023/11/morgane-lpb.png',
+      avatar: '/blog/images/2023/11/morgane-lpb.png',
     },
     actionPlan: {
       title: "Notre plan d'action",
@@ -634,17 +634,17 @@ const fallbackCaseStudies: CaseStudy[] = [
     description:
       "GetHumanCall offre aux entreprises la possibilité d'externaliser leur centre d'appels et service client à Madagascar. Malgré une expertise solide et des efforts initiaux en content marketing, l'entreprise peinait à atteindre les premières positions sur ses mots-clés cibles.",
     logo: 'GetHumanCall',
-    logoImage: 'https://agence-slashr.fr/wp-content/uploads/2024/10/GetHumancall.png',
+    logoImage: '/blog/images/2024/10/GetHumancall.png',
     images: {
-      hero: 'https://agence-slashr.fr/wp-content/uploads/2024/10/gethumancall1-1024x517.png',
+      hero: '/blog/images/2024/10/gethumancall1-1024x517.png',
       content: [
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gethumancall2-1024x640.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gethumancall3-1024x600.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gethumancall4-1024x627.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gethumancall5-1024x714.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gethumancall6-1024x597.png',
+        '/blog/images/2024/10/gethumancall2-1024x640.png',
+        '/blog/images/2024/10/gethumancall3-1024x600.png',
+        '/blog/images/2024/10/gethumancall4-1024x627.png',
+        '/blog/images/2024/10/gethumancall5-1024x714.png',
+        '/blog/images/2024/10/gethumancall6-1024x597.png',
       ],
-      testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2024/10/65d47aba8ca11c48fabbac14_Jo2.webp',
+      testimonialAvatar: '/blog/images/2024/10/65d47aba8ca11c48fabbac14_Jo2.webp',
     },
     stats: [
       { value: '+166%', label: 'De trafic SEO VS N-1', color: 'from-[#E74601] to-[#FF9011]' },
@@ -691,7 +691,7 @@ const fallbackCaseStudies: CaseStudy[] = [
         "Grâce à SLASHR, nous avons enfin atteint les premières positions sur nos mots-clés stratégiques. Leur méthodologie basée sur des playbooks ultra-spécifiques nous a permis de comprendre exactement ce qu'il fallait faire pour progresser.",
       name: 'Jonathan Da Costa',
       role: 'CEO, GetHumanCall',
-      avatar: 'https://agence-slashr.fr/wp-content/uploads/2024/10/65d47aba8ca11c48fabbac14_Jo2.webp',
+      avatar: '/blog/images/2024/10/65d47aba8ca11c48fabbac14_Jo2.webp',
     },
     actionPlan: {
       title: "Notre plan d'action",
@@ -730,15 +730,15 @@ const fallbackCaseStudies: CaseStudy[] = [
       "Gazette France est un média dont le modèle économique repose sur la publication d'annonces légales. Pour conserver son habilitation, l'entreprise doit générer un trafic minimum sur des requêtes locales. Malgré la présence de millions de pages, le site ne générait que 1 000 visites sur les trois derniers mois.",
     logo: 'La Gazette France',
     images: {
-      hero: 'https://agence-slashr.fr/wp-content/uploads/2024/10/la-gazette-france-1-1024x415.png',
+      hero: '/blog/images/2024/10/la-gazette-france-1-1024x415.png',
       content: [
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gazette1-1024x729.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gazette3-1024x740.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gazette4-1024x733.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gazette2-1024x733.png',
-        'https://agence-slashr.fr/wp-content/uploads/2024/10/gazettefrance-1024x608.png',
+        '/blog/images/2024/10/gazette1-1024x729.png',
+        '/blog/images/2024/10/gazette3-1024x740.png',
+        '/blog/images/2024/10/gazette4-1024x733.png',
+        '/blog/images/2024/10/gazette2-1024x733.png',
+        '/blog/images/2024/10/gazettefrance-1024x608.png',
       ],
-      testimonialAvatar: 'https://agence-slashr.fr/wp-content/uploads/2024/10/XAVIER-MEPLON.jpg',
+      testimonialAvatar: '/blog/images/2024/10/XAVIER-MEPLON.jpg',
     },
     stats: [
       { value: '+10000%', label: 'De trafic SEO, de 1000 à 160 000 clics mensuels', color: 'from-[#E74601] to-[#FF9011]' },
@@ -785,7 +785,7 @@ const fallbackCaseStudies: CaseStudy[] = [
         "SLASHR a su identifier et résoudre les problèmes techniques qui bloquaient notre site depuis des mois. Passer de 1 000 à 160 000 clics mensuels a non seulement sécurisé notre habilitation, mais a transformé notre vision du SEO.",
       name: 'Xavier Meplon',
       role: 'Directeur de publication, La Gazette France',
-      avatar: 'https://agence-slashr.fr/wp-content/uploads/2024/10/XAVIER-MEPLON.jpg',
+      avatar: '/blog/images/2024/10/XAVIER-MEPLON.jpg',
     },
     actionPlan: {
       title: "Notre plan d'action",

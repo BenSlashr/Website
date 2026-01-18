@@ -4,59 +4,59 @@ const LogoBanner = () => {
   const logos = [
     {
       name: "Superprof",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/logo-superprof-rdfndjotqafe1ryrfxpuvculp7boqvaszixb6rpm9s.png",
+      url: "/blog/images/elementor/thumbs/logo-superprof-rdfndjotqafe1ryrfxpuvculp7boqvaszixb6rpm9s.png",
     },
     {
       name: "Vestiaire Collective",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/logo-vestiaire-collective-rdfndjotqafe1ryrfxpuvculp7boqvaszixb6rpm9s.png",
+      url: "/blog/images/elementor/thumbs/logo-vestiaire-collective-rdfndjotqafe1ryrfxpuvculp7boqvaszixb6rpm9s.png",
     },
     {
       name: "NaturaBuy",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/naturabuy-modified-rdfnduyw0autx3idm2ldpa04tts3b8jl12r4y38w74.png",
+      url: "/blog/images/elementor/thumbs/naturabuy-modified-rdfnduyw0autx3idm2ldpa04tts3b8jl12r4y38w74.png",
     },
     {
       name: "La Gazette France",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/la-gazette-france-rdfndq9p24oeb1p7dik8ut6tuwf98r0xcfhpjpfv28.png",
+      url: "/blog/images/elementor/thumbs/la-gazette-france-rdfndq9p24oeb1p7dik8ut6tuwf98r0xcfhpjpfv28.png",
     },
     {
       name: "SKEMA",
-      url: "https://agence-slashr.fr/wp-content/uploads/2026/01/SKEMA_Business_Schools_logo-scaled.png",
+      url: "/blog/images/2026/01/SKEMA_Business_Schools_logo-scaled.png",
     },
     {
       name: "Somfy",
-      url: "https://agence-slashr.fr/wp-content/uploads/2026/01/Somfy_logo.svg_.png",
+      url: "/blog/images/2026/01/Somfy_logo.svg_.png",
     },
     {
       name: "Agryco",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/agryco-1-reouo9p0g9radhajhn2ar7lh30jjgenap2vsy2iwow.png",
+      url: "/blog/images/elementor/thumbs/agryco-1-reouo9p0g9radhajhn2ar7lh30jjgenap2vsy2iwow.png",
     },
     {
       name: "EPF",
-      url: "https://agence-slashr.fr/wp-content/uploads/2026/01/EPF_logo_2021.png",
+      url: "/blog/images/2026/01/EPF_logo_2021.png",
     },
     {
       name: "Colisee",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/colisee-reouobkotxtv0p7t6nvjw74e9sa9vsurdc6rwmg4cg.png",
+      url: "/blog/images/elementor/thumbs/colisee-reouobkotxtv0p7t6nvjw74e9sa9vsurdc6rwmg4cg.png",
     },
     {
       name: "Ennolys",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/ennolys-reouodgd7lwfnx52voot16nbgk10b7281lhqv6dc00.png",
+      url: "/blog/images/elementor/thumbs/ennolys-reouodgd7lwfnx52voot16nbgk10b7281lhqv6dc00.png",
     },
     {
       name: "Maison du Billard",
-      url: "https://agence-slashr.fr/wp-content/uploads/2026/01/logo.png",
+      url: "/blog/images/2026/01/logo.png",
     },
     {
       name: "Les Petites Billes",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/Logo-LesPetitesBilles-rdfndmicasj90lunzgxqku4zhcxsdylzzwvrmllfr4.webp",
+      url: "/blog/images/elementor/thumbs/Logo-LesPetitesBilles-rdfndmicasj90lunzgxqku4zhcxsdylzzwvrmllfr4.webp",
     },
     {
       name: "Usabilis",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/logo-colors-usabilis-reouofc1l9z0b52ckpi26668nbrqql9opusptqajnk.png",
+      url: "/blog/images/elementor/thumbs/logo-colors-usabilis-reouofc1l9z0b52ckpi26668nbrqql9opusptqajnk.png",
     },
     {
       name: "Verisure",
-      url: "https://agence-slashr.fr/wp-content/uploads/elementor/thumbs/Logo_of_Verisure-reouoi5k5s2v9yy948pxvngmfhdudokvq8r69k6d4w.png",
+      url: "/blog/images/elementor/thumbs/Logo_of_Verisure-reouoi5k5s2v9yy948pxvngmfhdudokvq8r69k6d4w.png",
     },
   ];
 

@@ -1,0 +1,510 @@
+---
+title: "Explorée, actuellement non indexée dans la Search Console : causes et solutions"
+slug: "exploree-actuellement-non-indexee"
+date: "2025-04-10 14:07:32"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<p>Si vous avez déjà passé un peu de temps dans la Google Search Console, vous êtes sûrement tombé sur cette mention un peu floue : <strong>“Explorée actuellement non indexée”</strong>.</p>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2025/04/explore-non-indexe-1024x420.png" alt="Explorée actuellement non indexée seo search console" class="wp-image-10887"/></figure>
+
+<p>Et à ce moment-là, comme beaucoup, vous vous êtes probablement demandé : <em>“OK… mais pourquoi exactement ?”</em></p>
+
+<p>C’est un message frustrant parce qu’il ne signale <strong>aucune erreur technique claire</strong>. La page n’est pas bloquée, elle n’est pas en 404, il n’y a pas de balise noindex. Google connaît l’URL, mais il ne l’a tout simplement <strong>pas ajoutée à son index</strong>. Et sans indexation, pas de visibilité. Pas de visibilité, pas de trafic. Et donc pas de résultats.</p>
+
+<p>Et c’est là que ça devient intéressant :<br>Dans la majorité des cas, ce message n’est <strong>pas un bug</strong>, mais <strong>un signal faible</strong>. Une façon pour Google de dire “je l’ai vue… mais j’ai pas jugé ça assez intéressant pour la montrer”.</p>
+
+<p>Et comme souvent en SEO, il n’y a pas une seule explication, mais une <strong>liste de causes potentielles</strong>. Serveur lent ? Contenu trop léger ? Pages sans intérêt ? Mauvais timing ? Mauvais rendu mobile ? Le problème peut venir de plein d’endroits différents.</p>
+
+<p>Dans cet article, on va faire le tour des raisons <strong>les plus courantes</strong>, et surtout, <strong>ce que vous pouvez faire concrètement</strong> pour débloquer la situation (ou décider que cette page n’a, au fond, rien à faire dans l’index).</p>
+
+<p>Besoin d'aide pour régler vos problèmes d'indexation ? Faites appel à Slashr, votre <a href="https://agence-slashr.fr/seo/">agence SEO nordiste</a>.</p>
+
+<h2 class="wp-block-heading">Ce que signifie “Explorée actuellement non indexée”</h2>
+
+<p>Ce message peut donner l’impression qu’il y a un bug ou un souci technique… mais ce n’est pas le cas.<br>Quand Google vous indique qu’une page est <strong>“explorée actuellement non indexée”</strong>, voilà ce qu’il faut comprendre, <strong>très factuellement</strong> :</p>
+
+<ul class="wp-block-list">
+<li>✅ <strong>Google connaît l’URL</strong> : il a découvert la page, souvent via un lien interne, un sitemap, ou autre.</li>
+
+<li>❌ <strong>Mais il ne l’a pas encore indexée</strong> : soit parce qu’il n’a pas encore pris le temps de la crawler vraiment, soit parce qu’il l’a crawlée partiellement, et qu’il a décidé qu’elle ne valait pas la peine d’être indexée.</li>
+</ul>
+
+<p>C’est un entre-deux un peu flou.<br>La page n’est <strong>pas bloquée</strong>, elle n’est <strong>pas en erreur</strong>, elle n’est <strong>pas en noindex</strong>.<br>Mais elle <strong>n’est pas non plus visible dans Google</strong>, et tant qu’elle reste dans cet état, elle ne génère <strong>aucun trafic organique</strong>.</p>
+
+<p>Ce n’est donc <strong>pas une urgence</strong>, mais c’est <strong>clairement un signal à interpréter</strong>.<br>Et surtout, c’est <strong>votre responsabilité</strong> de comprendre pourquoi elle en est là, et ce qu’il est possible d’améliorer pour changer son statut.</p>
+
+<h2 class="wp-block-heading">Les causes probables de 'Explorée actuellement non indexée"</h2>
+
+<p>Je vous préviens j'ai essayé d'être exhaustif, voici les causes les plus probables :) </p>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/causes-exploree-non-indexee.png" alt="Causes explorées non indexées google search console seo" class="wp-image-10891"/></figure>
+
+<h3 class="wp-block-heading"> Serveur lent ou peu fiable</h3>
+
+<p>C’est probablement une des raisons les plus sous-estimées… et pourtant, elle revient <strong>très souvent</strong>.</p>
+
+<p>Google a un temps limité à accorder à votre site. (le budget crawl qu'on verra juste après). S’il passe trop de temps à <strong>attendre que vos pages chargent</strong>, il va tout simplement <strong>prioriser ailleurs</strong>. Ce n’est pas qu’il ne veut pas explorer vos pages, c’est qu’il ne peut pas se permettre de gaspiller ses ressources dessus.</p>
+
+<p>En gros, si votre hébergement est lent, saturé, ou que votre site <strong>met 10 secondes à répondre</strong>, Googlebot passe… puis repart. Il découvre les URLs, mais il les garde dans un coin jusqu’à ce que ça vaille le coup de revenir. En attendant, vous vous retrouvez avec un joli “explorée non indexée”.</p>
+
+<h4 class="wp-block-heading">🔎 Comment le repérer :</h4>
+
+<ul class="wp-block-list">
+<li>Vos pages mettent du temps à charger même pour vous</li>
+
+<li>GSC vous signale des problèmes de “temps de réponse du serveur”</li>
+
+<li>Googlebot explore peu de pages par jour (regardez le rapport “Statistiques sur l’exploration”)</li>
+
+<li>Ou pire : vous avez des erreurs 5xx dans vos logs (serveur indisponible)</li>
+</ul>
+
+<h4 class="wp-block-heading">✅ Ce que vous pouvez faire :</h4>
+
+<ul class="wp-block-list">
+<li><strong>Changer d’hébergeur</strong> si vous êtes sur une offre trop cheap (genre mutualisé surchargé)</li>
+
+<li>Mettre en place un <strong>système de cache</strong> (comme WP Rocket, Litespeed Cache…)</li>
+
+<li>Réduire les appels inutiles côté front (scripts externes, trackers, polices)</li>
+
+<li>Et surtout : <strong>tester vos pages sur PageSpeed Insights</strong> pour voir ce qui bloque</li>
+</ul>
+
+<p><strong>Astuce du référenceur </strong>: vous pouvez consulter votre rapport d'exploration sur la GSC pour avoir un ordre d'idée de votre budget crawl et voir le TTFB rencontré par Google. Au dessus de 500, c'est problématique pour votre budget crawl (ici on peut voir que le TTFB est à 300, on est bon) :</p>
+
+<blockquote class="wp-block-quote">
+<p></p>
+</blockquote>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2025/04/rapport-exploration-1024x503.png" alt="Rapport exploration GSC" class="wp-image-10901"/></figure>
+
+<p>👉 Tant que Google ne peut pas charger vos pages correctement, <strong>il ne les indexera pas</strong>. Peu importe leur qualité.</p>
+
+<h3 class="wp-block-heading">3.2. Budget de crawl trop faible</h3>
+
+<p>Même si Google a des moyens énormes, il ne peut pas tout crawler, tout le temps, pour tout le monde.<br>Chaque site a ce qu’on appelle un <strong>budget de crawl</strong> : une sorte de quota implicite.</p>
+
+<p>Et si votre site en demande trop, ou que Google n’est pas convaincu de la valeur des pages, il va faire des choix. Résultat : certaines pages seront découvertes… mais resteront en attente d’indexation. Et c’est exactement ce que dit le message “explorée actuellement non indexée”.</p>
+
+<h4 class="wp-block-heading">🧠 En clair :</h4>
+
+<ul class="wp-block-list">
+<li>Vous avez <strong>trop de pages</strong> par rapport à ce que votre site “mérite” aujourd’hui</li>
+
+<li>Google les découvre via le sitemap ou les liens, mais il <strong>n’a pas la confiance nécessaire</strong> pour tout indexer d’un coup</li>
+</ul>
+
+<h4 class="wp-block-heading">🔎 Comment le repérer :</h4>
+
+<ul class="wp-block-list">
+<li>Votre site a explosé en nombre de pages récemment (nouvelle catégorie, import massif…)</li>
+
+<li>Vous avez beaucoup de pages inutiles ou à faible valeur (tags, filtres, pagination sans contenu…)</li>
+
+<li>Dans GSC, les stats d’exploration sont faibles par rapport à la taille réelle du site</li>
+</ul>
+
+<h4 class="wp-block-heading">✅ Ce que vous pouvez faire :</h4>
+
+<ul class="wp-block-list">
+<li><strong>Nettoyez</strong> les pages inutiles (filtres, tags, archives sans intérêt)</li>
+
+<li>Bloquez les URLs à faible valeur via <code>robots.txt</code> ou <code>noindex</code></li>
+
+<li><strong>Réduisez la profondeur des pages importantes</strong> dans le maillage interne</li>
+
+<li>Et concentrez-vous sur <strong>la qualité avant la quantité</strong></li>
+</ul>
+
+<p></p>
+
+<p>👉 Plus vous montrez à Google que votre site est bien structuré, rapide et pertinent, plus il élargira votre budget de crawl. L’inverse est aussi vrai.</p>
+
+<h3 class="wp-block-heading">Qualité du contenu trop faible</h3>
+
+<p>C’est sans doute <strong>la cause la plus fréquente</strong>, mais aussi celle que personne n’a envie d’entendre.<br>Dans beaucoup de cas, si Google ne veut pas indexer votre page, c’est juste qu’il considère <strong>qu’elle n’en vaut pas la peine</strong>.</p>
+
+<figure class="wp-block-image aligncenter size-medium"><img src="/blog/images/2025/04/qualite-contenu-trop-faible-min-300x300.png" alt="qualité du contenu trop faible seo" class="wp-image-10903"/></figure>
+
+<p>Et oui, ça pique un peu. Mais ça arrive à tout le monde — surtout quand on publie beaucoup, vite, ou à l’arrache.</p>
+
+<p>Google a fait d’énormes progrès dans la détection de contenu “inutile” :</p>
+
+<ul class="wp-block-list">
+<li>Trop court</li>
+
+<li>Trop creux</li>
+
+<li>Trop proche d’autres pages</li>
+
+<li>Trop générique</li>
+
+<li>Ou simplement pas assez utile par rapport à l’intention de recherche</li>
+</ul>
+
+<p>Et quand c’est le cas, il peut très bien découvrir votre page, mais décider <strong>de ne pas l’indexer du tout</strong>, sans vous prévenir autrement que par ce message.</p>
+
+<h4 class="wp-block-heading">🔎 Comment le repérer :</h4>
+
+<ul class="wp-block-list">
+<li>Pages très similaires entre elles (ex : “chaussures rouges”, “chaussures bleues”, “chaussures vertes” avec le même contenu)</li>
+
+<li>Contenu généré ou “spinné” automatiquement</li>
+
+<li>Pages créées juste pour “exister”, sans vraie valeur ajoutée</li>
+
+<li>GSC indique un grand nombre de pages explorées mais non indexées… avec très peu de trafic</li>
+</ul>
+
+<h4 class="wp-block-heading">✅ Ce que vous pouvez faire :</h4>
+
+<ul class="wp-block-list">
+<li><strong>Posez-vous une vraie question</strong> : cette page mérite-t-elle d’être visible ?</li>
+
+<li>Si oui → enrichissez-la, structurez-la mieux, apportez des infos concrètes, ajoutez des visuels, des données, du fond</li>
+
+<li>Si non → ne perdez pas de temps : supprimez-la ou mettez-la en <code>noindex</code></li>
+
+<li>Et évitez de produire des pages “SEO pour faire du SEO” : ça ne fonctionne plus</li>
+</ul>
+
+<p></p>
+
+<p>👉 Google n’a pas de temps à perdre. Il indexe ce qu’il juge <strong>vraiment utile</strong>. C’est à vous de lui prouver que ça l’est.</p>
+
+<h3 class="wp-block-heading">Problèmes de maillage interne</h3>
+
+<p>Google découvre vos pages en suivant les liens. S’il n’y a <strong>aucun lien interne</strong> vers une page, ou qu’elle est <strong>enterrée à 8 clics de la home</strong>, ne vous attendez pas à ce qu’elle soit indexée facilement.</p>
+
+<p>Et même si vous l’avez balancée dans le sitemap, ça ne suffit pas.<br>Le sitemap dit à Google “cette page existe”.<br>Le maillage, lui, dit “cette page est importante”. Et ça, ça change tout.</p>
+
+<p>Si votre page est isolée, peu liée, ou accessible uniquement depuis une page elle-même peu crawlée… elle restera probablement dans la catégorie <strong>“explorée non indexée”</strong>. Et c’est logique : Google pense qu’elle ne vaut pas le détour.</p>
+
+<h4 class="wp-block-heading">🔎 Comment le repérer :</h4>
+
+<ul class="wp-block-list">
+<li>Aucune page ne fait de lien vers elle (vérifiez avec Screaming Frog, Ahrefs ou un crawl interne)</li>
+
+<li>Page uniquement accessible depuis un menu secondaire ou une pagination</li>
+
+<li>Profondeur de page trop élevée (au-delà de 3-4 clics depuis la home)</li>
+</ul>
+
+<p></p>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2025/04/screaming-frog-lien-entrant-1024x602.png" alt="screaming frog liens entrants maillage interne" class="wp-image-10904"/></figure>
+
+<p>Sur Screaming Frog, cliquez sur une URL puis sur "liens entrants" en bas à gauche, vous aurez la liste de toutes les URL qui font un lien vers votre URL. Si votre URL n'est pas trouvée lors du crawl, c'est qu'elle est orpheline et qu'aucun lien n'est fait vers votre page dans la structure de votre site : à corriger de toute urgence ! </p>
+
+<h4 class="wp-block-heading">✅ Ce que vous pouvez faire :</h4>
+
+<ul class="wp-block-list">
+<li>Ajoutez <strong>des liens internes stratégiques</strong> vers cette page depuis des pages déjà bien indexées</li>
+
+<li>Remontez-la dans des hubs de contenu, des articles piliers ou des menus thématiques</li>
+
+<li>Travaillez votre <strong>maillage contextuel</strong> (dans le texte, pas juste dans le footer)</li>
+
+<li>Et vérifiez que vous n’avez pas 100 pages qui ciblent la même intention (ça dilue tout)</li>
+</ul>
+
+<p></p>
+
+<p>👉 En SEO, une page mal liée, c’est une page invisible. Même si elle est bonne, personne — ni Google, ni vos visiteurs — ne la trouvera.</p>
+
+<h3 class="wp-block-heading">Pages très récentes ou site jeune</h3>
+
+<p>Parfois, le message “explorée actuellement non indexée”, c’est <strong>juste une question de timing</strong>.<br>Si vous venez de publier la page — ou que votre site est tout neuf — il est normal que Google mette un peu de temps à crawler, analyser et décider s’il va l’indexer.</p>
+
+<p>Contrairement à ce qu’on imagine, <strong>Google n’indexe pas tout en temps réel</strong>. Surtout si :</p>
+
+<ul class="wp-block-list">
+<li>Votre site n’a pas encore beaucoup d’autorité</li>
+
+<li>Vous n’avez pas de backlinks</li>
+
+<li>Et que vous venez d’ajouter beaucoup de nouvelles URLs d’un coup</li>
+</ul>
+
+<p>Il prend son temps. Il observe. Il trie.<br>Et si votre contenu n’a pas de signaux clairs d’intérêt ou de popularité, il peut décider d’attendre encore un peu… ou indéfiniment.</p>
+
+<h4 class="wp-block-heading">🔎 Comment le repérer :</h4>
+
+<ul class="wp-block-list">
+<li>Vous venez de publier la page (moins de 7-10 jours)</li>
+
+<li>Votre site est très récent (moins de 3 mois, peu de backlinks, faible trafic)</li>
+
+<li>Vous avez soumis un gros lot de pages d’un coup via le sitemap</li>
+</ul>
+
+<h4 class="wp-block-heading">✅ Ce que vous pouvez faire :</h4>
+
+<ul class="wp-block-list">
+<li>Attendre quelques jours avant de paniquer</li>
+
+<li>Ajouter <strong>des liens internes</strong> vers cette page dès maintenant</li>
+
+<li>Si c’est une page stratégique : forcer une <strong>demande d’indexation</strong> via GSC (mais pas en boucle)</li>
+
+<li>Et au global : bosser votre autorité (contenu, netlinking, structure technique propre)</li>
+</ul>
+
+<p></p>
+
+<p>👉 Sur un nouveau site, Google met plus de temps à faire confiance.<br>Ça ne veut pas dire que vos pages sont mauvaises. Juste qu’il faut lui donner des raisons de s’y intéresser plus vite.</p>
+
+<h3 class="wp-block-heading">Contenu dupliqué ou trop proche d’autres pages</h3>
+
+<p>Si votre page est (trop) proche d’une autre en termes de contenu, Google ne va pas forcément s’embêter à les indexer toutes les deux.</p>
+
+<figure class="wp-block-image aligncenter size-medium"><img src="/blog/images/2025/04/contenu-duplique-300x300.png" alt="contenu dupliqué google search console" class="wp-image-10909"/></figure>
+
+<p><br>Il fait un choix, et garde <strong>celle qui lui semble la plus pertinente</strong>, la plus complète ou la plus populaire.<br>L’autre ? Elle reste en attente. Parfois pour toujours. D’où ce fameux “explorée actuellement non indexée”.</p>
+
+<p>Ça peut venir :</p>
+
+<ul class="wp-block-list">
+<li>de variations de pages avec des descriptions quasi identiques (produits, lieux, services…)</li>
+
+<li>de pages générées automatiquement avec peu de différences</li>
+
+<li>ou même de duplications internes involontaires, à cause de paramètres d’URL, de tri ou de pagination</li>
+</ul>
+
+<h4 class="wp-block-heading">🔎 Comment le repérer :</h4>
+
+<ul class="wp-block-list">
+<li>Plusieurs pages visent le <strong>même mot-clé</strong> ou répondent à la <strong>même intention</strong></li>
+
+<li>Le contenu change à peine (1 ou 2 phrases différentes)</li>
+
+<li>Vous avez des pages “ville + service” qui se répètent 20 fois avec la même structure</li>
+
+<li>GSC montre une seule de ces pages indexée, les autres non</li>
+</ul>
+
+<h4 class="wp-block-heading">✅ Ce que vous pouvez faire :</h4>
+
+<ul class="wp-block-list">
+<li><strong>Fusionner</strong> les pages proches en une seule page plus complète</li>
+
+<li>Définir <strong>une canonical claire</strong> si vous devez garder plusieurs versions (mais Google ne la suit pas toujours)</li>
+
+<li>Supprimer les pages de trop, ou les mettre en <code>noindex</code></li>
+
+<li>Travailler votre contenu pour qu’il <strong>apporte une vraie valeur propre à chaque page</strong></li>
+
+<li>Et surtout : ne dupliquez pas juste pour “occuper le terrain”</li>
+</ul>
+
+<p></p>
+
+<p>👉 Pour Google, deux pages qui disent la même chose, c’est <strong>une page de trop</strong>.<br>Et dans le doute, il choisira… et pas toujours celle que vous auriez voulu.</p>
+
+<h3 class="wp-block-heading">Pages peu stratégiques (tags, filtres, archives...)</h3>
+
+<p>Certaines pages sont découvertes par Google… mais <strong>ne l’intéressent tout simplement pas</strong>.</p>
+
+<p>C’est souvent le cas des :</p>
+
+<ul class="wp-block-list">
+<li>pages de <strong>tags</strong> générées automatiquement par un CMS</li>
+
+<li>pages de <strong>filtres</strong> e-commerce (couleur, taille, prix…)</li>
+
+<li><strong>archives datées</strong> sans réel contenu</li>
+
+<li>ou tout ce qui ressemble à une <strong>variation sans valeur unique</strong></li>
+</ul>
+
+<p>En gros : si la page ne propose <strong>rien d’utile ou d’unique</strong>, Google la verra, mais il ne l’indexera pas.<br>Et il aura raison.</p>
+
+<h4 class="wp-block-heading">🔎 Comment le repérer :</h4>
+
+<ul class="wp-block-list">
+<li>Ce sont des pages créées automatiquement, sans réflexion stratégique</li>
+
+<li>Elles contiennent souvent peu ou pas de contenu principal (juste une liste)</li>
+
+<li>Le taux d’indexation de ces pages est très faible dans GSC</li>
+
+<li>Elles n’apportent <strong>aucun trafic</strong> (même sur le long terme)</li>
+</ul>
+
+<h4 class="wp-block-heading">✅ Ce que vous pouvez faire :</h4>
+
+<ul class="wp-block-list">
+<li>Demandez-vous si ces pages ont <strong>vraiment une intention de recherche associée</strong></li>
+
+<li>Si non → <code>noindex</code> ou blocage via robots.txt</li>
+
+<li>Si oui → enrichissez-les (texte, intro, liens internes, maillage)</li>
+
+<li>Vérifiez vos paramètres d’URL dans GSC pour éviter des variations inutiles</li>
+
+<li>Et triez dans votre sitemap : <strong>pas besoin d’y mettre toutes les pages filtrées ou taguées</strong></li>
+</ul>
+
+<p></p>
+
+<p>👉 Ce n’est pas parce qu’une page existe qu’elle mérite d’être indexée.<br>Et ce n’est pas parce qu’elle est “SEO-friendly” qu’elle apporte une vraie valeur à Google ou à vos visiteurs.</p>
+
+<h3 class="wp-block-heading">Envoi massif d’URLs d’un coup</h3>
+
+<p>Si vous avez récemment balancé <strong>des centaines ou des milliers d’URLs d’un coup</strong> dans le sitemap, il est possible que Google <strong>ne suive pas le rythme</strong>.<br>Il les découvre, il les liste… mais il va les traiter <strong>en plusieurs vagues</strong>, selon ce qu’il estime prioritaire.</p>
+
+<p>C’est comme si vous lui aviez livré un carton de 1000 pages à trier : il va mettre les plus prometteuses en haut de la pile, et laisser les autres pour “plus tard”… qui peut durer.</p>
+
+<p>C’est une logique de gestion de ressources. Google <strong>dose</strong> son effort, surtout sur les sites qui n’ont pas encore assez d’autorité ou qui publient beaucoup trop vite.</p>
+
+<h4 class="wp-block-heading">🔎 Comment le repérer :</h4>
+
+<ul class="wp-block-list">
+<li>Vous venez d’ajouter une grosse section (blog, e-commerce, fiches produit, pages locales…)</li>
+
+<li>Vous avez généré ou mis à jour un sitemap contenant des centaines de nouvelles pages</li>
+
+<li>Une majorité d’entre elles s’affichent comme “explorées non indexées” dans GSC</li>
+</ul>
+
+<h4 class="wp-block-heading">✅ Ce que vous pouvez faire :</h4>
+
+<ul class="wp-block-list">
+<li>Ne pas tout balancer d’un coup si ce n’est pas nécessaire (publiez par lots)</li>
+
+<li>Prioriser les pages vraiment importantes dans votre maillage interne</li>
+
+<li>S’assurer que les pages les plus stratégiques sont bien accessibles, liées, rapides, et qualitatives</li>
+
+<li><strong>Nettoyer le sitemap</strong> : pas la peine de surcharger Google avec des pages inutiles</li>
+
+<li>Évitez aussi les pages “placeholder” vides ou pas encore finalisées</li>
+</ul>
+
+<p></p>
+
+<p>👉 Google a beau être puissant, il n’est pas magique.<br>Si vous inondez son radar, il va trier. À vous de l’aider à <strong>indexer d’abord ce qui compte le plus</strong>.</p>
+
+<h3 class="wp-block-heading">Contenu non lisible à cause du JavaScript</h3>
+
+<p>Google sait lire du JavaScript.<br>Mais il le fait <strong>lentement</strong>, <strong>partiellement</strong>, et <strong>pas toujours comme vous l’espérez</strong>.</p>
+
+<p>Si votre page charge son contenu via un framework JS (React, Angular, Vue, etc.), ou si une partie du texte s’affiche seulement <strong>après une action ou un scroll</strong>, il y a un vrai risque que Google <strong>voie la page, mais ne comprenne rien à ce qu’elle contient</strong>.</p>
+
+<p>Dans ce cas, vous vous retrouvez avec une URL “découverte” (grâce à un lien ou un sitemap), mais comme le contenu n’est pas lisible facilement, Google ne l’indexe pas.</p>
+
+<h4 class="wp-block-heading">🔎 Comment le repérer :</h4>
+
+<ul class="wp-block-list">
+<li>Vous utilisez un CMS ou un framework JS qui charge le contenu après coup</li>
+
+<li>Votre page s’affiche bien pour un humain, mais <strong>le test de rendu dans GSC montre une page vide</strong></li>
+
+<li>Vous avez beaucoup de pages avec peu ou pas de contenu visible dans le HTML source</li>
+</ul>
+
+<h4 class="wp-block-heading">✅ Ce que vous pouvez faire :</h4>
+
+<ul class="wp-block-list">
+<li>Inspectez l’URL dans la Search Console → onglet “Version explorée” + test de rendu</li>
+
+<li>Si le contenu est chargé dynamiquement → envisagez :
+<ul class="wp-block-list">
+<li><strong>du prerendering</strong> (avec un outil comme Prerender.io)</li>
+
+<li><strong>du server-side rendering (SSR)</strong> si votre stack le permet</li>
+
+<li>ou <strong>du contenu fallback dans le HTML</strong> pour que Google ait au moins quelque chose à se mettre sous la dent</li>
+</ul>
+</li>
+</ul>
+
+<p><strong>Astuce du référenceur </strong>: utilisez l'extension View Rendered Source pour facilement identifier les éléments chargées en Javascript</p>
+
+<p>👉 Si Googlebot n’a rien à lire au moment de passer, il passe son chemin.<br>Et la page restera “explorée non indexée”, peu importe sa qualité réelle. </p>
+
+<p>D'ailleurs, c'est la même sur mobile : si votre contenu est visible sur ordinateur mais pas sur mobile, pas de chance : Google crawl le web en mobile.</p>
+
+<h3 class="wp-block-heading">Ce qu’il ne faut pas faire</h3>
+
+<p>Quand vous voyez le message “explorée actuellement non indexée”, la tentation peut être grande de <strong>forcer la machine</strong>, de <strong>demander l’indexation manuellement</strong> ou de faire des modifications en masse. Mais attention, <strong>certains réflexes sont à éviter absolument</strong> si vous voulez que ça fonctionne sur le long terme.</p>
+
+<h4 class="wp-block-heading">Ne pas spammer la demande d’indexation</h4>
+
+<p>C’est un réflexe, on l’a tous eu : voir une page qui ne veut pas s’indexer, et hop, <strong>demander l’indexation à répétition</strong> via Google Search Console.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img src="/blog/images/2025/04/gsc-indexation.png" alt="indexation via gsc seo" class="wp-image-10913"/></figure>
+
+<p><br>Ça peut paraître efficace sur le moment, mais <strong>Google ne va pas indexer une page juste parce que vous le lui demandez</strong>, surtout si la page ne vaut pas grand-chose.</p>
+
+<p><strong>Google n’est pas une machine à répondre aux ordres.</strong> Si la page ne présente pas de valeur, il va continuer à l’ignorer.<br>Et si vous spammez les demandes, vous risquez juste de vous faire mal voir, ou de vous retrouver avec un quota épuisé, et ça ne sert à rien.</p>
+
+<h4 class="wp-block-heading">Ne pas forcer si la page est inutile</h4>
+
+<p>Si la page est vraiment une <strong>page piège</strong>, genre du contenu dupliqué, une page filtrée qui n’ajoute rien de plus ou une variation sans intérêt… <strong>ne forcez pas son indexation.</strong></p>
+
+<p>Googlebot est assez malin pour repérer les pages faibles, et vous allez probablement perdre du temps et de l’énergie à essayer de le convaincre d'indexer une page qui ne mérite pas d’être vue.</p>
+
+<h4 class="wp-block-heading">Ne pas tout mettre dans le sitemap n’importe comment</h4>
+
+<p>Le sitemap est un excellent outil pour <strong>aider Google à découvrir vos pages</strong>, mais il faut <strong>le structurer proprement</strong>.<br>Pas la peine d’envoyer des pages sans contenu ou des pages filtrées qui n’ont aucun intérêt.</p>
+
+<p>Google n’est pas un robot qui avale tout ce que vous lui donnez. Mieux vaut envoyer <strong>des pages qui comptent</strong>, et bien prioriser celles qui ont une vraie valeur pour l’utilisateur et pour le SEO.</p>
+
+<h4 class="wp-block-heading">Ne pas dupliquer sans réfléchir</h4>
+
+<p>Evitez de multiplier les pages juste pour occuper l’espace, avec des variations comme “mot-clé + ville” ou “produit + taille”. Google est très bon pour repérer <strong>le contenu dupliqué ou trop similaire</strong>. Et au final, ça peut nuire à l'indexation de vos pages <strong>plus stratégiques</strong>.</p>
+
+<p>Si vous avez un tas de pages avec le même contenu, l’indexation de toutes devient inutile, et ça dilue l’autorité de votre site. <strong>La consolidation est souvent plus efficace</strong> qu'une multiplication à outrance.</p>
+
+<h2 class="wp-block-heading">Prioriser quoi faire en premier : mini plan d’action</h2>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/solutions-exploree-non-indexee.png" alt="solutions exploré non indexé seo google search console" class="wp-image-10892"/></figure>
+
+<p>Face à ce message “explorée actuellement non indexée”, il y a des choses à vérifier en <strong>priorité</strong> pour éviter de perdre du temps. Voici un plan d’action rapide pour vous aider à y voir plus clair.</p>
+
+<h3 class="wp-block-heading">Vérifier la vitesse et le temps de réponse de la page</h3>
+
+<p>Si la page met du temps à charger, Googlebot va probablement passer à autre chose. Utilisez <strong>PageSpeed Insights</strong> ou <strong>l’outil d’inspection d’URL</strong> dans GSC pour vérifier si votre page charge suffisamment vite.</p>
+
+<ul class="wp-block-list">
+<li><strong>Priorité</strong> : si votre page met plus de 3 secondes à se charger, <strong>optimisez les images</strong>, réduisez le code et améliorez le cache.</li>
+</ul>
+
+<h3 class="wp-block-heading">Regarder le maillage interne : y a-t-il des liens qui pointent dessus ?</h3>
+
+<p>Si votre page est isolée, Google ne la considérera pas comme une priorité. Assurez-vous que la page a <strong>des liens internes qui pointent dessus</strong>, idéalement depuis des pages déjà bien indexées.</p>
+
+<ul class="wp-block-list">
+<li><strong>Priorité</strong> : <strong>ajoutez des liens internes</strong> vers cette page depuis des pages stratégiques ou populaires sur votre site.</li>
+</ul>
+
+<h3 class="wp-block-heading">Est-ce que la page mérite vraiment d’être indexée ?</h3>
+
+<p>Cette question est cruciale : est-ce que la page a <strong>vraiment une valeur ajoutée</strong> pour l’utilisateur et pour Google ? Si c’est une page mince, duplicative ou non stratégique, il vaut peut-être mieux la <strong>mettre en noindex</strong> ou même la supprimer.</p>
+
+<ul class="wp-block-list">
+<li><strong>Priorité</strong> : évaluez la <strong>valeur de la page</strong> avant d’essayer d’aller plus loin. Ne forcez pas une page inutile.</li>
+</ul>
+
+<h3 class="wp-block-heading">Si oui, améliorez-la et poussez-la avec des liens + sitemap</h3>
+
+<p>Si la page est importante, mais ne s’indexe pas, il est temps de <strong>l’améliorer</strong> (contenu, structure) et de <strong>pousser un peu l’indexation</strong>.<br>Ajoutez-la à votre <strong>sitemap</strong> si ce n’est pas déjà fait, vérifiez les <strong>balises meta</strong> et <strong>la canonical</strong>, et forcez la demande d’indexation si nécessaire.</p>
+
+<ul class="wp-block-list">
+<li><strong>Priorité</strong> : enrichissez le contenu, ajoutez des liens internes, et mettez à jour le sitemap. Une bonne page avec un mauvais maillage, c’est une page ignorée.</li>
+</ul>
+
+<h3 class="wp-block-heading">Si non, laissez-la de côté ou mettez-la en noindex</h3>
+
+<p>Si après avoir vérifié tout ça, vous êtes toujours sceptique sur la valeur de la page, il n’y a pas de mal à la mettre en <strong>noindex</strong> ou à la supprimer. Pas besoin de lutter contre Google quand il n’en veut pas.</p>
+
+<ul class="wp-block-list">
+<li><strong>Priorité</strong> : si elle n’a pas sa place dans l’index, <strong>ne perdez pas de temps</strong> avec des ajustements qui ne changeront rien.</li>
+</ul>

@@ -16,7 +16,7 @@ export const authors: Author[] = [
     slug: 'benoit',
     name: 'Benoit Demonchaux',
     role: 'Co-fondateur & Consultant SEO',
-    image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/benoit-demonchaux-smx.jpeg',
+    image: '/blog/images/2024/03/benoit-demonchaux-smx.jpeg',
     bio: 'Benoît Demonchaux est co-fondateur de Slashr, agence de référencement naturel basée à Lille et consultant SEO depuis 6 ans. Avant de créer Slashr, il a exercé en tant qu\'éditeur de sites et chef de projets dans une grande agence SEO.',
     achievements: [
       'Co-fondateur de Slashr (2020)',
@@ -30,7 +30,7 @@ export const authors: Author[] = [
     slug: 'anthony',
     name: 'Anthony Lecas',
     role: 'Co-fondateur & Consultant SEO',
-    image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/anthony-lecas.jpeg',
+    image: '/blog/images/2024/03/anthony-lecas.jpeg',
     bio: 'Co-fondateur de Slashr et consultant SEO depuis près de 5 ans. Anthony combine expertise technique et vision stratégique pour accompagner les entreprises dans leur croissance organique.',
     achievements: [
       'Co-fondateur de Slashr (2020)',

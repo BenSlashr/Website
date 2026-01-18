@@ -1,0 +1,630 @@
+---
+title: "Shopify SEO : Le guide pour optimiser votre référencement naturel"
+slug: "guide-shopify-seo"
+date: "2023-09-21 14:25:26"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<h2 class="wp-block-heading">Nos conseils sur le référencement sur Shopify en bref</h2>
+
+<p>On entend souvent que Shopify n'est pas super pour le SEO. Cependant, avec quelques ajustement, il est possible bien performer en SEO. </p>
+
+<p>Voici les éléments les plus importants pour optimiser la base technique pour le SEO de votre Shopify : </p>
+
+<ol class="wp-block-list">
+<li>Gestion du contenu dupliqué</li>
+
+<li>Gestion des redirections</li>
+
+<li>Balises metas</li>
+
+<li>Balises Hn</li>
+
+<li>Structure du site</li>
+
+<li>Images</li>
+
+<li>Données structurées</li>
+
+<li>Vitesse de la page</li>
+
+<li>Javascript côté client</li>
+</ol>
+
+<p>Nous examinons également les possibilités de modifier les éléments de la boutique qui ne peuvent pas être modifiés sur Shopify.</p>
+
+<h2 class="wp-block-heading">Qu'est-ce que l'optimisation du SEO sur Shopify ?</h2>
+
+<p>Shopify est un outil servant à faire du commerce sur le web. Les entreprises commerciales y créent leur boutique en ligne et y présentent tous leurs produits et leurs services. Pour attirer des visiteurs susceptibles d’acheter, l’optimisation des pages du site e-commerce est incontournable.</p>
+
+<p>L’optimisation SEO d’un site sur Shopify regroupe diverses actions apportées aux métadonnées, aux images, à la structure des URL, au contenu, etc. Ces différentes techniques d’optimisation vont rendre le site e-commerce plus visible pour les moteurs de recherche (Google, Bing, Yahoo…).</p>
+
+<p>Une meilleure visibilité conduit à une augmentation du trafic organique puis des ventes.&nbsp;</p>
+
+<p>Solliciter un professionnel pour optimiser votre boutique en ligne est un choix judicieux sachant que les experts SEO maîtrisent parfaitement les règles du référencement naturel. Prenez rendez-vous avec Slashr, <a href="https://agence-slashr.fr/seo/prestations/shopify/">agence SEO expérimentée sur Shopify</a>.</p>
+
+<h2 class="wp-block-heading">La gestion du Contenu dupliqué</h2>
+
+<p>Le contenu dupliqué nuit au SEO de votre site internet. Les moteurs de recherche, en particulier Google, valorisent le contenu unique. Un même article reproduit sur plusieurs pages peut conduire à des confusions pour les robots d’indexation. Les conséquences en termes de visibilité dans les résultats de recherche peuvent être importantes.</p>
+
+<h3 class="wp-block-heading">Duplication au niveau du domaine</h3>
+
+<p>Votre site est potentiellement accessibles à 4 adresses : </p>
+
+<ul class="wp-block-list">
+<li><code>http://exemple.com</code></li>
+
+<li><code>http://www.<code>exemple</code>.com</code></li>
+
+<li><code>https://<code>exemple</code>.com</code></li>
+
+<li><code>https://www.<code>exemple</code>.com</code></li>
+</ul>
+
+<p>et même example.myshopify.com.</p>
+
+<p>Choisissez une URL préférée pour votre domaine, puis configurez votre boutique Shopify pour qu'elle ne soit disponible que de cette façon, en activant la redirection. Cela entraînera la redirection de toutes les URL non préférées vers l'URL préférée via des redirections 301.</p>
+
+<p>Si vous avez votre domaine de connecté, suivez ces étapes : </p>
+
+<p>Configuration de la canonisation de domaine dans Shopify</p>
+
+<ul class="wp-block-list">
+<li>Connectez-vous à la console d'administration Shopify.</li>
+
+<li>Accédez à Boutique en ligne &gt; Domaines.</li>
+
+<li>Si ce message est indiqué : "le trafic de vos domaines n'est pas redirigé vers ce domaine principal.", vous devez activer la redirection en cliquant sur "Activer la redirection".</li>
+
+<li>Confirmez la redirection en cliquant sur le bouton "Activer la redirection".</li>
+
+<li>Vérifiez si tout est correct en vérifiant si vous voyez maintenant le message suivant sous Boutique en ligne &gt; Domaines : « Le trafic de tous vos domaines est redirigé vers le domaine principal ».</li>
+</ul>
+
+<h3 class="wp-block-heading">Pages de produits en double</h3>
+
+<p>Le problème récurrent sur les plateformes de vente en ligne comme Shopify, c’est la duplication des <strong><a href="https://agence-slashr.fr/blog/fiche-produit-seo/">fiches produits</a></strong>.</p>
+
+<p>Si le même produit est accessible via différentes URLs en raison de différentes variantes ou de campagnes marketing, cela entraine du contenu dupliqué.</p>
+
+<p>Sur shopify, plusieurs URL sont crées pour 1 seul produit : </p>
+
+<p>/products/nom-produit et /collections/product/nom-produit</p>
+
+<h4 class="wp-block-heading">Comment régler le problème des produits dupliqués sur Shopify ? </h4>
+
+<p>Vous pouvez résoudre ce problème en mettant à jour le code de votre thème pour référencer directement l'URL canonique, dans ce cas exemple.fr/products/nom-produit. </p>
+
+<p>Vous empêcherez ainsi Shopify de créer un lien vers l’URL du produit canonisée. Ce réglage est assez simple, donc si vous êtes à l'aise avec les modifications de code, vous pouvez le faire vous-même. </p>
+
+<ol class="wp-block-list">
+<li>Connectez-vous à la console d'administration Shopify</li>
+
+<li>Allez dans la boutique en ligne &gt; Thèmes</li>
+
+<li>Sur la droite, cliquez sur la liste déroulante Actions et utilisez Modifier le code</li>
+
+<li>Dans le dossier Snippets, sélectionnez product-grid-item.liquid</li>
+
+<li>Remplacez &lt;a href="{{ product.url | within: current_collection }}" class="product-grid-item"&gt; par <code>&lt;a href="{{ product.url }}" class="product-grid-item"&gt;</code></li>
+</ol>
+
+<h3 class="wp-block-heading">Pages de collections dupliquées</h3>
+
+<p>Des pages de collections contenant les mêmes produits peuvent être sujettes à la duplication. Veillez à ce que chaque collection affiche un contenu distinct, mettant en avant ses spécificités.</p>
+
+<p>Besoin d'aide sur les collections ? Consultez notre <a href="https://agence-slashr.fr/blog/optimiser-collections-shopify-seo/">guide SEO sur les collections Shopify</a> ! </p>
+
+<h3 class="wp-block-heading">Pages de variantes de produits</h3>
+
+<p>La plateforme Shopify vous donne la possibilité de présenter vos produits avec plusieurs variantes de taille ou de couleur. Shopify va automatiquement ajouter un paramètre à la fin de l'URL de votre produit pout générer ce variant : produit?variant=$id.</p>
+
+<p>Si j'ai un t-shirt disponible en couleur noir et blanc et que la noir est la version par défaut, je vais avoir pour URL de la version blanche : exemple.fr/products/t-shirt?variant=3213131</p>
+
+<p>Si vous ne souhaitez pas indexer les pages variantes de vos produits (cette option représente 90% des cas): laisser la balise canonical des pages variants vers la page originale, sans paramètre. Cela indiquera aux robots des moteurs de recherche de ne pas indexer cette page.</p>
+
+<p>Exemple :  exemple.fr/products/t-shirt?variant=3213131 aura une balise canonical vers exemple.fr/products/t-shirt</p>
+
+<p>Si vous souhaitez indexer vos pages variantes (vous avez par exemple détecté des mots-clés avec un volume intéressant pour ces derniers) : créez des produits à part pour pouvoir les positionner.</p>
+
+<p>Exemple : je remarque qu'il existe des recherches pour "t-shirt blanc" mais pas pour "t-shirt gris". Je vais donc créer un produit à part pour t-shirt blanc, et faire un variant pour t-shirt gris</p>
+
+<p>Vous souhaitez faire décoller le trafic SEO de votre boutique ? Faites appel à une <a href="https://agence-slashr.fr/seo/prestations/ecommerce/">agence SEO E-commerce</a>.</p>
+
+<p><strong>Notre avis sur la structure d'URL de Shopify</strong> : On ne va pas se le cacher, la structure d'URL de Shopify n'est pas très bonne. Ce n'est cependant pas ça qui fera échouer votre SEO qu vous avez appliqué nos conseils.</p>
+
+<h2 class="wp-block-heading">Crawling et indexation</h2>
+
+<p>Pour gérer efficacement une boutique Shopify, comprendre et optimiser le processus de crawling et d’indexation va garantir une visibilité optimale de votre site sur les moteurs de recherche.</p>
+
+<h3 class="wp-block-heading">Fichier Robots.txt</h3>
+
+<p>Un<strong> fichier robots.txt</strong> est généré automatiquement pour chaque boutique en ligne. Les pages ne présentant pas d’intérêt ne doivent pas être indexées (exemple : page panier). Personnalisez ce fichier en demandant la non-indexation des sections spécifiques de votre site. Il renseigne automatiquement le sitemap XML. </p>
+
+<p>Pour accéder au robots.txt : </p>
+
+<ol class="wp-block-list">
+<li>Ouvrez votre&nbsp;<strong>Tableau de bord</strong></li>
+
+<li>Allez dans&nbsp;<strong>Boutique en ligne</strong>&nbsp;&gt;&nbsp;<strong>Thèmes</strong></li>
+
+<li>Sur votre thème, cliquez sur&nbsp;<strong>Actions</strong>&nbsp;&gt;&nbsp;<strong>Modifier le code</strong></li>
+
+<li>Dans le dossier&nbsp;<strong>Modèles (Templates)</strong>, cliquez sur&nbsp;<strong>Ajouter un nouveau modèle</strong></li>
+
+<li>Dans la case&nbsp;<strong>Sélectionnez un modèle à créer</strong>, remplacez «&nbsp;Article&nbsp;» par &gt;&nbsp;<strong>Robots.txt</strong></li>
+
+<li>Cliquez sur&nbsp;<strong>«&nbsp;Créer le modèle&nbsp;»</strong></li>
+</ol>
+
+<p>Voici le contenu du robots.txt généré : </p>
+
+<pre class="wp-block-code"><code>we use Shopify as our ecommerce platform
+
+User-agent: *
+Disallow: /a/downloads/-/*
+Disallow: /admin
+Disallow: /cart
+Disallow: /orders
+Disallow: /checkout
+Disallow: /8203042875/checkouts
+Disallow: /8203042875/orders
+Disallow: /carts
+Disallow: /account
+Disallow: /collections/*sort_by*
+Disallow: /*/collections/*sort_by*
+Disallow: /collections/*+*
+Disallow: /collections/*%2B*
+Disallow: /collections/*%2b*
+Disallow: /*/collections/*+*
+Disallow: /*/collections/*%2B*
+Disallow: /*/collections/*%2b*
+Disallow: /blogs/*+*
+Disallow: /blogs/*%2B*
+Disallow: /blogs/*%2b*
+Disallow: /*/blogs/*+*
+Disallow: /*/blogs/*%2B*
+Disallow: /*/blogs/*%2b*
+Disallow: /*?*oseid=*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /policies/
+Disallow: /*/*?*ls=*&amp;ls=*
+Disallow: /*/*?*ls%3D*%3Fls%3D*
+Disallow: /*/*?*ls%3d*%3fls%3d*
+Disallow: /search
+Disallow: /apple-app-site-association
+Sitemap: YOURWEBSITE.COM/sitemap.xml
+
+# Google adsbot ignores robots.txt unless specifically named!
+User-agent: adsbot-google
+Disallow: /checkout
+Disallow: /carts
+Disallow: /orders
+Disallow: /8203042875/checkouts
+Disallow: /8203042875/orders
+Disallow: /*?*oseid=*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+
+User-agent: Nutch
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+Disallow: /a/downloads/-/*
+Disallow: /admin
+Disallow: /cart
+Disallow: /orders
+Disallow: /checkout
+Disallow: /8203042875/checkouts
+Disallow: /8203042875/orders
+Disallow: /carts
+Disallow: /account
+Disallow: /collections/*sort_by*
+Disallow: /*/collections/*sort_by*
+Disallow: /collections/*+*
+Disallow: /collections/*%2B*
+Disallow: /collections/*%2b*
+Disallow: /*/collections/*+*
+Disallow: /*/collections/*%2B*
+Disallow: /*/collections/*%2b*
+Disallow: /blogs/*+*
+Disallow: /blogs/*%2B*
+Disallow: /blogs/*%2b*
+Disallow: /*/blogs/*+*
+Disallow: /*/blogs/*%2B*
+Disallow: /*/blogs/*%2b*
+Disallow: /*?*oseid=*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /policies/
+Disallow: /*/*?*ls=*&amp;ls=*
+Disallow: /*/*?*ls%3D*%3Fls%3D*
+Disallow: /*/*?*ls%3d*%3fls%3d*
+Disallow: /search
+Disallow: /apple-app-site-association
+Sitemap: YOURWEBSITE.COM/sitemap.xml
+
+User-agent: AhrefsSiteAudit
+Crawl-delay: 10
+Disallow: /a/downloads/-/*
+Disallow: /admin
+Disallow: /cart
+Disallow: /orders
+Disallow: /checkout
+Disallow: /8203042875/checkouts
+Disallow: /8203042875/orders
+Disallow: /carts
+Disallow: /account
+Disallow: /collections/*sort_by*
+Disallow: /*/collections/*sort_by*
+Disallow: /collections/*+*
+Disallow: /collections/*%2B*
+Disallow: /collections/*%2b*
+Disallow: /*/collections/*+*
+Disallow: /*/collections/*%2B*
+Disallow: /*/collections/*%2b*
+Disallow: /blogs/*+*
+Disallow: /blogs/*%2B*
+Disallow: /blogs/*%2b*
+Disallow: /*/blogs/*+*
+Disallow: /*/blogs/*%2B*
+Disallow: /*/blogs/*%2b*
+Disallow: /*?*oseid=*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /policies/
+Disallow: /*/*?*ls=*&amp;ls=*
+Disallow: /*/*?*ls%3D*%3Fls%3D*
+Disallow: /*/*?*ls%3d*%3fls%3d*
+Disallow: /search
+Disallow: /apple-app-site-association
+Sitemap: YOURWEBSITE.COM/sitemap.xml
+
+User-agent: MJ12bot
+Crawl-Delay: 10
+
+User-agent: Pinterest
+Crawl-delay: 1</code></pre>
+
+<p><strong>Exemple</strong> : Une collection spéciale créée pour une promotion interne n’a pas lieu d’être indexée. Elle devra être mentionnée dans le fichier robots.txt.</p>
+
+<pre class="wp-block-code"><code><code>User-agent: * Disallow: /collections/nom-de-la-collection-promotionnelle/</code></code></pre>
+
+<h3 class="wp-block-heading">Sitemap.xml</h3>
+
+<p>Shopify génère le <strong>sitemap.xml</strong> de votre boutique, le rendant ainsi accessible à l’adresse votredomaine.com/sitemap.xml. Nul besoin&nbsp; de créer manuellement un plan de site ou de le mettre à jour. </p>
+
+<p>Il y a deux mises en garde ici pour les utilisateurs avancés&nbsp;:</p>
+
+<ol class="wp-block-list">
+<li>Il n'existe pas de sitemap XML distincts pour les images et les vidéos. </li>
+
+<li>Il n'existe aucun moyen de modifier les sitemap XML ou leur contenu.</li>
+</ol>
+
+<p>Pour supprimer une page du sitemap XML, il faut la passer en no-index. Si vous avez le module Smart SEO, vous pouvez également les exclure une par une.</p>
+
+<p>Le sitemap est généré automatiquement et n'est pas vraiment personnalisable : </p>
+
+<ul class="wp-block-list">
+<li>/sitemap_blogs_1.xml </li>
+
+<li>/sitemap_collections_1.xml </li>
+
+<li>/sitemap_products_1.xml </li>
+</ul>
+
+<p>Pas de sitemap séparés pour les images et les vidéos. Une seule image par produit est intégrée dans le sitemap. Pour contrer cela, il faut utiliser un plugin comme : <a>https://apps.shopify.com/avada-seo-suite?locale=fr</a></p>
+
+<p><strong>Astuce</strong> : En hébergeant un sitemap sur un sous-domaine, vous pouvez avoir la main dessus et le personnaliser. Par exemple, on aurait le sitemap sur sitemap.exemple.fr/sitemap.xml avec des URL de www.exemple.fr</p>
+
+<h3 class="wp-block-heading">Gestion du no-index</h3>
+
+<p>L’attribution d’une <strong>balise </strong><strong>noindex</strong> sur l’une de vos pages donne l’information au moteur de recherche de ne pas l’indexer. Exemple : Création d’une page lors d’un événement éphémère ou d’une opération commerciale à durée limitée.&nbsp;</p>
+
+<p>Recherchez la section « Paramètres de recherche » sur le tableau de bord Shopify, puis, « Empêcher les moteurs de recherche d’indexer cette page ».</p>
+
+<h3 class="wp-block-heading">Redirections</h3>
+
+<p>Une redirection 301 doit être intégrée pour éviter les erreurs 404 lors de la suppression d’un produit ou le changement d’une URL.&nbsp;</p>
+
+<p>Lorsque vous modifiez les URL, Shopify vous demandera si vous souhaitez créer automatiquement une redirection 301. Si votre boutique est déjà en ligne, nous vous recommandons fortement d'utiliser cette option. Chaque redirection ajoutée de cette manière peut être gérée dans le gestionnaire de redirection.</p>
+
+<p>Ce gestionnaire de redirection vous permet également d'importer et d'exporter des redirections – une fonctionnalité utile lorsque vous migrez vers ou depuis Shopify.</p>
+
+<p>Cette fonctionnalité présente cependant un gros inconvénient&nbsp;: elle ne vous permet pas de configurer des redirections à l'aide d'expressions régulières (RegEx), et vous devez donc soit remplir toutes les redirections manuellement, soit faire preuve de créativité et les générer vous-même, puis les importer. </p>
+
+<p>Le manque de prise en charge de RegEx peut vous obliger à définir des milliers de redirections, alors que vous les auriez simplement définies avec quelques lignes de RegEx dans la configuration de votre serveur Web (comme vous le feriez sur un serveur Web Apache dans le fichier .htaccess). <a href="https://help.shopify.com/fr/manual/online-store/menus-and-links/url-redirect">L'équipe d'assistance de Shopify a confirmé qu'elle prend en charge jusqu'à 100 000 redirections</a>. Par conséquent, si vous devez mettre en œuvre davantage de redirections, vous devrez les hiérarchiser.</p>
+
+<p>Voici mon gérer les redirections sur Shopify : </p>
+
+<ul class="wp-block-list">
+<li>Connectez-vous à la console d'administration Shopify</li>
+
+<li>Accédez à la boutique en ligne &gt; Navigation &gt; 🔗Redirections URL</li>
+
+<li>Cliquez sur le bouton bleu Créer une redirection d'URL</li>
+
+<li>Définissez l'URL source de redirection dans le champ "Redirection" depuis et définissez la cible de redirection dans "Redirection vers"&nbsp;</li>
+</ul>
+
+<p><strong>Astuce</strong> : Il est possible d'importer et d'exporter des redirections en masse via des CSV. Si vous devez rediriger 1000 pages d'un coup, passez par cette option sera beaucoup moins chronophage.</p>
+
+<h3 class="wp-block-heading">Fichiers de logs</h3>
+
+<p>Shopify ne fournit pas directement des fichiers de logs comme un hébergement traditionnel. Pour surveiller l’interaction des robots des moteurs de recherche avec votre boutique, vous pouvez utiliser des outils indépendants ou des applications Shopify.</p>
+
+<h2 class="wp-block-heading">La gestion des données structurées</h2>
+
+<p><strong>Les données structurées</strong> ont pour but d’aider les moteurs de recherche à mieux comprendre le contenu de votre site. Elles fournissent des&nbsp; informations explicites sur le contenu de votre page. Ces données peuvent améliorer la visibilité de votre site dans les résultats de recherche enrichis (étoiles de notation, prix et images).</p>
+
+<h4 class="wp-block-heading">Audit de l'implémentation des données structurées existantes</h4>
+
+<p>Avant de procéder à un ajout ou une modification de vos données structurées sur votre boutique Shopify, nous vous recommandons de réaliser <strong>un audit</strong>. Les outils de test des données structurées de Google vont vous permettre d’identifier les lacunes ou les erreurs.</p>
+
+<h4 class="wp-block-heading">Données structurées sur les produits</h4>
+
+<p>Lors de l’intégration des données structurées, Shopify fait généralement un bon travail. Vérifiez tout de même les informations renseignées : produit,&nbsp; prix, disponibilité, etc. Complétez les données si besoin avec des avis clients.</p>
+
+<h4 class="wp-block-heading">Schéma CollectionPage / OfferCatalog</h4>
+
+<p>Il peut être intéressant d’ajouter des données structurées à vos pages de collection. Ces schémas de page informent les moteurs de recherche que votre page de collection contient plusieurs produits.&nbsp;</p>
+
+<h4 class="wp-block-heading">Données structurées des articles</h4>
+
+<p>La fonctionnalité de blog de Shopify est intéressante lors de l’ajout de données structurées spécifiques aux articles. Ces données indiquent aux moteurs de recherche que votre contenu est éditorial, ce qui peut améliorer sa visibilité.</p>
+
+<h4 class="wp-block-heading">Données structurées du fil d'Ariane</h4>
+
+<p>Le fil d’Ariane est une série de liens qui indiquent aux utilisateurs la hiérarchie du site. L’ajout de données structurées à ces liens renforce la bonne compréhension des moteurs de recherche sur la structure de votre site.</p>
+
+<h4 class="wp-block-heading">Mise en place de données structurées sur Shopify</h4>
+
+<p>Shopify simplifie la mise en place de données structurées sur les sites de&nbsp; boutiques :</p>
+
+<ol class="wp-block-list">
+<li><strong>Option originale de Shopify</strong> : La plupart des thèmes proposés par&nbsp; Shopify, en particulier les thèmes premium, intègrent déjà des données structurées pour les produits, les articles de blog et autres types de contenu. Sélectionnez un thème intégrant la fonction afin de limiter vos actions manuelles.&nbsp;</li>
+
+<li><strong>Modification manuelle du code </strong>: Si vous êtes à l’aise avec le développement, vous pouvez ajouter ou modifier les données structurées directement dans le code de votre thème. Le schéma de données structurées le plus couramment utilisé est le format JSON-LD. Voici un exemple basique pour un produit :</li>
+</ol>
+
+<pre class="wp-block-code"><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "Nom du produit",
+  "image": "url-de-l'image",
+  "description": "Description du produit",
+  "brand": {
+    "@type": "Brand",
+    "name": "Nom de la marque"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "Prix"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+<ol start="3" class="wp-block-list">
+<li><strong>Applications Shopify pour les données structurées</strong> : Si vous préférez ne pas toucher au code, il existe des applications dans la boutique d'applications Shopify qui peuvent vous aider à ajouter ou gérer les données structurées, comme par exemple <strong>SEO JSON-LD Boost by Verge</strong>. Elle est gratuite pour les fonctionnalités de base, mais offre également un plan payant pour des fonctionnalités avancées.</li>
+
+<li>Si vos avis sont hébergés sur une application tierce, utilisez un module comme <a href="https://apps.shopify.com/json-ld-for-seo?locale=fr">JSON‑LD for SEO</a>.</li>
+</ol>
+
+<h2 class="wp-block-heading">Gestion des balises meta sur Shopify</h2>
+
+<p>Lorsque nous parlons de méta-informations dans le domaine du référencement, nous entendons le titre de la page et la méta-description. Les deux jouent un rôle essentiel dans le classement de vos pages et dans la manière dont elles sont présentées aux chercheurs.</p>
+
+<p>Un bon titre est facile à lire, contient des mots-clés importants au début, comporte un appel à l'action, est unique et a une longueur comprise entre 285 et 575 pixels (respectivement 30 et 60 caractères).</p>
+
+<p>Il en va de même pour une bonne méta description – sauf que la longueur préférée est comprise entre 430 et 920 pixels (respectivement 70 et 155 caractères).</p>
+
+<p>Ci-dessous, nous décrirons comment Shopify gère les méta-informations prêtes à l'emploi pour chaque type de contenu.</p>
+
+<h3 class="wp-block-heading">Collections</h3>
+
+<p>Shopify génère le titre et la méta description suivants pour les collections&nbsp;:</p>
+
+<p>Titre&nbsp;: $collectionName - $shopName, par ex.<br>T-shirts Heavy Duty - T-shirts millénaires<br>Méta description&nbsp;: $collectionDescription, par ex.<br>De beaux t-shirts robustes pour toutes les occasions.<br></p>
+
+<h3 class="wp-block-heading">Tags</h3>
+
+<p>Shopify n'offre pas d'endroit central pour gérer les balises, et les titres et méta descriptions ne peuvent donc pas être personnalisés. Il génère automatiquement&nbsp;:</p>
+
+<p>Titre : $collectionName - Tagged : $tagName - $shopName, par ex.<br>T-shirts Heavy Duty - Tagged: « drapeau usa » - T-shirts millénaires<br>Méta description&nbsp;: $collectionDescription, par ex.<br>De beaux t-shirts robustes pour toutes les occasions. – veuillez noter qu’il s’agit exactement de la même description que pour la collection.<br></p>
+
+<h3 class="wp-block-heading">Produits</h3>
+
+<p>Shopify génère les titres et méta descriptions suivants pour les produits&nbsp;:</p>
+
+<p>Titre&nbsp;: $productName - $shopName, par ex.<br>T-shirt des Montagnes Rocheuses - T-shirts millénaires<br>Méta description&nbsp;: $productDescription, par ex.<br>Vous avez toujours voulu emporter les magnifiques montagnes Rocheuses avec vous partout où vous allez ? Maintenant vous pouvez!<br></p>
+
+<h3 class="wp-block-heading">Pages et articles de blog</h3>
+
+<p>Shopify génère les titres et méta descriptions des pages et des articles de blog de la même manière&nbsp;:</p>
+
+<p>Titre&nbsp;: $pageName - $shopName, par ex.<br>À propos de nous - T-shirts millénaires<br>Méta description&nbsp;: $pageDescription, par ex.<br>Quelle est l’idée derrière la boutique de T-shirts Millennial ? Nous sommes heureux que vous ayez demandé….<br>Longueur de la méta description coupée à 320 caractères par Shopify<br></p>
+
+<p>Pour les collections, produits, pages et articles de blog, leur description est utilisée par défaut comme méta description. Si cette description comporte plus de 320&nbsp;caractères, elle sera coupée à cette longueur.</p>
+
+<p>Google n'affiche généralement pas d'extrait avec une description de 320 caractères&nbsp;; il le réécrira ou le tronquera à la place.</p>
+
+<h3 class="wp-block-heading">Définir des modèles de titre et de méta description</h3>
+
+<p>Pouvoir définir le titre et la méta description via des modèles plutôt que manuellement pour chaque produit est un énorme gain de temps.</p>
+
+<p>Shopify ne prend pas en charge cela par défaut, mais des applications le permettant existent, et nous vous recommandons fortement d'en utiliser une.</p>
+
+<p>Par exemple, vous pouvez définir les modèles suivants pour chaque collection&nbsp;:</p>
+
+<p>Titre&nbsp;: $collectionName<br>Méta description&nbsp;: Vous recherchez $collectionName&nbsp;? Découvrez notre vaste sélection sur $shopName&nbsp;!<br></p>
+
+<p>Et pour les produits :</p>
+
+<p>Titre&nbsp;: $productName<br>Méta description&nbsp;: Vous recherchez un $productName de $vendor&nbsp;? Vous n'aimez plus, commandez-le maintenant à partir de $minimumPrice&nbsp;!<br></p>
+
+<p><strong>Astuce</strong> : Nous vous recommandons d'utiliser l'application <a href="https://apps.shopify.com/smart-seo?locale=fr">Smart SEO</a> ou <a href="https://apps.shopify.com/seo-meta-manager?locale=fr">SEO Manager</a> pour gérer cela efficacement.</p>
+
+<h2 class="wp-block-heading">Gestion du balisage Hn sur Shopify </h2>
+
+<p>Respectez ces bonnes pratiques en ce qui concerne le balisage Hn&nbsp;:</p>
+
+<ul class="wp-block-list">
+<li>Utilisez un seul titre H1 par page.</li>
+
+<li>Pas de logos ou d'images dans des balises H1 (car le H1 transmet le sujet principal d'une page). C'est une erreur fréquente.</li>
+
+<li>Pour plus de lisibilité, respectez une longueur maximale de titre de 60 caractères.</li>
+
+<li>N'utilisez pas de titres pour les éléments présents sur chaque page, tels que la fonctionnalité de recherche.</li>
+
+<li>Appliquez un H2 aux noms de produits sur les pages de collection.</li>
+
+<li>Construisez votre structure de titres en utilisant une hiérarchie logique.</li>
+</ul>
+
+<p>Dans une large mesure, votre thème Shopify détermine quel texte est placé dans vos titres. Pour le H1, voici ce que vous verrez dans la plupart des thèmes&nbsp;:</p>
+
+<ul class="wp-block-list">
+<li>Page d'accueil : le nom du magasin</li>
+
+<li>Pages de collection&nbsp;: le nom de la collection</li>
+
+<li>Pages produits&nbsp;: le nom du produit</li>
+
+<li>Article de blog&nbsp;: le nom de l'article de blog</li>
+
+<li>Pages&nbsp;: le nom de la page</li>
+
+<li>Lorsque les pages autorisent du contenu supplémentaire, vous pouvez les marquer avec des titres H2 à H6 à votre guise – mais respectez les meilleures pratiques&nbsp;!</li>
+</ul>
+
+<p>Pour ajouter des balises Hn à la description de la collection</p>
+
+<ol class="wp-block-list">
+<li>Connectez-vous à la console d'administration Shopify</li>
+
+<li>Allez dans Produits &gt; Collections</li>
+
+<li>Sélectionnez la collection que vous souhaitez modifier</li>
+
+<li>Dans le champ Description (facultatif), vous pouvez remplir du texte puis le styliser à votre guise.</li>
+
+<li><strong>Attention cependant</strong> : n’utilisez pas le H1, il est déjà utilisé pour le nom de votre produit !</li>
+</ol>
+
+<h2 class="wp-block-heading">Arborescence et structure en Silo</h2>
+
+<p>Malheureusement, il n'est pas possible de créer une <a href="https://agence-slashr.fr/blog/siloing-seo-comment-organiser-son-contenu-en-silo-facilement/">structure en silo</a> avec des sous-catégories (sous-collection) sur Shopify, comme ceci : </p>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2024/05/structure-silo.png" alt="structure en silo seo" class="wp-image-9584"/></figure>
+
+<p>La seule chose possible est de le simuler, en imbriquant des éléments dans le menu.</p>
+
+<h2 class="wp-block-heading">Filtres à facette indexables</h2>
+
+<p>Shopify ne permet pas de créer des filtres à facette indexables. nous recommandons donc de créer des collections pour remplacer la facette. Ce système n'est pas idéal mais c'est mieux que rien.</p>
+
+<h2 class="wp-block-heading">Attention au Javascript</h2>
+
+<p>Bien que les moteurs de recherche puissent désormais afficher du JavaScript, il est recommandé d'utiliser le rendu côté serveur ou une solution de prérendu afin de pouvoir fournir du HTML standard aux moteurs de recherche afin de rendre leur processus d'exploration et d'indexation aussi fluide et rapide que possible. </p>
+
+<p>Faites attention au JavaScript côté client lorsque vous choisissez un thème Shopify ou lorsque vous en avez un sur mesure. Vérifiez bien si les éléments importants (liens, texte, images) de votre contenu sont bien présents dans le HTML avant le rendu du Javascript</p>
+
+<h2 class="wp-block-heading">Améliorer la vitesse du site Shopify</h2>
+
+<p>La <strong>vitesse de chargement </strong>a toujours été considérée comme un facteur phare pour le classement de l’URL sur le moteur de recherche. Un site rapide peut potentiellement obtenir un meilleur classement dans les résultats de recherche de la SERP. Pour optimiser efficacement la vitesse de chargement de votre site e-commerce Shopify :</p>
+
+<ol class="wp-block-list">
+<li><strong>Choisir un thème optimisé</strong> : Certains thèmes Shopify sont lourds et plus lents au téléchargement que d’autres. Sélectionnez un thème et contrôlez l’optimisation de la vitesse de chargement.</li>
+
+<li><strong>Optimiser les images </strong>: Les images doivent être compressées pour ne pas ralentir le chargement de la page. TinyPNG ou Image Optimizer sur Shopify sont des applications performantes qui n’enlèvent rien à la qualité de vos images. Utilisez un format d’image approprié (.webp ou .png pour les graphiques et .jpeg pour les photos).</li>
+
+<li><strong>Réduire le nombre de plugins </strong>: Conservez uniquement les applications et plugins dont vous avez l’utilité. Supprimez les autres. Elles sont, en effet, susceptibles de ralentir inutilement votre vitesse.</li>
+
+<li><strong>Bénéficiez des atouts du CDN (Content Delivery Network)</strong> : Shopify utilise un CDN via son infrastructure. Des serveurs situés partout dans le monde distribuent le contenu du site.&nbsp;</li>
+
+<li><strong>Minimiser et associer les fichiers CSS et JavaScript</strong> : Réduisez la taille et assemblez les deux fichiers pour améliorer le temps de chargement. Certains thèmes et applications le font automatiquement.</li>
+
+<li><strong>Ne pas abuser des sliders et des carrousels</strong> : Attrayants, les sliders et les carrousels sont néanmoins volumineux. Images et animations ralentissent considérablement votre site.</li>
+
+<li>T<strong>ester la vitesse de votre site</strong> : Google PageSpeed Insights ou GTmetrix analysent la vitesse de votre site puis recommandent des améliorations.</li>
+</ol>
+
+<p>Tous ces éléments contribuent à améliorer la vitesse de chargement de votre site Shopify. L’expérience utilisateur étant meilleure, une incidence significative sur le taux de conversion et les ventes est généralement constatée.&nbsp;</p>
+
+<p></p>
+
+<h2 class="wp-block-heading">Recherche de mots-clés</h2>
+
+<p>Une <strong>stratégie SEO </strong>commence par la <strong>recherche de mots-clés. </strong>Identifiez les requêtes les plus souvent saisies par les utilisateurs dans les moteurs de recherche et adaptez votre optimisation en conséquence. Déterminez ensuite quels sont les produits les plus recherchés par vos clients.</p>
+
+<h3 class="wp-block-heading">Optimisation des mots-clés</h3>
+
+<ol class="wp-block-list">
+<li><strong>Comprendre l’intention de recherche de l’utilisateur </strong>: achat ou recherche d’information.</li>
+
+<li><strong>Utilisez des outils de recherche de mots-clés tels que SEMrush, Ahrefs, ou Google Keyword Planner</strong> : étudiez le volume de recherche pour chaque terme.</li>
+
+<li><strong>Analysez les mots-clés de vos concurrents</strong> : une source d’idées pour de nouvelles opportunités.</li>
+
+<li><strong>Intégration naturelle des mots-clés sur la page</strong> : dans les titres de produits, les descriptions, les métadonnées, l’URL et le contenu.&nbsp;</li>
+
+<li><strong>Mise à jour régulière</strong> : Les tendances de recherche évoluent au fil du temps. Procédez régulièrement à des études de mots-clés pour rester en adéquation avec le mouvement.</li>
+</ol>
+
+<p>Envie de migrer votre site web sur Shopify ? Profitez de notre <a href="https://agence-slashr.fr/seo/prestations/refonte-seo/">accompagnement SEO à la refonte de sites web</a>.</p>
+
+<h2 class="wp-block-heading">La gestion du blog sur Shopify</h2>
+
+<p>Les boutiques Shopify sont centrées principalement sur la vente en ligne de produits, mais, on ne peut ignorer le potentiel du blogging en matière de SEO.&nbsp;</p>
+
+<h3 class="wp-block-heading">L'intention de recherche : entre transaction et information </h3>
+
+<p>Pour optimiser une boutique Shopify, comprendre l’intention de recherche de l’internaute est primordial.</p>
+
+<p>Exemple : Le terme « appareil photo pour selfies » pourrait sembler purement transactionnel. Toutefois, une analyse des résultats Google démontre que les utilisateurs recherchent des guides et des comparatifs avant d’effectuer un achat.</p>
+
+<h3 class="wp-block-heading">Exemple concret : les "chaussures éthiques" </h3>
+
+<p>En France, la mode éthique et responsable prend de l’ampleur. Si on tape « chaussures éthiques » sur Google, on trouve à la fois des boutiques proposant des produits à la vente et des articles de blog expliquant comment reconnaître une chaussure éthique. Une boutique Shopify vendant ce type de produits a donc tout intérêt à proposer un contenu informatif en plus de ses pages produit sur la thématique.</p>
+
+<h3 class="wp-block-heading">L'opportunité du blog pour Shopify </h3>
+
+<p>Face à cette dualité d’intention, la solution est claire : une boutique en ligne doit s’enrichir d’articles de blog pertinents. Ces articles vont apporter une valeur ajoutée à l’utilisateur tout en le guidant subtilement vers l’achat. Si vous souhaitez des fonctionnalités de blgo plus poussées, vous pouvez toujours installer un wordpress sur un sous-domaine, comme blog.exemple.fr.</p>
+
+<p>Besoin d'aide avec votre site Shopify ? Faites appel à des <a href="https://agence-slashr.fr/seo/">spécialistes du SEO à Lille</a>.</p>
+
+<h2 class="wp-block-heading">Les applications sur shopify</h2>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2023/09/application-shopify-min-1024x555.png" alt="" class="wp-image-6038"/></figure>
+
+<p>La plateforme Shopify bénéficie d’un large catalogue d’applications. Certaines peuvent apporter des fonctionnalités intéressantes à votre boutique en ligne.&nbsp;</p>
+
+<h3 class="wp-block-heading">Applications Shopify pour le référencement naturel</h3>
+
+<p>Le référencement naturel est incontournable pour la visibilité de votre boutique en ligne. Pour booster votre SEO sur Shopify, découvrez quelques applications intéressantes :</p>
+
+<ul class="wp-block-list">
+<li>Smart SEO : Pour la gestion des métas</li>
+
+<li>Avada SEO : pour la gestion des images</li>
+
+<li>Json-LD for SEO : pour les données structurées</li>
+</ul>
+
+<h3 class="wp-block-heading">Est-ce que Yoast SEO est disponible pour Shopify ?</h3>
+
+<p>Yoast SEO est fortement utilisé sous WordPress et est également disponible sur Shopify. Retrouvez-le <a href="https://apps.shopify.com/yoast-seo">ici</a>.</p>
+
+<h3 class="wp-block-heading">Limiter vos applications Shopify</h3>
+
+<p>Charger beaucoup d’applications va nuire à l’optimisation de votre site. Ajoutez uniquement des applications qui vous sont particulièrement utiles pour votre optimisation et vos analyses de performance.&nbsp;</p>
+
+<p></p>

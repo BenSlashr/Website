@@ -1,0 +1,286 @@
+---
+title: "Gatsby et JavaScript pour le SEO : le guide complet"
+slug: "gatsby-et-javascript-pour-le-seo-le-guide-complet"
+date: "2023-10-26 09:22:14"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<p>Gatsby est un outil <a href="https://www.gatsbyjs.com/docs/glossary/static-site-generator/">générateur de sites statiques</a> basé sur <strong>JavaScript React</strong> qui bénéficient de performances en termes de conception technique mais également de référencement SEO.</p>
+
+<p>Depuis l’arrivée de Gatsby, différencier un site statique d’un site dynamique est devenu complexe. Google et ses concurrents ont toujours privilégié les sites dotés d’une rapidité de téléchargement tels que les sites statiques jugés plus performants.</p>
+
+<p><a href="https://agence-slashr.fr/blog/javascript-et-seo-bonnes-pratiques-et-erreurs-a-eviter/">Interpréter correctement JavaScript</a> n’a pas toujours été simple et les experts avaient tendance à le déconseiller fut un temps. Aujourd’hui, les choses ont évolué favorablement et Google est en mesure d’interpréter correctement l’outil JavaScript. Notez que tous les moteurs de recherche ne bénéficient pas des compétences du géant Google.</p>
+
+<figure class="wp-block-image aligncenter size-large"><img src="/blog/images/2023/10/170044f0-5f53-11eb-852b-43268d756f2e-Static-Site-Generation-1024x617.png" alt="Explication de sites statiques " class="wp-image-6787"/></figure>
+
+<p>La vitesse d’indexation étant complètement aléatoire, il faut parfois du temps pour indexer un contenu dynamiquement généré.&nbsp;</p>
+
+<p>En générant des pages statiques, Gatsby renforce l’accessibilité aux robots d’exploration. La capacité d’interprétation de JavaScript ne rentre plus en ligne de compte.</p>
+
+<p>Vous souhaitez faire une refonte de votre site en utilisant Gatsby ? Profitez de notre <a href="https://agence-slashr.fr/seo/prestations/refonte-seo/">accompagnement SEO à la refonte de sites web</a>.</p>
+
+<h2 class="wp-block-heading">Gatsby et ses composants SEO</h2>
+
+<p>Pour être opérationnel d’un point de vue référencement, Gatsby a intégré des composants spécifiques SEO.</p>
+
+<p>Citons par exemple react-helmet qui gère les balises méta de manière efficace tout en laissant une large possibilité d’amélioration.</p>
+
+<pre class="wp-block-code"><code>import React from "react";
+import { Helmet } from "react-helmet";
+const SEO = ({ title, description }) => (
+  &lt;Helmet>
+    &lt;title>{title}&lt;/title>
+    &lt;meta name="description" content={description} />
+  &lt;/Helmet>
+);</code></pre>
+
+<p>Tout comme une voiture classique peut devenir une voiture puissante en ajoutant des équipements mécaniques, le <strong>composant SEO de Gatsby </strong>a le pouvoir de développer son niveau d’optimisation de manière forte et concrète. L’intégration de données structurées est l’exemple type de <strong>solutions d’améliorations de visibilité</strong> tout comme les balises meta spécifiques face au contenu des médias sociaux. Plus de risques de voir apparaître, lors du partage d’une publication, un contenu totalement différent de celui d’origine.</p>
+
+<pre class="wp-block-code"><code>&lt;Helmet>
+  &lt;script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Titre de l'article",
+      "image": "URL de l'image",
+      "author": "Nom de l'auteur",
+      "datePublished": "2022-01-01"
+    })}
+  &lt;/script>
+&lt;/Helmet></code></pre>
+
+<p></p>
+
+<pre class="wp-block-code"><code>&lt;Helmet>
+  &lt;meta property="og:title" content="Titre de l'article" />
+  &lt;meta property="og:description" content="Description de l'article" />
+  &lt;meta property="og:image" content="URL de l'image" />
+  &lt;meta name="twitter:card" content="summary_large_image" />
+&lt;/Helmet></code></pre>
+
+<h2 class="wp-block-heading">Données structurées</h2>
+
+<p><strong>Les données structurées</strong> sont des éléments codés qui, de par leur balisage, donnent des informations précises aux moteurs de recherche. Mieux analysées, les données sont ensuite mieux classifiées.&nbsp;</p>
+
+<p>On peut ainsi voir apparaître dans les résultats de recherche, des <strong>extraits enrichis</strong> qui apportent une valeur supplémentaire aux données : nombre d’avis clients, note globale donnée par les internautes, nombre d’étoiles attribuées, etc.</p>
+
+<p>Gatsby facilite grandement l’intégration de données structurées afin d’améliorer toujours <strong>l’expérience utilisateur.</strong>Vous souhaitez ajouter des scripts de type application/ld+json à votre site internet ? Utilisez react-helmet.</p>
+
+<pre class="wp-block-code"><code>&lt;Helmet>
+  &lt;script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Conférence sur le SEO",
+      "startDate": "2023-05-01T20:00",
+      "location": {
+        "@type": "Place",
+        "name": "Centre de conférence de Paris",
+        "address": "123 Rue de Paris, Paris, France"
+      }
+    })}
+  &lt;/script>
+&lt;/Helmet></code></pre>
+
+<p>Vous souhaitez informer d’un événement à venir ? Utilisez les données structurées comme dans l’exemple ci-dessous :&nbsp;</p>
+
+<p>Le code lié aux données structurées doit répondre à un formatage précis. Utilisez&nbsp; l’<a href="https://search.google.com/structured-data/testing-tool">outil de test des données structurées</a> proposé par Google afin d’éviter une mauvaise interprétation de la part du moteur de recherche.&nbsp;&nbsp;</p>
+
+<p>Les données structurées permettent de clarifier et structurer des informations de manière à apporter :&nbsp;</p>
+
+<ul>
+<li>Une meilleure visibilité du contenu sur le net.</li>
+
+<li>Une lisibilité agréable et confortable aux lecteurs.&nbsp;</li>
+
+<li>Une interaction active avec les internautes.</li>
+</ul>
+
+<p>Gatsby rend le processus de classification simple et accessible tout en restant technique.&nbsp;</p>
+
+<p>Besoin d'aide ? Faites appel à une <a href="https://agence-slashr.fr/seo/prestations/seo-technique/">agence SEO technique</a>.</p>
+
+<h2 class="wp-block-heading">Maillage interne</h2>
+
+<p><strong>Le maillage interne </strong>est une technique informatique donnant de la puissance à un contenu web. On parle en langage SEO de <strong>netlinking</strong>. Il s’agit d’insérer des liens internes entre les différentes pages du site.</p>
+
+<p>Un bon maillage interne apporte une qualité de navigation et la garantie d’un meilleur référencement. Pour booster l’efficacité du maillage et améliorer l’expérience utilisateur de manière significative, Gatsby propose le composant Link.</p>
+
+<pre class="wp-block-code"><code>import { Link } from "gatsby";
+&lt;Link to="/about/">À propos de nous&lt;/Link></code></pre>
+
+<p>Pour réussir votre maillage interne, nous vous délivrons quelques recommandations :&nbsp;</p>
+
+<ol>
+<li>Inclure des liens contextuels dans votre contenu va renforcer sa pertinence auprès des internautes et des moteurs de recherche.</li>
+
+<li>&nbsp;Contrôler la validité des liens. Un lien rompu est néfaste pour votre référencement et pour l’expérience utilisateur.</li>
+
+<li>&nbsp;Sélectionner une ancre informative plus puissante qu’une ancre générique.&nbsp;</li>
+
+<li>Faciliter la navigation des utilisateurs en structurant votre site par rapport à la page d’accueil. Les moteurs de recherche procéderont ainsi à une indexation plus juste des pages.&nbsp;</li>
+</ol>
+
+<h2 class="wp-block-heading">Optimisation des images dans Gatsby pour le SEO</h2>
+
+<p>Grâce à des plugins évolués, Gatsby assure une optimisation de qualité à vos images.</p>
+
+<h3 class="wp-block-heading">Gatsby Image et Sharp</h3>
+
+<p>Le plugin gatsby-image associé avec le plugin gatsby-transformer-sharp combine à la fois le traitement et l’optimisation de vos images.</p>
+
+<pre class="wp-block-code"><code>import Img from "gatsby-image";
+&lt;Img fluid={data.file.childImageSharp.fluid} alt="Description de l'image" /></code></pre>
+
+<p>Plusieurs tailles d’images sont soumises afin de vous laisser le choix de la version la plus qualitative. Avec un format adapté à chaque type de contenu, le temps de chargement est réduit.</p>
+
+<h3 class="wp-block-heading">Formats d'image modernes avec WebP</h3>
+
+<p>Le format WebP est largement utilisé aujourd’hui de par sa qualité et son niveau de compression. Gatsby, grâce à gatsby-plugin-webp convertit simplement vos images au format WebP.</p>
+
+<h3 class="wp-block-heading">Attribut alt et SEO</h3>
+
+<p>Un attribut alt est un élément indissociable de l’identification des images par les moteurs de recherche, même avec Gatsby.</p>
+
+<pre class="wp-block-code"><code>&lt;Img fluid={data.file.childImageSharp.fluid} alt="Un paysage montagneux au coucher du soleil" /></code></pre>
+
+<h3 class="wp-block-heading">Lazy Loading natif</h3>
+
+<p>Le plugin gatsby-image intègre le « lazy loading ». Les images sont ainsi chargées une fois visibles à l’écran. Les performances et la vitesse de chargement de la page n’en sont que meilleures.</p>
+
+<h2 class="wp-block-heading">Les plugins gatsby essentiels pour le SEO</h2>
+
+<p>Gatsby vous propose d’installer différents plugins dont certains sont incontournables pour votre optimisation SEO et votre référencement.</p>
+
+<h3 class="wp-block-heading"><code>gatsby-plugin-react-helmet</code></h3>
+
+<p>C’est un plugin de gestion de balises &lt;head&gt; ( descriptions, méta, titres, etc.) qui inclut le contenu de la bibliothèque react-helmet.</p>
+
+<pre class="wp-block-code"><code>import { Helmet } from "react-helmet";
+const PageComponent = () => (
+  &lt;div>
+    &lt;Helmet>
+      &lt;title>Titre de la page&lt;/title>
+      &lt;meta name="description" content="Description de la page" />
+    &lt;/Helmet>
+    {/* Reste du composant */}
+  &lt;/div>
+);</code></pre>
+
+<h3 class="wp-block-heading"><code>gatsby-plugin-sitemap</code></h3>
+
+<p>Ajouté au fichier gatsby-config.js, le plugin conçoit le sitemap de votre site Gatsby.</p>
+
+<pre class="wp-block-code"><code>module.exports = {
+  plugins: &#91;`gatsby-plugin-sitemap`],
+};</code></pre>
+
+<h3 class="wp-block-heading"><code>gatsby-plugin-robots-txt</code></h3>
+
+<p>Une fois le plugin configuré dans gatsby-config.js, vous pouvez avoir un regard sur l’exploration et l’indexation de vos pages de site.</p>
+
+<pre class="wp-block-code"><code>module.exports = {
+  plugins: &#91;
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: &#91;{ userAgent: '*', allow: '/' }]
+      }
+    }
+  ],
+};</code></pre>
+
+<h3 class="wp-block-heading"><code>gatsby-plugin-canonical-urls</code></h3>
+
+<p>La génération d’URL canoniques est incontournable pour éviter tout souci lié au duplicate content. Installlez et configurez gatsby-config.js sur votre site.&nbsp;</p>
+
+<pre class="wp-block-code"><code>module.exports = {
+  plugins: &#91;
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.votresite.com`,
+      },
+    },
+  ],
+};</code></pre>
+
+<p>Quelques autres plugins intéressants :&nbsp;</p>
+
+<p><strong>gatsby-plugin-offline&nbsp;</strong></p>
+
+<p>Ajouté à l’application Progressive Web App (PWA), ce plugin contribue à améliorer le référencement de votre site, son temps de chargement et sa compétitivité.</p>
+
+<p><strong>gatsby-plugin-manifest&nbsp;</strong></p>
+
+<p>En liant le plugin avec&nbsp; gatsby-plugin-offline, vous pourrez modifier le visuel de votre site pour une consultation de qualité sur mobile.&nbsp;</p>
+
+<p><strong>gatsby-plugin-google-analytics&nbsp;</strong></p>
+
+<p>Un plugin d’analyse de performances bien utile pour établir une véritable stratégie SEO en fonction des données relevées.</p>
+
+<p><strong>gatsby-plugin-preact&nbsp;</strong></p>
+
+<p>&nbsp;Un plugin à installer à la construction du site pour la partie production. Bénéfique pour la vitesse de chargement.</p>
+
+<p><strong>gatsby-plugin-image&nbsp;</strong></p>
+
+<p>Réservé à tout ce qui se rattache aux images, le plugin présente un niveau de performance élevé.</p>
+
+<p><strong>gatsby-plugin-advanced-sitemap&nbsp;</strong></p>
+
+<p>Plus développé que la version classique, ce plugin de gestion de sitemaps offre des particularités telles que la segmentation.</p>
+
+<p>Vous souhaitez faire décoller votre référencement naturel ? Faites appel à une <a href="https://agence-slashr.fr/seo/">agence SEO lilloise</a>.</p>
+
+<h2 class="wp-block-heading">La gestion du SEO multilingue avec Gatsby</h2>
+
+<p>Dans l'écosystème Gatsby, il existe plusieurs solutions pour gérer le multilinguisme et l'intégration de la balise <code>hreflang</code>.</p>
+
+<ul>
+<li>gatsby-plugin-intl</li>
+</ul>
+
+<p>Internationalisation simplifiée, traduction de texte, changement de langue et génération d’URL spécifiques sont les atouts de ce plugin</p>
+
+<ul>
+<li>hreflang et react-helmet</li>
+</ul>
+
+<p>L’association des deux plugins permet de profiter du multilinguisme de votre site tout en vous assurant d’avoir des balises d’en-tête appropriées.</p>
+
+<pre class="wp-block-code"><code>import { Helmet } from "react-helmet";
+const PageComponent = () => (
+  &lt;div>
+    &lt;Helmet>
+      &lt;link rel="alternate" hreflang="en" href="https://www.example.com/en/page" />
+      &lt;link rel="alternate" hreflang="fr" href="https://www.example.com/fr/page" />
+      {/* ... autres langues ... */}
+    &lt;/Helmet>
+    {/* Reste du composant */}
+  &lt;/div>
+);</code></pre>
+
+<ul>
+<li>gatsby-plugin-hreflang:</li>
+</ul>
+
+<p>Les balises hreflang sont ajoutées automatiquement sur les pages de votre site. Pratiques pour la gestion d’un gros volume de pages dans plusieurs langues.</p>
+
+<ul>
+<li>Stratégies manuelles</li>
+</ul>
+
+<p>Une configuration manuelle est toujours possible si tous ces plugins ne vous conviennent pas. Pour cela, testez le plugin gatsby-node.js.</p>
+
+<h2 class="wp-block-heading">L'importance du contenu pour le SEO</h2>
+
+<p>S’il y a une chose qui n’a pas changé dans le domaine du SEO c’est que <strong>“le contenu est roi”.</strong></p>
+
+<p>Un contenu de qualité satisfait autant les moteurs de recherche que les utilisateurs. Google ainsi que tous les moteurs de recherche n’ont qu’un seul but : fournir des résultats de recherche au plus près des requêtes des internautes. <strong>La pertinence, le point fort du SEO.</strong></p>
+
+<p>Plus votre contenu est clair, original, intéressant et structuré, plus les moteurs de recherche lui donneront de la valeur en le référençant favorablement.</p>
+
+<p>Gatsby est capable de réunir diverses sources de contenu que ce soit des fichiers Markdown, de CMS ou de simples bases de données. En veillant à ce que votre site respecte une architecture logique et limpide, la navigation de l’utilisateur sera facilitée et votre site sera mieux référencé. Publier du contenu, en rapport avec les questions des internautes, encourage l’engagement et le partage.</p>

@@ -1,0 +1,112 @@
+---
+title: "Server-side rendering et SEO : risques, fonctionnement et bonnes pratiques"
+slug: "server-side-rendering-et-seo"
+date: "2023-10-27 13:04:51"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<p>Les évolutions constantes du web et du SEO apportent des changements en termes de référencement et de rendu. Les moteurs de recherche doivent s’adapter et les sites web également. Le choix entre le rendu côté client (CSR) et le SSR est devenu un <a href="https://developers.google.com/search/docs/guides/rendering">point crucial</a> pour les entreprises en ligne.</p>
+
+<p>Les applications récentes construites avec certains frameworks privilégient l’interactivité. Elles utilisent le JavaScript pour rendre la navigation aussi agréable que sur mobiles ou ordinateurs de bureau.&nbsp;&nbsp;</p>
+
+<p>D’après<a href="https://developers.google.com/search/docs/crawling-indexing/javascript/dynamic-rendering?hl=fr"> la documentation de Google</a>, la méthode de rendu n’a pas d’incidence directe sur le classement organique des sites. En tout cas, tant que certaines conditions sont remplies ! De nombreux experts, y compris les collaborateurs de notre agence SEO, préfèrent néanmoins <strong>le SSR.</strong> Ce choix est basé sur des études de cas concrètes démontrant clairement des augmentations significatives de trafic, après la mise en œuvre du SSR. Il n’est pas rare de<strong> voir le trafic évolué de 100%</strong> !</p>
+
+<h3 class="wp-block-heading">Qu'est-ce que le Server-Side Rendering (SSR) ?</h3>
+
+<p><strong>Le Server-Side Rendering (SSR)</strong> est une technique utilisée aujourd’hui couramment dans le développement web pour générer le contenu d’une page web côté serveur plutôt que côté client (navigateur).</p>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2023/10/SSR-1024x731.png" alt="Server-side rendering fonctionnement" class="wp-image-6793"/></figure>
+
+<p>Le SSR prépare et complète la page directement sur le serveur, plutôt que d’envoyer au navigateur une structure vide de page web et de laisser JavaScript remplir le contenu. L’avantage est donc que le SSR permet l’affichage d’une version complète de la page. </p>
+
+<p><strong>Pourquoi le SST a-t-il autant d’importance ?</strong> Une page rendue côté serveur met généralement moins de temps à s’afficher. Le navigateur recevant directement le contenu, cela réduit le temps du rendu. Cette approche présente des <strong>avantages SEO </strong>car elle garantit que les moteurs de recherche aient une vision complète de la page lors de l’indexation. </p>
+
+<p>Besoin d'aide pour implémenter du SSR sur votre site web ? Faites appel à une <a href="https://agence-slashr.fr/seo/prestations/seo-technique/">agence SEO technique</a> ! </p>
+
+<h2 class="wp-block-heading">Les avantages du SSR</h2>
+
+<p>Le Server-Side Rendering apporte de nombreux atouts :</p>
+
+<p><strong>Amélioration de la performance et du temps de chargement </strong>: Les utilisateurs accèdent à une version pré-rendue de la page. L’accès du contenu côté serveur permet un temps d’affichage largement amoindri. Nul besoin d’attendre que JavaScript soit traité. </p>
+
+<p><strong>Optimisation pour les moteurs de recherche</strong> : Pour l’optimisation des&nbsp; moteurs de recherche, la vitesse de chargement et la performance du site sont des critères importants. Comme les pages web utilisant le SSR bénéficient d’un contenu déjà rendu, leur exploration et leur indexation sont plus simples. On comprend vite que cette solution est favorable au SEO. </p>
+
+<p><strong>Amélioration de l’expérience utilisateur</strong> : Le temps d’attente de l’utilisateur&nbsp; est réduit car il n’y a pas de chargement du contenu dynamique. Un avantage indéniable comme le confirme cette <a href="https://www.splunk.com/en_us/blog/learn/server-side-rendering-ssr.html">étude sur l’impact du SSR sur l’UX</a>.</p>
+
+<p><strong>Compatibilité avec les anciens navigateurs</strong> : Certains navigateurs ne donnaient pas la possibilité d’interpréter le JavaScript moderne. Le SSR garantit une compatibilité avec ces anciens navigateurs. </p>
+
+<p><strong>Consommation réduite de ressources client </strong>: Dans l’option rendu côté client, le navigateur traite le JavaScript pour générer le contenu. Avec le SSR, cette action est déplacée côté serveur, d’où une réduction de la consommation des ressources client. </p>
+
+<p><strong>Impact significatif sur la performance</strong> : La performance globale est améliorée grâce à l’utilisation du SSR. Le temps de chargement peut être réduit jusqu’à hauteur de 50 %. L’engagement des utilisateurs et la visibilité du site dans les moteurs de recherche croissent inévitablement.</p>
+
+<h2 class="wp-block-heading">Les défis du SSR</h2>
+
+<p><strong>Le Server-Side Rendering</strong> apporte certes des avantages mais il peut également vous confronter à quelques défis.</p>
+
+<p><strong>Complexité accrue</strong> : Le SSR complexifie le processus de développement.&nbsp; Une restructuration de l’architecture et une adaptation du code sont parfois nécessaires afin d’être certain que tout est opérationnel côté serveur. </p>
+
+<p><strong>Charge serveur</strong> : Le SSR amène une augmentation de la charge sur le serveur. C’est un inconvénient, il faut bien l’avouer. Le serveur génère le contenu de chaque demande, cela augmente significativement sa charge et ses coûts. </p>
+
+<p><strong>Temps de réponse </strong>: Une augmentation du temps de réponse du serveur peut être constatée lorsque le serveur est surchargé. Ces désagréments peuvent être largement diminués avec une bonne gestion des ressources et une optimisation minutieuse du serveur.</p>
+
+<p><strong>Compatibilité des bibliothèques </strong>: Les différentes bibliothèques ou frameworks JavaScript ne sont pas forcément compatibles ou optimisés pour le SSR. C’est donc aux développeurs de rechercher et de tester des solutions spécifiques afin d’être sûrs du fonctionnement correct avec le SSR. </p>
+
+<p><strong>Coût de développement </strong>: Une application utilisant le SSR a un coût généralement supérieur à celui d’une application utilisant uniquement le rendu côté client. La difficulté de la technique et les éventuelles modifications sont à l’origine de ces coûts. </p>
+
+<h2 class="wp-block-heading">SSR et SEO : Pourquoi est-ce essentiel ?</h2>
+
+<p>Le Server-Side Rendering agit favorablement sur la performance et l’expérience utilisateur. Mais il ne faut pas sous-estimer son incidence sur le référencement SEO.&nbsp;</p>
+
+<p><strong>Meilleure indexation </strong>: Le SSR facilite l’accessibilité aux robots d’indexation dès la première visite grâce la version pré-rendue du contenu. Google, Bing ou Yahoo ont généralement du mal à indexer des sites web conçus avec JavaScript, ce qui explique l'importance de suivre les <a class="" href="https://agence-slashr.fr/blog/javascript-et-seo-bonnes-pratiques-et-erreurs-a-eviter/">bonnes pratiques SEO liées à JavaScript</a>.</p>
+
+<p><strong>Premier rendu de contenu visible </strong>: Le SSR réduit le temps d’affichage grâce au fait que le navigateur ait reçu une page déjà rendue. C’est un élément intervenant sur le classement dans les résultats de recherche. </p>
+
+<p><strong>Compatibilité avec les anciens moteurs de recherche</strong> : Le SSR rend le contenu accessible à tous les moteurs de recherche. Même si Google a amélioré sa capacité à traiter le JavaScript, ce n’est pas le cas pour certains moteurs de recherche plus anciens qui ont toujours du mal à gérer le contenu généré côté client. </p>
+
+<p><strong>Réduction du taux de rebond </strong>: Un utilisateur qui doit attendre longtemps pour voir sa page s’afficher, risque de quitter la page rapidement, augmentant ainsi le taux de rebond. Un taux de rebond élevé affecte le référencement. Avec le SSR, l’affichage du contenu est rapide. Le taux de rebond est nettement plus faible et l’engagement des utilisateurs n’en est que meilleur. </p>
+
+<h2 class="wp-block-heading">Mise en œuvre du SSR</h2>
+
+<p>Server-Side Rendering est relativement simple à mettre en place à condition de respecter les différentes étapes :&nbsp;</p>
+
+<p><strong>Choisir le bon framework </strong>: Certains frameworks JavaScript modernes fournissent leurs propres solutions ou plugins pour le SSR :&nbsp;</p>
+
+<ul class="wp-block-list">
+<li>React : Next.js&nbsp;</li>
+
+<li>Vue : Nuxt.js</li>
+</ul>
+
+<p>&nbsp;Leurs configurations prédéfinies facilitent grandement la mise en œuvre du SSR.</p>
+
+<p><strong>Optimisation du serveur </strong>: Votre serveur a tout intérêt à être correctement optimisé face aux demandes supplémentaires liées à l’utilisation du SSR. Contrôlez les points d’optimisation : mise en cache, réduction du temps d’exécution du code serveur, utilisation de CDN, etc. </p>
+
+<p><strong>Gérer les appels API</strong> : Les appels API côté serveur améliorent le temps de chargement initial. Les appels côté client réduisent la charge pour le serveur. Votre choix va dépendre des besoins spécifiques de l’application. Cet <a href="https://css-tricks.com/server-side-react-rendering/">article sur la gestion des appels API avec le SSR</a> l’explique très bien.</p>
+
+<p><strong>S’assurer de la compatibilité des bibliothèques</strong> : Les bibliothèques JavaScript ne sont pas toutes compatibles avec le SSR, nous l’avons vu plus haut. Un test est donc indispensable pour mesurer le fonctionnement correct du contenu une fois rendu côté serveur. </p>
+
+<p><strong>Gérer le routage</strong> : La gestion du routage dans un contexte SSR nécessite d’envisager des options particulières comme react-router pour React ou vue-router pour <a href="https://vuejs.org/guide/scaling-up/ssr.html">Vue</a>.</p>
+
+<h2 class="wp-block-heading">Conseils pour une mise en œuvre réussie du SSR</h2>
+
+<p>Le bon fonctionnement de Server-Side Rendering est garanti par une programmation et une stratégie bien définie. Voici ci-dessous quelques conseils pour réussir la mise en œuvre du SSR :</p>
+
+<p><strong>Comprenez vos besoins </strong>: Le SSR a de l’intérêt pour du contenu dynamique. Si votre site repose essentiellement sur du contenu statique, le rendu côté client suffit amplement. Mais, si vous considérez que le SEO et la performance de votre site sont une priorité, le SSR est idéal. </p>
+
+<p><strong>Utilisez le caching stratégiquement</strong> : Une fois les versions pré-rendues des pages stockées, le temps nécessaire pour apporter une réponse aux demandes des utilisateurs est réduit. L’outil Redis ou des solutions de caching intégrées à certains frameworks (exemple : Next.js) peuvent vous apporter une aide appréciable. Découvrir ces solutions dans le <a href="https://arunoda.me/blog/ssr-and-server-only-modules">guide sur le caching avec le SSR</a>.</p>
+
+<p><strong>Optimisez pour le mobile </strong>: Le développement des appareils mobiles fait qu’aujourd’hui, de nombreux utilisateurs accèdent au web via leurs appareils de téléphonie mobiles. Le SSR peut améliorer sensiblement la&nbsp; performance sur ces appareils, surtout pour les régions délivrant une&nbsp; connexion Internet lente ou inégale. La mise en œuvre du SSR doit impérativement être optimisée pour offrir une expérience mobile fluide. </p>
+
+<p><strong>Surveillez les métriques régulièrement </strong>: Gardez un œil sur les  performances et procédez à des ajustements. Des outils tels que Google Lighthouse ou WebPageTest peuvent être utilisés pour mesurer la vitesse de chargement, tout comme <a class="" href="https://agence-slashr.fr/blog/screaming-frog-guide-complet-pour-optimiser-votre-seo/">Screaming Frog</a> pour crawler l'intégralité de votre site.</p>
+
+<p><strong>Planifiez pour l’avenir</strong> : Votre stratégie digitale doit pouvoir s’adapter rapidement à des évolutions technologiques et des avancées soudaines sur le rendu web ou le SSR. Cette flexibilité est nécessaire pour tirer parti du SSR à long terme.</p>
+
+<p><strong>Jouer la prudence avec les frameworks</strong> : L’association de plusieurs frameworks ou bibliothèques peut créer des problèmes et diminuer l’efficacité du processus. Soyez donc prudent et modérez les cumuls !&nbsp;</p>
+
+<p><strong>Optimisation des images </strong>: Des images non optimisées sont sujettes à ralentir le temps de rendu. Contrôlez leur optimisation systématiquement dans un environnement SSR en vous servant d’outils spécifiques. Des formats modernes comme WebP sont à privilégier pour améliorer la vitesse de chargement.</p>
+
+<p>Faites décoller votre trafic SEO avec Slashr, la <a href="https://agence-slashr.fr/seo/">meilleure agence SEO sur Lille</a>.</p>
+
+<p><strong>Le Server-Side Rendering (SSR)</strong> fait partie du paysage informatique du développement web. Ces avantages sont significatifs. Le SSR permet aux&nbsp; développeurs d’améliorer le temps de chargement des pages, de faciliter l’accessibilité du contenu pour l’indexation et de contribuer à une meilleure expérience utilisateur. Il apporte également quelques contraintes qui sont facilement gérables dès lors que vous maîtrisez parfaitement le sujet et que vous surveillez scrupuleusement les performances.</p>

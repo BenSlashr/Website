@@ -1,5 +1,5 @@
 // WordPress API Configuration
-const WP_API_URL = 'https://agence-slashr.fr/wp-json/wp/v2';
+const WP_API_URL = process.env.WORDPRESS_API_URL || 'https://wp.agence-slashr.fr/wp-json/wp/v2';
 
 // Types pour l'API WordPress
 interface WPPost {

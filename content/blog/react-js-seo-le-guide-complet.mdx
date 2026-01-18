@@ -1,0 +1,265 @@
+---
+title: "React SEO : le guide complet"
+slug: "react-js-seo-le-guide-complet"
+date: "2023-11-03 16:24:19"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<p>Le développement de technologies toujours plus innovantes a permis de voir apparaître <a href="https://reactjs.org/">React</a>, une bibliothèque Javascript, largement utilisée par les&nbsp; développeurs. Mis en place par la plateforme <a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)">Facebook</a>, React permet de créer des interfaces utilisateur interactives et performantes. Son efficacité en matière de développement ne doit pas pour autant nous faire oublier que l’outil présente des particularités en matière de SEO.</p>
+
+<p>Adoptée par tous (Facebook, Twitter et Google), Réact témoigne de sa puissance et de son adaptabilité. Néanmoins, des questions se posent sur la perception des moteurs de recherche face à des applications et des sites web construits avec React et, sur les techniques d’optimisation à envisager pour garantir une visibilité maximale dans les résultats de recherche.</p>
+
+<h2 class="wp-block-heading">L'évolution du développement web</h2>
+
+<p>Les bibliothèques JavaScript ont vu leur développement et leur attractivité monter en puissance ces dernières années. React s’est très vite démarqué&nbsp; en offrant des solutions de constructions d’interfaces utilisateur composables. Ces applications monopages (SPAs), ont permis d’obtenir une expérience utilisateur fluide et réactive, mais elles ont soulevé de nouveaux défis en matière de SEO.</p>
+
+<p>Jusqu’alors le contenu accessible côté serveur était la seule option, permettant ainsi une indexation optimale par les moteurs de recherche. Avec l’arrivée des bibliothèques comme React, le contenu conçu côté client est devenu courant, obligeant ainsi les moteurs de recherche à s’adapter. Avec de bonnes méthodes d’optimisation, la visibilité en ligne des applications peut tout à fait ne pas en souffrir.&nbsp;</p>
+
+<p>React construit sa popularité par son adaptabilité à répondre aux besoins changeants des développeurs et des utilisateurs qui demandent plus d’interactivité et plus de performances. React intègre des outils performants permettant la création de sites web à la fois dynamiques et optimisés pour le SEO. Une bonne compréhension des spécificités de l’optimisation des SPAs est l’assurance d’un bon référencement dans les résultats de recherche.&nbsp;</p>
+
+<p>Envie de migrer votre site web vers React ? Profitez de notre <a href="https://agence-slashr.fr/seo/prestations/refonte-seo/">accompagnement SEO à la refonte de sites web</a> pour ne pas perdre votre trafic ! </p>
+
+<h2 class="wp-block-heading">Défis SEO spécifiques à React</h2>
+
+<h3 class="wp-block-heading">Indexation du contenu généré côté client</h3>
+
+<p>Google ainsi que les autres moteurs de recherche sont formatés pour&nbsp; indexer le contenu HTML statique. L’apparition et la multiplication de bibliothèques JavaScript modernes comme React, obligent les moteurs de recherche à s’adapter au contenu web généré dynamiquement côté client.</p>
+
+<p>Au cours d’une exploration de page, les robots d’indexation n’entrevoient parfois que le squelette initial de la page. Le contenu généré par JavaScript, écarté de l’exploration, se retrouve pénalisé par l’indexation. Les éléments essentiels au SEO (contenu, liens ou métadonnées) étant devenus inaccessibles, les développeurs peuvent projeter d’opérer le rendu côté serveur ou le pré-rendu du contenu pour les moteurs de recherche à l’aide d’outils ou de services spécifiques.</p>
+
+<h3 class="wp-block-heading">Spécificités des applications monopages (SPAs)</h3>
+
+<p>Les SPAs sont des applications monopages contenant l’essentiel de la page, évitant ainsi le chargement de nouvelles pages. Ils rendent l’expérience utilisateur fluide améliorant ainsi considérablement le SEO. Auparavant, chaque nouvelle page d’un site web possédait sa propre URL. Cela facilitait grandement l’indexation par les moteurs de recherche. Avec les SPAs, le contenu change dynamiquement mais, sans toutefois changer d’URL.</p>
+
+<p><a href="https://reactrouter.com/">React Router</a> est un outil fiable pour gérer la navigation dans une SPA tout en conservant des URL uniques pour chaque « page ». Une application soignée des fonctionnalités de l’outil est nécessaire pour garantir une exploration et une indexation correcte de chaque URL.</p>
+
+<h3 class="wp-block-heading">Temps de chargement et performances</h3>
+
+<p>L’un des facteurs clés du SEO, c’est le temps de chargement d’une page. Les SPAs contenant une grande quantité de JavaScript risquent de présenter des temps de chargement plus longs.</p>
+
+<p>La technique du rendu côté serveur (SSR) accélère le temps de chargement initial d’une SPA. Fréquemment utilisé par les développeurs, le SSR avec React génère une version complète de la page dès la première demande de l’utilisateur. Cela réduit considérablement le temps nécessaire pour afficher le contenu initial, ce qui améliore à la fois l’expérience utilisateur et le <a class="" href="https://agence-slashr.fr/blog/positionnement-moteurs-recherche/">positionnement SEO</a> de vos pages. Cette technique est favorable à l’expérience utilisateur mais également à la visibilité de la page dans les moteurs de recherche.</p>
+
+<h3 class="wp-block-heading">Structure des URL et redirections</h3>
+
+<p>La gestion des URLs et des redirections peut vite devenir problématique d’un point de vue SEO lorsque des applications ou des SPAs sont créées à partir de React. Considérons ensemble quelques problématiques :</p>
+
+<h4 class="wp-block-heading">Dynamisme des URL</h4>
+
+<p>Avec React, les URLs sont principalement générées dynamiquement à partir des interactions de l’utilisateur, offrant ainsi une souplesse à l’expérience utilisateur. Le moteur de recherche peut avoir des difficultés à indexer ces URLs correctement.&nbsp;&nbsp;</p>
+
+<h4 class="wp-block-heading">Gestion des redirections</h4>
+
+<p>Les redirections installées du côté client à l’aide des bibliothèques comme <a href="https://reactrouter.com/">React Router</a> peuvent mener à des erreurs de navigation. Mal configurées, ces redirections peuvent créer des boucles de redirection ou de simples problèmes d’indexation pour les moteurs de recherche.</p>
+
+<h4 class="wp-block-heading">Problèmes de doublons de contenu</h4>
+
+<p><a href="https://www.google.com/">Google</a>, comme tous les autres moteurs de recherche, pénalise les doublons, ce qui affecte le classement SEO. Une bonne gestion des URLs est donc indispensable pour éviter des contenus similaires.</p>
+
+<h4 class="wp-block-heading">Pages orphelines</h4>
+
+<p>Certaines applications React donnent la possibilité de créer des pages uniques, reliées à aucune autre page. Leur découverte peut être ainsi rendue difficile pour les robots d’exploration des moteurs de recherche. Ces pages orphelines nuisent à une bonne indexation du site.</p>
+
+<p>React bénéficie d’une grande flexibilité lors de la création d’applications web modernes, mais, une grande attention doit être apportée à la structure des URLs et à la gestion des redirections. Ces recommandations constituent des éléments de contrôle incontournables pour garantir une optimisation SEO efficace.</p>
+
+<h2 class="wp-block-heading">Halte aux idées reçues sur react et le SEO</h2>
+
+<p>Le développement web a profité à React qui a vu son intérêt monter en puissance. Mais c’est sans compter sur l’émergence de nombreuses idées reçues sur l’impact de l’outil sur le référencement naturel. Faisons le point sur ces fausses croyances afin de permettre aux développeurs et aux spécialistes du SEO de tirer pleinement parti des capacités de React.&nbsp;</p>
+
+<h3 class="wp-block-heading">"React n'est pas adapté au SEO"</h3>
+
+<p>L’une des idées reçues les plus courantes est que les applications conçues avec React ne sont pas suffisamment optimisées pour le référencement naturel sur les moteurs de recherche. Il est vrai, qu’auparavant, les moteurs de recherche avaient du mal à indexer le contenu généré par JavaScript, mais, aujourd’hui, les choses ont évolué. Google a apporté de nettes améliorations rendant ainsi l’indexation du contenu JavaScript plus accessible. Au développeur d’assurer ensuite l’application des règles pour une mise en œuvre correcte.</p>
+
+<h3 class="wp-block-heading">"Le contenu généré côté client est invisible pour les moteurs de recherche"</h3>
+
+<p>Il est indéniable que les moteurs de recherche ont eu, fut un temps, des difficultés avec le contenu généré côté client, mais ce n’est plus le cas&nbsp; aujourd’hui. L’indexation de ce type de contenu est désormais possible mais elle nécessite des configurations supplémentaires (rendu côté serveur) pour garantir l’accessibilité dès le premier chargement.</p>
+
+<p>Martin Splitt a réalisé une vidéo pour Google Search Central sur la visibilité des app react pour Google : </p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rKgF0rf009c?si=z_FB_SufjhUWTi2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 class="wp-block-heading">"React et SEO nécessitent des compromis"</h3>
+
+<p>Des ajustements sont parfois nécessaires pour optimiser efficacement une  application React pour le SEO. Mais en aucun cas la qualité ou la fonctionnalité de leur application n’est compromise. Il suffit juste d’une bonne compréhension des défis auxquels ils peuvent être confrontés et, une mise en œuvre soignée. Aujourd’hui, Une application construite à partir de React peut être à la fois interactive et bien optimisée pour les moteurs de recherche, si les bonnes <a class="" href="https://agence-slashr.fr/blog/javascript-et-seo-bonnes-pratiques-et-erreurs-a-eviter/">pratiques JavaScript et SEO</a> sont appliquées.</p>
+
+<p>On s’aperçoit vite que React offre d’énormes possibilités pour le développement web. Avec une approche et une attention particulière, les défis associés au SEO sont vite surmontés sans nuire à la visibilité dans les moteurs de recherche.</p>
+
+<p>Besoin d'aide pour le référencement de votre site react ? Faites appel à Slashr, une <a href="https://agence-slashr.fr/seo/prestations/seo-technique/">agence de référencement naturel technique</a>.</p>
+
+<h2 class="wp-block-heading">Guide détaillé sur l'optimisation SEO pour React</h2>
+
+<h3 class="wp-block-heading">Rendu côté serveur (SSR)</h3>
+
+<p>Le rendu côté serveur est l’élément qui permet l’accessibilité immédiate aux moteurs de recherche du contenu de votre application React. Next.js peut grandement simplifier ce processus.</p>
+
+<h3 class="wp-block-heading">Utilisation des balises meta appropriées</h3>
+
+<p>Pour gérer efficacement les balises meta, utilisez une bibliothèque comme <a href="https://github.com/nfl/react-helmet">React Helmet</a>. Les balises de tête de chaque page seront ainsi ajustées dynamiquement.</p>
+
+<p><strong>Exemple avec React Helmet :</strong></p>
+
+<pre class="wp-block-code"><code>import { Helmet } from 'react-helmet';
+
+function PageComponent() {
+  return (
+    &lt;div&gt;
+      &lt;Helmet&gt;
+        &lt;title&gt;Ma page title&lt;/title&gt;
+        &lt;meta name="description" content="Description de ma page" /&gt;
+      &lt;/Helmet&gt;
+      // Reste du composant
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+<h3 class="wp-block-heading">Optimisation du temps de chargement</h3>
+
+<p>Minimiser le code JavaScript :&nbsp; <a href="https://webpack.js.org/">Webpack</a> est un outil pour grouper et minimiser votre code.</p>
+
+<p>Optimisation des images : <a href="https://imageoptim.com/">ImageOptim</a> est une solution pour réduire la taille de vos images sans perdre de qualité.</p>
+
+<p>Lazy loading : L’installation d’un lazy loading pour les composants qui ne sont pas immédiatement nécessaires est possible avec react.</p>
+
+<p><strong>Exemple de <strong>Lazy loading</strong> :</strong></p>
+
+<pre class="wp-block-code"><code>import React, { Suspense } from 'react';
+const MyComponent = React.lazy(() =&gt; import('./MyComponent'));
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;Suspense fallback={&lt;div&gt;Chargement...&lt;/div&gt;}&gt;
+        &lt;MyComponent /&gt;
+      &lt;/Suspense&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+<h3 class="wp-block-heading">Gestion des URL et navigation</h3>
+
+<p>Chaque « page » de votre SPA doit être rattachée à une URL unique. <a href="https://reactrouter.com/">React Router</a> est une bibliothèque que vous pouvez utiliser pour gérer la navigation.</p>
+
+<p>Conseil : Si vous définissez vos routes de navigation avec <a href="https://reactrouter.com/">React Router</a>, ou tout autre outil du même genre, assurez-vous impérativement de réinitialiser l’état de l’application à chaque changement de route. Chaque « page » de votre SPA sera ainsi cohérente et apte à être explorée. Peu importe de quelle manière l’utilisateur ou le robot y accède.</p>
+
+<p><strong>Exemple avec React Router :</strong></p>
+
+<pre class="wp-block-code"><code>import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+function App() {
+  return (
+    &lt;Router&gt;
+      &lt;Route path="/about" component={About} /&gt;
+      &lt;Route path="/users" component={Users} /&gt;
+    &lt;/Router&gt;
+  );
+}</code></pre>
+
+<h3 class="wp-block-heading">Sitemaps et fichiers robots.txt</h3>
+
+<p>L’utilisation d’outils automatisés ou de scripts est bien souvent bénéfique lors d’une génération de sitemaps d’une application React. D’autant plus si le contenu est amené à changer souvent.</p>
+
+<p><strong>Exemple de fichier <code>robots.txt</code> :</strong></p>
+
+<pre class="wp-block-code"><code>User-agent: *
+Disallow: /private/
+Allow: /</code></pre>
+
+<p>Ce fichier interdit aux robots d'indexer le chemin <code>/private/</code> mais leur permet d'explorer tous les autres chemins.</p>
+
+<h3 class="wp-block-heading">Tests et validations</h3>
+
+<p>La <a href="https://search.google.com/search-console/">Google Search Console</a> est un outil complet qui permet d’avoir une vue d’ensemble sur l’état de santé de votre site, d’identifier les problèmes potentiels et de soumettre de nouvelles pages pour l’indexation. Une fois les optimisations terminées, n’hésitez pas à l’utiliser !&nbsp;</p>
+
+<h2 class="wp-block-heading">Outils et ressources pour le SEO avec React</h2>
+
+<p>L’optimisation SEO d’une application ou d’un site web React nécessite l’utilisation d’outils fiables et performants. Voici une liste non exhaustive de quelques outils utiles ainsi que quelques solutions pour vous guider dans cette tâche :</p>
+
+<h3 class="wp-block-heading">Google Search Console</h3>
+
+<p>La <a href="https://search.google.com/search-console/">Google Search Console</a> est un incontournable pour tous ceux cherchant à faire de l’optimisation SEO, surtout si vous travaillez à réduire les erreurs liées à l’<a class="" href="https://agence-slashr.fr/blog/redirections-seo-guide-pratique/">indexation et aux redirections</a>. Avec cet outil, vous avez une vision claire et précise de l’exploration et de l’indexation de votre site. Les erreurs sont indiquées précisément permettant ainsi de procéder à une rectification immédiate. Vous pouvez également y soumettre des sitemaps et bien d’autres possibilités encore.</p>
+
+<p>Exemple de fonctionnalité : Une fois la propriété de votre site vérifiée, la section « Couverture » vous indique les pages indexées et les erreurs potentielles.</p>
+
+<h3 class="wp-block-heading">React Helmet</h3>
+
+<p><a href="https://github.com/nfl/react-helmet">React Helmet</a> est une bibliothèque servant à la gestion des balises de tête de votre application React et à l’ajustement dynamique des balises situées dans le haut du document (title, meta, etc.).</p>
+
+<p><strong>Exemple de code :</strong></p>
+
+<pre class="wp-block-code"><code>import { Helmet } from 'react-helmet';
+
+function PageComponent() {
+  return (
+    &lt;div&gt;
+      &lt;Helmet&gt;
+        &lt;title&gt;Titre de ma page&lt;/title&gt;
+        &lt;meta name="description" content="Description de ma page" /&gt;
+      &lt;/Helmet&gt;
+      // Reste du composant
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+<h3 class="wp-block-heading">Lighthouse</h3>
+
+<p><a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> est un outil d’audit SEO automatisé, intégré à Chrome DevTools, permettant l’évaluation de la qualité de vos pages web. Performant, accessible, il améliore les pratiques liées au SEO.</p>
+
+<p>Exemple d’utilisation : Ouvrez l’application Chrome DevTools ; dans l’onglet « Lighthouse », sélectionnez « SEO » ; cliquez sur « Générer un rapport ». Une liste d’améliorations potentielles vous sera proposée pour votre page.</p>
+
+<h3 class="wp-block-heading">Next.js</h3>
+
+<p><a href="https://nextjs.org/">Next.js</a> est une excellente option pour améliorer le rendu côté serveur avec React. Facile à utiliser, il bénéficie d’optimisations intégrées pour le SEO.</p>
+
+<p><strong>Exemple de code :</strong></p>
+
+<pre class="wp-block-code"><code>import Head from 'next/head'
+
+function PageComponent() {
+  return (
+    &lt;div&gt;
+      &lt;Head&gt;
+        &lt;title&gt;Titre de ma page avec Next.js&lt;/title&gt;
+      &lt;/Head&gt;
+      // Reste du composant
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+<p>Besoin d'aide pour performer en SEO ? Nous proposons des <a href="https://agence-slashr.fr/seo/">services de référencement sur mesure à Lille</a>.</p>
+
+<h2 class="wp-block-heading">Conseils pratiques pour renforcer le SEO avec React</h2>
+
+<p>React vous confronte à des défis et des spécificités en matière d’optimisation SEO. Découvrez ci-dessous quelques conseils centrés exclusivement sur les particularités de React :</p>
+
+<h3 class="wp-block-heading">1. Utilisez des composants spécifiques pour le SEO</h3>
+
+<p>Concentrez la gestion de vos éléments SEO en créant des composants React dédiés. Non seulement, cela simplifiera votre organisation, mais, de plus, cela facilitera les mises à jour et les tests.</p>
+
+<h3 class="wp-block-heading">2. Évitez d'utiliser <code>#</code> dans vos URLs</h3>
+
+<p>La navigation basée sur des hashes (#) entrave l’indexation correcte des pages. Des outils comme <a href="https://reactrouter.com/">React Router</a> se basent sur une navigation d’après l’historique du navigateur, plus favorable en termes de&nbsp; SEO.</p>
+
+<h3 class="wp-block-heading">3. Mettez à jour dynamiquement les balises title et meta</h3>
+
+<p>Procédez à l’ajustement de vos balises title et meta à chaque changement de page ou de route dans votre SPA React. <a href="https://github.com/nfl/react-helmet">React Helmet</a> est un allié précieux pour cette tâche qui reflète parfaitement le contenu actuel.</p>
+
+<h3 class="wp-block-heading">4. Soyez sélectif avec les bibliothèques tierces</h3>
+
+<p>Certaines bibliothèques peuvent parfois détenir du contenu non optimal pour le SEO ou pouvant impacter le temps de chargement de vos pages. Évaluez, avant d’intégrer une nouvelle bibliothèque, son impact sur le référencement de votre application.</p>
+
+<h3 class="wp-block-heading">5. Priorisez le rendu côté serveur pour les contenus critiques</h3>
+
+<p>Pour les sections essentielles de votre contenu, l’utilisation du rendu côté serveur ou du pré-rendu est une solution fortement recommandée pour&nbsp; garantir l’accès immédiat des moteurs de recherche pour l’exploration.</p>
+
+<h3 class="wp-block-heading">6. Testez régulièrement avec des outils spécialisés</h3>
+
+<p>Exploitez les fonctionnalités des outils comme <a href="https://search.google.com/test/mobile-friendly">Google’s Mobile-Friendly Test</a> pour évaluer la performance de votre application React. Vous pourrez ainsi réagir rapidement face à des problèmes spécifiques à React.</p>
+
+<h3 class="wp-block-heading">7. Gérez le focus lors des changements de route</h3>
+
+<p>Dans les applications monopages (SPAs), les transitions entre les&nbsp; différentes pages n’occasionnent pas de rechargement complet. Pour améliorer l’accessibilité et informer les moteurs de recherche que le contenu principal a subi des modifications, la gestion du focus à chaque changement de route, est nécessaire.</p>
+
+<h3 class="wp-block-heading">8. Implémentez des microdonnées pour enrichir votre contenu</h3>
+
+<p>La mise en œuvre des microdonnées à l’intérieur d’une SPA peut se révéler légèrement différente même si elles ne sont pas exclusives à React. <a href="https://schema.org/">Schema.org</a> est un outil pour permettre aux moteurs de recherche une meilleure compréhension de votre contenu, surtout lorsqu’il est utilisé via des <a class="" href="https://agence-slashr.fr/blog/la-meta-description-le-guide-complet-pour-loptimiser/">données structurées SEO</a> bien mises en œuvre.</p>

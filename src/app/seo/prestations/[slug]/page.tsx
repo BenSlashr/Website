@@ -6,7 +6,7 @@ import {
   Prestation,
 } from "@/lib/prestationsWP";
 import { caseStudies } from "@/lib/caseStudiesWP";
-import { getArticleBySlugFromWP } from "@/lib/wordpress";
+import { getArticleBySlugFromWP } from "@/lib/mdx";
 import {
   getRelatedArticlesForPrestation,
   loadEmbeddingsCacheSync,

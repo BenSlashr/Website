@@ -1,9 +1,9 @@
 import { MetadataRoute } from "next";
 import { getAllPrestationSlugs } from "@/lib/prestationsWP";
-import { getArticlesFromWP } from "@/lib/wordpress";
+import { getArticlesFromWP } from "@/lib/mdx";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://slashr.fr";
+  const baseUrl = "https://agence-slashr.fr";
 
   // Pages statiques
   const staticPages: MetadataRoute.Sitemap = [

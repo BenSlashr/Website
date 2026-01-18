@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://slashr.fr"),
+  metadataBase: new URL("https://agence-slashr.fr"),
   alternates: {
     canonical: "/",
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "SLASHR | Agence SEO & Search Marketing",
     description:
       "L'agence des marques qui veulent gagner la bataille de l'attention.",
-    url: "https://slashr.fr",
+    url: "https://agence-slashr.fr",
     siteName: "SLASHR",
     locale: "fr_FR",
     type: "website",

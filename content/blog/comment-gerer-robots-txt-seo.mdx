@@ -1,0 +1,210 @@
+---
+title: "Comment gérer le Robots.txt en SEO ?"
+slug: "comment-gerer-robots-txt-seo"
+date: "2023-10-30 19:00:00"
+category: "SEO"
+author: "Tom"
+authorAvatar: "/blog/images/2024/03/tom-chemin.jpeg"
+---
+
+<p>Les propriétaires de site ne bénéficient pas forcément de compétences techniques pour gérer leur propre site web. Leur priorité c’est de produire du contenu dans le but d’informer, de vendre des produits ou de proposer des services. <strong>Le fichier robots.txt </strong>ne représente sans doute pas grand chose pour eux.</p>
+
+<p>Quelques explications s’imposent pour que tous puissent comprendre l’intérêt d’un fichier robots.txt&nbsp; tout en ayant également des notions pour mieux le gérer.</p>
+
+<h2 class="wp-block-heading">Qu'est-ce qu'un fichier Robots.txt&nbsp;?</h2>
+
+<p>Le fichier robots.txt rassemble les URL constituant votre site internet. Ce fichier texte sert d’indicateur aux robots d’explorations. Il est déterminant pour communiquer avec les robots sur la prise en compte des différentes URL de votre site.</p>
+
+<p>Présent à la racine du site, un fichier robots.txt se présente sous cette forme :&nbsp;</p>
+
+<figure class="wp-block-image size-full is-resized"><img src="/blog/images/2023/06/LE-ROBOTS.TXT-DU-SITE-SLASHR.png" alt="Fichier Robots.txt du site Slashr" class="wp-image-5604"/></figure>
+
+<h2 class="wp-block-heading">Utilisation du fichier robots.txt</h2>
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+https://www.youtube.com/watch?v=2V44ttqDbLM
+</div></figure>
+
+<p>Un fichier robots.txt a de multiples fonctionnalités. Découvrez-les ci-dessous :&nbsp;</p>
+
+<h3 class="wp-block-heading">Demander aux robots d’exploration d’ignorer le contenu de votre site</h3>
+
+<p>User-agent: * Disallow: /</p>
+
+<p>C’est une information claire et précise située dans le fichier robots.txt, indiquant aux robots d’exploration de ne pas analyser les pages du site.</p>
+
+<h3 class="wp-block-heading">Autoriser les robots d’exploration Web à accéder à l’ensemble du contenu de votre site</h3>
+
+<p>User-agent: * Disallow:</p>
+
+<p>C’est une commande intégrée dans un fichier robots.txt pour indiquer aux&nbsp; robots qu’ils peuvent explorer toutes les pages du site.</p>
+
+<h3 class="wp-block-heading">Demander le blocage d’un robot d’exploration spécifique à partir d’un dossier précis</h3>
+
+<p>User-agent: Googlebot Disallow: /exemple-dossier-a/</p>
+
+<p>Cette formule de commande, présente dans un fichier robots.txt, demande&nbsp; à Googlebot de faire abstraction des pages contenant le dossier (/exemple-dossier-a/).</p>
+
+<h3 class="wp-block-heading">Demande de blocage d’un robot d’exploration Web déterminé, à partir, d’une page spécifique</h3>
+
+<p>User-agent: Bingbot Disallow: /exemple-dossier-a/page-bloquer.html</p>
+
+<p>Cette formule de code introduite dans un fichier robots.txt&nbsp; informe le&nbsp; robot d’exploration Bingbot de ne pas explorer la page citée. /exemple-dossier-a/page-bloquer.html</p>
+
+<h3 class="wp-block-heading">Exemple d’un fichier robots.txt avec des instructions multiples</h3>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2023/06/Robots.txt-du-site-Buzzfeed.com_-1.png" alt="Le fichier Robots.txt du site d'information Buzzfeed.com" class="wp-image-5653"/></figure>
+
+<p></p>
+
+<h2 class="wp-block-heading">Quel est le fonctionnement d’un fichier robots.txt ?</h2>
+
+<p>La mission des moteurs de recherche, c’est l’exploration continuelle du web. Tout nouveau contenu est exploré, analysé puis indexé. La page de site est ensuite visible et accessible pour tous les internautes, via la barre de recherche du moteur (Google ou un autre).&nbsp;</p>
+
+<p>Les robots des moteurs de recherche atterrissent sur les nouvelles pages des sites par l’intermédiaire des liens. Tous les jours, des milliers de pages web sont parcourues. Cette action est nommée <strong>“<a href="https://agence-slashr.fr/blog/comprendre-processus-crawling/">le crawling</a>”. </strong></p>
+
+<p>Avant d’effectuer son exploration, le robot recherche la présence d’un <strong>fichier robots.txt.</strong> Celui-ci répertorie toutes les instructions liées à l’exploration ou la non-exploration des différentes URL du site.&nbsp;</p>
+
+<p>Tout cela semble trop technique ? Faites appel à une <a href="https://agence-slashr.fr/seo/prestations/seo-technique/">agence SEO technique</a> comme Slashr !</p>
+
+<h2 class="wp-block-heading">Lexique du fichier robots.txt</h2>
+
+<p>Le<strong> lexique du fichier robots.txt</strong> est une syntaxe regroupant les directives de codage rattaché aux robots d’explorations.</p>
+
+<ul class="wp-block-list">
+<li>User-agent : nom que l’on donne aux robots d’exploration Web auxquels vous donnez des instructions d’exploration. Ils sont nombreux. Retrouvez la liste des Users-agents <a href="http://www.robotstxt.org/db.html">ici</a>.</li>
+
+<li>Sitemap : fichier regroupant toutes les URL d’un site. Notez que ce type de fichier est lisible par Google, Yahoo, Ask et Bing.&nbsp;</li>
+
+<li>Disallow :&nbsp; terme désignant la commande qui demande à un User Agent de ne pas explorer une URL Une seule ligne « Disallow: » est autorisée pour chaque URL.</li>
+
+<li>Allow : directive spécifique au robot Googlebot servant à notifier l’accès à une page (ou à un sous-dossier) même si l’accès à la page parent n’est pas autorisé.</li>
+
+<li>Crawl-delay : action déterminant le temps d’attente avant le chargement de la page et son exploration. Notez que Googlebot n’est pas en mesure de comprendre cette commande mais la vitesse peut être définie à partir de votre Google Search Console.&nbsp;&nbsp;</li>
+</ul>
+
+<h2 class="wp-block-heading">Un fichier robots.txt a-t-il un rôle important ?</h2>
+
+<p>Le <strong>fichier robots.txt </strong>a la charge de gérer le contrôle des robots d’indexation, évitant ainsi l’indexation de pages non destinées aux internautes. Ces pages risquent de plus, de surcharger inutilement votre site.&nbsp;&nbsp;</p>
+
+<p>Récapitulatif des raisons justifiant l’utilisation d’un fichier robots.txt :</p>
+
+<h3 class="wp-block-heading">Contrôle permanent sur l’exploration des robots</h3>
+
+<p>Grâce au<strong> fichier robots.txt, </strong>vous avez le contrôle permanent des pages à explorer et à indexer. Certaines pages ne présentent aucun intérêt à être indexée.&nbsp;</p>
+
+<p>Il s’agit, pour un site vitrine ou un blog, des pages suivantes :&nbsp;</p>
+
+<ul class="wp-block-list">
+<li>Les mentions légales du site&nbsp;</li>
+
+<li>La politique de gestion des cookies</li>
+
+<li>Les pages d’archives&nbsp;</li>
+
+<li>La politique de confidentialité</li>
+</ul>
+
+<p>Pour un site e-commerce, les pages à ne pas indexer sont :&nbsp;</p>
+
+<ul class="wp-block-list">
+<li>La page « Panier »</li>
+
+<li>La page « Mon Compte »</li>
+
+<li>La page « Validation de la Commande »</li>
+
+<li>Les conditions générales de vente (CGV)</li>
+
+<li>Les mentions légales</li>
+
+<li>Les conditions générales d’utilisation (CGU)</li>
+</ul>
+
+<h3 class="wp-block-heading">Meilleure gestion de la charge du serveur</h3>
+
+<p>Suite à un trop gros volume de demandes d’exploration d’URL, le serveur peut être en surcharge. En répertoriant les pages devant ou non être crawlées, vous garantissez à votre site une expérience utilisateur et des performances idéales.</p>
+
+<h3 class="wp-block-heading">Protection de la confidentialité</h3>
+
+<p><strong>Le fichier robots.txt </strong>présente l’avantage d’exclure de l’exploration des éléments demandant une confidentialité particulière. Non indexées, ces URL resteront privées.</p>
+
+<h3 class="wp-block-heading">Optimisation du budget de crawl</h3>
+
+<p>En présence d’un fichier robots.txt, les robots d’exploration se concentrent sur l’analyse des pages essentielles du site. L’indexation et le référencement des pages n’en sont que plus rapides. Cela permet d'optimiser le <a href="https://agence-slashr.fr/blog/crawl-budget/">budget crawl</a>. </p>
+
+<p>Besoin d'aide avec votre SEO ? Faites appel à une <a href="https://agence-slashr.fr/seo/">agence de référencement naturel à Lille</a>.</p>
+
+<h2 class="wp-block-heading">Comment créer un fichier robots.txt ? </h2>
+
+<p>Créer un fichier robot.txt ne pose pas de réels problèmes. <a href="https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?visit_id=638231073779656778-189240689&amp;rd=1&amp;hl=fr">Cet article</a> proposé par Google décrit les différentes étapes auxquelles vous allez être confronté pour <strong>créer votre fichier robots.txt.</strong></p>
+
+<p>Les sites fonctionnant avec un programme informatique (CMS) proposent généralement différentes solutions pour créer votre fichier robots.txt.&nbsp;</p>
+
+<h3 class="wp-block-heading">Créer son fichier Robots.txt sous Shopify</h3>
+
+<ul class="wp-block-list">
+<li>Connectez-vous sur la plate-forme Shopify&nbsp;</li>
+
+<li>Accédez au tableau de bord de votre site puis à votre boutique en ligne.</li>
+
+<li>Cliquez sur les 3 petits points à côté de votre thème</li>
+
+<li>Cliquez sur l’onglet « Modifier le Code »</li>
+</ul>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2023/06/Modifier-le-Code-sur-Shopify-pour-le-Robots-Txt-1024x391.png" alt="Modifier le code du thème Shopify pour le fichier Robots.txt " class="wp-image-5670"/></figure>
+
+<ul class="wp-block-list">
+<li>Ajouter une nouvelle ressource du type : modèle</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2023/06/Ajouter-une-nouvelle-ressource.png" alt="" class="wp-image-5672"/></figure>
+
+<ul class="wp-block-list">
+<li>Sélectionner le modèle robots.txt</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2023/06/Selection-du-Fichier-Robots.txt-dans-Shopify.png" alt="" class="wp-image-5674"/></figure>
+
+<p>Vous pouvez alors procéder à une modification ou ajouter de nouvelles directives à votre robots.txt.</p>
+
+<h3 class="wp-block-heading">Création d’un fichier Robots.txt sous WordPress</h3>
+
+<p>La gestion de votre fichier robots.txt via WordPress est dépendante de plugins tels que :</p>
+
+<ul class="wp-block-list">
+<li>Yoast SEO</li>
+
+<li>All in One SEO Pack</li>
+</ul>
+
+<p>Choisissez un plugin, installez-le et activez-le à partir de votre tableau de bord sous WordPress.</p>
+
+<ol class="wp-block-list">
+<li>Accédez aux paramètres du plugin puis, recherchez l’option Robots.txt.</li>
+
+<li>&nbsp;Établissez votre fichier robots.txt à l’aide de l’interface du plugin.</li>
+</ol>
+
+<h3 class="wp-block-heading">Création d’un fichier Robots.txt sous Prestashop</h3>
+
+<ol class="wp-block-list">
+<li>Connectez-vous à la page d’administration de votre boutique Prestashop.</li>
+
+<li>Accédez à&nbsp; la section« Préférences »&nbsp;</li>
+
+<li>Sélectionnez « SEO &amp; URL »&nbsp;</li>
+
+<li>Dans l’onglet « SEO &amp; Indexing », recherchez la section « Robots.txt file ».</li>
+
+<li>Éditez votre fichier robots.txt.</li>
+
+<li>Enregistrez les modifications.</li>
+</ol>
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+https://www.youtube.com/watch?v=gxjVNeZZ4sY
+</div></figure>
+
+<p></p>

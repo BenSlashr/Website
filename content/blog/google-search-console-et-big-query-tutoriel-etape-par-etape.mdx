@@ -1,0 +1,280 @@
+---
+title: "Google Search Console et big query : tutoriel étape par étape"
+slug: "google-search-console-et-big-query-tutoriel-etape-par-etape"
+date: "2023-10-16 10:22:04"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<p>Même si la Google Search Console fournit des données extrêmement intéressantes, les exportations des mots-clés générant des impressions et des clics vers votre site sont néanmoins limitées. <strong>Big Query </strong>est une solution pour exporter de gros volumes de données.</p>
+
+<p>BigQuery est un outil de stockage et d’analyse utilisant le langage SQL. En mettant en place une méthodologie définie et en utilisant les bonnes ressources pour votre stratégie SEO, BigQuery vous donne des possibilités intéressantes d’évolution.</p>
+
+<p>Les exports de la Google Search Console sans passer par l’API se limitent à 1000 lignes. Pour les sites qui génèrent un gros volume de données, cette limite est restrictive, bien évidemment. L’utilisation de l’API devient alors incontournable pour exploiter pleinement les données fournies par la GSC.</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;re happy to let you know that Bulk data exports are now available to everyone. Enjoy! 📊📈 <a href="https://t.co/AdSVgSekQz">https://t.co/AdSVgSekQz</a></p>&mdash; Google Search Central (@googlesearchc) <a href="https://twitter.com/googlesearchc/status/1630566935187402753?ref_src=twsrc%5Etfw">February 28, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2 class="wp-block-heading">Compréhension des outils</h2>
+
+<h3 class="wp-block-heading">Qu'est-ce que la Google Search Console et pourquoi est-elle indispensable ?</h3>
+
+<p><strong>La Google Search Console </strong>est un outil performant, gratuit, complet et incontournable pour les webmasters. Fournie par Google, la Search Console analyse, indexe, surveille et résous les problèmes des sites web liés aux résultats de recherche de Google. Tous les éléments recueillis par la plateforme représentent une source précieuse pour votre optimisation : performances, requêtes, impressions, clics, etc. </p>
+
+<h3 class="wp-block-heading">Pourquoi BigQuery est-il un allié de poids dans l'analyse des données ?</h3>
+
+<p><strong>BigQuery </strong>est une plateforme de big data présente sur le cloud de Google. Son objectif principal ? L’analyse en temps réel de données. C’est un outil puissant qui exécute des requêtes SQL. Les données importées de la Google Search Console dans BigQuery, sont stockées dans un espace sécurisé afin d’être analysées puis extraites pour votre stratégie SEO. </p>
+
+<h3 class="wp-block-heading">Comment la combinaison de GSC et BigQuery enrichit-elle votre stratégie SEO ?</h3>
+
+<p>L’abondance des données de la Search Console associée à la puissance analytique de BigQuery procure aux analystes une solution d’optimisation efficace pour le SEO. Les possibilités d’analyse se multiplient grâce à l’extraction d’informations auparavant inaccessibles. </p>
+
+<p>Besoin d'aide pour vos exports ? Faites appel à une <a href="https://agence-slashr.fr/seo/prestations/seo-technique/">agence de référencement naturel technique</a>.</p>
+
+<h2 class="wp-block-heading">Intégration de GSC et BigQuery</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YBpYB9c-uGQ?si=3lZ-oICTXuEV8ZTS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 class="wp-block-heading">Pourquoi intégrer la Google Search Console et BigQuery est-il stratégique ?</h3>
+
+<p>L’intégration entre <strong>la Google Search Console et BigQuery </strong>est une démarche stratégique incontournable pour amplifier les <strong>actions SEO</strong> et la capacité d’analyse des données. L’interface utilisateur de la GSC <a href="https://support.google.com/webmasters/answer/7576553?hl=en">limite l’export de données à 1000 lignes</a>. L’association des deux outils présente l’avantage de passer outre ces limites. L’utilisation de l’API de la Google Search Console et l’automatisation du transfert des données vers l’outil BigQuery garantit l’accès à des résultats d’analyses pointues et fiables. </p>
+
+<h3 class="wp-block-heading">Comment les méthodologies d'intégration peuvent-elles être mises en œuvre ?</h3>
+
+<p>Pour profiter de l’association de la Search Console et de BigQuery, diverses méthodes sont proposées. L’utilisation de Python pour extraire les données via l’API de la GSC et les charger dans BigQuery est l’approche la plus courante. Cette méthode est flexible, comme le détaillent les <a href="https://developers.google.com/search-ads/v2/appendix/languagecodes">développeurs de Google</a>. Supermetrics, quant à lui, gère l’extraction et le chargement des données. C’est une <a href="https://supermetrics.com/integrations/bigquery">alternative moins technique</a> mais tout autant intéressante.</p>
+
+<h3 class="wp-block-heading">Quels sont les principaux défis et solutions lors de l'intégration ?</h3>
+
+<p>L’intégration de données n’est pas exempte de soucis plus ou moins graves. Des erreurs d’API, des limites de requêtes et la gestion de grands volumes de données peuvent laisser apparaître des problèmes nécessitant de trouver des solutions fiables. Diverses possibilités sont alors à envisager : mise en œuvre de stratégies de gestion des erreurs robustes, utilisation de backoffs en cas d’erreurs d’API, et mise en place de pratiques plus performantes lors de l’utilisation de BigQuery. Découvrez les  <a href="https://cloud.google.com/blog/products/gcp/12-best-practices-for-user-account">meilleures pratiques pour les comptes utilisateurs sur Google Cloud</a>.</p>
+
+<h2 class="wp-block-heading">Comment configurer un nouvel export de données en masse ?</h2>
+
+<p>Lors d’une exportation de données massives, vous devez respecter les étapes ci-dessous :</p>
+
+<h4 class="wp-block-heading">Étape 1: Accédez à votre compte BigQuery</h4>
+
+<ul>
+<li>Naviguez vers votre compte BigQuery en utilisant le lien suivant: <a href="https://console.cloud.google.com/bigquery">https://console.cloud.google.com/bigquery</a></li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 2: Sélectionnez le projet correspondant</h4>
+
+<ul>
+<li>Assurez-vous que vous êtes dans le projet où vous souhaitez stocker les données de la console de recherche.</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 3: Accédez au menu</h4>
+
+<ul>
+<li>Cliquez sur le menu “burger” (les trois lignes horizontales) en haut à gauche de votre écran.</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 4: Naviguez vers IAM et admin &gt; IAM</h4>
+
+<ul>
+<li>Allez dans « IAM et admin » puis sélectionnez « IAM ».</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 5: Accordez l'accès</h4>
+
+<ul>
+<li>Cliquez sur le bouton « GRANT ACCESS » (« Accorder l’accès »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 6: Ajoutez un nouveau principal</h4>
+
+<ul>
+<li>Dans « New Principals » (« Nouveaux principaux »), collez le nom du compte de service suivant : [email protected]</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 7: Sélectionnez un rôle</h4>
+
+<ul>
+<li>Cliquez sur le menu déroulant « Select a role » (« Sélectionner un rôle »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 8: Recherchez et sélectionnez le rôle "BigQuery Job User"</h4>
+
+<ul>
+<li>Recherchez « BigQuery Job User » et sélectionnez la première option.</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 9: Ajoutez un autre rôle</h4>
+
+<ul>
+<li>Cliquez sur le bouton « + ADD ANOTHER ROLE » (« + AJOUTER UN AUTRE RÔLE »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 10: Sélectionnez "BigQuery Data Editor" et sauvegardez</h4>
+
+<ul>
+<li>Sélectionnez « BigQuery Data Editor » dans le menu déroulant et cliquez ensuite sur le bouton « Save » (« Enregistrer »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 11: Cliquez sur le menu déroulant du projet</h4>
+
+<ul>
+<li>Cliquez sur le menu déroulant du projet.</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 12: Copiez votre ID de projet</h4>
+
+<ul>
+<li>Copiez votre ID de projet.</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 13: Connectez-vous à votre compte Google Search Console avec les permissions "propriétaire"</h4>
+
+<ul>
+<li>Connectez-vous à votre compte Google Search Console et assurez-vous d’avoir les permissions « owner » (« propriétaire »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 14: Accédez aux paramètres</h4>
+
+<ul>
+<li>Faites défiler la page vers le bas, trouvez et cliquez sur « Settings » (« Paramètres »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 15: Cliquez sur "Bulk Data Export" sous "General Setting"</h4>
+
+<ul>
+<li>Cliquez sur « Bulk Data Export » (« Exportation de données en masse ») sous « General Setting » (« Paramètres généraux »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 16: Entrez votre ID de projet BigQuery et continuez</h4>
+
+<ul>
+<li>Entrez votre ID de projet BigQuery et cliquez ensuite sur le bouton « Continue » (« Continuer »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 17: Configurez l'exportation</h4>
+
+<ul>
+<li>Cliquez sur le bouton « Set up export » (« Configurer l’exportation »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 18: Terminez la configuration</h4>
+
+<ul>
+<li>Cliquez sur le bouton « Done » (« Terminé »).</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 19: Accédez à Google Cloud Platform après 48 heures</h4>
+
+<ul>
+<li>Attendre 48 heures pour naviguer sur la plateforme Google Cloud en utilisant le lien suivant: <a href="https://console.cloud.google.com/">https://console.cloud.google.com/</a></li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 20: Ouvrez le menu de navigation</h4>
+
+<ul>
+<li>Cliquez sur le menu de navigation en haut à gauche.</li>
+</ul>
+
+<h4 class="wp-block-heading">Étape 21: Accédez à l'espace de travail SQL BigQuery</h4>
+
+<ul>
+<li>Recherchez « BigQuery » en faisant défiler vers le bas puis cliquez sur « SQL Workspace » (« Espace de travail SQL »).</li>
+</ul>
+
+<h2 class="wp-block-heading">Analyse des données</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d8BBbZ75qpA?si=Ot059Vadli5HB4ww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 class="wp-block-heading">Comment explorer les données dans BigQuery ?</h3>
+
+<p>Une fois les données de la Google Search Console chargées dans BigQuery, le travail d’analyse peut commencer. Généralement, l’exploration des données débute par des requêtes SQL. Elles permettent de sonder les données, d’identifier les tendances du moment et d’explorer les domaines méritant une investigation plus poussée. Citons pour exemple : une requête banale pourrait viser à identifier les pages les plus performantes en termes de clics ou d’impressions au cours d’une période prédéfinie.</p>
+
+<h3 class="wp-block-heading">Pourquoi et comment visualiser vos données ?</h3>
+
+<p><strong>Google Data Studio, Looker ou Tableau</strong> vont vous permettre de créer des tableaux de bord interactifs. Vos données vont devenir actionnables et modifiables. Notez qu’avec l’outil <a href="https://datastudio.google.com/">Google Data Studio</a>, l’intégration avec BigQuery est relativement facile. La visualisation est faite en temps réel sur la base des données les plus récentes. </p>
+
+<h3 class="wp-block-heading">Comment l'optimisation SEO peut-elle être guidée par vos analyses de données ?</h3>
+
+<p>Une fois les données de la GSC dans BigQuery analysées, des opportunités d’optimisation SEO peuvent se révéler intéressantes à travailler. Identifier les pages nécessitant un travail d’optimisation ou les problèmes techniques par exemple. En fonction des résultats de l’analyse, vous pouvez ensuite apporter les modifications nécessaires à votre contenu. Les erreurs 404, décelées par l’outil peuvent être aussitôt résolues.</p>
+
+<h2 class="wp-block-heading">Analyse des données avec exemples d’export SEO</h2>
+
+<h3 class="wp-block-heading">Comment identifier les pages les plus performantes ?</h3>
+
+<p>Les dix meilleures pages sont présentées par l’outil d’analyse. La requête pour accéder à ces données est :  </p>
+
+<pre class="wp-block-code"><code>SELECT page, SUM(clicks) as total_clicks, SUM(impressions) as total_impressions
+FROM `your_project_id.your_dataset_id.your_table_id`
+GROUP BY page
+ORDER BY total_clicks DESC
+LIMIT 10;</code></pre>
+
+<p>Cette requête vous donnera un aperçu des 10 pages les plus cliquées de votre site.</p>
+
+<h3 class="wp-block-heading">Comment trouver les requêtes avec un faible taux de clics (CTR) ?</h3>
+
+<p>Un faible CTR indique principalement un décalage entre l’attente des utilisateurs (basée sur la requête de recherche) et le contenu présenté dans les SERP. Une requête à fort volume d’impressions mais dotée d’un faible CTR laisse présager qu’avec une modification du titre ou de la description, l’impact sur l’optimisation pourrait être significatif. Pour identifier ce type d’opportunités, la requête est :</p>
+
+<pre class="wp-block-code"><code>SELECT query, AVG(ctr) as avg_ctr, SUM(impressions) as total_impressions
+FROM `your_project_id.your_dataset_id.your_table_id`
+GROUP BY query
+HAVING total_impressions &gt; 100
+ORDER BY avg_ctr ASC
+LIMIT 10;</code></pre>
+
+<h3 class="wp-block-heading">Comment repérer les opportunités de mots-clés à longue traîne ?</h3>
+
+<p>Les mots-clés de longue traîne sont nettement moins concurrentiels que les mots-clés de courte traîne. Ils représentent des opportunités intéressantes pour améliorer votre SEO. De nouvelles niches peuvent être alors exploitées. La requête pour repérer ces mots-clés est :  </p>
+
+<pre class="wp-block-code"><code>SELECT query, SUM(clicks) as total_clicks
+FROM `your_project_id.your_dataset_id.your_table_id`
+WHERE LENGTH(query) &gt; 5 AND total_clicks &lt; 10
+GROUP BY query
+ORDER BY LENGTH(query) DESC
+LIMIT 10;</code></pre>
+
+<h3 class="wp-block-heading">Comment identifier les pages avec un positionnement moyen faible ?</h3>
+
+<p>Repérer les pages pouvant bénéficier d’une amélioration de positionnement est possible avec la requête suivante :</p>
+
+<pre class="wp-block-code"><code>SELECT page, AVG(position) as avg_position
+FROM `your_project_id.your_dataset_id.your_table_id`
+GROUP BY page
+ORDER BY avg_position DESC
+LIMIT 10;</code></pre>
+
+<p>Les pages avec une position moyenne élevée (plus éloignées de la position 1) peuvent devenir intéressantes pour une optimisation SEO ciblée, notamment en matière de contenu, de balises de titre et de backlinks.</p>
+
+<h2 class="wp-block-heading">Meilleures pratiques et maintenance</h2>
+
+<h3 class="wp-block-heading">Comment assurer la continuité de l'intégration des données ?</h3>
+
+<p>Pour garantir une intégration en continu des données de la Google Search Console et BigQuery, l’automatisation est recommandée. Automatisez l’extraction, la transformation et le chargement ! Réduisez au maximum l’intervention manuelle et les erreurs potentielles ! Soyez informé immédiatement en cas de défaillance en bénéficiant des outils de surveillance et d’alerte à votre disposition.</p>
+
+<h3 class="wp-block-heading">Pourquoi et comment gérer les coûts de BigQuery ?</h3>
+
+<p>Gérez scrupuleusement les coûts associés à l’utilisation de BigQuery afin d’éviter toutes dépenses inattendues. Optimisez vos requêtes et profitez des outils de gestion des coûts de BigQuery pour définir budgets et alertes. Supprimez les informations plus d’actualités avec l’intermédiaire des <a href="https://cloud.google.com/bigquery/docs/partitioned-tables">partitions de tables</a> afin de bénéficier d’une performance optimale de vos requêtes sera améliorée et de réduire au mieux vos coûts.</p>
+
+<h3 class="wp-block-heading">Comment garantir la sécurité et la conformité des données ?</h3>
+
+<p>Google recommande certaines pratiques spécifiques de sécurité si vous associez BigQuery à vos analyses. Dès lors que vous traitez des informations clients, la sécurité des données récoltées doit être prise en compte. Veillez à respecter les réglementations applicables (RGPD, CCPA).</p>
+
+<h3 class="wp-block-heading">Comment assurer la qualité des données dans le temps ?</h3>
+
+<p>Pour garantir le niveau de fiabilité de vos données, vous devez procéder à des vérifications de qualité des données dans vos pipelines ETL. L’ajout de solutions de surveillance est idéal pour être informé d’éventuels problèmes liés aux données. Le processus doit être suffisamment approvisionné en information actualisée.</p>
+
+<p>Faites décoller votre référencement naturel avec une <a href="https://agence-slashr.fr/seo/">agence SEO reconnue à Lille</a>.</p>
+
+<h2 class="wp-block-heading">FAQ sur l'intégration de GSC et BigQuery</h2>
+
+<h3 class="wp-block-heading">Pourquoi intégrer GSC avec BigQuery ?</h3>
+
+<p>L’intégration de GSC et BigQuery est une solution efficace pour accéder à des analyses SEO approfondies, dépassant les capacités d’exportation standard de la Google Search Console. Le volume des données est illimité et l’outil offre puissance et flexibilité.</p>
+
+<h3 class="wp-block-heading">Quels sont les principaux défis de l'intégration ?</h3>
+
+<p>Les défis comprennent la gestion des erreurs d’API, la gestion de volumes de données considérables, et la configuration appropriée de l’API GSC pour assurer un flux de données stable.</p>
+
+<h3 class="wp-block-heading">Dois-je avoir des compétences en codage pour intégrer GSC et BigQuery ?</h3>
+
+<p>Connaître le codage, en particulier Python, offre des avantages certains pour l’extraction des données via API et SQL pour les requêtes dans BigQuery. Mais des outils comme Supermetrics sont des solutions d’intégration accessibles sans codage.</p>
+
+<h3 class="wp-block-heading">Comment puis-je optimiser les coûts lors de l’utilisation de BigQuery ?</h3>
+
+<p>La rédaction de requêtes SQL efficaces vous permet de gérer vos coûts, notamment en effectuant un tri et une mise à jour des données stockées. </p>

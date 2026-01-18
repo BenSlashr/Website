@@ -1,0 +1,306 @@
+---
+title: "Pagination SEO : laquelle choisir en fonction de son site web ?"
+slug: "pagination-seo"
+date: "2025-04-14 08:39:52"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<p>La pagination est souvent gérée de façon aléatoire. Pourtant, bien pensée, elle peut booster l’UX, améliorer le crawl de Google, et renforcer la structure SEO de votre site. Mal fichue, elle peut plomber votre indexation, diluer votre PageRank et vous faire perdre des positions sans que vous ne compreniez pourquoi. Voici une version ultra-complète de ce qu’il faut savoir, tests à l’appui, exemples concrets à la clé.</p>
+
+<h2 class="wp-block-heading">Pourquoi la pagination est critique pour le SEO</h2>
+
+<p>La pagination, c’est le prolongement naturel de votre maillage interne. Elle sert à organiser les gros volumes de contenus : listings produits, articles, commentaires, etc. Elle doit permettre :</p>
+
+<ul class="wp-block-list">
+<li>Un accès facilité aux pages profondes</li>
+
+<li>Une répartition maîtrisée de la popularité (PageRank)</li>
+
+<li>Une optimisation du budget crawl</li>
+</ul>
+
+<p>Mais ce n’est pas magique : selon comment vous la configurez, elle peut autant aider que nuire.</p>
+
+<h2 class="wp-block-heading"><strong>Adapter la pagination à son modèle de site, c’est non négociable</strong></h2>
+
+<p>Tous les sites ne se paginent pas de la même manière — et heureusement. Un site média qui pousse de l’actu à la chaîne n’a pas les mêmes priorités qu’un e-commerce avec 20 000 fiches produits evergreen. Sur un site média, on privilégiera une pagination courte, parfois même limitée à un lien « page suivante », car les anciens articles perdent vite en intérêt SEO. </p>
+
+<p>À l’inverse, un site e-commerce ou un annuaire où chaque page produit a un potentiel de trafic justifie une pagination plus robuste, plus ouverte, parfois par paliers ou blocs fixes pour ne pas noyer le robot dans des profondeurs inutiles.</p>
+
+<p>👉 Pour faire les bons choix, partez de <strong>votre propre réalité métier</strong> :</p>
+
+<ul class="wp-block-list">
+<li><strong>Structure de contenu</strong> : Est-ce que vos contenus sont périssables ou evergreen ? Est-ce qu’ils sont organisés par catégories larges ou très granulaires ? Plus votre structure est profonde, plus la pagination doit compenser pour éviter un isolement SEO des pages du fond du catalogue.</li>
+
+<li><strong>Répartition du trafic</strong> : Le trafic arrive-t-il surtout sur les pages produits, ou sur les pages de catégories / listings ? Si vos pages de produits ne rankent jamais et que tout passe par les filtres ou les catégories, la pagination n’a pas besoin d’être poussée à fond. À l’inverse, si chaque produit peut faire du SEO en solo, il faut maximiser son accessibilité.</li>
+
+<li><strong>Rôle stratégique des pages profondes</strong> : Est-ce que les pages en profondeur sont essentielles pour le business ? Si oui, elles doivent être accessibles rapidement, maillées proprement, et bénéficier du jus SEO. Si non, inutile de gaspiller le crawl budget : pensez plutôt à canaliser la popularité vers les pages vraiment stratégiques.</li>
+</ul>
+
+<p>🎯 La bonne pagination, ce n’est pas juste un pattern technique. C’est un <strong>levier d’alignement entre architecture, crawlabilité et priorités SEO business</strong>.</p>
+
+<h3 class="wp-block-heading">Sites médias</h3>
+
+<ul class="wp-block-list">
+<li>Les contenus perdent de la valeur avec le temps</li>
+
+<li>Pagination souvent courte (1 lien "suivant") ou par paliers</li>
+
+<li>Pas de noindex, mais exploration raisonnée</li>
+</ul>
+
+<h3 class="wp-block-heading">Sites e-commerce</h3>
+
+<ul class="wp-block-list">
+<li>Les produits gardent une valeur SEO constante</li>
+
+<li>Pagination plus ouverte mais contrôlée (3 premières pages + dernière)</li>
+
+<li>Limitation fréquente du nombre de pages (ex : 102 pages max chez Manomano)</li>
+</ul>
+
+<p>Voici un benchmark de la pagination des gros sites e-commerce français par <a href="https://newsletter.alekseo.com/about">Alexis Rylko</a> : </p>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2025/04/benchmark-pagination-seo-1024x640.png" alt="benchmark pagination seo" class="wp-image-10965"/></figure>
+
+<h2 class="wp-block-heading">Étude Audisto : quels types de pagination performent le mieux ?</h2>
+
+<p><a href="https://audisto.com/guides/pagination/">Audisto</a> s’est posé une question simple : <em>quels types de pagination permettent de mieux faire circuler le PageRank et de maximiser l’indexation des pages profondes ?</em></p>
+
+<p>Pour y répondre, ils ont testé <strong>9 types de pagination</strong> sur un site contenant <strong>plus de 2 000 pages</strong>. Objectif : mesurer ce que chaque configuration apporte (ou pas) en termes de SEO. Un tableau récapitulatif est dispo un peu plus loin dans l'article.</p>
+
+<h3 class="wp-block-heading">🔍 Les métriques observées</h3>
+
+<p>Dans leur étude, Audisto a isolé <strong>5 indicateurs clés</strong> pour comparer les types de pagination :</p>
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Élément</th><th>Ce que ça mesure</th></tr></thead><tbody><tr><td><strong>Level Item Pages</strong></td><td>Profondeur des pages produits. Plus c’est bas, mieux c’est (moins de clics depuis la page d’accueil).</td></tr><tr><td><strong>% PageRank Pagination Page</strong></td><td>Part du PageRank absorbée par les pages de pagination.</td></tr><tr><td><strong>% PageRank Item Pages</strong></td><td>Part du PageRank captée par les pages produits. C’est là que le vrai SEO se joue.</td></tr><tr><td><strong># SEO-Relevant Pagination Pages</strong></td><td>Nombre de pages de pagination jugées pertinentes SEO (donc qui participent vraiment au maillage).</td></tr><tr><td><strong># SEO-Relevant Item Pages</strong></td><td>Nombre de pages produits considérées comme pertinentes en SEO. C’est la métrique reine.</td></tr></tbody></table></figure>
+
+<h3 class="wp-block-heading">🧩 Les types de pagination testés (et ce qu’ils valent)</h3>
+
+<h4 class="wp-block-heading">1. Pagination basique</h4>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagination-basique.webp" alt="pagination seo basique" class="wp-image-10950"/></figure>
+
+<blockquote class="wp-block-quote">
+<p>Le classique 1, 2, 3… sans fioriture.</p>
+</blockquote>
+
+<ul class="wp-block-list">
+<li>Profondeur énorme (100 clics)</li>
+
+<li>Très faible impact SEO réel</li>
+
+<li>À éviter pour tout site avec un catalogue conséquent</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagination-basique-pagerank.webp" alt="pagination seo basique pagerank" class="wp-image-10949"/></figure>
+
+<h4 class="wp-block-heading">2. Pagination avec lien vers la première page</h4>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagination-basique-1ere-page.webp" alt="pagination seo basique avec lien vers première page" class="wp-image-10948"/></figure>
+
+<blockquote class="wp-block-quote">
+<p>Ajout d’un lien vers la première page depuis chaque page paginée.</p>
+</blockquote>
+
+<ul class="wp-block-list">
+<li>Légère amélioration, mais toujours trop profond</li>
+
+<li>Pas fou niveau transmission de PageRank</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagination-basique-1ere-page-pagerank.webp" alt="distribution pagerank pagination seo basique avec lien vers première page" class="wp-image-10947"/></figure>
+
+<h4 class="wp-block-heading">3. Pagination avec liens vers première et dernière page</h4>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagination-1ere-derniere-page.webp" alt="pagination seo basique avec lien vers première page et dernière page" class="wp-image-10946"/></figure>
+
+<blockquote class="wp-block-quote">
+<p>Lien vers la première ET la dernière page.</p>
+</blockquote>
+
+<ul class="wp-block-list">
+<li>Profondeur divisée par 2</li>
+
+<li>Meilleure circulation, mais reste limité</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagination-1ere-derniere-page-pagerank.webp" alt="distribution pagerank pagination seo basique avec lien vers première page et dernière page" class="wp-image-10945"/></figure>
+
+<h4 class="wp-block-heading">4. <strong>Pagination avec liens vers pages voisines</strong></h4>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/neighbors-pagination.webp" alt="pagination seo page voisine" class="wp-image-10944"/></figure>
+
+<blockquote class="wp-block-quote">
+<p>Chaque page lie vers ses voisines directes.</p>
+</blockquote>
+
+<ul class="wp-block-list">
+<li>Profondeur ramenée à 21</li>
+
+<li>Gros bond sur le nombre de pages produits bien maillées</li>
+
+<li>Bon ratio effort / résultat</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/neighbors-pagerank.webp" alt="distribution pagerank pagination seo page voisine " class="wp-image-10943"/></figure>
+
+<h4 class="wp-block-heading">5. Pagination avec liens vers pages voisines ET première/dernière page</h4>
+
+<blockquote class="wp-block-quote">
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/first-last-and-neighbors-pagination-700.webp" alt="pagination seo page voisine avec première et dernière page" class="wp-image-10942"/></figure>
+
+<p>Combo malin : début + fin + voisins</p>
+</blockquote>
+
+<ul class="wp-block-list">
+<li>Profondeur ramenée à 12</li>
+
+<li>Très bon équilibre entre crawl, UX et distribution</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagerank-for-first-last-and-neighbors-basic-pagination-700.webp" alt="distribution pagerank pagination seo page voisine avec première et dernière page" class="wp-image-10941"/></figure>
+
+<h4 class="wp-block-heading">6. Pagination à échelle fixe</h4>
+
+<blockquote class="wp-block-quote">
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/fixed-steps-pagination.webp" alt="pagination fixe seo" class="wp-image-10940"/></figure>
+
+<p>Lien tous les X pages (ex : 1, 5, 10, 15…)</p>
+</blockquote>
+
+<ul class="wp-block-list">
+<li>Très proche de First/Last/Neighbors</li>
+
+<li>Un bon plan si on veut un maillage plus régulier</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagerank-distribution-for-fixed-steps-pagination-700.webp" alt="distribution pagerank pagination fixe" class="wp-image-10939"/></figure>
+
+<h4 class="wp-block-heading">7. Pagination en accordéon</h4>
+
+<blockquote class="wp-block-quote">
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/fixed-block-pagination.webp" alt="" class="wp-image-10938"/></figure>
+
+<p>Ici, on fait des liens vers la première et la dernière page de la pagination, ainsi que des liens vers les pages voisines de la dizaine où l'on se trouve. Dans notre exemple, on a des liens vers toutes les pages en 20. Si on se trouve à la page 11, on aurait des liens vers toutes cette dizaine : 10, 11, 12, 13 etc jusqu'à 20.</p>
+</blockquote>
+
+<ul class="wp-block-list">
+<li>Bonne clarté UX</li>
+
+<li>Performance correcte mais moins puissante que Fixed Steps</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagerank-for-fixed-block-pagination.webp" alt="" class="wp-image-10937"/></figure>
+
+<h4 class="wp-block-heading">8.<strong> </strong>Pagination Logarithmique</h4>
+
+<blockquote class="wp-block-quote">
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/logarithmic-pagination.webp" alt="pagination logarithmique seo" class="wp-image-10936"/></figure>
+
+<p>Lien vers 1, 2, 4, 8, 16, etc. – approche très mathématique</p>
+</blockquote>
+
+<ul class="wp-block-list">
+<li>Profondeur ultra réduite (4)</li>
+
+<li>+1 700 pages produits bien maillées (presque tout le catalogue !)</li>
+
+<li>Parfait pour le SEO, mais nécessite une UX bien pensée</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagerank-distribution-for-logarithmic-pagination.webp" alt="distribution pagination logarithmique seo" class="wp-image-10935"/></figure>
+
+<h4 class="wp-block-heading">9. Pagination à deux niveaux</h4>
+
+<blockquote class="wp-block-quote">
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/ghostblock-pagination.webp" alt="pagination à deux blocs" class="wp-image-10934"/></figure>
+
+<p>Maillage interne invisible pour l’utilisateur, mais visible par les robots</p>
+</blockquote>
+
+<ul class="wp-block-list">
+<li>Profondeur minimale (3)</li>
+
+<li>Score maximal : 2 000 pages produits bien indexées</li>
+
+<li>C’est la Rolls Royce de la pagination (mais demande un vrai niveau technique)</li>
+</ul>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2025/04/pagerank-distribution-for-ghostblock-pagination.webp" alt="distribution pagination seo à deux blocs" class="wp-image-10933"/></figure>
+
+<h3 class="wp-block-heading">🧠 À retenir</h3>
+
+<p>Les meilleures options combinent <strong>maillage optimisé</strong> et <strong>UX lisible</strong> : <em>Liens vers pages voisines ET première/dernière page</em> ou <em>la pagination à échelle fixe</em> sont d’excellents compromis.</p>
+
+<p>Plus la pagination est <strong>intelligente</strong>, plus le <strong>PageRank est distribué efficacement</strong>.</p>
+
+<p><strong>La profondeur est clé</strong> : au-delà de 5 clics, Googlebot commence à lâcher l’affaire.</p>
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><th>Type de Pagination</th><th class="has-text-align-center" data-align="center">Profondeur</th><th class="has-text-align-center" data-align="center">% PR Pagination</th><th class="has-text-align-center" data-align="center">% PR Contenu</th><th class="has-text-align-center" data-align="center">Pages Pagination SEO</th><th class="has-text-align-center" data-align="center">Pages Contenu SEO</th></tr><tr><td>Basique</td><td class="has-text-align-center" data-align="center">100</td><td class="has-text-align-center" data-align="center">51%</td><td class="has-text-align-center" data-align="center">49%</td><td class="has-text-align-center" data-align="center">4</td><td class="has-text-align-center" data-align="center">60</td></tr><tr><td>Lien vers la première page</td><td class="has-text-align-center" data-align="center">97</td><td class="has-text-align-center" data-align="center">55%</td><td class="has-text-align-center" data-align="center">45%</td><td class="has-text-align-center" data-align="center">7</td><td class="has-text-align-center" data-align="center">120</td></tr><tr><td>Liens vers première et dernière page</td><td class="has-text-align-center" data-align="center">51</td><td class="has-text-align-center" data-align="center">52%</td><td class="has-text-align-center" data-align="center">48%</td><td class="has-text-align-center" data-align="center">7</td><td class="has-text-align-center" data-align="center">100</td></tr><tr><td>Liens vers pages voisines</td><td class="has-text-align-center" data-align="center">21</td><td class="has-text-align-center" data-align="center">56%</td><td class="has-text-align-center" data-align="center">44%</td><td class="has-text-align-center" data-align="center">19</td><td class="has-text-align-center" data-align="center">260</td></tr><tr><td>Liens vers pages voisines ET première/dernière page</td><td class="has-text-align-center" data-align="center">12</td><td class="has-text-align-center" data-align="center">57%</td><td class="has-text-align-center" data-align="center">43%</td><td class="has-text-align-center" data-align="center">32</td><td class="has-text-align-center" data-align="center">360</td></tr><tr><td>Echelle fixe</td><td class="has-text-align-center" data-align="center">12</td><td class="has-text-align-center" data-align="center">57%</td><td class="has-text-align-center" data-align="center">43%</td><td class="has-text-align-center" data-align="center">27</td><td class="has-text-align-center" data-align="center">340</td></tr><tr><td>Accordéon</td><td class="has-text-align-center" data-align="center">20</td><td class="has-text-align-center" data-align="center">59%</td><td class="has-text-align-center" data-align="center">41%</td><td class="has-text-align-center" data-align="center">20</td><td class="has-text-align-center" data-align="center">220</td></tr><tr><td>Logarithmique</td><td class="has-text-align-center" data-align="center">4</td><td class="has-text-align-center" data-align="center">62%</td><td class="has-text-align-center" data-align="center">38%</td><td class="has-text-align-center" data-align="center">100</td><td class="has-text-align-center" data-align="center">1,720</td></tr><tr><td>Double niveau</td><td class="has-text-align-center" data-align="center">3</td><td class="has-text-align-center" data-align="center">64%</td><td class="has-text-align-center" data-align="center">36%</td><td class="has-text-align-center" data-align="center">100</td><td class="has-text-align-center" data-align="center">2,000</td></tr></tbody></table></figure>
+
+<p>👉 Pour les petits sites, la pagination classique ou First + Last peut suffire. Pour les gros catalogues (e-commerce, média), il faut aller vers du <strong>Neighbors + First/Last</strong>, ou des solutions avancées comme <strong>Fixed Steps</strong> ou <strong>Logarithmique</strong>.</p>
+
+<p>Besoin d'aide pour régler votre pagination ? Faites appel à Slashr, votre <a href="https://agence-slashr.fr/seo/">agence SEO dans le nord</a>.</p>
+
+<h2 class="wp-block-heading"> <strong>Scroll infini et "View All" : UX sympa, SEO à encadrer</strong></h2>
+
+<p>Le <strong>scroll infini</strong> et le bouton <strong>« View All »</strong> sont souvent pensés pour l’UX : fluidité de navigation, zéro interruption, parfaits pour mobile… sauf que côté SEO, ils ne font pas le job seuls. Google a besoin de structure, de liens HTML, d’URLs uniques. Bonne nouvelle : ces approches ne sont pas incompatibles avec une pagination solide. Elles peuvent même <strong>coexister intelligemment</strong>.</p>
+
+<p>👉 Par exemple, vous pouvez proposer un <strong>scroll infini en façade</strong> (avec History API pour générer des URLs uniques dynamiques), <strong>tout en gardant une pagination classique en fallback</strong>. C’est ce que font beaucoup de sites e-commerce ou médias : scroll pour les humains, pagination HTML discrète pour les robots. Pareil pour le <strong>« View All »</strong> : une page dédiée, bien canonisée, peut venir <strong>compléter une pagination par blocs</strong> et centraliser le jus SEO si elle reste légère.</p>
+
+<p>🎯 Ce qu’il faut retenir : infinite scroll et view all sont des <strong>surcouches UX</strong>, pas des solutions SEO en soi. Intégrez-les <strong>en plus</strong> d’une vraie pagination structurée, pas à la place.</p>
+
+<h2 class="wp-block-heading">Bonnes pratiques SEO pour la pagination</h2>
+
+<ul class="wp-block-list">
+<li>✅ Une URL unique par page (<code>?page=2</code>, <code>/page/3/</code>, etc.)</li>
+
+<li>✅ Des liens HTML classiques (<code>&lt;a href&gt;</code>) entre les pages</li>
+
+<li>✅ Pas de <code>#</code> dans les URLs (ignoré par Googlebot)</li>
+
+<li>✅ Des balises et distinctes</li>
+
+<li>✅ Pas de duplication de texte SEO sur les pages suivantes</li>
+
+<li>✅ Si scroll infini ou "voir plus" : fallback HTML obligatoire</li>
+</ul>
+
+<h2 class="wp-block-heading">Les pires erreurs à éviter (et qu’on voit encore en 2025)</h2>
+
+<ul class="wp-block-list">
+<li>❌ <code>rel=canonical</code> des pages 2+ pointant vers la page 1</li>
+
+<li>❌ <code>noindex</code> ou <code>noindex, follow</code> sur les pages paginées</li>
+
+<li>❌ Bouton "voir plus" ou scroll infini sans URL distincte</li>
+
+<li>❌ Trop de liens vers les pages de pagination (100 liens = fuite de jus SEO)</li>
+</ul>
+
+<h2 class="wp-block-heading">Diagnostiquer une pagination mal fichue</h2>
+
+<p>📉 Analysez vos <strong>logs serveurs</strong>. Si vos pages paginées au-delà de la page 5 ne sont <strong>jamais crawlées</strong>, c’est que la profondeur est trop grande ou que le maillage est mal pensé.</p>
+
+<p>🎯 Objectif : que les pages clés soient accessibles <strong>à moins de 5 clics</strong> depuis la home ou une page de catégorie.</p>
+
+<h2 class="wp-block-heading">En résumé</h2>
+
+<p>La pagination, c’est un outil puissant mais exigeant. Plus votre site grossit, plus elle doit être <strong>stratégique</strong>. Il n’y a pas de solution unique, mais des arbitrages à faire selon :</p>
+
+<ul class="wp-block-list">
+<li>la volumétrie,</li>
+
+<li>la valeur SEO des pages profondes,</li>
+
+<li>votre budget crawl,</li>
+
+<li>et votre capacité à maintenir une structure cohérente.</li>
+</ul>
+
+<p>💡 Prenez exemple sur les grands sites : médias, e-commerçants… chacun a sa logique, mais tous ont <strong>réfléchi leur pagination</strong>.</p>
+
+<p></p>

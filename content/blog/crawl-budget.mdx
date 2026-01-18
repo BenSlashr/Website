@@ -1,0 +1,284 @@
+---
+title: "Crawl budget SEO : Ce que Google explore… ou ignore"
+slug: "crawl-budget"
+date: "2024-08-27 12:54:34"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<h3 class="wp-block-heading">🧠 1. Le budget de crawl, c’est quoi au juste ?</h3>
+
+<p>En SEO, <strong>pas d’indexation = pas de <a href="https://agence-slashr.fr/blog/positionnement-moteurs-recherche/">positionnement</a></strong>. Et pour qu’une page soit indexée, elle doit d’abord être <em>vue</em> par Google. C’est là qu’entre en scène le <strong>budget de crawl</strong>.</p>
+
+<p>🧮 Pour faire simple :</p>
+
+<blockquote class="wp-block-quote">
+<p>Le budget de crawl, c’est la combinaison entre <strong>ce que Google <em>peut</em> explorer sur votre site</strong> (capacités techniques), et <strong>ce qu’il <em>a envie</em> d’explorer</strong> (intérêt SEO perçu).</p>
+</blockquote>
+
+<h3 class="wp-block-heading">Deux composantes à comprendre :</h3>
+
+<ul class="wp-block-list">
+<li><strong>Crawl rate limit</strong> (La capacité de crawl) : la limite physique. Si votre serveur rame, sature ou répond mal, Google ralentit. Trop d’erreurs = moins de crawl.</li>
+
+<li><strong>Crawl demand</strong> (La demande de crawl) : la logique SEO. Si une page est populaire, fraîche, utile… elle sera visitée plus souvent. Sinon ? Elle sera vite ignorée.</li>
+</ul>
+
+<p>Autrement dit :<br>🔌 Un serveur lent = Google ralentit la cadence.<br>🥱 Des pages sans valeur ou rarement mises à jour = Google passe moins souvent, voire jamais.</p>
+
+<p>Résultat ? Google alloue un quota d’attention à chaque site. Et ce quota, <strong>vous pouvez l’optimiser ou le flinguer</strong>.</p>
+
+<p>🔎 Et plus votre site est gros (catalogue e-commerce, média, marketplace…), plus <strong>le budget de crawl devient un levier critique</strong>. Vous ne voulez pas que vos meilleures pages soient invisibles pendant que Google explore vos filtres, vos pages vides ou vos 404.</p>
+
+<p>Le crawl le vous parle pas ? Consultez notre article sur le <a href="https://agence-slashr.fr/blog/comprendre-processus-crawling/">processus de crawling</a>.</p>
+
+<p><em>Vous pouvez vérifier le nombre de pages indexées de votre site dans Google Search Console, sous la section "Couverture de l'index".</em></p>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2024/08/couverture-seo-1024x565.png" alt="indexation des pages google search console" class="wp-image-10248"/></figure>
+
+<h2 class="wp-block-heading">💣 Ce qui flingue votre budget de crawl (et comment Google réagit)</h2>
+
+<p>Quand on parle de budget de crawl, la vraie question n’est pas « Est-ce que Google <em>veut</em> crawler mon site ? », mais plutôt : <strong>« Est-ce que je lui facilite la vie ou est-ce que je le fais fuir ? »</strong></p>
+
+<p>Parce que même avec un site bien noté côté popularité, si l’exploration technique est chaotique, Googlebot va très vite ralentir la cadence, voire décrocher. Voici ce qui ruine votre budget de crawl en silence :</p>
+
+<h3 class="wp-block-heading">🐢 Serveur lent ou instable = Google freine</h3>
+
+<p>Google a une tolérance très basse aux serveurs qui rament.<br>👉 Si vos temps de réponse montent au-dessus de 1s, il ralentit automatiquement sa fréquence de passage pour ne pas surcharger le serveur.<br>Et s’il rencontre trop de 5xx ? Il arrête tout simplement de crawler.</p>
+
+<p><strong>⏱️ Benchmark</strong> :</p>
+
+<ul class="wp-block-list">
+<li>Temps de réponse &lt; 500 ms → crawl boosté</li>
+
+<li>Temps &gt; 1000 ms → crawl ralenti de 130% (source : Botify)</li>
+</ul>
+
+<p><strong>💡 Astuce </strong>: il est possible de vérifier le TTFB (time to first byte, le temps de réponse de votre serveur) que Googlebot enregistre directement dans la Search console. Le rapport est disponible dans "Paramètres" puis "Statistiques sur l'exploration". <strong>Je vous conseille de conserver un temps de réponse moyen inférieur à 500 MS</strong>.</p>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2024/08/ttfb-seo-1024x497.png" alt="ttfb search console crawl budget" class="wp-image-10246"/></figure>
+
+<h3 class="wp-block-heading">🔁 Redirections inutiles &amp; boucles = perte sèche</h3>
+
+<p>Les chaînes de redirection de 3 ou 4 hops (oui, on en voit encore en 2025) font perdre du temps à Googlebot.<br>Et chaque <a href="https://agence-slashr.fr/blog/redirections-seo-guide-pratique/">redirection SEO,</a> c’est une page de moins visitée dans son budget. Pire, les boucles peuvent bloquer l’exploration totale de segments entiers.</p>
+
+<p><strong>✅ Règle : 1 redirection max (301 directe), jamais plus.</strong></p>
+
+<h3 class="wp-block-heading">🔗 Pages orphelines = invisible pour Google</h3>
+
+<p>Une page sans lien entrant (depuis le site ou le sitemap) n’existe tout simplement pas aux yeux du robot. Même si elle est pertinente, même si elle est optimisée.</p>
+
+<p>➡️ Et si vous en avez des centaines ou milliers, c’est autant d’énergie que Google ne sait pas où dépenser.<br>👉 Résultat : il tente des crawl randoms ou se désintéresse.</p>
+
+<h3 class="wp-block-heading">💨 Javascript mal géré = gaspillage de ressources</h3>
+
+<p>Les <a href="https://agence-slashr.fr/blog/javascript-et-seo-bonnes-pratiques-et-erreurs-a-eviter/">sites full JS mal configurés obligent Google à faire deux passages</a> :</p>
+
+<ol class="wp-block-list">
+<li>D’abord pour récupérer l’HTML vide</li>
+
+<li>Ensuite pour faire le <em>rendering</em> (interprétation JS)</li>
+</ol>
+
+<p>Sauf que ce deuxième passage… <strong>ne se fait pas toujours.</strong> Et même s’il se fait, il arrive <strong>beaucoup plus tard</strong> que le crawl HTML brut.</p>
+
+<p><strong>⛔ Mauvais JS = pages non explorées ou explorées trop tard.</strong><br>Utilisez <code>prerender</code>, <a href="https://agence-slashr.fr/blog/server-side-rendering-et-seo/">SSR</a> ou simplifiez au max pour les pages stratégiques.</p>
+
+<h3 class="wp-block-heading">📉 Contenu dupliqué, thin content, pages inutiles</h3>
+
+<p>Si vous avez :</p>
+
+<ul class="wp-block-list">
+<li>50 déclinaisons d’un même produit avec une URL chacune</li>
+
+<li><a href="https://agence-slashr.fr/blog/filtres-a-facette/">des filtres qui génèrent des URLs indexables à l’infini</a></li>
+
+<li><a href="https://agence-slashr.fr/blog/pagination-seo/">des listings paginés crawlables mais sans valeur ajoutée…</a></li>
+</ul>
+
+<p>Alors Google perd littéralement <strong>son temps et son énergie</strong> sur du contenu peu utile.<br>Il n’ira pas voir les pages qui comptent, car vous <strong>l’ennuyez</strong> avant qu’il y arrive.</p>
+
+<p>👉  Faites particulièrement attention au spider trap (piège à robot), qui est absolument dévastateur pour votre budget crawl. </p>
+
+<h2 class="wp-block-heading">📈 Ce qui fait grimper la demande de crawl</h2>
+
+<p>À l’inverse des erreurs techniques ou structurelles qui brident le crawl, certaines pratiques peuvent <em>donner envie</em> à Google de revenir plus souvent et d’explorer plus profondément. Le crawl, ce n’est pas un droit — c’est un <strong>signal de confiance</strong>. Et comme toute confiance, ça se gagne.</p>
+
+<p>Voici les leviers les plus efficaces pour booster cette demande :</p>
+
+<h3 class="wp-block-heading">🔗 La popularité, toujours en pole position</h3>
+
+<p>Plus une page reçoit de liens (internes et surtout externes), plus elle est perçue comme importante. Et plus Googlebot viendra la visiter.<br>👉 <strong>Backlinks frais</strong> = boost direct du crawl.<br>👉 <strong>Maillage interne stratégique</strong> = propagation de la popularité vers des pages profondes.<br>👉 <strong>Trafic externe</strong> = augmentation de l'autorité au global de votre site et donc du crawl de google </p>
+
+<p>Une page en page 5 de <a href="https://agence-slashr.fr/blog/pagination-seo/">pagination</a> peut devenir régulièrement crawlée… si elle reçoit un lien depuis une page très populaire du site.</p>
+
+<h3 class="wp-block-heading">📰 La fraîcheur, mais pas n’importe comment</h3>
+
+<p>Google adore le contenu mis à jour. Mais pas les faux updates.<br>Une vraie mise à jour (ajout de sections, nouveaux visuels, enrichissement sémantique) <strong>stimule la demande de crawl</strong>. Google revient vérifier s’il doit reclassifier la page.</p>
+
+<p>💡 Astuce : ajouter un bloc “mis à jour le…” dans le code source <strong>et</strong> le visible renforce le message.</p>
+
+<h3 class="wp-block-heading">✅ Le contenu perçu comme “utile”</h3>
+
+<p>L’algo de Google évolue : aujourd’hui, <strong>l’expérience utilisateur</strong> compte dans les signaux indirects qui influencent le crawl.<br>➡️ Scroll depth élevé, bon TTV (Time to View), clics secondaires…<br>➡️ Pages avec engagement = pages plus crawlées = pages mieux positionnées.</p>
+
+<p>📊 Googlebot semble de plus en plus piloté par les insights Navboost (cf. notre article à ce sujet), ce qui crée une vraie boucle “intérêt utilisateur → intensité de crawl”.</p>
+
+<h3 class="wp-block-heading">🧭 Une architecture limpide</h3>
+
+<p>Un site bien structuré, c’est un site où Googlebot ne se perd pas.<br>Si votre sitemap est cohérent, que les menus sont clairs, que les liens sont contextuels et hiérarchisés : <strong>vous envoyez un signal de fiabilité</strong>.</p>
+
+<p>👁️‍🗨️ Google préfère crawl un site structuré à 10 000 pages qu’un fouillis de 1 000 URLs inutiles.</p>
+
+<h2 class="wp-block-heading">📊 Ce que montrent les chiffres (et pourquoi c’est pas que théorique)</h2>
+
+<p>Le budget de crawl, c’est pas juste un concept flou de SEO technique. C’est un levier <strong>quantifiable</strong>. Et les chiffres parlent d’eux-mêmes.</p>
+
+<h3 class="wp-block-heading">💀 50 % des pages jamais explorées</h3>
+
+<p>Selon une étude de <strong>Botify</strong>, <strong>plus de la moitié des pages</strong> des grands sites e-commerce analysés <strong>ne sont jamais crawlées</strong> par Googlebot. Zéro visite, zéro indexation, zéro chance d’être visible.<br>👉 Source : <a href="https://fr.slideshare.net/slideshow/how-does-google-crawl-the-web-botify-at-smx-paris-2018/102165541">Botify</a></p>
+
+<h3 class="wp-block-heading">⚡ Temps de chargement : &lt;500 ms = 2x plus de crawl</h3>
+
+<p>Toujours selon Botify, les pages qui se chargent en <strong>moins de 500 ms</strong> sont <strong>2 fois plus crawlées</strong> que celles qui prennent plus de 1 seconde. Google n’aime pas attendre.<br>👉 Source : même étude Botify </p>
+
+<h3 class="wp-block-heading">📚 Les pages longues sont mieux crawlées</h3>
+
+<p>Autre insight intéressant : les pages avec <strong>plus de 2500 mots</strong> reçoivent <strong>significativement plus de passages de Googlebot</strong>. À l’inverse, les pages très courtes (moins de 300 mots) sont largement ignorées.<br>👉 Source : <a href="https://www.botify.com/blog/crawl-budget-optimization-for-classified-websites">Crawl Budget Optimization For Classified Websites</a></p>
+
+<h3 class="wp-block-heading">💡 Cas Skroutz.gr (filiale de PriceRunner – 25M pages au départ)</h3>
+
+<p>En supprimant ou en désindexant massivement leurs pages inutiles (search internes, combinatoires, etc.), <strong>ils sont passés de 25M à 7,6M de pages indexées</strong>.</p>
+
+<p>👉 Résultat : <strong>Google a crawlé plus fréquemment les pages importantes</strong>, réduisant le temps d’indexation de plusieurs mois à quelques jours.</p>
+
+<blockquote class="wp-block-quote">
+<p>📉 Le trafic est passé de 63M à 70M de clics mensuels.<br>🔁 38,28 % des pages en noindex ont continué à être crawlées pendant 6 mois après le changement.<br>👉 <a class="">S</a><a href="https://engineering.skroutz.gr/blog/SEO-Crawl-Budget-Optimization-2019/">ource : étude Skroutz – SEO case study 2019</a></p>
+</blockquote>
+
+<h2 class="wp-block-heading">🛠️ 5. Optimiser son budget de crawl (concrètement)</h2>
+
+<h3 class="wp-block-heading">🚧 Technique : vitesse, erreurs 5xx, JS, redirections</h3>
+
+<p>Quand Googlebot explore votre site, il <strong>teste sa résistance</strong>. Un site lent ou fragile, c’est un site qu’il va rapidement mettre de côté. Quelques points critiques à surveiller :</p>
+
+<ul class="wp-block-list">
+<li><strong>Vitesse de chargement</strong> : une page qui dépasse 1 seconde de temps de réponse côté serveur peut voir son crawl chuter brutalement. Selon <a class="">Botify</a>, les pages &lt;500 ms sont 130% plus crawlées que celles &gt;1000 ms.</li>
+
+<li><strong>Erreurs serveur 5xx</strong> : elles indiquent à Googlebot que votre site n’est pas stable. Trop d’erreurs = baisse de fréquence de crawl.</li>
+
+<li><strong>JavaScript mal géré</strong> : si Google doit attendre le rendu JS pour voir le contenu, vous gaspillez des ressources. Préférez le contenu visible dans le HTML brut.</li>
+
+<li><strong>Chaînes de redirections</strong> : une <a href="https://agence-slashr.fr/blog/redirections-seo-guide-pratique/">redirection</a> simple passe, une chaîne de 3 hops ou plus = perte de jus + coût de crawl inutile.</li>
+</ul>
+
+<p>👉 Pour faire simple : <strong>Google n’aime pas les sites mous</strong>.</p>
+
+<h3 class="wp-block-heading">🧭 Structure : plan du site logique, profondeur &lt; 3 clics, liens contextuels</h3>
+
+<p>Un site bien structuré, c’est comme une carte GPS pour les robots.</p>
+
+<ul class="wp-block-list">
+<li><strong>Profondeur maximale : 3 clics</strong> entre la home et les pages stratégiques. Plus, c’est risqué.</li>
+
+<li><strong>Plan du site clair</strong> : évitez les structures trop plates ou trop profondes. Un site e-com avec 3000 produits peut garder une architecture simple avec un bon système de catégories et facettes.</li>
+
+<li><strong>Liens contextuels</strong> : ne comptez pas que sur les menus. Les liens dans les textes ou blocs associés sont bien mieux compris par Googlebot.</li>
+</ul>
+
+<p>🧠 Petit rappel : <strong>ce n’est pas la quantité de liens qui fait tout, mais leur pertinence sémantique et leur accessibilité</strong>.</p>
+
+<h3 class="wp-block-heading">✂️ Élagage : supprimer / rediriger / désindexer intelligemment</h3>
+
+<p>Si votre site a plus de 10k pages, il y a fort à parier qu’un bon % est inutile côté SEO. Il faut faire le ménage :</p>
+
+<ul class="wp-block-list">
+<li><strong>404 valides</strong> : parfois normales, mais trop nombreuses = budget gaspillé.</li>
+
+<li><strong>Pages à zéro trafic ou crawlées mais non indexées</strong> : souvent les pires candidates.</li>
+
+<li><strong>Produits indisponibles, filtres non indexables, tags de blog oubliés</strong>…</li>
+</ul>
+
+<p>➡️ On ne supprime pas à l’aveugle : on <strong>analyse logs + trafic + indexation</strong>, puis on choisit :</p>
+
+<ul class="wp-block-list">
+<li>Blocage via robots.txt</li>
+
+<li>Suppression pure</li>
+
+<li>Redirection (301)</li>
+
+<li>Passage en <code>noindex</code></li>
+
+<li><a href="https://agence-slashr.fr/blog/obfuscation-seo/">Obfuscation de liens</a></li>
+</ul>
+
+<h3 class="wp-block-heading">🧼 Robots.txt, canonical, sitemap XML clean</h3>
+
+<p>Les fondamentaux du SEO technique :</p>
+
+<ul class="wp-block-list">
+<li><strong><a href="https://agence-slashr.fr/blog/comment-gerer-robots-txt-seo/">robots.txt</a></strong> : bloquez les répertoires inutiles ou filtrables (params, filtres, résultats de recherche internes…).</li>
+
+<li><strong>Canonical</strong> : assurez-vous que chaque URL “utile” se canonicalise elle-même, et que les variantes renvoient bien vers leur version principale.</li>
+
+<li><strong>Sitemap XML</strong> : uniquement les pages indexables. Pas de 404, pas de pages exclues. Sinon, Google perd confiance.</li>
+</ul>
+
+<p>👉 Un bon sitemap = une promesse tenue à Googlebot. Il ne doit pas mentir.</p>
+
+<h3 class="wp-block-heading">🧠 Prioriser les pages business et utiles</h3>
+
+<p>Si tout est important, <strong>rien ne l’est</strong>. Votre budget de crawl n’est pas extensible à l’infini.</p>
+
+<ul class="wp-block-list">
+<li>Mettez en avant les pages business : catégories, produits clés, guides d’achat, pages pilier.</li>
+
+<li>Moins de priorité aux pages accessoires (mentions légales, CGV, filtres, tags inutiles…).</li>
+
+<li>Utilisez <strong>l’interconnexion des pages stratégiques</strong> pour créer un graphe de crawl efficace.</li>
+</ul>
+
+<h2 class="wp-block-heading">🔍 6. Les bons outils pour surveiller tout ça</h2>
+
+<h3 class="wp-block-heading">🧰 Google Search Console</h3>
+
+<p>La GSC est l'outil parfait si vous n'avez pas le budget pour l'analyse de logs.</p>
+
+<ul class="wp-block-list">
+<li>Statistiques de crawl (fréquence, erreurs, délais)</li>
+
+<li>Couverture d’index</li>
+
+<li>Inspection d’URL (indexation + rendu)</li>
+</ul>
+
+<h3 class="wp-block-heading">📁 Analyseurs de logs</h3>
+
+<p><strong>Botify</strong>, <strong>Oncrawl</strong>, <strong>JetOctopus</strong>, <strong>Seolyzer</strong>…</p>
+
+<figure class="wp-block-image size-full"><img src="/blog/images/2024/08/oncrawl-dashboard.webp" alt="dashboard oncrawl analyse de logs" class="wp-image-10250"/></figure>
+
+<p><br>Indispensables pour savoir <em>ce que Google explore vraiment</em>.<br>Vous saurez quelles pages reçoivent du crawl, à quelle fréquence, et où le robot tourne en rond.</p>
+
+<h3 class="wp-block-heading">🕷️ Crawlers SEO</h3>
+
+<p><strong><a href="https://agence-slashr.fr/blog/screaming-frog-guide-complet-pour-optimiser-votre-seo/">Screaming Frog</a></strong>, <strong>Sitebulb</strong>, <strong>Seobserver</strong> (partie crawl)</p>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2024/08/screaming-frog-dashboard-1024x625.png" alt="dashboard screaming frog" class="wp-image-10251"/></figure>
+
+<p><br>Parfaits pour <strong>voir le site comme un bot le voit</strong>. Vous pourrez détecter profondeur, erreurs, balises incohérentes, duplication…</p>
+
+<p>💡 La vraie puissance vient du <strong>croisement crawler + logs + GSC</strong>.</p>
+
+<h2 class="wp-block-heading">📌 7. Conclusion : Pas de crawl, pas de SEO</h2>
+
+<p>Pas de crawl = pas d’indexation = pas de visibilité. Aussi simple que ça.</p>
+
+<p>Et pourtant, <strong>le crawl budget reste sous-estimé</strong>, même sur des sites à très fort trafic. Optimiser son architecture, nettoyer ses pages mortes, accélérer son serveur… Ce sont des actions <strong>à fort ROI</strong> pour (ré)activer tout le potentiel SEO d’un site.</p>
+
+<p>🧠 En SEO, il ne suffit pas d’avoir du contenu de qualité. Encore faut-il qu’il soit découvert, crawlé, et indexé.</p>
+
+<p></p>

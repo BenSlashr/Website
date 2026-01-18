@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getLatestArticlesFromWP, Article } from "@/lib/wordpress";
+import { getLatestArticlesFromWP, Article } from "@/lib/mdx";
 
 interface ArticlesProps {
   title?: string;

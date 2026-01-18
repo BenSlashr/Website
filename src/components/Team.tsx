@@ -25,37 +25,37 @@ const Team = () => {
       name: 'Lucas',
       role: 'ACCOUNT MANAGER',
       number: '01',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/lucas.png',
+      image: '/blog/images/2024/03/lucas.png',
     },
     {
       name: 'Tom',
       role: 'SEO CONSULTANT',
       number: '07',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/tom-chemin.jpeg',
+      image: '/blog/images/2024/03/tom-chemin.jpeg',
     },
     {
       name: 'Anthony',
       role: 'CONSULTING DIRECTOR',
       number: '23',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/anthony-lecas.jpeg',
+      image: '/blog/images/2024/03/anthony-lecas.jpeg',
     },
     {
       name: 'Quentin',
       role: 'BUSINESS PARTNER',
       number: '10',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2026/01/Capture-decran-2026-01-14-a-11.11.07-e1768387199199.png',
+      image: '/blog/images/2026/01/Capture-decran-2026-01-14-a-11.11.07-e1768387199199.png',
     },
     {
       name: 'Pierre-Antoine',
       role: 'SEO CONSULTANT',
       number: '33',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/pierre-antoine.jpeg',
+      image: '/blog/images/2024/03/pierre-antoine.jpeg',
     },
     {
       name: 'Benoit',
       role: 'SEO DIRECTOR',
       number: '99',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2024/03/benoit-demonchaux-smx-e1711037394539.jpeg',
+      image: '/blog/images/2024/03/benoit-demonchaux-smx-e1711037394539.jpeg',
     },
   ];
 

@@ -205,7 +205,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Prestashop',
     category: 'seo',
     heroDescription: 'Vous avez une boutique en ligne sous Prestashop et cherchez à renforcer sa présence en ligne ? Notre agence SEO spécialisée dans Prestashop est la réponse à vos besoins. Découvrez notre méthode SLASHR.',
-    metaTitle: 'Agence SEO Prestashop | Expert Référencement Naturel | Slashr',
+    metaTitle: 'Agence SEO Prestashop | Expert Référencement Naturel',
     metaDescription: 'Agence SEO spécialisée Prestashop. Optimisez votre boutique e-commerce pour les moteurs de recherche avec notre expertise. Méthode SLASHR, résultats mesurables.',
     contentSection: {
       tag: 'Prestashop',
@@ -441,7 +441,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Shopify',
     category: 'seo',
     heroDescription: "Votre boutique Shopify mérite une visibilité optimale. Notre expertise SEO Shopify vous permet de maximiser votre potentiel sur les moteurs de recherche et d'augmenter vos ventes.",
-    metaTitle: 'Agence SEO Shopify | Expert Référencement Shopify | Slashr',
+    metaTitle: 'Agence SEO Shopify | Expert Référencement Shopify',
     metaDescription: 'Agence SEO experte Shopify. Optimisez votre boutique Shopify pour Google. +1.7M de marchands font confiance à Shopify, démarquez-vous avec notre expertise SEO.',
     contentSection: {
       tag: 'Shopify',
@@ -622,7 +622,7 @@ export const prestationsData: Prestation[] = [
     tag: 'WooCommerce',
     category: 'seo',
     heroDescription: "WooCommerce propulse plus de 5 millions de boutiques et détient 40% du marché e-commerce mondial. Exploitez la puissance de WordPress et WooCommerce pour votre référencement.",
-    metaTitle: 'Agence SEO WooCommerce | Expert WordPress E-commerce | Slashr',
+    metaTitle: 'Agence SEO WooCommerce | Expert WordPress E-commerce',
     metaDescription: 'Agence SEO spécialisée WooCommerce. Optimisez votre boutique WordPress pour Google. 40% du marché e-commerce mondial, maximisez votre potentiel SEO.',
     contentSection: {
       tag: 'WooCommerce',
@@ -803,7 +803,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Magento',
     category: 'seo',
     heroDescription: "Magento (Adobe Commerce) est la solution enterprise pour le e-commerce à grande échelle. Notre expertise vous permet d'exploiter sa puissance technique pour un SEO performant.",
-    metaTitle: 'Agence SEO Magento | Expert Adobe Commerce | Slashr',
+    metaTitle: 'Agence SEO Magento | Expert Adobe Commerce',
     metaDescription: 'Agence SEO spécialisée Magento et Adobe Commerce. Optimisez votre plateforme e-commerce enterprise pour maximiser votre visibilité sur Google.',
     contentSection: {
       tag: 'Magento',
@@ -980,7 +980,7 @@ export const prestationsData: Prestation[] = [
     tag: 'E‑commerce',
     category: 'seo',
     heroDescription: "93% des expériences en ligne commencent par un moteur de recherche. Maximisez les ventes de votre boutique en ligne grâce à une stratégie SEO e-commerce adaptée à vos enjeux.",
-    metaTitle: 'Agence SEO E-commerce à Lille | Slashr',
+    metaTitle: 'Agence SEO E-commerce à Lille',
     metaDescription: 'Agence SEO e-commerce à Lille. Boostez les ventes de votre boutique en ligne avec un référencement adapté. Optimisation fiches produits, catégories et architecture.',
     contentSection: {
       tag: 'E‑commerce',
@@ -1161,7 +1161,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Local',
     category: 'seo',
     heroDescription: "46% des recherches Google ont une intention locale. Dominez les résultats de recherche dans votre zone de chalandise et attirez les clients de proximité.",
-    metaTitle: 'Agence SEO Local à Lille | Slashr',
+    metaTitle: 'Agence SEO Local à Lille',
     metaDescription: 'Agence SEO local à Lille. Dominez les résultats locaux et Google Maps. Optimisation Google Business Profile, citations et avis clients.',
     contentSection: {
       tag: 'SEO Local',
@@ -1342,7 +1342,7 @@ export const prestationsData: Prestation[] = [
     tag: 'International',
     category: 'seo',
     heroDescription: "Développez votre présence SEO à l'international. Stratégie multilingue, hreflang et adaptation culturelle pour conquérir de nouveaux marchés.",
-    metaTitle: 'Agence SEO International | Slashr',
+    metaTitle: 'Agence SEO International',
     metaDescription: "Agence SEO international. Développez votre présence à l'international avec une stratégie multilingue, hreflang et adaptation culturelle pour chaque marché.",
     contentSection: {
       tag: 'International',
@@ -1519,7 +1519,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Migration',
     category: 'seo',
     heroDescription: "Une refonte mal préparée peut anéantir des années de travail SEO. Notre méthodologie éprouvée sécurise votre trafic et transforme ce risque en opportunité.",
-    metaTitle: 'Refonte & Migration SEO - Préservez Votre Trafic | Slashr',
+    metaTitle: 'Refonte & Migration SEO - Préservez Votre Trafic',
     metaDescription: 'Réussissez votre refonte ou migration sans perte de trafic SEO. Méthodologie éprouvée et accompagnement expert. +162% de trafic possible.',
     contentSection: {
       tag: 'Migration',
@@ -1699,7 +1699,7 @@ export const prestationsData: Prestation[] = [
     tag: 'SEA',
     category: 'ads',
     heroDescription: "Le SEA complète parfaitement le SEO. Nos campagnes Google Ads vous permettent d'obtenir des résultats immédiats pendant que votre stratégie SEO se déploie.",
-    metaTitle: 'Agence Google Ads à Lille | Slashr',
+    metaTitle: 'Agence Google Ads à Lille',
     metaDescription: 'Agence Google Ads à Lille. Maximisez votre ROI avec nos campagnes Google Ads. Search, Shopping, Display : expertise SEA pour des résultats immédiats.',
     contentSection: {
       tag: 'Google Ads',
@@ -1835,7 +1835,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Formation',
     category: 'seo',
     heroDescription: "Le SEO évolue constamment. Nos formations permettent à vos équipes de développer les compétences nécessaires pour être autonomes et performantes.",
-    metaTitle: 'Formation SEO - Montée en Compétences Équipes | Slashr',
+    metaTitle: 'Formation SEO - Montée en Compétences Équipes',
     metaDescription: 'Formez vos équipes au SEO avec nos formations sur-mesure. Du débutant à l\'expert, développez vos compétences en référencement.',
     contentSection: {
       tag: 'Formation',
@@ -1974,7 +1974,7 @@ export const prestationsData: Prestation[] = [
     tag: 'GEO',
     category: 'seo',
     heroDescription: 'Votre marque est-elle visible dans les réponses générées par les IA ? Google SGE, ChatGPT, Bing Chat, Perplexity, Gemini… Tous ces moteurs de réponse générative affichent des contenus en mode conversationnel. Mais est-ce que votre site fait partie des sources qu\'ils utilisent ?',
-    metaTitle: 'Agence GEO | Référencement IA & Generative Engine Optimization | Slashr',
+    metaTitle: 'Agence GEO | Référencement IA & Generative Engine Optimization',
     metaDescription: 'Agence spécialisée en GEO (Generative Engine Optimization). Apparaissez dans les réponses de ChatGPT, Google SGE, Perplexity. Devenez une source citée par les IA.',
     contentSection: {
       tag: 'GEO',
@@ -2344,7 +2344,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Drupal',
     category: 'seo',
     heroDescription: 'Faites le choix d\'une agence spécialiste du CMS Drupal pour votre campagne de référencement naturel. Notre expertise Drupal vous garantit des résultats mesurables.',
-    metaTitle: 'Agence SEO Drupal à Lille | Expert Référencement Drupal | Slashr',
+    metaTitle: 'Agence SEO Drupal à Lille | Expert Référencement Drupal',
     metaDescription: 'Agence SEO spécialisée Drupal. Optimisez votre site Drupal pour les moteurs de recherche avec notre expertise. Résultats mesurables et approche personnalisée.',
     contentSection: {
       tag: 'Drupal',
@@ -2502,7 +2502,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'WordPress',
     category: 'seo',
     heroDescription: 'Faites le choix d\'une agence spécialiste du CMS WordPress pour votre campagne de référencement naturel. Optimisez votre site WordPress pour dominer les résultats de recherche.',
-    metaTitle: 'Agence SEO WordPress à Lille | Expert Référencement WordPress | Slashr',
+    metaTitle: 'Agence SEO WordPress à Lille | Expert Référencement WordPress',
     metaDescription: 'Agence SEO spécialisée WordPress. Optimisez votre site WordPress pour les moteurs de recherche. Blogs, sites vitrines, e-commerce : nous maîtrisons tous les types de sites WP.',
     contentSection: {
       tag: 'WordPress',
@@ -2660,7 +2660,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Framer',
     category: 'seo',
     heroDescription: 'Expertise SEO spécialisée sur Framer, le CMS no-code puissant. Nous aidons les web designers et entrepreneurs à optimiser leur visibilité en exploitant les fonctionnalités de Framer.',
-    metaTitle: 'Agence SEO Framer à Lille | Expert Référencement Framer | Slashr',
+    metaTitle: 'Agence SEO Framer à Lille | Expert Référencement Framer',
     metaDescription: 'Agence SEO spécialisée Framer. Optimisez votre site Framer pour les moteurs de recherche. Audit, stratégie, accompagnement pour maximiser votre visibilité.',
     contentSection: {
       tag: 'Framer',
@@ -2832,7 +2832,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Salesforce',
     category: 'seo',
     heroDescription: 'Accompagnement SEO spécialisé pour les sites Salesforce Commerce Cloud (SFCC). Nous répondons aux défis techniques de cette plateforme e-commerce complexe destinée aux grandes entreprises.',
-    metaTitle: 'Agence SEO Salesforce Commerce Cloud à Lille | Expert SFCC | Slashr',
+    metaTitle: 'Agence SEO Salesforce Commerce Cloud à Lille | Expert SFCC',
     metaDescription: 'Agence SEO spécialisée Salesforce Commerce Cloud. Optimisez votre plateforme SFCC pour les moteurs de recherche. Expertise technique et internationale.',
     contentSection: {
       tag: 'Salesforce',
@@ -3007,7 +3007,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Webflow',
     category: 'seo',
     heroDescription: 'Un site Webflow bien conçu, c\'est bien. Un site Webflow qui ranke, c\'est mieux. Nous vous aidons à maximiser le potentiel SEO de Webflow sans extensions ni bricolage.',
-    metaTitle: 'Agence SEO Webflow à Lille | Expert Référencement Webflow | Slashr',
+    metaTitle: 'Agence SEO Webflow à Lille | Expert Référencement Webflow',
     metaDescription: 'Agence SEO spécialisée Webflow. Audit, optimisation, accompagnement pour votre site Webflow. 71% des sites Webflow ont des Core Web Vitals verts.',
     contentSection: {
       tag: 'Webflow',

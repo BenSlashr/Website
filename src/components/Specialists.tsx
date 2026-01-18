@@ -2,12 +2,12 @@ import Image from 'next/image';
 
 const Specialists = () => {
   const platforms = [
-    { name: 'YouTube', image: 'https://agence-slashr.fr/wp-content/uploads/2026/01/1656504144youtube-logo-png-white-scaled.webp' },
-    { name: 'Amazon', image: 'https://agence-slashr.fr/wp-content/uploads/2026/01/AMZN_BIG.D-8fb0be81.png' },
-    { name: 'Google', image: 'https://agence-slashr.fr/wp-content/uploads/2026/01/Google_2015_logo.svg_.png' },
-    { name: 'ChatGPT', image: 'https://agence-slashr.fr/wp-content/uploads/2026/01/new-ChatGPT-logo-white-png-large-size-1.png' },
-    { name: 'TikTok', image: 'https://agence-slashr.fr/wp-content/uploads/2026/01/TikTok-LogomarkWordmark-White-Dark-Background-Logo.wine_.png' },
-    { name: 'Instagram', image: 'https://agence-slashr.fr/wp-content/uploads/2026/01/1-13459_instagram-font-logo-white-png-instagram-white-text.png' },
+    { name: 'YouTube', image: '/blog/images/2026/01/1656504144youtube-logo-png-white-scaled.webp' },
+    { name: 'Amazon', image: '/blog/images/2026/01/AMZN_BIG.D-8fb0be81.png' },
+    { name: 'Google', image: '/blog/images/2026/01/Google_2015_logo.svg_.png' },
+    { name: 'ChatGPT', image: '/blog/images/2026/01/new-ChatGPT-logo-white-png-large-size-1.png' },
+    { name: 'TikTok', image: '/blog/images/2026/01/TikTok-LogomarkWordmark-White-Dark-Background-Logo.wine_.png' },
+    { name: 'Instagram', image: '/blog/images/2026/01/1-13459_instagram-font-logo-white-png-instagram-white-text.png' },
   ];
 
   return (

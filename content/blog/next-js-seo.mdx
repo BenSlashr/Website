@@ -1,0 +1,277 @@
+---
+title: "Next.js SEO : Le guide complet pour le référencement naturel"
+slug: "next-js-seo"
+date: "2023-11-02 12:25:06"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<h2 class="wp-block-heading">Qu'est-ce que Next.js ?</h2>
+
+<p>Next.js est un framework populaire donnant la possibilité de créer et développer des applications web performantes et évolutives. Il offre des fonctionnalités développées telles que le routage basé sur les fichiers, le support de TypeScript, les fonctions sans serveur, etc.</p>
+
+<p>Next.js se distingue des autres frameworks par sa capacité à proposer plusieurs méthodes de rendu au sein même de votre application.</p>
+
+<h2 class="wp-block-heading">Harmonisation des efforts SEO</h2>
+
+<p>L’harmonie entre la production de contenu de qualité, le choix de bons mots-clés, la création d’une stratégie de backlinks et tous les aspects techniques du SEO sont un ensemble de tâches contribuant à une optimisation efficace.</p>
+
+<p>Le SEO technique (vitesse de chargement, structure du site, rendu des pages etc.) influence les moteurs de recherche dans leur indexation du site un site tandis que les autres éléments donnent de l’autorité et de la pertinence au site.</p>
+
+<p>Si l’harmonie entre ces deux parties ne fonctionnent pas, Next.js apparaît comme une solution intéressante. Il facilite notamment le rendu côté serveur et offre une flexibilité aux développeurs pour sélectionner l’option la plus intéressante pour chaque type de contenu.</p>
+
+<p>L’association de Next.js avec un CMS Headless comme Prismic ajoute un élément d’optimisation supplémentaire, notamment lorsque l’on cherche à <a class="" href="https://agence-slashr.fr/blog/optimiser-son-cms-pour-le-seo/">optimiser son CMS pour le SEO</a> sans sacrifier la performance technique. Chaque membre de l’équipe des développeurs peut travailler indépendamment sans avoir à toucher au code. </p>
+
+<p>Besoin d'aide avec le SEO de votre site sous next.js ? Faites appel à Slashr, une <a href="https://agence-slashr.fr/seo/prestations/seo-technique/">agence de référencement technique</a> parfaitement aux faits des enjeux de next.js.</p>
+
+<h2 class="wp-block-heading">Meilleures pratiques SEO avec Next.js</h2>
+
+<h3 class="wp-block-heading">Utilisation du composant "Head"</h3>
+
+<p>Le composant Head de Next.js permet d’ajouter des éléments à l’en-tête de votre document HTML comme par exemple des méta-tags.&nbsp;</p>
+
+<p>Pour définir la balise title d’une page, le code se présente sous cette forme :&nbsp;</p>
+
+<pre class="wp-block-code"><code>import Head from 'next/head';
+
+function MaPage() {
+  return (
+    &lt;div&gt;
+      &lt;Head&gt;
+        &lt;title&gt;Mon titre de page pour le SEO&lt;/title&gt;
+      &lt;/Head&gt;
+      &lt;p&gt;Contenu de ma page&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+<h3 class="wp-block-heading">Données structurées</h3>
+
+<p>Les données structurées sont répertoriées sous un format prédéfini fixe. Elles donnent aux moteurs de recherche les informations nécessaires à une bonne compréhension du contenu de la page.&nbsp;</p>
+
+<p>Pour un article de blog, les données structurées vont informer les moteurs de recherche que la page est un article, que l’auteur est…, que la date de publication est …, etc.</p>
+
+<pre class="wp-block-code"><code>import Head from 'next/head';
+
+function ArticlePage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Titre de l'article",
+    "image": "url_de_l'image",
+    "author": {
+      "@type": "Person",
+      "name": "Nom de l'auteur"
+    },
+    "datePublished": "date_de_publication",
+    "articleBody": "Contenu de l'article"
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;Head&gt;
+        &lt;script type="application/ld+json"&gt;
+          {JSON.stringify(structuredData)}
+        &lt;/script&gt;
+      &lt;/Head&gt;
+      &lt;h1&gt;Titre de l'article&lt;/h1&gt;
+      &lt;p&gt;Contenu de l'article&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+<h3 class="wp-block-heading">Avantages des imports dynamiques</h3>
+
+<p>L’utilisation des imports dynamiques n’est pas systématique. Supposez que vous ayez un composant lourd qui n’est nécessaire que sous certaines conditions, votre formule de code se présentera ainsi :&nbsp;</p>
+
+<pre class="wp-block-code"><code>import dynamic from 'next/dynamic';
+
+const MonComposantLourd = dynamic(() =&gt; import('./MonComposantLourd'), {
+  loading: () =&gt; &lt;p&gt;Chargement...&lt;/p&gt;,
+  ssr: false
+});
+
+function MaPage() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Ma page&lt;/h1&gt;
+      &lt;MonComposantLourd /&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+<p>Ici,&nbsp;<code>MonComposantLourd</code>&nbsp;n’est chargé que côté client et uniquement lorsqu’il est nécessaire.</p>
+
+<h3 class="wp-block-heading">Rendu côté serveur avec "getServerSideProps"</h3>
+
+<p>Le rendu côté serveur sert à générer du contenu HTML côté serveur pour chaque requête. C’est une fonction utile pour les pages nécessitant des données en temps réel. Voici un exemple concret d’utilisation de getServerSideProps dans Next.js permettant de récupérer des données depuis une API :</p>
+
+<pre class="wp-block-code"><code>function MaPage({ data }) {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;{data.titre}&lt;/h1&gt;
+      &lt;p&gt;{data.description}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch('https://monapi.com/data');
+  const data = await res.json();
+
+  return {
+    props: {
+      data
+    }
+  };
+}</code></pre>
+
+<p>Pour chaque utilisateur qui parcourt la page, les données sont recueillies en instantanées depuis l’API.</p>
+
+<h2 class="wp-block-heading">Exemples pratiques</h2>
+
+<h3 class="wp-block-heading">Optimisation des images avec <code>next/image</code></h3>
+
+<p>L’optimisation des images est l’une des techniques clés pour booster la performance SEO, souvent couplée à d’autres leviers comme l'<a class="" href="https://agence-slashr.fr/blog/obfuscation-seo/">obfuscation SEO</a> afin d’optimiser à la fois la vitesse de chargement et la structure du maillage. Avec Next.js et son composant next/image vous avez en main un outil puissant d’optimisation d’image.  Taille, poids, format, etc. l’outil opère rapidement et efficacement.</p>
+
+<pre class="wp-block-code"><code>import Image from 'next/image';
+
+function MaPage() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Ma page avec une image optimisée&lt;/h1&gt;
+      &lt;Image 
+        src="/chemin/vers/mon/image.jpg" 
+        alt="Description de l'image" 
+        width={640} 
+        height={480} 
+      /&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+<h3 class="wp-block-heading">Gestion des routes et des liens avec <code>next/link</code></h3>
+
+<p>La structure des URLs et la navigation interne entre les liens est un aspect du SEO à ne pas négliger, tout comme l’organisation du contenu via un <a class="" href="https://agence-slashr.fr/blog/siloing-seo-comment-organiser-son-contenu-en-silo-facilement/">maillage interne intelligent</a> qui maximise la pertinence sémantique. Avec next/link, la gestion de la navigation entre les pages de votre application devient simple. Nul besoin de recharger la page entière.</p>
+
+<pre class="wp-block-code"><code>import Link from 'next/link';
+
+function Navbar() {
+  return (
+    &lt;nav&gt;
+      &lt;Link href="/"&gt;Accueil&lt;/Link&gt;
+      &lt;Link href="/a-propos"&gt;À propos&lt;/Link&gt;
+      &lt;Link href="/contact"&gt;Contact&lt;/Link&gt;
+    &lt;/nav&gt;
+  );
+}</code></pre>
+
+<h3 class="wp-block-heading">Utilisation des routes API pour créer des endpoints côté serveur</h3>
+
+<p>Next.js facilite la création d’endpoints API sans avoir recours à un serveur backend. Une solution appréciable pour gérer des tâches côté serveur.</p>
+
+<p>Exemple de création d’un endpoint qui renvoie à une liste d’articles :</p>
+
+<pre class="wp-block-code"><code>// pages/api/articles.js
+
+export default function handler(req, res) {
+  const articles = &#91;
+    { id: 1, title: 'Article 1' },
+    { id: 2, title: 'Article 2' },
+  ];
+
+  res.status(200).json(articles);
+}</code></pre>
+
+<p>Cet endpoint est accessible depuis n’importe quel client HTTP à l’URL /api/articles.</p>
+
+<p>Faites appel à Slashr, <a href="https://agence-slashr.fr/seo/">agence SEO basée à Lille</a> pour faire décoller le trafic de votre site next.js ! </p>
+
+<h2 class="wp-block-heading">Quel rendu est le meilleur pour le SEO avec Next.js ?</h2>
+
+<h3 class="wp-block-heading">Server-Side Rendering (SSR)</h3>
+
+<p>Le Server-Side Rendering est un langage de programmation qui indique que le contenu de la page est généré à chaque sollicitation du serveur. Lorsqu’un utilisateur arrive sur une page, le serveur active le code associé puis génère la version HTML. Reste ensuite à l’envoye au navigateur.</p>
+
+<p>Avantages pour l’optimisation SEO :</p>
+
+<ul class="wp-block-list">
+<li>Un contenu toujours actualisé.</li>
+
+<li>Un affichage rendu complet favorisant l’indexation.</li>
+</ul>
+
+<p>Utilisez le SSR avec Next.js lorsque :&nbsp;</p>
+
+<ul class="wp-block-list">
+<li>Le contenu change fréquemment.</li>
+
+<li>Les pages nécessitent des données en temps réel.</li>
+</ul>
+
+<h3 class="wp-block-heading">Static Site Generation (SSG)</h3>
+
+<p>Avec le programme Static Site Generation, le contenu est généré lors de la construction. Il se présente sous la forme d’un fichier statique qui s’affiche à chaque fois qu’un utilisateur accède à la page.&nbsp;</p>
+
+<p>Avantages pour le SEO :</p>
+
+<ul class="wp-block-list">
+<li>Une extrême rapidité.</li>
+
+<li>Une diminution du temps de chargement.</li>
+</ul>
+
+<p>Utilisez le SSG avec Next.js :&nbsp;</p>
+
+<ul class="wp-block-list">
+<li>Pour les sites ou les pages avec un contenu qui change peu.&nbsp;</li>
+
+<li>Pour les blogs, les portfolios et les sites d’entreprises.</li>
+</ul>
+
+<h3 class="wp-block-heading">Incremental Static Regeneration (ISR)</h3>
+
+<p>Specificité de Next.js, Incremental Static Regeneration est idéal pour bénéficier des avantages du SSG tout en régénérant des pages statiques déja produites.</p>
+
+<p>Avantages pour le SEO :</p>
+
+<ul class="wp-block-list">
+<li>Une combinaison vitesse du SSG/mise à jour en temps réel du SSR.</li>
+
+<li>Une mise à jour des pages obsolètes sans impact sur les utilisateurs.</li>
+</ul>
+
+<p>Utilisez l’ISR avec Next.js pour :</p>
+
+<ul class="wp-block-list">
+<li>Des pages statiques ayant besoin de mises à jour occasionnelles.</li>
+
+<li>Des articles de blog ajoutés régulièrement sur un site.</li>
+</ul>
+
+<h3 class="wp-block-heading">Client-Side Rendering (CSR)</h3>
+
+<p>Le client-Side Rendering laisse le navigateur analyser le Javascript avant de générer le contenu HTML. L’accès à la page génère une arborescence de la page, puis son contenu.</p>
+
+<p>Avantages pour le SEO :</p>
+
+<ul class="wp-block-list">
+<li>Idéal pour l’expérience utilisateur.</li>
+</ul>
+
+<p>Inconvénients pour le SEO :</p>
+
+<ul class="wp-block-list">
+<li>Affichage possible pour les moteurs de recherche d’une page vide, défavorable pour l’indexation.</li>
+
+<li>Nécessiter parfois d’ajout de configurations pour être SEO-friendly.</li>
+</ul>
+
+<p>Utilisez le CSR avec Next.js :</p>
+
+<ul class="wp-block-list">
+<li>Pour les parties interactives de votre application.</li>
+</ul>
+
+<figure class="wp-block-table"><table><thead><tr><th>Méthode de Rendu</th><th>Avantages</th><th>Inconvénients</th><th>Cas d'utilisation</th></tr></thead><tbody><tr><td>Server-Side Rendering (SSR)</td><td>- Toujours à jour.<br>- Excellent pour l'indexation.</td><td>- Plus lent que le SSG car le contenu est généré à chaque demande.</td><td>- Contenu qui change fréquemment.<br>- Données en temps réel.</td></tr><tr><td>Static Site Generation (SSG)</td><td>- Très rapide.<br>- Excellent pour l'indexation et l'expérience utilisateur.</td><td>- Pas idéal pour le contenu en temps réel.</td><td>- Sites ou pages avec un contenu stable.<br>- Blogs, portfolios.</td></tr><tr><td>Incremental Static Regeneration (ISR)</td><td>- Vitesse du SSG.<br>- Mises à jour en temps réel.</td><td>- Nécessite une configuration supplémentaire.</td><td>- Pages statiques nécessitant des mises à jour occasionnelles.</td></tr><tr><td>Client-Side Rendering (CSR)</td><td>- Idéal pour les applications web interactives.</td><td>- Risque d'indexation faible.<br>- Nécessite des configurations SEO supplémentaires.</td><td>- Parties interactives d'une application, comme un tableau de bord utilisateur.</td></tr></tbody></table></figure>

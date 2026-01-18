@@ -1,0 +1,94 @@
+---
+title: "Le paramètre ?srsltid= en SEO : Impact & recommandations"
+slug: "parametre-srsltid-seo"
+date: "2024-08-20 15:30:05"
+category: "SEO"
+author: "Benoit Demonchaux"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<h2 class="wp-block-heading">🧩 Le paramètre <code>srsltid</code> de Google : c’est quoi ce bazar dans vos URL ?</h2>
+
+<p>Depuis quelques mois, un truc bizarre s’est invité dans vos URLs Google :<br><code>?srsltid=xxxxxxxxxxxxxx</code></p>
+
+<p>Si vous bossez en SEO ou en e-commerce, vous l’avez sûrement croisé. Et peut-être que, comme nous, vous vous êtes dit :<br><strong>“C’est quoi ce paramètre ? C’est normal ? Et surtout, est-ce que ça flingue mon SEO ?”</strong></p>
+
+<p>Spoiler : non. Mais on va vous expliquer <strong>pourquoi il est là, ce qu’il fait, et ce qu’il faut surveiller.</strong></p>
+
+<h2 class="wp-block-heading">🧠 <code>srsltid</code> en bref : un paramètre de Google Merchant Center pour le suivi des conversions</h2>
+
+<ul class="wp-block-list">
+<li>💡 Ajouté automatiquement par <strong>Google Merchant Center</strong></li>
+
+<li>🎯 Objectif : <strong>suivre les conversions</strong> venant des fiches produits gratuites (Free Listings)</li>
+
+<li>📅 En place depuis <strong>février 2022</strong> sur les résultats Shopping</li>
+
+<li>⚠️ Depuis juillet 2024, il s’incruste aussi dans les résultats de recherche organiques</li>
+</ul>
+
+<blockquote class="wp-block-quote">
+<p>📌 Ce n’est pas un tag de suivi marketing classique. C’est un identifiant unique que Google colle dans vos URLs pour tracker le comportement post-clic.</p>
+</blockquote>
+
+<h2 class="wp-block-heading">🧪 Bug ou nouvelle feature SEO ?</h2>
+
+<p>C’est la grande question qu’on s’est tous posée cet été.<br>"Des URLs avec srsltid ont commencé à apparaître dans les résultats organiques — même pour des pages qui n’ont rien à voir avec Merchant Center : homepage, articles de blog, catégories… Un peu comme les <a class="" href="https://agence-slashr.fr/blog/filtres-a-facette/">URLs générées via certains filtres à facette</a>, elles peuvent devenir problématiques sans précautions."</p>
+
+<p>Résultat : branle-bas de combat côté SEO.</p>
+
+<p>Mais selon <strong>John Mueller</strong>, ce n’est <strong>ni un bug, ni une nouveauté</strong> : c’est juste une <strong>extension de la fonctionnalité d’auto-tagging</strong>, déjà active côté Shopping.</p>
+
+<h3 class="wp-block-heading">🧠 Ce que dit Google (traduction maison du post LinkedIn de John Mueller) :</h3>
+
+<blockquote class="wp-block-quote">
+<p>“Ces paramètres sont ajoutés pour le marquage automatique (auto-tagging) de Merchant Center.<br>Ils permettent de suivre les conversions.<br>Les URLs avec <code>srsltid</code> ne sont <strong>pas indexées ni explorées</strong> par Google, elles servent uniquement à l’analyse.”</p>
+</blockquote>
+
+<p>Il précise aussi :</p>
+
+<ul class="wp-block-list">
+<li>Ça <strong>n’impacte pas le crawl, ni l’indexation, ni le ranking</strong></li>
+
+<li>Si ça vous gêne, vous pouvez <strong>désactiver l’auto-tagging</strong></li>
+
+<li>Sinon, pensez à bien configurer vos <strong>balises <code>rel=canonical</code></strong> pour pointer vers la version propre de l’URL</li>
+</ul>
+
+<h2 class="wp-block-heading">⚠️ OK pour le SEO… mais galère en tracking</h2>
+
+<p>Le vrai souci, il est là :</p>
+
+<ul class="wp-block-list">
+<li>Vos pages se retrouvent avec des URLs alternatives</li>
+
+<li>Les outils d’analyse (et parfois vos redirections) <strong>peuvent péter un câble</strong></li>
+
+<li>Vos stats de positions ou de pages vues peuvent être fragmentées, comme lorsqu’un<a class="" href="https://agence-slashr.fr/blog/crawl-budget/"> crawl budget mal optimisé</a> disperse l’analyse sur trop de variantes d’URL.</li>
+</ul>
+
+<blockquote class="wp-block-quote">
+<p>🎯 <em>“Ce n’est pas dangereux pour le SEO, mais c’est relou pour l’analytics.”</em></p>
+</blockquote>
+
+<p>Et dans un monde où les <strong>signaux utilisateur (trafic, clics, comportement)</strong> ont de plus en plus de poids dans le ranking, ça soulève quand même une question : ➡️ <em>Est-ce que ce paramètre peut nuire à la consolidation de vos signaux ?</em></p>
+
+<p>Réponse : on ne sait pas encore.<br>Mais on vous conseille de <strong>garder un œil là-dessus</strong> dans les prochains mois.</p>
+
+<h2 class="wp-block-heading">✅ Nos recommandations SEO</h2>
+
+<p>Google dit que tout va bien ? Parfait.<br>Mais si vous voulez garder une stack propre et sans surprises, surtout si vous êtes accompagné par une <a class="" href="https://agence-slashr.fr/seo/prestations/ecommerce/">agence SEO e-commerce</a>, quelques bonnes pratiques s’imposent :</p>
+
+<ol class="wp-block-list">
+<li><strong>Mettez toujours une balise <code>canonical</code></strong> vers l’URL <strong>sans <code>?srsltid</code></strong></li>
+
+<li><strong>Testez vos redirections</strong> avec ce paramètre : certaines pages peuvent buguer</li>
+
+<li>Surveillez votre <strong>trafic par URL exacte</strong> dans GA / GSC : éclatement possible</li>
+
+<li>Si vous ne suivez pas les conversions Merchant Center ➝ <strong>désactivez l’auto-tagging</strong></li>
+</ol>
+
+<h2 class="wp-block-heading">🧾 En résumé</h2>
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>🔍 Ce que c’est</th><th>Un paramètre de suivi Merchant Center (<code>auto-tagging</code>)</th></tr></thead><tbody><tr><td>❌ Impact SEO</td><td>Aucun (pas crawlé, pas indexé, pas classé)</td></tr><tr><td>🧨 Impact analytics</td><td>Possibles effets de bord sur les stats et les redirections</td></tr><tr><td>✅ Ce qu’il faut faire</td><td>Canonical propre + suivi régulier </td></tr></tbody></table></figure>

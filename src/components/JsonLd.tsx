@@ -58,8 +58,8 @@ interface ArticleSchemaProps {
 
 export function OrganizationSchema({
   name = "SLASHR",
-  url = "https://slashr.fr",
-  logo = "https://slashr.fr/logo.png",
+  url = "https://agence-slashr.fr",
+  logo = "https://agence-slashr.fr/logo.png",
   description = "Agence SEO & Search Marketing à Lille. L'agence des marques qui veulent gagner la bataille de l'attention.",
   address = {
     streetAddress: "165 Av. de Bretagne, Place de Saintignon, Bâtiment Lafont",
@@ -103,8 +103,8 @@ export function OrganizationSchema({
 
 export function LocalBusinessSchema({
   name = "SLASHR - Agence SEO Lille",
-  url = "https://slashr.fr",
-  logo = "https://slashr.fr/logo.png",
+  url = "https://agence-slashr.fr",
+  logo = "https://agence-slashr.fr/logo.png",
   description = "Agence SEO & Search Marketing à Lille. Référencement naturel, SEA, GEO et accompagnement digital pour les marques ambitieuses.",
   address = {
     streetAddress: "165 Av. de Bretagne, Place de Saintignon, Bâtiment Lafont, Euratechnologies",
@@ -268,7 +268,7 @@ export function ArticleSchema({
   author,
   publisher = {
     name: "SLASHR",
-    logo: "https://slashr.fr/logo.png",
+    logo: "https://agence-slashr.fr/logo.png",
   },
 }: ArticleSchemaProps) {
   const schema = {

@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/webp', 'image/avif'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'agence-slashr.fr',
+        pathname: '/wp-content/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'wp.agence-slashr.fr',
         pathname: '/wp-content/uploads/**',
       },
     ],
@@ -20,6 +25,8 @@ const nextConfig = {
   experimental: {
     // Optimise le packaging des modules côté serveur
     optimizePackageImports: ['geist'],
+    // Inline le CSS critique pour éviter les chaînes de requêtes
+    optimizeCss: true,
   },
 
   // Optimisation du bundling
@@ -28,6 +35,17 @@ const nextConfig = {
     'geist': {
       transform: 'geist/{{member}}',
     },
+  },
+
+  // Rewrites pour garder les anciennes URLs d'images WordPress
+  async rewrites() {
+    return [
+      // Rediriger les anciennes URLs WordPress vers les images locales
+      {
+        source: '/wp-content/uploads/:path*',
+        destination: '/blog/images/:path*',
+      },
+    ];
   },
 
   // Headers de sécurité et cache

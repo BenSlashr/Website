@@ -1,0 +1,182 @@
+---
+title: "Désindexer des url : Guide complet pour une désindexation efficace"
+slug: "comment-desindexer-url"
+date: "2023-08-21 08:25:36"
+category: "SEO"
+author: "Clément Poletti"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<p>Le contrôle des contenus indexés est primordial pour le bon référencement de votre site. Pourquoi et comment désindexer certaines url peut-il améliorer la visibilité de ce dernier ? Avant de nous plonger dans les méthodes, commençons par comprendre un élément essentiel : c'est quoi l'URL d'un site ?&nbsp;</p>
+
+<h2 class="wp-block-heading">C'est quoi l'URL d'un site ?</h2>
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+https://www.youtube.com/watch?v=h223mCgbmf4
+</div></figure>
+
+<p>L’<strong>url</strong> (<strong>Uniform Resource Locator</strong>) représente l’adresse d’une page d’un site web. Elle permet de localiser une page parmi toutes les autres présentes sur internet.&nbsp;</p>
+
+<p>Elle est composée de cinq composants essentiels :</p>
+
+<ul class="wp-block-list">
+<li>Le <strong>protocole</strong> : la façon dont les utilisateurs peuvent accéder aux pages de votre site internet est décrite dans le protocole. Les plus courants sont https, http et ftp.<br></li>
+
+<li>Le <strong>sous-domaine</strong> indique quelle section particulière de votre site doit être affichée.<br></li>
+
+<li>Le <strong>nom de domaine</strong> principal de votre site Web permet aux visiteurs de savoir de quoi il parle. Sur notre site, il s'agit de slashr.fr.<br></li>
+
+<li>Le <strong>répertoire</strong> indique la section particulière du site sur laquelle se trouve l'utilisateur. Il est sous la forme "/répertoire".<br></li>
+</ul>
+
+<p>&nbsp;Votre visibilité sur Internet dépend de votre url. Elle permet aux moteurs de recherche d'identifier très précisément le contenu d'une page internet.</p>
+
+<p>Pour y parvenir, il est <strong>nécessaire d'intégrer les informations spécifiques à une page</strong>, notamment ses mots clés, <strong>à l'url</strong>.</p>
+
+<p>Si l'on considère que l'url est l'adresse de la maison, l'extension donne directement accès à la pièce de la maison.</p>
+
+<p>Besoin d'aide pour désindexer des pages en masse ? Faites appel à une <a href="https://agence-slashr.fr/seo/prestations/seo-technique/">agence de référencement naturel technique</a> comme Slashr.</p>
+
+<h2 class="wp-block-heading">Pourquoi est-il important de désindexer ?</h2>
+
+<p>Parfois, du contenu confidentiel est indexé à votre insu depuis votre site ou même le site d’un de vos partenaires. Dans ce cas, <strong>il est préférable de retirer de l’index ces contenus indésirables</strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>La suppression de l'index est une technique SEO qui consiste à retirer des pages d'un site web de l'index des moteurs de recherche.</p>
+
+<p>Elle optimise l'expérience utilisateur en empêchant le contenu de faible qualité d'apparaître dans les résultats de recherche.&nbsp;</p>
+
+<p>Cet algorithme pénalise les sites qui ont des pages sans valeur. Les contenus de mauvaise qualité sont souvent la cause.</p>
+
+<p>Parmi les <strong>pages indésirables les plus souvent indexées</strong>, on retrouve le plus souvent :</p>
+
+<ul class="wp-block-list">
+<li>Les pages de <strong>résultats internes</strong><br></li>
+
+<li>Les <strong>pages dupliquées</strong><br></li>
+
+<li>Les <strong>contenus obsolètes</strong></li>
+
+<li></li>
+</ul>
+
+<p>Vous souhaitez au contraire bien vous positionner ? Découvrez notre article sur le <a href="https://agence-slashr.fr/blog/positionnement-moteurs-recherche/">positionnement Google</a>.</p>
+
+<h2 class="wp-block-heading">Méthodes de désindexation</h2>
+
+<h3 class="wp-block-heading">Utilisation de la balise "noindex"</h3>
+
+<p>Il existe deux méthodes pour utiliser la règle noindex :</p>
+
+<ul class="wp-block-list">
+<li>La balise &lt;meta&gt;.<br></li>
+
+<li>La réponse HTTP.<br></li>
+</ul>
+
+<p>Vous pouvez également utiliser “<strong>noindex</strong>” avec d'autres règles. Par exemple, vous pouvez connecter un indicateur nofollow à une règle noindex afin de bloquer le crawl :</p>
+
+<p>&lt;meta charset="utf-8" content="noindex, nofollow"/&gt;</p>
+
+<p>Placez la balise suivante <strong>dans la section &lt;head&gt;</strong> pour empêcher l'indexation d'une page par tous les moteurs de recherche :</p>
+
+<p>&lt;meta charset="utf-8" content="noindex"&gt;</p>
+
+<p>Utilisez la balise ci-dessous pour <strong>bloquer uniquement les robots Google</strong> :</p>
+
+<p>&lt;!-meta name="googlebot" content="noindex"--&gt;</p>
+
+<p>Il est important de comprendre que certains moteurs de recherche peuvent interpréter différemment la règle <strong>noindex</strong>. Par conséquent, votre page sera toujours présente dans leurs résultats.</p>
+
+<h3 class="wp-block-heading">Désindexer avec l'en-tête HTTP</h3>
+
+<p>L'en-tête HTTP X-Robots-Tag avec une valeur “noindex” ou “none” peut être utilisé à la place d'une <strong>balise &lt;meta&gt; pour empêcher l'indexation des ressources non HTML</strong> comme les fichiers PDF, vidéo et image.&nbsp;</p>
+
+<p>Pour y parvenir, veuillez intégrer ce code dans le fichier .htaccess à la racine du site :</p>
+
+<p>HTTP/1.1 200 OK</p>
+
+<p>(...)</p>
+
+<p>X-Robots-Tag: noindex</p>
+
+<p>(...)</p>
+
+<p>Les pages web ne sont pas désindexées immédiatement après leur suppression.&nbsp;</p>
+
+<p>Utilisez les codes 404 ou 410 pour confirmer la suppression à Google de son index. Utilisez la <strong>balise canonical pour éviter les sanctions pour du contenu dupliqué</strong>.&nbsp;</p>
+
+<p>Chaque page dupliquée contient une balise dans la section &lt;head&gt; qui indique à Google de ne considérer que la page principale, dont l'url est indiquée dans la balise.</p>
+
+<h3 class="wp-block-heading">Désindexer via le Robots.txt</h3>
+
+<p>Afin d’optimiser au mieux son <a href="https://agence-slashr.fr/blog/crawl-budget/">budget de crawl</a>, <a href="https://agence-slashr.fr/blog/comment-gerer-robots-txt-seo/">un fichier robots.txt</a> dirige les robots de recherche des moteurs de recherche vers les url accessibles de votre site. Vous pouvez les diriger grâce à la fonction <strong>allow</strong> et <strong>disallow</strong>.</p>
+
+<p>Cependant, il ne sert pas à empêcher une page Web d'apparaître dans les résultats de recherche Google. En effet, il va avant tout empêcher les robots d’indexation de <a href="https://agence-slashr.fr/blog/comprendre-processus-crawling/">crawler</a> certaines pages, mais si ces dernières ont été indexées au préalable et que vous recourez à cette méthode, elles ne seront pas désindexées du moment que les robots ne verront pas le “noindex” dans le code source des pages.</p>
+
+<p>Si vous avez commis cette erreur, veuillez suivre les étapes suivantes&nbsp;:</p>
+
+<ol class="wp-block-list">
+<li>Ajustez votre robots.txt afin qu’il allow la page en question</li>
+
+<li>Attendez que la page soit désindexée</li>
+
+<li>Remettez en place le disallow</li>
+</ol>
+
+<p><strong>&nbsp;</strong>II a en revanche certaines limites.&nbsp; Cela <strong>ne fonctionne pas avec tous les moteurs de recherche</strong>. Tous les robots d'exploration ne respectent pas les instructions. Si une page est référencée ailleurs, elle peut également y être indexée.</p>
+
+<h2 class="wp-block-heading">Désindexer rapidement une page sur Google&nbsp;</h2>
+
+<h3 class="wp-block-heading">Utilisation de Google SafeSearch</h3>
+
+<p>Les propriétaires de sites Web peuvent gérer temporairement l'apparition de leurs url dans les résultats de recherche Google avec l'outil de suppression Google SafeSearch, accessible via la Search Console.&nbsp;</p>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2023/08/Desindexer-url-1024x267.png" alt="Désindexer une url avec la Search console" class="wp-image-5758"/></figure>
+
+<p><a href="https://search.google.com/search-console/removals?utm_medium=referral&amp;amp;utm_campaign=1663419">L’outil de Google</a> permet notamment de bloquer temporairement des url particulières et de vérifier l'historique des demandes de suppression.</p>
+
+<p>Il est utile afin de <strong>supprimer rapidement une url</strong> de l'index de Google ou <strong>mettre à jour les résultats </strong>lorsque le contenu a été modifié. Il ne garantit malheureusement pas la suppression définitive de l'url ou du contenu.</p>
+
+<p>Il est par ailleurs possible de supprimer du contenu de votre site et de vous assurer que votre serveur web affiche un <strong>code d'état HTTP 404</strong> (Introuvable) <strong>ou 410</strong> (Déplacé) pour désindexer une url de manière permanente.</p>
+
+<h3 class="wp-block-heading">Comment pousser Google à re-crawler une page?</h3>
+
+<p>Il existe deux méthodes adéquates pour accélérer la désindexation de vos url sur Google :</p>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2023/08/Verifier-url-idexee-1024x612.png" alt="Vérifier l'indexation d'une url avec la Google Search Console" class="wp-image-5759"/></figure>
+
+<ul class="wp-block-list">
+<li><a href="https://search.google.com/search-console?action=inspect&amp;utm_medium=referral&amp;utm_campaign=9012289">Utilisez l'outil d'inspection des url de Google Search Console</a> pour <strong>examiner les url spécifiques</strong>. Notez que les demandes répétées n'accélèrent pas le processus et que vous êtes limité à un certain quota pour l'envoi d'url individuelles.<br></li>
+
+<li>Utilisez un <strong>sitemap pour un grand nombre d'url</strong>. Il aide Google à trouver les url qui doivent être désindexées.<br></li>
+</ul>
+
+<p>Cependant, ces demandes ne vous garantissent pas une désindexation instantanée. En effet, ça peut prendre plusieurs jours ou semaines. Néanmoins, par rapport à l'attente passive du crawler de Google, ces techniques peuvent accélérer le processus de désindexation.</p>
+
+<h2 class="wp-block-heading">Comment éviter et corriger les erreurs courantes de désindexation</h2>
+
+<h3 class="wp-block-heading">Précautions à prendre lors de la désindexation d'une url</h3>
+
+<p>Avant de procéder à la désindexation d'une url sur votre site, il est essentiel de peser les conséquences. En effet, assurez-vous que la page n'a pas de valeur pour le référencement SEO ou de liens de qualité.&nbsp;</p>
+
+<p>Lors de l'utilisation de la balise "noindex", <strong>vérifiez que votre fichier robots.txt ne bloque pas l'accès aux pages concernées</strong>.&nbsp;</p>
+
+<p>De plus, soyez conscient que la désindexation n'est pas immédiate, cela peut prendre un certain temps avant que les robots visitent votre site.&nbsp;</p>
+
+<p>Si vous utilisez l'en-tête HTTP X-Robots-Tag pour désindexer des fichiers sans code source, faites-le avec prudence, car une mauvaise manipulation peut causer de gros problèmes d’indexation sur votre site.</p>
+
+<h3 class="wp-block-heading"><strong>Exemples d'erreurs courantes et comment les corriger</strong></h3>
+
+<ul class="wp-block-list">
+<li><strong>Désindexation involontaire</strong> : Parfois, une page peut être désindexée par erreur. Pour corriger cela, assurez-vous d’avoir bien respecté les informations précédentes.<br></li>
+
+<li>Utiliser <strong>robots.txt pour désindexer n’est pas possible</strong>, car il empêche seulement le crawl.<br></li>
+</ul>
+
+<p>-&gt; Découvrez Slashr, la <a href="https://agence-slashr.fr/seo/">meilleure agence SEO sur Lille</a> ! </p>
+
+<h3 class="wp-block-heading"><strong>Comment Vérifier la Désindexation d'une url?</strong></h3>
+
+<p>Pour vérifier si une url a bien été désindexée, vous pouvez utiliser Google Search Console. Une fois dedans, utilisez l'outil d'inspection des url pour examiner l'url spécifique. Cela vous montrera si l'url est sur l'index Google.&nbsp;</p>
+
+<p>Il vous est également possible d’effectuer une recherche sur Google en utilisant la requête "site:monsite.fr/ma-page". <strong>Si la page n'apparaît pas dans les résultats, c’est qu’elle a bien été désindexée</strong>.</p>

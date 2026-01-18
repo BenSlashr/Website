@@ -7,28 +7,28 @@ const Testimonials = () => {
       name: 'Antoine Thomas',
       role: 'Responsable SEO',
       company: 'Carter Cash',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2023/11/antoine-thomas-300x300.webp',
+      image: '/blog/images/2023/11/antoine-thomas-300x300.webp',
     },
     {
       quote: "Je recommande fortement Anthony. Il a accompagné des startups en SEO (super expertise, dixit une entrepreneuse déjà bien calée) et en positionnement de marque ! Excellent relationnel, expertise au top, qualité de suivi, je n'ai que des retours positifs !",
       name: 'Soizic Chevillotte',
       role: 'Retail & Ecommerce Program Manager',
       company: 'Euratechnologies',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2023/11/soizic-300x300.webp',
+      image: '/blog/images/2023/11/soizic-300x300.webp',
     },
     {
       quote: "Excellente agence que je recommande les yeux fermés. Equipe très très pro, réactive et à l'écoute. C'est précieux de trouver de telles valeurs...",
       name: 'Morgane Tardivel',
       role: 'Fondatrice',
       company: 'Les Petites Billes',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2023/11/morgane-lpb.png',
+      image: '/blog/images/2023/11/morgane-lpb.png',
     },
     {
       quote: "J'ai fait appel à SLASHR pour m'épauler sur le développement de Vestiaire collective US... Une expertise sur le conseil et l'exécution SEO que je recommande à toutes les entreprises ambitieuses.",
       name: 'Jean-Éric Blas-Châtelain',
       role: 'Principal Engineer Buyer Experience (SEO and acquisition)',
       company: 'Vestiaire Collective',
-      image: 'https://agence-slashr.fr/wp-content/uploads/2023/11/vestiaire-collective-jean-eric-blas-chatelain.webp',
+      image: '/blog/images/2023/11/vestiaire-collective-jean-eric-blas-chatelain.webp',
     },
   ];
 

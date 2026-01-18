@@ -3,7 +3,7 @@
  * Uses embeddings to find semantically similar content
  */
 
-import { Article } from './wordpress';
+import { Article } from './mdx';
 import { Prestation, prestationsData } from './prestationsWP';
 
 // Types

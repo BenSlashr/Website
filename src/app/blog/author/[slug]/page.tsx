@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAuthorBySlug, getAllAuthorSlugs } from '@/lib/authors';
-import { getArticlesByAuthorFromWP } from '@/lib/wordpress';
+import { getArticlesByAuthorFromWP } from '@/lib/mdx';
 import CTA from '@/components/CTA';
 import Newsletter from '@/components/Newsletter';
 

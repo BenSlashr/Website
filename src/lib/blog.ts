@@ -4,7 +4,7 @@ import {
   getAllSlugsFromWP,
   getCategoriesFromWP,
   Article,
-} from './wordpress';
+} from './mdx';
 
 // Re-export du type Article
 export type { Article };

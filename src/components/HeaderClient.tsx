@@ -121,7 +121,7 @@ const HeaderClient = ({ expertises, aboutPages }: HeaderClientProps) => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="https://agence-slashr.fr/wp-content/uploads/2024/03/LOGO-SLASHR-NOIR.png"
+              src="/blog/images/2024/03/LOGO-SLASHR-NOIR.png"
               alt="SLASHR"
               width={300}
               height={96}

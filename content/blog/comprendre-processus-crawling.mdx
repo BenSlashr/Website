@@ -1,0 +1,158 @@
+---
+title: "comprendre-processus-crawling"
+slug: "comprendre-processus-crawling"
+date: "2023-06-26 15:21:57"
+category: "SEO"
+author: "Clément Poletti"
+authorAvatar: "/blog/images/2024/03/benoit-demonchaux-smx.jpeg"
+---
+
+<p>Vous vous êtes certainement déjà demandé comment les moteurs de recherche comme Google arrivent à classer les pages sur internet et ce peu importe la requête de base. Dans cet article, nous allons découvrir le principe de crawling, son importance, comment il fonctionne et son impact sur le SEO.</p>
+
+<h2 class="wp-block-heading">Définition et importance du crawling dans les moteurs de recherche</h2>
+
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+https://www.youtube.com/watch?v=Md7K90FfJhg
+</div><figcaption class="wp-element-caption">Petit vidéo explicative de Matt Cutts qui nous explique comment le crawling fonctionne chez Google.</figcaption></figure>
+
+<h3 class="wp-block-heading">Qu'est-ce que le crawling ?</h3>
+
+<p>Commençons directement dans le vif du sujet, le crawling est un processus automatisé qui est réalisé par des algorithmes appelés robots d’indexation ou spiders.&nbsp;</p>
+
+<p>Ces fameux robots ont pour but de parcourir le Web en suivant des liens d’une page à une autre tout en collectant des données sur ces mêmes pages dans le but d’enrichir la base de données des moteurs de recherche. Il sont aujourd’hui très performants comme par exemple celui de Google qui a pu explorer plus de 130 milliards de pages. On comprend maintenant l’ampleur du travail à effectuer étant donné que 800 000 sites sont créés par jour.</p>
+
+<h3 class="wp-block-heading">Pourquoi le crawling est essentiel pour les moteurs de recherche</h3>
+
+<p>Le crawling est évidemment essentiel pour les moteurs de recherche étant donné qu’il permet de découvrir de nouvelles pages web et de les indexer. Cette pratique est primordiale afin de les rendre accessibles aux utilisateurs lorsqu’ils effectuent une requête.</p>
+
+<p>De plus, cette pratique permet aux moteurs de recherche de mettre à jour constamment leur proposition de pages.&nbsp;</p>
+
+<h2 class="wp-block-heading">Le processus de crawling expliqué</h2>
+
+<h3 class="wp-block-heading">Comment les moteurs de recherche utilisent le crawling pour extraire et évaluer les mots</h3>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2023/06/schema-processus-crawl-1024x731.png" alt="Etapes du processu de crawling avant l'indexation de Google" class="wp-image-5633"/></figure>
+
+<p>Comme vous avez pu le comprendre, les moteurs de recherche font appel à des robots d’indexation afin de parcourir le Web et découvrir de nouvelles pages. Les liens visités par ces robots sont explorés à partir de sitemaps et de sites web qui ont été visités lors de crawls précédents. Pour expliquer le schéma ci-dessus, nous allons voir comment Google explore, traite et indexe les pages:</p>
+
+<ol class="wp-block-list">
+<li>Exploration : Tout d’abord, Google va découvrir une URL (cette découverte peut également être motivée directement par l’utilisateur lui-même). Il va ensuite l’ajouter à sa liste&nbsp; d’attente d’URL à crawler. Googlebot va alors soumettre des requêtes GET à un serveur pour toutes les URL qui se trouvent dans cette file d’attente d’exploration et va enregistrer le contenu de la réponse. Il réalise cette action pour le HTML, le JavaScript, le CSS, les fichiers images, etc.</li>
+
+<li>Traitement : Cette étape concerne tout d’abord l’ajout de nouvelles URL à la liste d’attente et qui proviennent des liens &lt;a href&gt; qui ont été trouvées dans le code HTML de la page explorée. Cela inclut aussi bien les URL de ressources (CSS et JavaScript) trouvées au sein des balises &lt;link&gt; et les images qui sont quant à elles trouvées dans les balises &lt;img src&gt;. Cependant, si le robot d’exploration tombe sur une balise &lt;noindex&gt; en cours de route, il va stopper son processus, il n’affichera alors pas le contenu et ne l’indexera pas.</li>
+
+<li>Rendu : Pour ce qui est du rendu, Googlebot va exécuter du code <em><a href="https://agence-slashr.fr/blog/javascript-et-seo-bonnes-pratiques-et-erreurs-a-eviter/">JavaScript</a></em>  avec un navigateur Chromium sans header afin de mettre le doigt sur tout éventuel contenu dans le DOM (Document Object Model), mais pas spécialement la source HTML. Il le fait tout de même pour toutes les URL HTML.</li>
+
+<li>Indexation : Caffeine, l’indexeur de Google utilise les informations de Googlebot, les normalise, tente d’y donner un sens en précalculant certains éléments de classement qui sont prêts à être diffusés dans les résultats de recherche.</li>
+</ol>
+
+<h3 class="wp-block-heading">Le processus d'extraction des mots sur une page web</h3>
+
+<p>L’extraction de mots est une étape capitale dans le processus de crawl de sites Web. En effet, les robots d’indexation parcourent le code HTML de la page visitée dans le but d’extraire des mots pour les indexer. Cependant, même pour les robots de Google, il est impossible de traiter certaines données comme le JavaScript ou encore les images à cause du manque de puissance de traitement nécessaire.</p>
+
+<p>Les mots qui ont été extraits sont alors évalués pour être indexés en fonction de leur pertinence par rapport à la requête réalisée par l’utilisateur. Les mots-clés les plus pertinents sont alors privilégiés dans le processus <a href="https://agence-slashr.fr/blog/ameliorer-indexation-site/">d’indexation</a>. Ce dernier consiste à stocker, analyser et organiser le contenu présent dans les pages. Une page comportant des informations pertinentes sera par conséquent mieux classée que les autres.</p>
+
+<p>Tout cela vous semble compliqué ? Faites appel à une <a href="https://agence-slashr.fr/seo/">agence SEO</a> comme Slashr !</p>
+
+<h2 class="wp-block-heading">L'impact du Crawling sur le SEO</h2>
+
+<h3 class="wp-block-heading">Comment le crawling affecte le classement des moteurs de recherche</h3>
+
+<p>Le crawling a un fort impact pour le SEO. En effet, le crawl est l’étape qui va déterminer quelles pages vont être indexées. Une des principales limites des crawlers est leur “manque de rapidité” face à toutes les pages qui sont créées en permanence. Ces derniers vont alors éviter de perdre du temps pour les pages qui ne sont pas valables pour répondre à des requêtes. L’objectif est plutôt de se consacrer aux pages pertinentes. En outre, toutes les pages chargées d’erreurs et pouvant porter atteinte à certains critères socio-géographiques. Par exemple, pour la requête “Tian An'men”, les informations ne seront pas traitées de la même manière si elle est faite sur Google ou Baidu qui est un moteur de recherche principalement utilisé en Chine.</p>
+
+<h3 class="wp-block-heading">Les backlinks de haute qualité et leur rôle dans le crawling</h3>
+
+<p>N’oublions pas le rôle que jouent les liens dans le processus de crawlings. En effet, comme énoncé précédemment, les robots se baladent de lien en lien afin de découvrir des pages. Par conséquent, plus ils sont de qualité et plus il sera probable que les pages en question soient indexées.</p>
+
+<h3 class="wp-block-heading">Les outils de crawl pour le SEO</h3>
+
+<p>Le crawl peut également être mise en place à la suite d’une initiative humaine dans le cadre du référencement SEO. Il est courant pour un consultant d’utiliser des outils de crawl comme <a href="https://agence-slashr.fr/blog/screaming-frog-guide-complet-pour-optimiser-votre-seo/">Screaming Frog</a> qui en est le leader. Ces derniers permettent d’identifier les facteurs qui peuvent impacter le référencement d’un site.</p>
+
+<h2 class="wp-block-heading">Gérer le budget Crawl pour optimiser le SEO</h2>
+
+<p>Comme vous avez certainement pu le comprendre, pour les moteurs de recherche comme Google, crawler un site demande beaucoup de ressources et ces dernières ne sont pas illimitées. Nous comptons la limite allouée au crawl d’un site en termes de temps. On appelle ça le <a href="https://agence-slashr.fr/blog/crawl-budget/">budget de crawl</a>. Il est donc primordial de gérer efficacement ce budget pour que les robots puissent explorer le plus de pages possible.</p>
+
+<h3 class="wp-block-heading">Comment gérer efficacement votre budget crawl</h3>
+
+<ol class="wp-block-list">
+<li>Comprendre le processus de Crawling (cf. parties précédentes)</li>
+
+<li>Optimiser le maillage interne : il s’agit de la manière dont les pages d’un même site sont liées entre elles.</li>
+
+<li>Éviter le contenu dupliqué: Dupliquer son contenu revient à faire analyser la même chose aux robots et ça impacte fortement le budget de crawl. Par exemple, les balises canoniques pour ne montrer qu’une version d’une page aux robots ou encore, pensez à désindexer les pages à faible potentiel d’acquisition comme les mentions légales, les CGV, etc.</li>
+</ol>
+
+<p>La performance d’un site est primordiale dans le cadre d’un crawl par les robots d’exploration. En effet, plus le site est performant, plus il sera rapide et par conséquent, plus le nombre de pages visitées sera conséquent.</p>
+
+<p>Même si nous n’avons pas l’emprise sur le budget de crawl alloué à notre site, ni même quelles pages vont être visitées (on peut tout de même l’orienter avec le <a href="https://agence-slashr.fr/blog/comment-gerer-robots-txt-seo/">robots.txt</a> le <a href="https://agence-slashr.fr/blog/maillage-interne-seo/">maillage interne</a>, etc.), il est possible de l’optimiser via plusieurs techniques. Tout d’abord, il vous est possible de réaliser au préalable un crawl prédictif de votre site avec Screaming Frog par exemple afin de pouvoir venir modifier tous les éventuels problèmes qui pourraient nuire au budget de crawl. </p>
+
+<!-- wp:generateblocks/container {"uniqueId":"f0efd32f","backgroundColor":"var(\\u002d\\u002dbase-2)","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"15px","paddingRight":"15px","paddingBottom":"15px","paddingLeft":"15px"},"paddingSyncUnits":true,"borders":{"borderLeftWidth":"0px","borderLeftStyle":"solid","borderTopRightRadius":"12px","borderBottomRightRadius":"12px","borderBottomLeftRadius":"12px","borderTopLeftRadius":"12px"}} -->
+
+<p><strong>Anecdote de l'équipe : la parte de budget crawl via bot trap</strong></p>
+
+<p>Une des pertes de budget crawl les plus fréquentes est le bot trap généré par la navigation à facette. Il arrive que cette dernière génère des liens qui peuvent être suivi par google vers des pages avec paramètres, qui peuvent se cumuler. De cette façon : </p>
+
+<ul>
+
+<li>Exemple.fr/t-shirt?bleu</li>
+
+<li>Exemple.fr/t-shirt?bleu&amp;vert</li>
+
+<li>Exemple.fr/t-shirt?bleu&amp;vert&amp;tailleS</li>
+
+<li>Exemple.fr/t-shirt?bleu&amp;vert&amp;tailleS&amp;tailleM</li>
+
+<li>etc</li>
+
+</ul>
+
+<p>On peut au final arriver à des dizaines voir des centaines de paramètres qui s'enchainement, à multiplier par le nombre de pages listing et se retrouver avec des millions de pages parasites.</p>
+
+<p></p>
+
+<p>Une autre méthode, qui reste tout de même plutôt laborieuse, est de réaliser une analyse de logs et d’identifier quelles pages ont un trop faible ratio entre le nombre de visites par des utilisateurs et le nombre de visites par les robots d’exploration. Une fois que ces pages ont été identifiées, il suffit d’utiliser une des nombreuses méthodes pour cacher les liens à Google comme par exemple les d’obfusquer afin que la priorité soit donnée aux autres pages.</p>
+
+<p>Besoin d'aide pour votre référencement naturel ? Faites appel à <a href="https://agence-slashr.fr/seo/">agence de référencement Google à Lille</a>.</p>
+
+<h2 class="wp-block-heading">Suivre les statistiques des crawls de Google via la Search Console</h2>
+
+<figure class="wp-block-image size-large"><img src="/blog/images/2023/06/crawling-search-console-e1687265110341-747x1024.png" alt="Rapport d'exploration des robots d'indexation sur la search console" class="wp-image-5632"/></figure>
+
+<p>Afin de suivre et analyser les crawls réalisés par les robots de Google, rendez-vous sur la search console et cliquez sur paramètres, puis sur statistiques sur l’exploration et enfin sur ouvrir le rapport. Parmis toutes les données que vous pourrez trouver, il y en a 3 principaux qui sont:</p>
+
+<h3 class="wp-block-heading">Le graphique des tendances d’exploration</h3>
+
+<p>Il est composé de 3 métriques qui sont:</p>
+
+<ul class="wp-block-list">
+<li>Le total de nombre d’exploration,&nbsp;</li>
+
+<li>La taille de téléchargement et enfin&nbsp;</li>
+
+<li>Le temps de réponse moyen. Il faut ici vérifier s’il y a des pics significatifs ou des baisses afin de voir s’il y a un problème ou non avec le site ou son hébergement. Comme vous pouvez le constater sur l’image ci-dessus, il y a quelques pics sur le site qui sont dûs à de fortes influences ponctuelles ou un éventuel problème au niveau de l’hébergeur. Il est important de noter qu’il est préférable de conserver un temps de réponse moyen inférieur à 500… contrairement à notre exemple.</li>
+</ul>
+
+<h3 class="wp-block-heading">Les détails de l’état de l’hôte</h3>
+
+<p>Cette métrique permet quant à elle de vérifier aisément la disponibilité générale du site au cours des 90 derniers jours. Elle est également composée de trois éléments qui sont:</p>
+
+<ul class="wp-block-list">
+<li>L’exploration par le robots.txt: il n’est pas obligatoire d’avoir un fichier robots.txt sur son site mais il est primordial de renvoyer un code de réponse valable comme le 200 ou le 404 en cas de recherche de ce dernier. Par exemple, s’il tombe sur une 503, il arrêtera directement de crawler le site.</li>
+
+<li>La résolution DNS</li>
+
+<li>La connectivité du serveur qui indique si le serveur n’a pas fourni la réponse complète ou s’il n’a tout simplement pas répondu. Si vous consultez des problèmes réguliers ou des pics, n’hésitez pas à contacter directement votre hébergeur.</li>
+</ul>
+
+<h3 class="wp-block-heading">La répartition des demandes d’exploration</h3>
+
+<p>Enfin, il permet de comprendre ce que les robots d’exploration de Google ont pu trouver sur le site. Elle est composée de 4 élément:</p>
+
+<ul class="wp-block-list">
+<li>Réponse</li>
+
+<li>Type de fichier</li>
+
+<li>Objectif</li>
+
+<li>Type de Googlebot</li>
+</ul>

@@ -150,10 +150,10 @@ export default async function ArticlePage({ params }: Props) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": `https://slashr.fr/blog/${slug}#article`,
+    "@id": `https://agence-slashr.fr/blog/${slug}#article`,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://slashr.fr/blog/${slug}`,
+      "@id": `https://agence-slashr.fr/blog/${slug}`,
     },
     headline: article.title,
     description: article.excerpt || article.metaDescription,
@@ -166,7 +166,7 @@ export default async function ArticlePage({ params }: Props) {
         }
       : {
           "@type": "ImageObject",
-          url: "https://slashr.fr/og-default.jpg",
+          url: "https://agence-slashr.fr/og-default.jpg",
           width: 1200,
           height: 630,
         },
@@ -174,8 +174,8 @@ export default async function ArticlePage({ params }: Props) {
       "@type": "Person",
       name: article.author,
       url: authorSlug
-        ? `https://slashr.fr/blog/author/${authorSlug}`
-        : "https://slashr.fr/qui-sommes-nous",
+        ? `https://agence-slashr.fr/blog/author/${authorSlug}`
+        : "https://agence-slashr.fr/qui-sommes-nous",
       image: authorInfo?.image,
       jobTitle: authorInfo?.role,
       worksFor: {
@@ -188,12 +188,12 @@ export default async function ArticlePage({ params }: Props) {
     dateModified: article.updatedAt || article.publishedAt,
     publisher: {
       "@type": "Organization",
-      "@id": "https://slashr.fr/#organization",
+      "@id": "https://agence-slashr.fr/#organization",
       name: "SLASHR",
-      url: "https://slashr.fr",
+      url: "https://agence-slashr.fr",
       logo: {
         "@type": "ImageObject",
-        url: "https://agence-slashr.fr/wp-content/uploads/2024/03/LOGO-SLASHR-NOIR.png",
+        url: "/blog/images/2024/03/LOGO-SLASHR-NOIR.png",
         width: 200,
         height: 60,
       },
@@ -222,10 +222,10 @@ export default async function ArticlePage({ params }: Props) {
     isAccessibleForFree: true,
     isPartOf: {
       "@type": "Blog",
-      "@id": "https://slashr.fr/blog#blog",
+      "@id": "https://agence-slashr.fr/blog#blog",
       name: "Blog SLASHR",
       publisher: {
-        "@id": "https://slashr.fr/#organization",
+        "@id": "https://agence-slashr.fr/#organization",
       },
     },
   };
@@ -239,19 +239,19 @@ export default async function ArticlePage({ params }: Props) {
         "@type": "ListItem",
         position: 1,
         name: "Accueil",
-        item: "https://slashr.fr",
+        item: "https://agence-slashr.fr",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://slashr.fr/blog",
+        item: "https://agence-slashr.fr/blog",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: article.title,
-        item: `https://slashr.fr/blog/${slug}`,
+        item: `https://agence-slashr.fr/blog/${slug}`,
       },
     ],
   };
