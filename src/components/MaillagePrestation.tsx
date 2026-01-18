@@ -20,24 +20,19 @@ const defaultCards: PrestationCard[] = [
     href: '/seo/prestations/agence-geo',
   },
   {
-    title: 'Social Search',
-    description: 'Le SEO sur les médias sociaux',
-    href: '/seo/prestations/social-search',
-  },
-  {
     title: 'Paid Search',
     description: 'Générer du trafic payant',
-    href: '/sea',
+    href: '/ads/sea',
   },
   {
-    title: 'UX & CRO',
-    description: 'Améliorer expérience & conversion',
-    href: '/ux-cro',
+    title: 'Google Ads',
+    description: 'Campagnes publicitaires',
+    href: '/ads/prestations/google-ads',
   },
   {
-    title: 'Data & Webanalytics',
-    description: 'Récolter la data',
-    href: '/data-webanalytics',
+    title: 'R&D & Outils',
+    description: 'Nos outils SEO internes',
+    href: '/r-and-d',
   },
 ];
 

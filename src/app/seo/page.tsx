@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   title: 'Agence SEO à Lille | Référencement Naturel Google | Slashr',
   description:
     'Agence SEO à Lille spécialisée en référencement naturel. Boostez votre visibilité sur Google avec notre expertise. Audits SEO, stratégie de contenu, netlinking.',
+  alternates: {
+    canonical: '/seo',
+  },
   openGraph: {
     title: 'Agence SEO à Lille | Référencement Naturel Google | Slashr',
     description:

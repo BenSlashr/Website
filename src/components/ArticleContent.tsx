@@ -46,9 +46,8 @@ function isInsideExcludedTag(html: string, position: number): boolean {
     // Compter les </span> après le dernier glossary-tooltip ouvert
     let spanCloseCount = 0;
     const afterTooltip = beforeText.substring(lastTooltipOpen);
-    let closeMatch;
 
-    while ((closeMatch = spanClosePattern.exec(afterTooltip)) !== null) {
+    while (spanClosePattern.exec(afterTooltip) !== null) {
       spanCloseCount++;
     }
 

@@ -48,6 +48,59 @@ const nextConfig = {
     ];
   },
 
+  // Redirections 301 pour les anciennes URLs
+  async redirects() {
+    return [
+      // === SERVICES RENOMMÉS / SUPPRIMÉS ===
+      // Pages qui n'existent plus - rediriger vers la page parente appropriée
+      { source: '/ux-cro', destination: '/seo', permanent: true },
+      { source: '/data-webanalytics', destination: '/seo', permanent: true },
+      { source: '/sea', destination: '/ads/sea', permanent: true },
+      { source: '/outils', destination: '/r-and-d', permanent: true },
+
+      // === PRESTATIONS SEO - Anciens slugs WordPress ===
+      { source: '/seo/prestations/google-ads', destination: '/ads/prestations/google-ads', permanent: true },
+      { source: '/seo/prestations/social-search', destination: '/seo', permanent: true },
+      { source: '/seo/prestations/refonte', destination: '/seo/prestations/refonte-migration', permanent: true },
+      { source: '/seo/prestations/refonte-seo', destination: '/seo/prestations/refonte-migration', permanent: true },
+      { source: '/seo/prestations/seo-technique', destination: '/seo', permanent: true },
+      { source: '/seo/prestations/seo-international', destination: '/seo/prestations/international', permanent: true },
+      { source: '/seo/prestations/agence-seo-wordpress', destination: '/seo/prestations/wordpress', permanent: true },
+      { source: '/seo/prestations/agence-seo-drupal-2', destination: '/seo/prestations/drupal', permanent: true },
+      { source: '/seo/prestations/devis', destination: '/prestations/devis', permanent: true },
+
+      // === PRESTATIONS - Anciens slugs avec préfixe agence-seo- ===
+      { source: '/prestations/agence-seo-magento', destination: '/prestations/magento', permanent: true },
+      { source: '/prestations/agence-seo-wordpress', destination: '/prestations/wordpress', permanent: true },
+      { source: '/prestations/agence-seo-drupal', destination: '/prestations/drupal', permanent: true },
+
+      // === CAS CLIENTS - URLs sans /cas-clients/ ===
+      { source: '/cas-client-tradesy-vestiaire-collective', destination: '/cas-clients/cas-client-tradesy-vestiaire-collective', permanent: true },
+      { source: '/cas-client-fusion-de-yakarouler-et-carter-cash', destination: '/cas-clients/cas-client-fusion-de-yakarouler-et-carter-cash', permanent: true },
+      { source: '/migration-tradesy-vc-seo', destination: '/cas-clients/cas-client-tradesy-vestiaire-collective', permanent: true },
+
+      // === BLOG - Anciennes URLs sans /blog/ ===
+      { source: '/courte-traine', destination: '/blog', permanent: true },
+      { source: '/searchdexing', destination: '/blog', permanent: true },
+      { source: '/guide-vseo', destination: '/blog', permanent: true },
+      { source: '/migration-seo-guide', destination: '/blog/plan-de-redirection-seo-guide-etape-par-etape-pour-bien-le-realiser', permanent: true },
+      { source: '/redirections-seo-guide-pratique', destination: '/blog/plan-de-redirection-seo-guide-etape-par-etape-pour-bien-le-realiser', permanent: true },
+      { source: '/comment-gerer-robots-txt-seo', destination: '/blog', permanent: true },
+      { source: '/comprendre-processus-crawling', destination: '/blog', permanent: true },
+      { source: '/recherches-associees', destination: '/blog', permanent: true },
+
+      // === BLOG - Articles renommés ou supprimés ===
+      { source: '/blog/detecteur-cloaking', destination: '/blog', permanent: true },
+      { source: '/blog/refonte-de-site-web-et-seo-comment-conserver-son-trafic', destination: '/blog/plan-de-redirection-seo-guide-etape-par-etape-pour-bien-le-realiser', permanent: true },
+      { source: '/blog/optimiser-son-cms-pour-le-seo', destination: '/blog/cms-ecommerce', permanent: true },
+      { source: '/blog/cocon-semantique', destination: '/blog', permanent: true },
+      { source: '/blog/seo-technique', destination: '/blog', permanent: true },
+      { source: '/blog/e-commerce-seo', destination: '/blog', permanent: true },
+      { source: '/blog/indexation-seo', destination: '/blog', permanent: true },
+      { source: '/blog/audit-seo', destination: '/blog', permanent: true },
+    ];
+  },
+
   // Headers de sécurité et cache
   async headers() {
     const securityHeaders = [
