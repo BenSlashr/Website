@@ -238,6 +238,19 @@ h2, h3 {
   }
 }
 
+/* Animation avec pause : 2s de rotation + 2s de pause = 4s total */
+@keyframes snake-spin-pause {
+  0% {
+    --border-angle: 0deg;
+  }
+  50% {
+    --border-angle: 360deg;
+  }
+  100% {
+    --border-angle: 360deg;
+  }
+}
+
 .animate-gradient-border {
   position: relative;
   background: conic-gradient(
@@ -251,6 +264,22 @@ h2, h3 {
     transparent 360deg
   );
   animation: snake-spin 2s linear infinite;
+}
+
+/* Version avec pause - le gradient tourne puis fait une pause */
+.animate-gradient-border-pause {
+  position: relative;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0deg,
+    transparent 240deg,
+    #E74601 250deg,
+    #CE08A9 290deg,
+    #8962FD 330deg,
+    transparent 340deg,
+    transparent 360deg
+  );
+  animation: snake-spin-pause 4s linear infinite;
 }
 
 /* Fade in animation for tooltips */

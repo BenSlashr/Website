@@ -1,11 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,26 +68,37 @@ const Newsletter = () => {
           {/* Right Content - Form */}
           <div className="flex-1 flex flex-col justify-center">
             {/* Email Input */}
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row mb-4 gap-2 sm:gap-0">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Votre email"
-                disabled={status === 'loading'}
-                className="flex-1 bg-[#1a1a1a] border border-gray-700 rounded-full sm:rounded-l-full sm:rounded-r-none px-5 sm:px-6 py-3 text-white text-base placeholder-gray-500 focus:outline-none focus:border-gray-500 disabled:opacity-50"
-              />
-              <button
-                type="submit"
-                disabled={status === 'loading'}
-                className="bg-white text-black px-5 sm:px-6 py-3 rounded-full sm:rounded-l-none sm:rounded-r-full text-sm font-medium hover:bg-gray-200 transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {status === 'loading' ? 'Inscription...' : 'S\'inscrire'}
-              </button>
-            </form>
+            {isClient ? (
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row mb-4 gap-2 sm:gap-0">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Votre email"
+                  disabled={status === 'loading'}
+                  className="flex-1 bg-[#1a1a1a] border border-gray-700 rounded-full sm:rounded-l-full sm:rounded-r-none px-5 sm:px-6 py-3 text-white text-base placeholder-gray-500 focus:outline-none focus:border-gray-500 disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="bg-white text-black px-5 sm:px-6 py-3 rounded-full sm:rounded-l-none sm:rounded-r-full text-sm font-medium hover:bg-gray-200 transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {status === 'loading' ? 'Inscription...' : 'S\'inscrire'}
+                </button>
+              </form>
+            ) : (
+              <div className="flex flex-col sm:flex-row mb-4 gap-2 sm:gap-0">
+                <div className="flex-1 bg-[#1a1a1a] border border-gray-700 rounded-full sm:rounded-l-full sm:rounded-r-none px-5 sm:px-6 py-3 text-gray-500 text-base">
+                  Votre email
+                </div>
+                <div className="bg-white text-black px-5 sm:px-6 py-3 rounded-full sm:rounded-l-none sm:rounded-r-full text-sm font-medium text-center whitespace-nowrap">
+                  S&apos;inscrire
+                </div>
+              </div>
+            )}
 
             {/* Status Message */}
-            {message && (
+            {isClient && message && (
               <p className={`text-sm mb-3 ${status === 'success' ? 'text-green-400' : 'text-red-400'}`}>
                 {message}
               </p>

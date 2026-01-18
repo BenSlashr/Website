@@ -4,31 +4,31 @@ const LogoBanner = () => {
   const logos = [
     {
       name: "Superprof",
-      url: "/blog/images/elementor/thumbs/logo-superprof-rdfndjotqafe1ryrfxpuvculp7boqvaszixb6rpm9s.png",
+      url: "/blog/images/2023/10/logo-superprof.png",
     },
     {
       name: "Vestiaire Collective",
-      url: "/blog/images/elementor/thumbs/logo-vestiaire-collective-rdfndjotqafe1ryrfxpuvculp7boqvaszixb6rpm9s.png",
+      url: "/blog/images/2024/02/vestiaire-collectif-w.png",
     },
     {
       name: "NaturaBuy",
-      url: "/blog/images/elementor/thumbs/naturabuy-modified-rdfnduyw0autx3idm2ldpa04tts3b8jl12r4y38w74.png",
+      url: "/blog/images/2024/06/naturabuy-modified.png",
     },
     {
       name: "La Gazette France",
-      url: "/blog/images/elementor/thumbs/la-gazette-france-rdfndq9p24oeb1p7dik8ut6tuwf98r0xcfhpjpfv28.png",
+      url: "/blog/images/2024/03/la-gazette-france.png",
     },
     {
       name: "SKEMA",
-      url: "/blog/images/2026/01/SKEMA_Business_Schools_logo-scaled.png",
+      url: "/blog/images/2026/01/SKEMA_Business_Schools_logo.png",
     },
     {
       name: "Somfy",
-      url: "/blog/images/2026/01/Somfy_logo.svg_.png",
+      url: "/blog/images/2025/11/SOMFY-Domotique.png",
     },
     {
       name: "Agryco",
-      url: "/blog/images/elementor/thumbs/agryco-1-reouo9p0g9radhajhn2ar7lh30jjgenap2vsy2iwow.png",
+      url: "/blog/images/2025/11/agryco-1.png",
     },
     {
       name: "EPF",
@@ -36,27 +36,27 @@ const LogoBanner = () => {
     },
     {
       name: "Colisee",
-      url: "/blog/images/elementor/thumbs/colisee-reouobkotxtv0p7t6nvjw74e9sa9vsurdc6rwmg4cg.png",
+      url: "/blog/images/2025/11/colisee.png",
     },
     {
       name: "Ennolys",
-      url: "/blog/images/elementor/thumbs/ennolys-reouodgd7lwfnx52voot16nbgk10b7281lhqv6dc00.png",
-    },
-    {
-      name: "Maison du Billard",
-      url: "/blog/images/2026/01/logo.png",
+      url: "/blog/images/2025/11/ennolys.png",
     },
     {
       name: "Les Petites Billes",
-      url: "/blog/images/elementor/thumbs/Logo-LesPetitesBilles-rdfndmicasj90lunzgxqku4zhcxsdylzzwvrmllfr4.webp",
+      url: "/blog/images/2024/03/les-petites-billes.webp",
     },
     {
       name: "Usabilis",
-      url: "/blog/images/elementor/thumbs/logo-colors-usabilis-reouofc1l9z0b52ckpi26668nbrqql9opusptqajnk.png",
+      url: "/blog/images/2025/11/logo-colors-usabilis.png",
     },
     {
       name: "Verisure",
-      url: "/blog/images/elementor/thumbs/Logo_of_Verisure-reouoi5k5s2v9yy948pxvngmfhdudokvq8r69k6d4w.png",
+      url: "/blog/images/2025/11/Logo_of_Verisure.png",
+    },
+    {
+      name: "Carter Cash",
+      url: "/blog/images/2025/12/logo-carter-cash-fr.webp",
     },
   ];
 

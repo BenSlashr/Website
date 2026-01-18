@@ -9,6 +9,7 @@ import Newsletter from "@/components/Newsletter";
 import RelatedServices from "@/components/RelatedServices";
 import RelatedArticles from "@/components/RelatedArticles";
 import ArticleContent from "@/components/ArticleContent";
+import SidebarNewsletter from "@/components/SidebarNewsletter";
 import "./wordpress-content.css";
 
 // Revalide toutes les 60 secondes (ISR)
@@ -419,40 +420,51 @@ export default async function ArticlePage({ params }: Props) {
                 </div>
 
                 {/* Author Box */}
-                <div className="mt-12 bg-[#2C2E34] rounded-3xl p-8">
-                  <div className="flex items-start gap-4">
+                <div className="mt-12 bg-[#2C2E34] rounded-3xl p-6 sm:p-8">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6">
+                    {/* Photo de l'auteur - style carte équipe */}
                     {authorSlug ? (
-                      <Link href={`/blog/author/${authorSlug}`} className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                      <Link
+                        href={`/blog/author/${authorSlug}`}
+                        className="relative w-28 h-36 sm:w-32 sm:h-40 rounded-xl overflow-hidden flex-shrink-0 group"
+                        style={{
+                          background: 'linear-gradient(180deg, rgba(44, 46, 52, 0.75) 0%, rgba(217, 217, 217, 0.75) 100%)',
+                        }}
+                      >
                         {authorInfo?.image ? (
                           <Image
                             src={authorInfo.image}
                             alt={article.author}
                             fill
-                            className="object-cover"
-                            sizes="64px"
+                            className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                            sizes="128px"
                           />
                         ) : (
-                          <div className="w-full h-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-bold text-xl">
+                          <div className="w-full h-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-bold text-3xl">
                             {article.author.split(' ').map(n => n[0]).join('')}
                           </div>
                         )}
+                        {/* Hover overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#E74601]/20 via-transparent to-[#8962FD]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </Link>
                     ) : (
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                      <div
+                        className="w-28 h-36 sm:w-32 sm:h-40 rounded-xl bg-gradient-to-br from-[#E74601] to-[#CE08A9] flex items-center justify-center text-white font-bold text-3xl flex-shrink-0"
+                      >
                         {article.author.split(' ').map(n => n[0]).join('')}
                       </div>
                     )}
-                    <div className="flex-1">
+                    <div className="flex-1 text-center sm:text-left">
                       {authorSlug ? (
-                        <Link href={`/blog/author/${authorSlug}`} className="text-white font-bold text-lg mb-1 hover:text-[#E74601] transition-colors inline-block">
+                        <Link href={`/blog/author/${authorSlug}`} className="text-white font-bold text-xl mb-1 hover:text-[#E74601] transition-colors inline-block">
                           {article.author}
                         </Link>
                       ) : (
-                        <h3 className="text-white font-bold text-lg mb-1">
+                        <h3 className="text-white font-bold text-xl mb-1">
                           {article.author}
                         </h3>
                       )}
-                      <p className="text-[#E74601] text-sm mb-3">
+                      <p className="text-sm font-medium uppercase tracking-wider bg-gradient-to-r from-[#E74601] via-[#CE08A9] to-[#8962FD] bg-clip-text text-transparent mb-3">
                         {authorInfo?.role || 'Expert SEO @ SLASHR'}
                       </p>
                       <p className="text-gray-400 text-sm leading-relaxed">
@@ -509,27 +521,7 @@ export default async function ArticlePage({ params }: Props) {
                   )}
 
                   {/* Newsletter CTA */}
-                  <div className="group rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
-                    <div className="bg-[#2C2E34] rounded-[14px] p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <svg className="w-5 h-5 text-[#E74601]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <h3 className="text-white font-bold text-sm">Newsletter SEO</h3>
-                      </div>
-                      <p className="text-gray-400 text-sm mb-4">
-                        Recevez nos meilleurs conseils SEO chaque semaine.
-                      </p>
-                      <input
-                        type="email"
-                        placeholder="Votre email"
-                        className="w-full bg-[#1a1a1a] border border-gray-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#E74601] mb-3"
-                      />
-                      <button className="w-full bg-white text-black px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">
-                        Je m'inscris
-                      </button>
-                    </div>
-                  </div>
+                  <SidebarNewsletter />
 
                   {/* Afterwork CTA */}
                   <div className="group rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">

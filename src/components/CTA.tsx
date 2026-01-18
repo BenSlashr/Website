@@ -40,8 +40,8 @@ const CTA = () => {
             </a>
           </div>
 
-          {/* Button Primary - Prendre RDV with calendar icon */}
-          <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
+          {/* Button Primary - Prendre RDV with calendar icon and animated border */}
+          <div className="group inline-block rounded-full p-[2px] animate-gradient-border-pause">
             <a
               href={CALENDLY_URL}
               target="_blank"

@@ -219,3 +219,78 @@
     margin-right: 0;
   }
 }
+
+/* ===========================================
+   Glossary Tooltip Styles - Pure CSS hover
+   =========================================== */
+
+/* Container pour le terme + tooltip */
+.glossary-term {
+  position: relative;
+  display: inline;
+}
+
+/* Le terme surligné */
+.glossary-highlight {
+  background: linear-gradient(135deg, rgba(231, 70, 1, 0.3), rgba(137, 98, 253, 0.3));
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 3px;
+  cursor: help;
+  border-bottom: 1px dotted rgba(231, 70, 1, 0.5);
+}
+
+/* Le tooltip caché par défaut */
+.glossary-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: #2C2E34;
+  border: 1px solid rgba(107, 114, 128, 0.5);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #e5e7eb;
+  width: max-content;
+  max-width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  pointer-events: none;
+
+  /* Caché par défaut */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+/* Flèche du tooltip */
+.glossary-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #2C2E34;
+}
+
+/* Afficher le tooltip au hover du terme */
+.glossary-term:hover .glossary-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Repositionnement si trop près du bord gauche */
+@media (max-width: 640px) {
+  .glossary-tooltip {
+    left: 0;
+    transform: translateX(0) translateY(-8px);
+    max-width: 200px;
+  }
+
+  .glossary-tooltip::after {
+    left: 20px;
+  }
+}
