@@ -10,6 +10,7 @@ import RelatedServices from "@/components/RelatedServices";
 import RelatedArticles from "@/components/RelatedArticles";
 import ArticleContent from "@/components/ArticleContent";
 import SidebarNewsletter from "@/components/SidebarNewsletter";
+import AISummaryLinks from "@/components/AISummaryLinks";
 import "./wordpress-content.css";
 
 // Revalide toutes les 60 secondes (ISR)
@@ -391,10 +392,11 @@ export default async function ArticlePage({ params }: Props) {
 
               {/* Main Content */}
               <div className="flex-1 lg:max-w-[65%]">
-                {/* Excerpt */}
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed font-medium">
-                  {article.excerpt}
-                </p>
+                {/* AI Summary Links */}
+                <AISummaryLinks
+                  title={article.title}
+                  url={`https://agence-slashr.fr/blog/${slug}`}
+                />
 
                 {/* Article Content - WordPress HTML avec Glossaire SEO */}
                 <ArticleContent
@@ -522,36 +524,6 @@ export default async function ArticlePage({ params }: Props) {
 
                   {/* Newsletter CTA */}
                   <SidebarNewsletter />
-
-                  {/* Afterwork CTA */}
-                  <div className="group rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
-                    <div className="bg-[#2C2E34] rounded-[14px] p-6">
-                      <div className="flex items-center gap-2 mb-2">
-                        <svg className="w-5 h-5 text-[#CE08A9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <span className="text-[#CE08A9] text-xs font-medium uppercase tracking-wider">Prochain Event</span>
-                      </div>
-                      <h3 className="text-white font-bold mb-2">
-                        Afterwork SEO Lille
-                      </h3>
-                      <p className="text-gray-400 text-sm mb-1">
-                        Jeudi 25 janvier 2024
-                      </p>
-                      <p className="text-gray-500 text-sm mb-4">
-                        19h00 - Lille
-                      </p>
-                      <Link
-                        href="#"
-                        className="inline-flex items-center gap-2 text-white text-sm font-medium hover:text-[#E74601] transition-colors"
-                      >
-                        S'inscrire gratuitement
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
 
                   {/* Recent Articles */}
                   <div className="group rounded-[15px] p-[1px] bg-white/10 hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">

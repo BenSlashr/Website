@@ -24,7 +24,7 @@ const Hero = () => {
         <h1
           className="text-white max-w-[818px] font-semibold text-center"
           style={{
-            fontFamily: 'var(--font-funnel-display), sans-serif',
+            fontFamily: '"Funnel Display", sans-serif',
             fontSize: 'clamp(40px, 8vw, 90px)',
             lineHeight: '95%',
             letterSpacing: '-0.03em',
@@ -73,7 +73,7 @@ const Hero = () => {
           {/* CTA Button - Geist 15px semibold */}
           <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center justify-center px-[30px] py-[15px] bg-white rounded-full text-[#2C2E34] font-semibold text-[15px] leading-[145%] transition-colors"
             >
               Prenez l&apos;avantage maintenant

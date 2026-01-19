@@ -84,17 +84,12 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${GeistSans.variable}`}>
       <head>
-        {/* Preconnect pour réduire latence DNS/TLS */}
+        {/* Preconnect pour Google Fonts - optimise la latence */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Font Funnel Display - chargement non bloquant */}
+        {/* Funnel Display - chargement optimisé avec display=swap */}
         <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&display=swap"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap"
           rel="stylesheet"
         />
         <OrganizationSchema />
