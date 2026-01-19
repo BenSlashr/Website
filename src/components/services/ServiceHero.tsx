@@ -42,7 +42,7 @@ const ServiceHero = ({ title, description, ctaText = "Découvrir notre méthode"
         {/* CTA Button */}
         <div className="group inline-block rounded-full p-[2px] bg-transparent hover:bg-gradient-to-r hover:from-[#E74601] hover:via-[#CE08A9] hover:to-[#8962FD] transition-all duration-300">
           <a
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center justify-center px-[30px] py-[15px] bg-white rounded-full text-[#2C2E34] font-semibold text-[15px] leading-[145%] transition-colors"
           >
             {ctaText}

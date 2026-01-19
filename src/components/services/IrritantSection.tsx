@@ -16,7 +16,7 @@ const IrritantSection = ({
   heading = "Vous accompagner pour performer",
   cards,
   ctaText,
-  ctaHref = "#contact"
+  ctaHref = "/#contact"
 }: IrritantSectionProps) => {
   return (
     <section className="bg-[#1a1a1a] py-16 md:py-20 px-6">
