@@ -27,7 +27,7 @@ const defaultCards: PrestationCard[] = [
   {
     title: 'Google Ads',
     description: 'Campagnes publicitaires',
-    href: '/ads/prestations/google-ads',
+    href: '/ads/sea/google-ads',
   },
   {
     title: 'R&D & Outils',

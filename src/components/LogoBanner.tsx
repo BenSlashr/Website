@@ -44,7 +44,7 @@ const LogoBanner = () => {
     },
     {
       name: "Les Petites Billes",
-      url: "/blog/images/2024/03/les-petites-billes.webp",
+      url: "/blog/images/2024/03/Logo-LesPetitesBilles.webp",
     },
     {
       name: "Usabilis",
@@ -56,7 +56,8 @@ const LogoBanner = () => {
     },
     {
       name: "Carter Cash",
-      url: "/blog/images/2025/12/logo-carter-cash-fr.webp",
+      url: "/blog/images/2023/10/logo-carter-cash.png",
+      keepColor: true, // Logo rouge qui ne supporte pas le filtre invert
     },
   ];
 
@@ -74,9 +75,12 @@ const LogoBanner = () => {
               alt={logo.name}
               width={120}
               height={60}
-              className="object-contain max-h-[35px] sm:max-h-[40px] md:max-h-[50px] w-auto grayscale brightness-0 invert hover:grayscale-0 hover:brightness-100 hover:invert-0 transition-all duration-300"
+              className={`object-contain max-h-[35px] sm:max-h-[40px] md:max-h-[50px] w-auto transition-all duration-300 ${
+                logo.keepColor
+                  ? 'opacity-80 hover:opacity-100'
+                  : 'grayscale brightness-0 invert hover:grayscale-0 hover:brightness-100 hover:invert-0'
+              }`}
               loading="lazy"
-              // Optimisation : taille réduite et qualité optimisée pour les logos
               sizes="120px"
               quality={75}
             />

@@ -402,7 +402,7 @@ export default function DevisPage() {
               { name: "SEO Prestashop", href: "/seo/prestations/prestashop" },
               { name: "SEO Shopify", href: "/seo/prestations/shopify" },
               { name: "SEO WooCommerce", href: "/seo/prestations/woocommerce" },
-              { name: "Google Ads", href: "/ads/prestations/google-ads" },
+              { name: "Google Ads", href: "/ads/sea/google-ads" },
             ].map((prestation) => (
               <Link
                 key={prestation.name}

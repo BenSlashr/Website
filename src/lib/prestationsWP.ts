@@ -129,7 +129,7 @@ export interface GEOExclusiveContent {
 }
 
 // Catégories de prestations
-export type PrestationCategory = 'seo' | 'ads' | 'other';
+export type PrestationCategory = 'seo' | 'ads' | 'social' | 'transverse' | 'other';
 
 // Interface principale Prestation enrichie
 export interface Prestation {
@@ -1328,7 +1328,7 @@ export const prestationsData: Prestation[] = [
     otherExpertises: [
       { name: 'SEO E-commerce', href: '/seo/prestations/ecommerce' },
       { name: 'SEO International', href: '/seo/prestations/international' },
-      { name: 'Google Ads', href: '/ads/prestations/google-ads' },
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
       { name: 'Agence GEO', href: '/seo/prestations/agence-geo' },
     ],
     pricing: {
@@ -1830,6 +1830,1675 @@ export const prestationsData: Prestation[] = [
     },
   },
   {
+    slug: 'google-shopping',
+    title: 'Agence Google Shopping',
+    tag: 'Shopping',
+    category: 'ads',
+    heroDescription: "Vous vendez en ligne ? Google Shopping est le levier d'acquisition le plus rentable pour les e-commerçants. Nos experts optimisent vos flux produits et campagnes pour maximiser votre ROAS.",
+    metaTitle: 'Agence Google Shopping | Expert Flux Produits & Performance Max',
+    metaDescription: 'Agence Google Shopping à Lille. Optimisation flux produits, campagnes Shopping et Performance Max. Maximisez votre ROAS e-commerce avec nos experts.',
+    contentSection: {
+      tag: 'Google Shopping',
+      title: 'Le levier incontournable du e-commerce',
+      content: "Google Shopping affiche vos produits directement dans les résultats de recherche avec photo, prix et avis. C'est le format le plus performant pour les e-commerçants avec des taux de conversion jusqu'à 30% supérieurs aux annonces textuelles classiques.",
+      bulletPoints: [
+        "Visibilité premium : Vos produits en haut de Google avec photos et prix.",
+        "Intent d'achat fort : Les utilisateurs Shopping sont prêts à acheter.",
+        "ROAS élevé : Le format le plus rentable pour le e-commerce.",
+        "Performance Max : Diffusion automatique sur Search, Display, YouTube, Gmail.",
+      ],
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Pourquoi Google Shopping est essentiel',
+      intro: "Google Shopping représente souvent 60 à 80% du chiffre d'affaires Ads des e-commerçants. Un flux produit mal optimisé, c'est des milliers d'euros de ventes perdues chaque mois.",
+      expertiseLinks: [
+        { text: 'Flux produit optimisé', href: '#', highlight: 'Titres, descriptions, images qui convertissent' },
+        { text: 'Segmentation avancée', href: '#', highlight: 'Campagnes par catégorie, marge, saisonnalité' },
+        { text: 'Performance Max', href: '#', highlight: 'IA Google pour maximiser les conversions' },
+        { text: 'Feed Management', href: '#', highlight: 'Automatisation et enrichissement du catalogue' },
+      ],
+      ctaText: 'Auditer mon flux produit',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Expertise e-commerce complète',
+      subtitle: 'SEO + Shopping = domination SERP',
+      description: "Notre double expertise SEO et Ads nous permet d'optimiser votre présence sur l'ensemble des résultats Google : SEO pour le trafic organique, Shopping pour les conversions immédiates.",
+      points: [
+        {
+          title: 'Experts flux produits',
+          description: "Optimisation des titres, descriptions, images et attributs pour maximiser la visibilité et le CTR.",
+        },
+        {
+          title: 'Stratégie ROAS-first',
+          description: "Segmentation par rentabilité, ajustement des enchères par produit, focus sur les best-sellers.",
+        },
+        {
+          title: 'Synergies SEO/Shopping',
+          description: "Les données Shopping enrichissent la stratégie SEO produit et inversement.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous avez un site e-commerce avec plus de 100 produits",
+      "Votre ROAS Shopping actuel est en dessous de vos objectifs",
+      "Vous voulez scaler vos ventes en ligne rapidement",
+      "Votre flux produit n'est pas optimisé ou génère des refus",
+    ],
+    notForYou: [
+      "Vous n'avez pas de site e-commerce transactionnel",
+      "Votre catalogue compte moins de 20 produits",
+      "Vous n'avez pas de budget média minimum de 1000€/mois",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Audit flux & compte',
+        description: "Analyse de votre flux produit, structure de compte et performances actuelles.",
+      },
+      {
+        number: 2,
+        title: 'Optimisation flux',
+        description: "Enrichissement des titres, descriptions, images. Correction des refus Merchant Center.",
+      },
+      {
+        number: 3,
+        title: 'Restructuration campagnes',
+        description: "Segmentation par catégorie, marge, performance. Setup Performance Max optimisé.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation continue',
+        description: "Ajustement des enchères, exclusion des produits non rentables, tests créatifs.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Expertise flux produits e-commerce',
+        description: "Optimisation complète de votre feed : titres enrichis, descriptions SEO, images haute qualité, attributs Google. Votre catalogue devient une machine à conversions.",
+        highlight: 'flux produits',
+        icon: 'clipboard',
+        size: 'large',
+      },
+      {
+        title: 'Performance Max',
+        description: "Configuration avancée des campagnes Performance Max avec assets optimisés et signaux d'audience précis.",
+        highlight: 'Performance Max',
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'Segmentation rentabilité',
+        description: "Campagnes segmentées par marge, catégorie et performance pour maximiser le ROAS global.",
+        icon: 'chart',
+        size: 'medium',
+      },
+      {
+        title: 'Feed Management',
+        description: "Automatisation des mises à jour, règles de transformation, enrichissement dynamique du catalogue.",
+        icon: 'code',
+        size: 'medium',
+      },
+      {
+        title: 'Merchant Center',
+        description: "Résolution des refus, optimisation du score qualité, setup des promotions et avis produits.",
+        icon: 'check',
+        size: 'medium',
+      },
+      {
+        title: 'ROAS maximisé sur l\'ensemble du catalogue',
+        description: "Focus sur les produits rentables, exclusion des gouffres à budget, stratégie d'enchères intelligente pour chaque segment.",
+        highlight: 'ROAS maximisé',
+        icon: 'target',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Qualité du flux produit',
+        description: "Un flux mal optimisé = produits refusés + mauvais Quality Score + CPC élevés. L'optimisation du feed est la base de tout.",
+      },
+      {
+        title: 'Données structurées',
+        description: "Google Shopping puise aussi dans les données structurées de votre site. Schema.org Product doit être parfait.",
+      },
+      {
+        title: 'Rentabilité par produit',
+        description: "Tous vos produits ne sont pas rentables en Shopping. Identifier et exclure les gouffres à budget est crucial.",
+      },
+    ],
+    comparison: {
+      title: 'Google Shopping : seul vs avec une agence',
+      without: [
+        'Flux produit basique généré par le CMS',
+        'Titres non optimisés pour la recherche',
+        'Une seule campagne pour tout le catalogue',
+        'Pas de segmentation par rentabilité',
+        'Refus Merchant Center non résolus',
+      ],
+      with: [
+        'Flux enrichi avec titres SEO optimisés',
+        'Images retravaillées pour maximiser le CTR',
+        'Campagnes segmentées par catégorie et marge',
+        'Exclusion automatique des produits non rentables',
+        'Merchant Center propre, 0 refus',
+      ],
+    },
+    faqs: [
+      {
+        question: 'Quel budget minimum pour Google Shopping ?',
+        answer: "Nous recommandons un minimum de 1000€/mois de budget média pour avoir des données significatives et optimiser efficacement. En dessous, le volume est insuffisant pour tirer des conclusions fiables.",
+      },
+      {
+        question: 'Quelle différence entre Shopping Standard et Performance Max ?',
+        answer: "Shopping Standard vous donne un contrôle total sur les enchères et la diffusion, uniquement sur l'onglet Shopping. Performance Max utilise l'IA Google pour diffuser sur tous les canaux (Search, Display, YouTube, Gmail) et optimise automatiquement vers les conversions. Nous recommandons souvent une combinaison des deux.",
+      },
+      {
+        question: 'Mon flux est généré automatiquement par mon CMS, c\'est suffisant ?',
+        answer: "Non. Les flux générés par défaut par Shopify, Prestashop ou WooCommerce sont basiques : titres produits bruts, descriptions incomplètes, pas d'attributs enrichis. Une optimisation manuelle ou via règles de transformation est indispensable pour performer.",
+      },
+      {
+        question: 'Combien de temps pour voir des résultats ?',
+        answer: "L'optimisation du flux produit a un impact immédiat (24-48h). Pour les performances de campagne, comptez 2-4 semaines de phase d'apprentissage puis une amélioration continue sur 2-3 mois.",
+      },
+      {
+        question: 'Gérez-vous aussi le SEO des pages produits ?',
+        answer: "Oui ! Notre double expertise SEO/Ads nous permet d'optimiser vos pages produits pour le référencement naturel ET pour Shopping. Les synergies sont nombreuses : données structurées, titres optimisés, contenu enrichi.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'SEO E-commerce', href: '/seo/prestations/ecommerce' },
+      { name: 'SEO Prestashop', href: '/seo/prestations/prestashop' },
+      { name: 'SEO Shopify', href: '/seo/prestations/shopify' },
+    ],
+    pricing: {
+      tjm: '600-800€',
+      description: 'Frais de gestion + budget média selon volume catalogue',
+    },
+  },
+  {
+    slug: 'social-ads',
+    title: 'Agence Social Ads',
+    tag: 'Social Ads',
+    category: 'social',
+    heroDescription: "Touchez votre audience sur les réseaux sociaux. Notre agence Social Ads crée et gère vos campagnes publicitaires sur Meta, LinkedIn et TikTok pour générer des leads qualifiés et booster votre visibilité.",
+    metaTitle: 'Agence Social Ads à Lille | Meta, LinkedIn, TikTok | Slashr',
+    metaDescription: 'Agence Social Ads à Lille. Création et gestion de campagnes publicitaires sur les réseaux sociaux : Facebook Ads, Instagram Ads, LinkedIn Ads, TikTok Ads.',
+    contentSection: {
+      tag: 'Social Ads',
+      title: 'Touchez votre audience où elle se trouve',
+      content: "Les réseaux sociaux rassemblent des milliards d'utilisateurs chaque jour. Les Social Ads permettent de cibler précisément votre audience idéale grâce aux données riches de ces plateformes : centres d'intérêt, comportements, données démographiques.",
+      bulletPoints: [
+        "Ciblage précis : Touchez exactement les personnes susceptibles d'acheter.",
+        "Formats engageants : Vidéos, carrousels, stories qui captent l'attention.",
+        "Remarketing puissant : Reciblez les visiteurs et paniers abandonnés.",
+        "Multi-plateforme : Meta, LinkedIn, TikTok selon votre audience.",
+      ],
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Pourquoi investir en Social Ads',
+      intro: "Les Social Ads permettent de toucher des audiences que Google Ads ne peut pas atteindre. C'est le levier idéal pour la notoriété, la génération de leads et le remarketing.",
+      expertiseLinks: [
+        { text: 'Meta Ads', href: '/ads/social/facebook-ads', highlight: 'Facebook & Instagram Ads' },
+        { text: 'LinkedIn Ads', href: '/ads/social/linkedin-ads', highlight: 'B2B & Décideurs' },
+        { text: 'Remarketing', href: '#', highlight: 'Reciblage multi-plateforme' },
+        { text: 'Création contenu', href: '#', highlight: 'Visuels & vidéos performants' },
+      ],
+      ctaText: 'Lancer mes Social Ads',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Expertise multi-plateforme',
+      subtitle: 'SEA + Social = acquisition complète',
+      description: "Notre expertise couvre l'ensemble des canaux d'acquisition payante. Combiner Google Ads et Social Ads permet de toucher votre audience à chaque étape de son parcours d'achat.",
+      points: [
+        {
+          title: 'Stratégie cross-plateforme',
+          description: "Définition des plateformes pertinentes selon votre cible et vos objectifs business.",
+        },
+        {
+          title: 'Création de contenu',
+          description: "Production de visuels et vidéos adaptés aux codes et formats de chaque réseau social.",
+        },
+        {
+          title: 'Optimisation continue',
+          description: "A/B testing, analyse des audiences et ajustement des campagnes pour maximiser le ROI.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous voulez développer votre notoriété sur les réseaux sociaux",
+      "Vous ciblez une audience B2C ou B2B précise",
+      "Vous souhaitez générer des leads qualifiés",
+      "Vous voulez recibler les visiteurs de votre site",
+    ],
+    notForYou: [
+      "Vous n'avez pas de présence sur les réseaux sociaux",
+      "Votre cible n'utilise pas les réseaux sociaux",
+      "Vous n'avez pas de budget média minimum de 500€/mois",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Audit & Stratégie',
+        description: "Analyse de votre audience, définition des objectifs et choix des plateformes adaptées.",
+      },
+      {
+        number: 2,
+        title: 'Setup & Tracking',
+        description: "Configuration des pixels, API Conversions et audiences personnalisées.",
+      },
+      {
+        number: 3,
+        title: 'Création des campagnes',
+        description: "Production du contenu, rédaction des textes et paramétrage des ciblages.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation & Scaling',
+        description: "A/B testing, optimisation des audiences et montée en puissance progressive.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Ciblage ultra-précis sur les réseaux sociaux',
+        description: "Touchez votre audience idéale grâce aux données riches : centres d'intérêt, comportements, données démographiques, fonction professionnelle.",
+        highlight: 'Ciblage ultra-précis',
+        icon: 'target',
+        size: 'large',
+      },
+      {
+        title: 'Audiences personnalisées',
+        description: "Créez des audiences sur mesure à partir de vos clients existants, visiteurs du site ou abonnés.",
+        icon: 'user',
+        size: 'medium',
+      },
+      {
+        title: 'Formats engageants',
+        description: "Vidéos, carrousels, stories, reels... Les formats natifs captent l'attention.",
+        icon: 'rocket',
+        size: 'medium',
+      },
+      {
+        title: 'Mesure des performances',
+        description: "Suivi précis des conversions et optimisation continue pour atteindre vos objectifs.",
+        icon: 'chart',
+        size: 'medium',
+      },
+      {
+        title: 'Remarketing puissant',
+        description: "Reciblez les visiteurs, paniers abandonnés et leads non convertis.",
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'Visibilité multi-plateforme complète',
+        description: "Déployez vos campagnes sur l'ensemble des réseaux sociaux pour toucher votre audience partout.",
+        highlight: 'multi-plateforme',
+        icon: 'globe',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Contenu non adapté',
+        description: "Les Social Ads ne fonctionnent pas sans contenu de qualité. Visuels et vidéos doivent être adaptés aux codes de chaque plateforme.",
+      },
+      {
+        title: 'Mauvaise définition d\'audience',
+        description: "Un ciblage trop large dilue le budget, trop restreint limite le volume. Les tests sont essentiels.",
+      },
+      {
+        title: 'Tracking mal configuré',
+        description: "Sans pixels et API Conversions correctement configurés, impossible d'optimiser les campagnes.",
+      },
+    ],
+    comparison: {
+      title: 'Social Ads : seul vs avec une agence',
+      without: [
+        'Ciblage basique par centres d\'intérêt',
+        'Visuels non optimisés pour chaque plateforme',
+        'Pas d\'audiences lookalike configurées',
+        'Tracking incomplet sans API Conversions',
+        'Pas de stratégie de remarketing',
+      ],
+      with: [
+        'Audiences personnalisées et lookalikes affinées',
+        'Création de contenu adapté aux codes Social',
+        'Setup technique complet (pixels + CAPI)',
+        'Stratégie remarketing cross-plateforme',
+        'A/B testing et optimisation continue',
+      ],
+    },
+    faqs: [
+      {
+        question: 'Quelle plateforme choisir pour mes Social Ads ?',
+        answer: "Le choix dépend de votre cible : Meta Ads (Facebook/Instagram) pour le B2C et l'e-commerce, LinkedIn Ads pour le B2B et les décideurs, TikTok Ads pour la Gen Z et les Millennials. Notre agence vous conseille sur les plateformes les plus pertinentes.",
+      },
+      {
+        question: 'Quel budget minimum pour les Social Ads ?',
+        answer: "Comptez minimum 500€/mois pour Meta et TikTok, 1500€/mois pour LinkedIn (CPC plus élevé en B2B). Nous recommandons de commencer petit, tester, puis scaler les campagnes qui performent.",
+      },
+      {
+        question: 'Créez-vous les visuels et vidéos ?',
+        answer: "Oui, notre agence propose la création de visuels statiques, carrousels et l'adaptation de vidéos pour vos campagnes Social Ads.",
+      },
+      {
+        question: "Qu'est-ce que l'API Conversions (CAPI) ?",
+        answer: "L'API Conversions envoie les données de conversion directement depuis votre serveur vers les plateformes. C'est essentiel avec les restrictions iOS pour mesurer correctement les performances.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Facebook Ads', href: '/ads/social/facebook-ads' },
+      { name: 'LinkedIn Ads', href: '/ads/social/linkedin-ads' },
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Google Shopping', href: '/ads/sea/google-shopping' },
+    ],
+    pricing: {
+      tjm: '500-700€',
+      description: 'Frais de gestion + budget média + création contenu',
+    },
+  },
+  {
+    slug: 'facebook-ads',
+    title: 'Agence Facebook Ads',
+    tag: 'Facebook Ads',
+    category: 'social',
+    heroDescription: "Facebook et Instagram rassemblent 40 millions d'utilisateurs en France. Notre agence Meta Ads crée des campagnes publicitaires performantes pour générer des leads et des ventes.",
+    metaTitle: 'Agence Facebook Ads & Instagram Ads à Lille | Meta Ads | Slashr',
+    metaDescription: 'Agence Facebook Ads à Lille. Création et gestion de campagnes Meta Ads (Facebook & Instagram). Génération de leads, e-commerce et notoriété.',
+    contentSection: {
+      tag: 'Meta Ads',
+      title: 'La puissance de l\'écosystème Meta',
+      content: "Meta Ads (Facebook Ads + Instagram Ads) offre l'un des ciblages les plus précis du marché grâce aux données comportementales de ses utilisateurs. C'est le levier idéal pour le B2C, l'e-commerce et la génération de leads.",
+      bulletPoints: [
+        "40 millions d'utilisateurs en France sur Facebook et Instagram.",
+        "Ciblage par centres d'intérêt, comportements et données démographiques.",
+        "Formats variés : image, vidéo, carrousel, stories, reels.",
+        "Catalogue produits et publicités dynamiques pour l'e-commerce.",
+      ],
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Pourquoi investir en Meta Ads',
+      intro: "Meta Ads permet de toucher massivement votre audience avec des formats engageants. Le remarketing et les audiences lookalike en font un levier incontournable pour scaler votre acquisition.",
+      expertiseLinks: [
+        { text: 'Facebook Ads', href: '#', highlight: 'Acquisition & Leads' },
+        { text: 'Instagram Ads', href: '#', highlight: 'Notoriété & Engagement' },
+        { text: 'Catalogue dynamique', href: '#', highlight: 'E-commerce & Remarketing' },
+        { text: 'Audiences lookalike', href: '#', highlight: 'Scaling intelligent' },
+      ],
+      ctaText: 'Lancer mes Meta Ads',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Experts Meta Ads certifiés',
+      subtitle: 'Créativité + Data = Performance',
+      description: "Notre expertise Meta Ads combine création de contenu engageant et optimisation data-driven. Nous maximisons votre ROAS grâce à des stratégies d'audience avancées.",
+      points: [
+        {
+          title: 'Création de contenu',
+          description: "Visuels et vidéos adaptés aux codes Facebook et Instagram pour maximiser l'engagement.",
+        },
+        {
+          title: 'Audiences avancées',
+          description: "Lookalikes, custom audiences, retargeting : toutes les stratégies pour toucher les bonnes personnes.",
+        },
+        {
+          title: 'Setup technique complet',
+          description: "Pixel Facebook, API Conversions, catalogue produits : un tracking précis pour optimiser.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous ciblez une audience B2C grand public",
+      "Vous avez un site e-commerce à promouvoir",
+      "Vous voulez générer des leads qualifiés",
+      "Vous souhaitez développer votre notoriété de marque",
+    ],
+    notForYou: [
+      "Votre cible est exclusivement B2B senior",
+      "Vous n'avez pas de visuels ou vidéos à exploiter",
+      "Vous n'avez pas de budget minimum de 500€/mois",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Audit & Stratégie',
+        description: "Analyse de votre compte, définition des audiences et objectifs de campagne.",
+      },
+      {
+        number: 2,
+        title: 'Setup technique',
+        description: "Configuration du pixel, API Conversions, catalogue produits si e-commerce.",
+      },
+      {
+        number: 3,
+        title: 'Création & Lancement',
+        description: "Production des visuels, rédaction des textes et lancement des campagnes.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation',
+        description: "A/B testing créatifs, optimisation des audiences et scaling progressif.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Audience massive et ciblage précis',
+        description: "40 millions d'utilisateurs en France avec un ciblage par centres d'intérêt, comportements et données démographiques ultra-précis.",
+        highlight: 'ciblage précis',
+        icon: 'target',
+        size: 'large',
+      },
+      {
+        title: 'Formats créatifs variés',
+        description: "Image, vidéo, carrousel, stories, reels : des formats natifs qui captent l'attention.",
+        icon: 'rocket',
+        size: 'medium',
+      },
+      {
+        title: 'Catalogue dynamique',
+        description: "Publicités produits automatiques pour l'e-commerce avec remarketing des paniers abandonnés.",
+        icon: 'code',
+        size: 'medium',
+      },
+      {
+        title: 'Audiences lookalike',
+        description: "Trouvez de nouveaux clients ressemblant à vos meilleurs acheteurs pour scaler efficacement.",
+        icon: 'user',
+        size: 'medium',
+      },
+      {
+        title: 'Instagram inclus',
+        description: "Diffusion automatique sur Instagram pour toucher une audience complémentaire.",
+        icon: 'globe',
+        size: 'medium',
+      },
+      {
+        title: 'ROI mesurable et optimisable',
+        description: "Tracking précis des conversions grâce au pixel et à l'API Conversions pour optimiser chaque euro investi.",
+        highlight: 'ROI mesurable',
+        icon: 'chart',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Créatifs qui ne performent pas',
+        description: "Sur Meta, le créatif fait 80% de la performance. Des visuels génériques ne génèrent pas de résultats.",
+      },
+      {
+        title: 'Tracking incomplet',
+        description: "Sans pixel et API Conversions correctement configurés, l'algorithme Meta ne peut pas optimiser.",
+      },
+      {
+        title: 'Audiences trop larges',
+        description: "Cibler 'tout le monde' dilue le budget. Mieux vaut des audiences précises et des lookalikes.",
+      },
+    ],
+    comparison: {
+      title: 'Meta Ads : seul vs avec une agence',
+      without: [
+        'Visuels non optimisés pour les formats Meta',
+        'Ciblage basique sans audiences avancées',
+        'Pixel seul sans API Conversions',
+        'Pas de stratégie de remarketing',
+        'Budget gaspillé sur des audiences trop larges',
+      ],
+      with: [
+        'Créatifs performants adaptés aux codes Meta',
+        'Audiences lookalike et custom audiences affinées',
+        'Setup technique complet (Pixel + CAPI)',
+        'Remarketing dynamique sur catalogue',
+        'A/B testing et optimisation continue',
+      ],
+    },
+    faqs: [
+      {
+        question: 'Quelle différence entre Facebook Ads et Instagram Ads ?',
+        answer: "Ils font partie de la même plateforme Meta Ads. Vous pouvez diffuser sur les deux simultanément ou choisir. Instagram touche une audience plus jeune et plus visuelle, Facebook une audience plus large et diversifiée.",
+      },
+      {
+        question: 'Quel budget minimum pour Meta Ads ?',
+        answer: "Comptez minimum 500€/mois pour tester et apprendre. Pour des résultats significatifs et pouvoir scaler, 1500-2000€/mois est recommandé.",
+      },
+      {
+        question: "Pourquoi l'API Conversions est-elle importante ?",
+        answer: "Avec les restrictions iOS (App Tracking Transparency), le pixel seul ne capte plus toutes les conversions. L'API Conversions envoie les données côté serveur pour un tracking plus fiable.",
+      },
+      {
+        question: 'Gérez-vous aussi le community management ?',
+        answer: "Notre expertise se concentre sur les Meta Ads (publicité payante). Pour le community management (gestion des réseaux sociaux organique), nous pouvons vous recommander des partenaires.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Social Ads', href: '/ads/social/social-ads' },
+      { name: 'LinkedIn Ads', href: '/ads/social/linkedin-ads' },
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Google Shopping', href: '/ads/sea/google-shopping' },
+    ],
+    pricing: {
+      tjm: '500-700€',
+      description: 'Frais de gestion + budget média + création contenu',
+    },
+  },
+  {
+    slug: 'linkedin-ads',
+    title: 'Agence LinkedIn Ads',
+    tag: 'LinkedIn Ads',
+    category: 'social',
+    heroDescription: "LinkedIn est LA plateforme B2B pour toucher les décideurs. Notre agence LinkedIn Ads crée des campagnes ciblées par fonction, secteur et entreprise pour générer des leads qualifiés.",
+    metaTitle: 'Agence LinkedIn Ads à Lille | Publicité B2B | Slashr',
+    metaDescription: 'Agence LinkedIn Ads à Lille. Création et gestion de campagnes publicitaires B2B. Ciblage par fonction, secteur, entreprise. Génération de leads qualifiés.',
+    contentSection: {
+      tag: 'LinkedIn Ads',
+      title: 'Le levier B2B par excellence',
+      content: "LinkedIn rassemble 25 millions de professionnels en France. C'est la seule plateforme qui permet de cibler précisément par fonction, secteur d'activité, taille d'entreprise et compétences. Idéal pour le B2B et la génération de leads qualifiés.",
+      bulletPoints: [
+        "25 millions de professionnels en France sur LinkedIn.",
+        "Ciblage unique : fonction, secteur, entreprise, ancienneté.",
+        "Formats B2B : Sponsored Content, InMail, Lead Gen Forms.",
+        "Leads ultra-qualifiés avec formulaires pré-remplis.",
+      ],
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Pourquoi investir en LinkedIn Ads',
+      intro: "LinkedIn Ads a un coût par clic plus élevé que les autres plateformes, mais la qualité des leads B2B compense largement. C'est le levier incontournable pour toucher les décideurs.",
+      expertiseLinks: [
+        { text: 'Sponsored Content', href: '#', highlight: 'Posts sponsorisés dans le feed' },
+        { text: 'Lead Gen Forms', href: '#', highlight: 'Formulaires pré-remplis' },
+        { text: 'InMail sponsorisé', href: '#', highlight: 'Messages directs ciblés' },
+        { text: 'ABM', href: '#', highlight: 'Account-Based Marketing' },
+      ],
+      ctaText: 'Lancer mes LinkedIn Ads',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Experts LinkedIn Ads B2B',
+      subtitle: 'Ciblage précis = Leads qualifiés',
+      description: "Notre expertise LinkedIn Ads permet de toucher exactement les décideurs que vous ciblez. Nous optimisons chaque campagne pour maximiser le volume de leads qualifiés tout en maîtrisant le coût par lead.",
+      points: [
+        {
+          title: 'Ciblage chirurgical',
+          description: "Fonction, secteur, entreprise, ancienneté : nous ciblons précisément vos prospects idéaux.",
+        },
+        {
+          title: 'Lead Gen optimisé',
+          description: "Formulaires pré-remplis pour maximiser le taux de conversion et la qualité des leads.",
+        },
+        {
+          title: 'Stratégie ABM',
+          description: "Account-Based Marketing pour cibler des entreprises spécifiques avec des messages personnalisés.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous vendez en B2B à des décideurs",
+      "Vous proposez des services aux entreprises",
+      "Vous recrutez des profils qualifiés",
+      "Vous voulez générer des leads B2B qualifiés",
+    ],
+    notForYou: [
+      "Votre cible est exclusivement B2C",
+      "Vous vendez des produits grand public",
+      "Vous n'avez pas de budget minimum de 1500€/mois",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Définition des cibles',
+        description: "Identification des personas, fonctions et entreprises cibles pour vos campagnes.",
+      },
+      {
+        number: 2,
+        title: 'Setup & Tracking',
+        description: "Configuration du LinkedIn Insight Tag et des événements de conversion.",
+      },
+      {
+        number: 3,
+        title: 'Création des campagnes',
+        description: "Rédaction des messages, création des visuels et configuration des Lead Gen Forms.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation',
+        description: "A/B testing, affinage des audiences et optimisation du coût par lead.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Ciblage B2B inégalé',
+        description: "Le seul réseau qui permet de cibler par fonction, secteur, entreprise, ancienneté et compétences. Touchez exactement les décideurs que vous visez.",
+        highlight: 'Ciblage B2B',
+        icon: 'target',
+        size: 'large',
+      },
+      {
+        title: 'Lead Gen Forms',
+        description: "Formulaires pré-remplis avec les données LinkedIn : taux de conversion supérieur et leads qualifiés.",
+        icon: 'clipboard',
+        size: 'medium',
+      },
+      {
+        title: 'InMail sponsorisé',
+        description: "Messages directs dans la boîte de réception LinkedIn pour un contact personnalisé.",
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'Account-Based Marketing',
+        description: "Ciblez des entreprises spécifiques pour des campagnes hyper-personnalisées.",
+        icon: 'user',
+        size: 'medium',
+      },
+      {
+        title: 'Audience professionnelle',
+        description: "25 millions de professionnels en France, des décideurs aux opérationnels.",
+        icon: 'globe',
+        size: 'medium',
+      },
+      {
+        title: 'ROI B2B mesurable',
+        description: "Tracking des conversions et mesure précise du coût par lead pour optimiser votre investissement.",
+        highlight: 'ROI B2B',
+        icon: 'chart',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'CPC élevé',
+        description: "LinkedIn Ads a des coûts par clic plus élevés que Meta ou Google. Le budget doit être suffisant pour générer des résultats.",
+      },
+      {
+        title: 'Audiences trop restreintes',
+        description: "Un ciblage trop précis limite le volume. Il faut trouver l'équilibre entre qualité et quantité.",
+      },
+      {
+        title: 'Contenu non adapté au B2B',
+        description: "Le ton et les messages doivent être professionnels et apporter de la valeur aux décideurs.",
+      },
+    ],
+    comparison: {
+      title: 'LinkedIn Ads : seul vs avec une agence',
+      without: [
+        'Ciblage générique par secteur uniquement',
+        'Pas de stratégie Lead Gen Forms',
+        'Messages non optimisés pour le B2B',
+        'Pas de stratégie ABM',
+        'Budget gaspillé sur des audiences mal définies',
+      ],
+      with: [
+        'Ciblage chirurgical par fonction et entreprise',
+        'Lead Gen Forms optimisés pour la conversion',
+        'Contenu B2B qui engage les décideurs',
+        'Stratégie ABM pour les comptes clés',
+        'Optimisation continue du coût par lead',
+      ],
+    },
+    faqs: [
+      {
+        question: 'Quel budget minimum pour LinkedIn Ads ?',
+        answer: "LinkedIn Ads est plus cher que les autres plateformes (CPC de 5-15€). Comptez minimum 1500€/mois de budget média pour avoir des résultats significatifs et pouvoir optimiser.",
+      },
+      {
+        question: "Qu'est-ce que les Lead Gen Forms ?",
+        answer: "Les Lead Gen Forms sont des formulaires pré-remplis avec les données du profil LinkedIn. L'utilisateur n'a qu'à cliquer pour envoyer ses informations, ce qui maximise le taux de conversion.",
+      },
+      {
+        question: 'LinkedIn Ads vs Google Ads pour le B2B ?',
+        answer: "Google Ads capture une intention de recherche (l'utilisateur cherche activement). LinkedIn Ads permet de cibler des profils spécifiques même s'ils ne cherchent pas. Les deux sont complémentaires pour une stratégie B2B complète.",
+      },
+      {
+        question: "Qu'est-ce que l'ABM (Account-Based Marketing) ?",
+        answer: "L'ABM consiste à cibler des entreprises spécifiques avec des campagnes personnalisées. LinkedIn Ads permet de cibler par nom d'entreprise, idéal pour les cycles de vente longs en B2B.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Social Ads', href: '/ads/social/social-ads' },
+      { name: 'Facebook Ads', href: '/ads/social/facebook-ads' },
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Google Shopping', href: '/ads/sea/google-shopping' },
+    ],
+    pricing: {
+      tjm: '600-800€',
+      description: 'Frais de gestion + budget média (minimum 1500€/mois recommandé)',
+    },
+  },
+  // =====================================================
+  // INSTAGRAM ADS
+  // =====================================================
+  {
+    slug: 'instagram-ads',
+    title: 'Agence Instagram Ads',
+    tag: 'Instagram Ads',
+    category: 'social',
+    heroDescription: "Instagram rassemble plus de 26 millions d'utilisateurs actifs en France. Notre agence Instagram Ads crée des campagnes publicitaires visuelles et engageantes pour toucher votre audience et générer des résultats concrets.",
+    metaTitle: 'Agence Instagram Ads à Lille | Publicité Instagram | Slashr',
+    metaDescription: 'Agence Instagram Ads à Lille. Création et gestion de campagnes publicitaires sur Instagram : Stories, Reels, carrousels. Experts en publicités visuelles pour maximiser votre engagement et vos conversions.',
+    contentSection: {
+      tag: 'Instagram Ads',
+      title: "Captez l'attention avec des visuels qui convertissent",
+      content: "Instagram est la plateforme du visuel par excellence. Les utilisateurs y passent en moyenne 30 minutes par jour, scrollant des contenus inspirants. Les Instagram Ads permettent de capter cette attention avec des formats natifs et engageants qui s'intègrent naturellement dans le feed.",
+      bulletPoints: [
+        "Formats immersifs : Stories, Reels, carrousels qui captent l'attention.",
+        "Ciblage précis : Centres d'intérêt, comportements, audiences similaires.",
+        "Synergie Meta : Gestion unifiée avec Facebook pour optimiser les performances.",
+        "E-commerce natif : Shopping intégré pour transformer l'inspiration en achat.",
+      ],
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Pourquoi investir en Instagram Ads',
+      intro: "Instagram est devenu un canal incontournable pour les marques qui veulent développer leur notoriété et générer des ventes. La plateforme offre un engagement supérieur aux autres réseaux sociaux, particulièrement auprès des 18-35 ans.",
+      expertiseLinks: [
+        { text: 'Stories Ads', href: '#', highlight: 'Format plein écran immersif' },
+        { text: 'Reels Ads', href: '#', highlight: 'Vidéo courte et virale' },
+        { text: 'Shopping Ads', href: '#', highlight: 'E-commerce intégré' },
+        { text: 'Facebook Ads', href: '/ads/social/facebook-ads', highlight: 'Synergie Meta complète' },
+      ],
+      ctaText: 'Lancer mes Instagram Ads',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Expertise créative et performance',
+      subtitle: 'Le visuel au service de vos objectifs',
+      description: "Notre agence combine expertise créative et maîtrise technique pour créer des campagnes Instagram Ads qui se démarquent. Nous produisons des visuels adaptés aux codes de la plateforme et optimisons en continu pour maximiser vos résultats.",
+      points: [
+        {
+          title: 'Création de contenu',
+          description: "Production de visuels et vidéos adaptés aux formats Instagram : Stories, Reels, carrousels.",
+        },
+        {
+          title: 'Stratégie audience',
+          description: "Ciblage précis et création d'audiences personnalisées pour toucher vos prospects idéaux.",
+        },
+        {
+          title: 'Optimisation continue',
+          description: "Tests A/B, analyse des performances et ajustement des campagnes pour maximiser le ROI.",
+        },
+      ],
+    },
+    forYou: [
+      "Votre marque cible les 18-45 ans",
+      "Vous avez des produits ou services visuels à promouvoir",
+      "Vous souhaitez développer votre notoriété et votre engagement",
+      "Vous avez une stratégie e-commerce et voulez utiliser Instagram Shopping",
+    ],
+    notForYou: [
+      "Votre cible est principalement B2B (préférez LinkedIn Ads)",
+      "Vous n'avez pas de contenu visuel à mettre en avant",
+      "Votre audience a plus de 55 ans principalement",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Audit & Stratégie',
+        description: "Analyse de votre présence Instagram, définition de vos objectifs et création d'une stratégie adaptée à votre audience.",
+      },
+      {
+        number: 2,
+        title: 'Setup & Création',
+        description: "Configuration du compte publicitaire, création des audiences et production des visuels publicitaires.",
+      },
+      {
+        number: 3,
+        title: 'Lancement campagnes',
+        description: "Paramétrage des campagnes, définition des budgets et lancement sur les formats les plus pertinents.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation',
+        description: "Suivi des performances, tests A/B et optimisation continue pour maximiser vos résultats.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Formats créatifs natifs',
+        description: "Stories, Reels, carrousels, collection : des formats publicitaires qui s'intègrent naturellement dans l'expérience Instagram et captent l'attention de votre audience.",
+        highlight: 'créatifs',
+        icon: 'rocket',
+        size: 'large',
+      },
+      {
+        title: 'Engagement supérieur',
+        description: "Instagram affiche des taux d'engagement plus élevés que les autres réseaux sociaux, idéal pour développer votre communauté.",
+        highlight: 'engagement',
+        icon: 'chart',
+        size: 'medium',
+      },
+      {
+        title: 'Shopping intégré',
+        description: "Tagguez vos produits directement dans les publications pour transformer l'inspiration en achat.",
+        highlight: 'Shopping',
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'Ciblage Meta',
+        description: "Accédez aux données de ciblage de Meta pour toucher précisément votre audience idéale.",
+        highlight: 'Meta',
+        icon: 'target',
+        size: 'medium',
+      },
+      {
+        title: 'Remarketing puissant',
+        description: "Reciblez les visiteurs de votre site et les personnes qui ont interagi avec votre contenu.",
+        highlight: 'Remarketing',
+        icon: 'globe',
+        size: 'medium',
+      },
+      {
+        title: 'Synergie Facebook',
+        description: "Gérez vos campagnes Instagram et Facebook depuis une seule plateforme pour maximiser votre portée et optimiser vos budgets publicitaires.",
+        highlight: 'Synergie',
+        icon: 'shield',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Qualité visuelle insuffisante',
+        description: "Instagram est une plateforme visuelle exigeante. Des visuels de mauvaise qualité ou non adaptés aux formats impactent négativement les performances de vos campagnes publicitaires.",
+      },
+      {
+        title: 'Ignorer les tendances',
+        description: "Les codes d'Instagram évoluent rapidement. Ne pas adapter son contenu aux tendances (Reels, formats natifs) limite la portée et l'engagement de vos publicités.",
+      },
+      {
+        title: 'Ciblage trop large',
+        description: "Un ciblage non affiné dilue votre budget sur des audiences peu qualifiées. L'analyse et la segmentation sont essentielles pour maximiser le ROI.",
+      },
+      {
+        title: 'Pas de cohérence avec le feed',
+        description: "Des publicités trop différentes de votre contenu organique créent une rupture. L'authenticité et la cohérence de marque sont clés sur Instagram.",
+      },
+      {
+        title: 'Tracking mal configuré',
+        description: "Sans Pixel Meta et API Conversions correctement configurés, impossible de mesurer le vrai ROI et d'optimiser les campagnes efficacement.",
+      },
+    ],
+    faqs: [
+      {
+        question: 'Quels formats publicitaires proposez-vous sur Instagram ?',
+        answer: "Nous gérons tous les formats Instagram Ads : Stories (plein écran vertical), Reels (vidéos courtes), Feed (image et vidéo), Carrousels (jusqu'à 10 visuels), Collection (catalogue produits) et Explore. Nous recommandons les formats selon vos objectifs : Stories pour la notoriété, Reels pour l'engagement, Collection pour l'e-commerce.",
+      },
+      {
+        question: 'Quel budget pour des Instagram Ads efficaces ?',
+        answer: "Nous recommandons un budget minimum de 500€/mois pour commencer à tester et apprendre. Pour des résultats significatifs, un budget de 1000-2000€/mois permet d'optimiser les campagnes et d'atteindre un volume suffisant. Le budget optimal dépend de vos objectifs et de votre secteur.",
+      },
+      {
+        question: 'Créez-vous les visuels publicitaires ?',
+        answer: "Oui, notre agence propose la création de visuels et vidéos adaptés aux formats Instagram. Nous produisons des contenus qui respectent les codes de la plateforme et maximisent l'engagement. Nous pouvons également adapter vos visuels existants aux différents formats.",
+      },
+      {
+        question: 'Quelle différence entre Instagram Ads et Facebook Ads ?',
+        answer: "Instagram et Facebook font partie de Meta et partagent la même plateforme publicitaire. Instagram touche une audience plus jeune (18-35 ans) avec des formats plus visuels et créatifs. Facebook a une audience plus large et diversifiée. Nous recommandons souvent de combiner les deux pour maximiser la portée.",
+      },
+      {
+        question: 'Comment mesurez-vous les performances ?',
+        answer: "Nous configurons le Pixel Meta et l'API Conversions pour un tracking précis. Nous suivons les KPIs clés : impressions, reach, engagement, clics, conversions, ROAS. Des reportings réguliers vous permettent de suivre les résultats et l'optimisation des campagnes.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Facebook Ads', href: '/ads/social/facebook-ads' },
+      { name: 'TikTok Ads', href: '/ads/social/tiktok-ads' },
+      { name: 'LinkedIn Ads', href: '/ads/social/linkedin-ads' },
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+    ],
+    pricing: {
+      tjm: '500-700€',
+      description: 'Frais de gestion + budget média + création contenu',
+    },
+  },
+  // =====================================================
+  // TIKTOK ADS
+  // =====================================================
+  {
+    slug: 'tiktok-ads',
+    title: 'Agence TikTok Ads',
+    tag: 'TikTok Ads',
+    category: 'social',
+    heroDescription: "TikTok est devenu incontournable pour toucher la Gen Z et les Millennials. Notre agence TikTok Ads crée des campagnes publicitaires authentiques et engageantes qui s'intègrent naturellement dans l'expérience utilisateur.",
+    metaTitle: 'Agence TikTok Ads à Lille | Publicité TikTok | Slashr',
+    metaDescription: 'Agence TikTok Ads à Lille. Création et gestion de campagnes publicitaires sur TikTok : vidéos natives, Spark Ads, challenges. Experts en marketing digital pour toucher la Gen Z.',
+    contentSection: {
+      tag: 'TikTok Ads',
+      title: "Créez du contenu qui devient viral",
+      content: "TikTok a révolutionné la consommation de contenu vidéo. Les utilisateurs y passent en moyenne 95 minutes par jour, découvrant des contenus via l'algorithme For You. Les TikTok Ads permettent de toucher cette audience engagée avec des formats natifs qui génèrent des résultats impressionnants.",
+      bulletPoints: [
+        "Formats natifs : In-Feed, Spark Ads, TopView qui s'intègrent naturellement.",
+        "Audience engagée : 95 minutes de temps passé quotidien en moyenne.",
+        "Algorithme puissant : Découverte basée sur l'intérêt, pas sur le follow.",
+        "Viralité potentielle : Un contenu authentique peut exploser organiquement.",
+      ],
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Pourquoi investir en TikTok Ads',
+      intro: "TikTok est la plateforme à la croissance la plus rapide, avec plus d'un milliard d'utilisateurs actifs. C'est le canal privilégié pour toucher les 16-35 ans avec un contenu authentique et divertissant qui génère un engagement exceptionnel.",
+      expertiseLinks: [
+        { text: 'In-Feed Ads', href: '#', highlight: 'Vidéos natives dans le feed' },
+        { text: 'Spark Ads', href: '#', highlight: 'Boost de contenus organiques' },
+        { text: 'TopView', href: '#', highlight: 'Format premium plein écran' },
+        { text: 'Instagram Ads', href: '/ads/social/instagram-ads', highlight: 'Stratégie vidéo complète' },
+      ],
+      ctaText: 'Lancer mes TikTok Ads',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Authenticité et créativité',
+      subtitle: "Maîtriser les codes TikTok",
+      description: "TikTok requiert une approche différente des autres réseaux sociaux. Notre équipe maîtrise les codes de la plateforme et crée des contenus qui résonnent avec l'audience : authentiques, divertissants et engageants.",
+      points: [
+        {
+          title: 'Codes TikTok',
+          description: "Nous maîtrisons les tendances, les sons et les formats qui fonctionnent sur TikTok.",
+        },
+        {
+          title: 'Création native',
+          description: "Production de vidéos qui s'intègrent naturellement dans l'expérience TikTok.",
+        },
+        {
+          title: 'Stratégie data',
+          description: "Analyse des performances et optimisation continue basée sur les données.",
+        },
+      ],
+    },
+    forYou: [
+      "Votre marque cible les 16-35 ans (Gen Z et Millennials)",
+      "Vous êtes prêt à adopter un ton authentique et divertissant",
+      "Vous souhaitez développer votre notoriété auprès d'une nouvelle audience",
+      "Vous avez des produits lifestyle, mode, beauté, food ou gaming",
+    ],
+    notForYou: [
+      "Votre cible a plus de 45 ans principalement",
+      "Votre marque ne peut pas adopter un ton décontracté",
+      "Vous n'avez pas de capacité à produire du contenu vidéo",
+      "Votre secteur est très réglementé (finance, santé, etc.)",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Audit & Stratégie',
+        description: "Analyse de votre marque, définition des objectifs et création d'une stratégie TikTok adaptée.",
+      },
+      {
+        number: 2,
+        title: 'Création contenu',
+        description: "Production de vidéos natives qui respectent les codes TikTok et captent l'attention.",
+      },
+      {
+        number: 3,
+        title: 'Lancement campagnes',
+        description: "Configuration du compte TikTok Ads, paramétrage des audiences et lancement des campagnes.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation',
+        description: "Analyse des performances, tests créatifs et optimisation continue pour maximiser le ROI.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Audience Gen Z & Millennials',
+        description: "TikTok est LA plateforme pour toucher les 16-35 ans. Une audience massive et engagée, difficile à atteindre sur les autres canaux marketing.",
+        highlight: 'Gen Z',
+        icon: 'target',
+        size: 'large',
+      },
+      {
+        title: 'Engagement record',
+        description: "TikTok affiche des taux d'engagement jusqu'à 3x supérieurs aux autres réseaux sociaux.",
+        highlight: 'engagement',
+        icon: 'chart',
+        size: 'medium',
+      },
+      {
+        title: 'Algorithme découverte',
+        description: "L'algorithme For You permet de toucher des audiences au-delà de vos followers.",
+        highlight: 'découverte',
+        icon: 'rocket',
+        size: 'medium',
+      },
+      {
+        title: 'CPM compétitifs',
+        description: "Des coûts publicitaires souvent plus bas que sur les plateformes matures.",
+        highlight: 'CPM',
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'Formats créatifs',
+        description: "In-Feed, Spark Ads, TopView, Branded Effects : des formats variés et engageants.",
+        highlight: 'créatifs',
+        icon: 'globe',
+        size: 'medium',
+      },
+      {
+        title: 'Potentiel viral',
+        description: "Un contenu authentique peut générer des millions de vues organiques et transformer votre marque. TikTok récompense la créativité, pas le budget.",
+        highlight: 'viral',
+        icon: 'shield',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Contenu trop corporate',
+        description: "TikTok valorise l'authenticité. Des publicités trop polies ou corporate performent mal. Adoptez un ton décontracté et créatif adapté à la plateforme.",
+      },
+      {
+        title: 'Ignorer les tendances',
+        description: "Les tendances TikTok évoluent très vite (sons, formats, challenges). Ne pas les suivre limite drastiquement la portée de vos campagnes publicitaires.",
+      },
+      {
+        title: 'Vidéos trop longues',
+        description: "L'attention sur TikTok est courte. Des vidéos de plus de 30 secondes perdent rapidement les utilisateurs. Le hook des premières secondes est crucial.",
+      },
+      {
+        title: 'Mauvais ciblage',
+        description: "TikTok touche principalement les 16-35 ans. Si votre cible est plus âgée, d'autres plateformes seront plus efficaces pour votre stratégie.",
+      },
+      {
+        title: 'Budget insuffisant',
+        description: "TikTok Ads nécessite un budget minimum pour optimiser l'algorithme. Un budget trop faible ne permet pas d'accumuler assez de données pour les performances.",
+      },
+    ],
+    faqs: [
+      {
+        question: 'Quels formats publicitaires proposez-vous sur TikTok ?',
+        answer: "Nous gérons tous les formats TikTok Ads : In-Feed (vidéos dans le flux For You), Spark Ads (boost de contenus organiques), TopView (première vidéo à l'ouverture), Branded Hashtag Challenge et Branded Effects. Nous recommandons les Spark Ads pour débuter car ils performent généralement mieux.",
+      },
+      {
+        question: 'Quel budget pour des TikTok Ads efficaces ?',
+        answer: "TikTok recommande un budget minimum de 50€/jour par groupe d'annonces pour optimiser l'algorithme. Nous conseillons de démarrer avec 1000-1500€/mois pour tester et apprendre, puis de scaler les campagnes qui performent.",
+      },
+      {
+        question: 'Créez-vous les vidéos TikTok ?',
+        answer: "Oui, notre équipe produit des vidéos natives adaptées aux codes TikTok. Nous pouvons également optimiser vos contenus existants ou travailler avec des créateurs (UGC) pour plus d'authenticité. Le format vertical 9:16 et les premières secondes sont cruciaux.",
+      },
+      {
+        question: 'TikTok est-il adapté au B2B ?',
+        answer: "TikTok est principalement B2C, ciblant les consommateurs finaux. Pour le B2B, LinkedIn Ads est plus adapté. Cependant, TikTok peut fonctionner pour des marques B2B qui ciblent les jeunes professionnels ou souhaitent développer leur marque employeur.",
+      },
+      {
+        question: 'Comment fonctionne le Spark Ads ?',
+        answer: "Le Spark Ads permet de booster une vidéo organique (la vôtre ou celle d'un créateur avec son accord) en publicité. Ce format performe généralement mieux car le contenu est authentique et garde les interactions (likes, commentaires) du post original.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Instagram Ads', href: '/ads/social/instagram-ads' },
+      { name: 'Facebook Ads', href: '/ads/social/facebook-ads' },
+      { name: 'LinkedIn Ads', href: '/ads/social/linkedin-ads' },
+      { name: 'YouTube Ads', href: '/ads/sea/youtube-ads' },
+    ],
+    pricing: {
+      tjm: '500-700€',
+      description: 'Frais de gestion + budget média + création contenu vidéo',
+    },
+  },
+  // =====================================================
+  // BING ADS (MICROSOFT ADVERTISING)
+  // =====================================================
+  {
+    slug: 'bing-ads',
+    title: 'Agence Bing Ads',
+    tag: 'Bing Ads',
+    category: 'ads',
+    heroDescription: "Microsoft Advertising (Bing Ads) est le complément idéal de Google Ads. Notre agence gère vos campagnes publicitaires sur Bing, Yahoo et les sites partenaires Microsoft pour toucher une audience qualifiée souvent négligée.",
+    metaTitle: 'Agence Bing Ads à Lille | Microsoft Advertising | Slashr',
+    metaDescription: 'Agence Bing Ads (Microsoft Advertising) à Lille. Création et gestion de campagnes publicitaires sur Bing et Yahoo. Complétez votre stratégie SEA pour maximiser votre visibilité.',
+    contentSection: {
+      tag: 'Bing Ads',
+      title: "L'alternative SEA souvent sous-estimée",
+      content: "Microsoft Advertising (anciennement Bing Ads) touche 10-15% des recherches en France via Bing, Yahoo et les sites partenaires. Cette audience est souvent plus âgée, plus aisée et génère des taux de conversion supérieurs à Google Ads, avec des CPC généralement plus bas.",
+      bulletPoints: [
+        "CPC plus bas : Moins de concurrence, coûts réduits de 20-30% vs Google.",
+        "Audience qualifiée : CSP+ et professionnels (utilisateurs Windows/Office).",
+        "Import Google Ads : Réplication facile de vos campagnes existantes.",
+        "Extensions LinkedIn : Ciblage professionnel unique à Microsoft.",
+      ],
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Pourquoi investir en Bing Ads',
+      intro: "Bing Ads complète parfaitement Google Ads en touchant une audience différente. Les utilisateurs Bing sont souvent des professionnels utilisant les outils Microsoft, avec un pouvoir d'achat supérieur et une intention d'achat souvent plus forte.",
+      expertiseLinks: [
+        { text: 'Search Ads', href: '#', highlight: 'Annonces sur Bing.com' },
+        { text: 'Shopping', href: '#', highlight: 'Catalogue produits Microsoft' },
+        { text: 'Audience Network', href: '#', highlight: 'Display Microsoft' },
+        { text: 'Google Ads', href: '/ads/sea/google-ads', highlight: 'Stratégie SEA complète' },
+      ],
+      ctaText: 'Lancer mes Bing Ads',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Expertise Microsoft Advertising',
+      subtitle: "Optimiser le canal négligé",
+      description: "Beaucoup d'annonceurs ignorent Bing Ads, se privant d'une source de trafic qualifié à moindre coût. Notre expertise permet d'exploiter pleinement ce canal et de l'intégrer dans une stratégie SEA globale cohérente.",
+      points: [
+        {
+          title: 'Import optimisé',
+          description: "Nous ne nous contentons pas d'importer Google Ads : nous adaptons et optimisons pour Bing.",
+        },
+        {
+          title: 'Extensions LinkedIn',
+          description: "Exploitation des données LinkedIn pour un ciblage professionnel unique.",
+        },
+        {
+          title: 'Synergies SEA',
+          description: "Intégration cohérente avec vos campagnes Google Ads pour maximiser la couverture.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous avez déjà des campagnes Google Ads et souhaitez étendre votre couverture",
+      "Votre cible inclut des professionnels (CSP+, B2B)",
+      "Vous cherchez des sources de trafic complémentaires à coût réduit",
+      "Vous êtes dans un secteur concurrentiel avec des CPC élevés sur Google",
+    ],
+    notForYou: [
+      "Vous n'avez pas encore de stratégie Google Ads établie",
+      "Votre budget SEA est très limité (priorisez Google d'abord)",
+      "Votre cible est exclusivement mobile (Bing est plus desktop)",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Audit & Import',
+        description: "Analyse de vos campagnes Google Ads et import optimisé vers Microsoft Advertising.",
+      },
+      {
+        number: 2,
+        title: 'Adaptation',
+        description: "Ajustement des enchères, budgets et paramètres spécifiques à Bing Ads.",
+      },
+      {
+        number: 3,
+        title: 'Extensions',
+        description: "Configuration des extensions spécifiques Microsoft (LinkedIn Profile Targeting).",
+      },
+      {
+        number: 4,
+        title: 'Optimisation',
+        description: "Suivi des performances et optimisation continue pour maximiser le ROI.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'CPC plus compétitifs',
+        description: "Moins de concurrence sur Bing signifie des coûts par clic 20-30% inférieurs à Google Ads, avec souvent une meilleure qualité de trafic.",
+        highlight: 'CPC',
+        icon: 'zap',
+        size: 'large',
+      },
+      {
+        title: 'Audience CSP+',
+        description: "Les utilisateurs Bing sont souvent des professionnels avec un pouvoir d'achat supérieur.",
+        highlight: 'CSP+',
+        icon: 'target',
+        size: 'medium',
+      },
+      {
+        title: 'Import facile',
+        description: "Vos campagnes Google Ads peuvent être importées et adaptées en quelques clics.",
+        highlight: 'Import',
+        icon: 'rocket',
+        size: 'medium',
+      },
+      {
+        title: 'LinkedIn Targeting',
+        description: "Ciblez par entreprise, secteur ou fonction grâce à l'intégration LinkedIn unique.",
+        highlight: 'LinkedIn',
+        icon: 'globe',
+        size: 'medium',
+      },
+      {
+        title: 'Reach complémentaire',
+        description: "Touchez 10-15% d'audience supplémentaire que vous manquez sur Google.",
+        highlight: 'Reach',
+        icon: 'chart',
+        size: 'medium',
+      },
+      {
+        title: 'Conversion supérieure',
+        description: "Les études montrent souvent des taux de conversion plus élevés sur Bing, grâce à une audience plus intentionniste et moins sollicitée par la publicité.",
+        highlight: 'Conversion',
+        icon: 'shield',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Simple copie de Google Ads',
+        description: "Importer sans adapter ne suffit pas. Les enchères, audiences et paramètres doivent être optimisés spécifiquement pour l'écosystème Microsoft Advertising.",
+      },
+      {
+        title: 'Volume plus faible',
+        description: "Bing représente 10-15% du marché search. N'attendez pas le même volume que Google. C'est un canal complémentaire, pas un remplacement.",
+      },
+      {
+        title: 'Audience desktop',
+        description: "L'audience Bing est plus desktop que mobile. Si votre site n'est pas optimisé desktop, les performances peuvent être impactées.",
+      },
+      {
+        title: 'Suivi séparé nécessaire',
+        description: "Le tracking doit être configuré spécifiquement pour Microsoft Ads (UET tag). Ne pas l'installer limite l'optimisation des campagnes.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Qu'est-ce que Microsoft Advertising (Bing Ads) ?",
+        answer: "Microsoft Advertising (anciennement Bing Ads) est la plateforme publicitaire de Microsoft qui diffuse des annonces sur Bing, Yahoo, AOL et les sites partenaires. Elle fonctionne de manière similaire à Google Ads avec un système d'enchères au CPC.",
+      },
+      {
+        question: 'Quel budget pour Bing Ads ?',
+        answer: "Bing Ads peut fonctionner avec des budgets modestes grâce à des CPC plus bas. Nous recommandons un minimum de 500€/mois pour commencer, en complément de vos campagnes Google Ads existantes. Le budget optimal dépend de votre secteur et de vos objectifs.",
+      },
+      {
+        question: 'Puis-je importer mes campagnes Google Ads ?',
+        answer: "Oui, Microsoft Advertising propose un import direct de Google Ads. Cependant, nous ne nous contentons pas de copier : nous adaptons les enchères, ajustons les paramètres et optimisons spécifiquement pour la plateforme Bing.",
+      },
+      {
+        question: "Qu'est-ce que le LinkedIn Profile Targeting ?",
+        answer: "C'est une fonctionnalité exclusive à Microsoft Advertising qui permet de cibler les utilisateurs par leur profil LinkedIn : entreprise, secteur d'activité, fonction. C'est particulièrement puissant pour le B2B.",
+      },
+      {
+        question: 'Bing Ads ou Google Ads en premier ?',
+        answer: "Nous recommandons de commencer par Google Ads qui représente 90% du marché search en France. Une fois vos campagnes optimisées et rentables sur Google, Bing Ads devient un excellent complément pour étendre votre couverture à moindre coût.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Google Shopping', href: '/ads/sea/google-shopping' },
+      { name: 'YouTube Ads', href: '/ads/sea/youtube-ads' },
+      { name: 'Performance Max', href: '/ads/sea/performance-max' },
+    ],
+    pricing: {
+      tjm: '500-700€',
+      description: 'Frais de gestion + budget média Microsoft Advertising',
+    },
+  },
+  // =====================================================
+  // YOUTUBE ADS
+  // =====================================================
+  {
+    slug: 'youtube-ads',
+    title: 'Agence YouTube Ads',
+    tag: 'YouTube Ads',
+    category: 'ads',
+    heroDescription: "YouTube est le 2ème moteur de recherche au monde avec 40 millions de visiteurs uniques par mois en France. Notre agence YouTube Ads crée des campagnes vidéo percutantes pour développer votre visibilité et toucher votre audience.",
+    metaTitle: 'Agence YouTube Ads à Lille | Publicité Vidéo | Slashr',
+    metaDescription: 'Agence YouTube Ads à Lille. Création et gestion de campagnes publicitaires vidéo sur YouTube. Formats In-Stream, Discovery, Bumper pour maximiser votre visibilité et vos performances.',
+    contentSection: {
+      tag: 'YouTube Ads',
+      title: "La puissance de la vidéo pour votre marque",
+      content: "YouTube est la plateforme vidéo incontournable avec plus de 2 milliards d'utilisateurs actifs mensuels. Les YouTube Ads permettent de toucher votre audience avec des formats vidéo variés : avant, pendant ou après les vidéos, dans les résultats de recherche ou sur la page d'accueil.",
+      bulletPoints: [
+        "Reach massif : 40 millions de Français utilisent YouTube chaque mois.",
+        "Formats variés : In-Stream skippable, non-skippable, Bumper, Discovery.",
+        "Ciblage Google : Intention de recherche, centres d'intérêt, remarketing.",
+        "Mesure complète : Vue, engagement, conversion via Google Ads.",
+      ],
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Pourquoi investir en YouTube Ads',
+      intro: "La vidéo est le format le plus engageant et YouTube est sa plateforme de référence. Les campagnes vidéo permettent de raconter votre histoire, démontrer vos produits et créer une connexion émotionnelle que les formats texte ne peuvent égaler.",
+      expertiseLinks: [
+        { text: 'In-Stream Ads', href: '#', highlight: 'Pré-roll et mid-roll' },
+        { text: 'Bumper Ads', href: '#', highlight: '6 secondes non-skippable' },
+        { text: 'Discovery Ads', href: '#', highlight: 'Résultats de recherche' },
+        { text: 'Google Ads', href: '/ads/sea/google-ads', highlight: 'Stratégie SEA complète' },
+      ],
+      ctaText: 'Lancer mes YouTube Ads',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Expertise vidéo et performance',
+      subtitle: "De la création à l'optimisation",
+      description: "Les campagnes YouTube Ads nécessitent une approche spécifique : des créatifs vidéo adaptés à chaque format, un ciblage précis et une optimisation continue. Notre expertise couvre l'ensemble de la chaîne pour maximiser votre ROI.",
+      points: [
+        {
+          title: 'Stratégie vidéo',
+          description: "Définition du format optimal selon vos objectifs : notoriété, considération ou action.",
+        },
+        {
+          title: 'Production adaptée',
+          description: "Création ou adaptation de vidéos aux formats YouTube (6s, 15s, 30s+).",
+        },
+        {
+          title: 'Optimisation ciblage',
+          description: "Exploitation des données Google pour toucher précisément votre audience.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous avez du contenu vidéo à promouvoir ou souhaitez en créer",
+      "Vous voulez développer la notoriété de votre marque à grande échelle",
+      "Vous ciblez une audience qui consomme du contenu vidéo",
+      "Vous souhaitez raconter une histoire ou démontrer un produit",
+    ],
+    notForYou: [
+      "Vous n'avez pas de budget pour la création vidéo",
+      "Vous cherchez uniquement des conversions immédiates à faible coût",
+      "Votre message ne peut pas être transmis en vidéo",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Stratégie vidéo',
+        description: "Définition des objectifs, choix des formats et planification de la production vidéo.",
+      },
+      {
+        number: 2,
+        title: 'Production',
+        description: "Création ou adaptation de vos vidéos aux formats YouTube Ads optimaux.",
+      },
+      {
+        number: 3,
+        title: 'Ciblage & Lancement',
+        description: "Configuration des audiences, paramétrage des campagnes et lancement.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation',
+        description: "Analyse des métriques vidéo, tests créatifs et optimisation continue.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Reach massif',
+        description: "40 millions de visiteurs uniques par mois en France. YouTube permet de toucher une audience massive avec des formats vidéo mémorisables.",
+        highlight: 'Reach',
+        icon: 'globe',
+        size: 'large',
+      },
+      {
+        title: 'Formats flexibles',
+        description: "Du Bumper 6s au TrueView 3min+, adaptez le format à votre message et vos objectifs.",
+        highlight: 'Formats',
+        icon: 'rocket',
+        size: 'medium',
+      },
+      {
+        title: 'Ciblage Google',
+        description: "Exploitez les données Google : intention de recherche, audiences, remarketing.",
+        highlight: 'Google',
+        icon: 'target',
+        size: 'medium',
+      },
+      {
+        title: 'Engagement vidéo',
+        description: "La vidéo génère plus d'engagement et de mémorisation que les autres formats.",
+        highlight: 'Engagement',
+        icon: 'chart',
+        size: 'medium',
+      },
+      {
+        title: 'Coût à la vue',
+        description: "Payez uniquement quand l'utilisateur regarde 30 secondes ou interagit.",
+        highlight: 'CPV',
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'Brand Lift mesurable',
+        description: "Mesurez l'impact réel sur votre notoriété, considération et intention d'achat grâce aux études Brand Lift de Google.",
+        highlight: 'Brand Lift',
+        icon: 'shield',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Vidéo non adaptée',
+        description: "Une vidéo corporate classique ne fonctionne pas sur YouTube. Les premières secondes sont cruciales pour capter l'attention avant le skip.",
+      },
+      {
+        title: 'Mauvais format',
+        description: "Chaque format a ses spécificités. Un Bumper 6s ne peut pas transmettre le même message qu'un TrueView 30s. Adaptez votre créatif.",
+      },
+      {
+        title: 'Ciblage trop large',
+        description: "Le reach YouTube est massif mais un ciblage imprécis gaspille du budget. Affinez par audiences, mots-clés et placements.",
+      },
+      {
+        title: 'Mesure incomplète',
+        description: "Ne vous limitez pas aux vues. Configurez le suivi des conversions pour mesurer l'impact réel sur votre business.",
+      },
+      {
+        title: 'Budget insuffisant',
+        description: "Les campagnes vidéo nécessitent un budget conséquent pour accumuler des données significatives. Prévoyez un budget test avant de scaler.",
+      },
+    ],
+    faqs: [
+      {
+        question: 'Quels formats YouTube Ads recommandez-vous ?',
+        answer: "Le choix dépend de vos objectifs. Pour la notoriété : Bumper Ads (6s) et In-Stream non-skippable. Pour la considération : TrueView In-Stream (skippable). Pour l'action : TrueView for Action avec CTA. Nous recommandons souvent de combiner plusieurs formats.",
+      },
+      {
+        question: 'Quel budget pour YouTube Ads ?',
+        answer: "Les campagnes YouTube Ads nécessitent un budget plus conséquent que le Search. Nous recommandons minimum 2000€/mois pour des résultats significatifs. Le CPV (coût par vue) varie de 0,02€ à 0,10€ selon le ciblage et le format.",
+      },
+      {
+        question: 'Créez-vous les vidéos publicitaires ?',
+        answer: "Nous pouvons adapter vos vidéos existantes aux formats YouTube Ads (ajout d'intro accrocheuse, CTA, etc.). Pour la création de vidéos from scratch, nous travaillons avec des partenaires production ou pouvons vous conseiller sur le brief créatif.",
+      },
+      {
+        question: 'Comment fonctionne le paiement TrueView ?',
+        answer: "Avec TrueView (In-Stream skippable), vous ne payez que si l'utilisateur regarde au moins 30 secondes (ou l'intégralité si moins de 30s) ou interagit avec la vidéo. C'est un modèle au CPV (coût par vue) qui optimise votre budget.",
+      },
+      {
+        question: 'YouTube Ads pour le e-commerce ?',
+        answer: "Oui, YouTube Ads peut être très efficace pour l'e-commerce avec les formats TrueView for Shopping qui affichent vos produits sous la vidéo. Combiné à Performance Max, c'est un levier puissant pour les conversions.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Performance Max', href: '/ads/sea/performance-max' },
+      { name: 'TikTok Ads', href: '/ads/social/tiktok-ads' },
+      { name: 'Instagram Ads', href: '/ads/social/instagram-ads' },
+    ],
+    pricing: {
+      tjm: '600-800€',
+      description: 'Frais de gestion + budget média + production vidéo optionnelle',
+    },
+  },
+  // =====================================================
+  // PERFORMANCE MAX
+  // =====================================================
+  {
+    slug: 'performance-max',
+    title: 'Agence Performance Max',
+    tag: 'Performance Max',
+    category: 'ads',
+    heroDescription: "Performance Max est le type de campagne Google Ads le plus avancé, utilisant l'IA pour diffuser vos annonces sur tous les canaux Google. Notre agence optimise vos campagnes PMax pour maximiser les conversions.",
+    metaTitle: 'Agence Performance Max à Lille | Google Ads PMax | Slashr',
+    metaDescription: 'Agence Performance Max (PMax) à Lille. Experts en campagnes Google Ads automatisées. Optimisez vos conversions sur Search, Shopping, Display, YouTube et Gmail avec une seule campagne.',
+    contentSection: {
+      tag: 'Performance Max',
+      title: "L'IA Google au service de vos conversions",
+      content: "Performance Max (PMax) est le format de campagne Google Ads le plus récent et le plus automatisé. L'algorithme de machine learning optimise automatiquement vos enchères, votre ciblage et la diffusion de vos annonces sur l'ensemble des canaux Google pour maximiser les conversions.",
+      bulletPoints: [
+        "Multi-canaux : Search, Shopping, Display, YouTube, Gmail, Discover, Maps en une seule campagne.",
+        "Automatisation IA : L'algorithme Google optimise en continu pour atteindre vos objectifs.",
+        "Assets variés : Textes, images, vidéos combinés automatiquement pour les meilleures performances.",
+        "E-commerce puissant : Intégration catalogue produits pour maximiser le ROAS.",
+      ],
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Pourquoi investir en Performance Max',
+      intro: "Performance Max représente l'évolution majeure de Google Ads, combinant automatisation et reach multi-canaux. C'est aujourd'hui le format privilégié pour les annonceurs e-commerce et les objectifs de conversion à grande échelle.",
+      expertiseLinks: [
+        { text: 'Shopping PMax', href: '#', highlight: 'E-commerce optimisé' },
+        { text: 'Lead Gen PMax', href: '#', highlight: 'Génération de leads' },
+        { text: 'Audiences Signaux', href: '#', highlight: 'Ciblage intelligent' },
+        { text: 'Google Ads', href: '/ads/sea/google-ads', highlight: 'Stratégie SEA complète' },
+      ],
+      ctaText: 'Lancer mes campagnes Performance Max',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Expertise PMax avancée',
+      subtitle: "Maîtriser l'automatisation Google",
+      description: "Performance Max demande une approche différente : moins de contrôle manuel, plus de stratégie sur les assets et les signaux d'audience. Notre expertise permet d'exploiter pleinement le potentiel de l'IA Google tout en gardant le contrôle sur les résultats.",
+      points: [
+        {
+          title: 'Assets optimisés',
+          description: "Création et optimisation des assets (textes, images, vidéos) pour maximiser les combinaisons performantes.",
+        },
+        {
+          title: 'Signaux audience',
+          description: "Configuration des signaux d'audience pour guider l'algorithme vers les bons prospects.",
+        },
+        {
+          title: 'Insights & contrôle',
+          description: "Analyse des insights PMax et mise en place de contrôles (exclusions, scripts) pour optimiser les performances.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous êtes un e-commerce et souhaitez maximiser votre ROAS",
+      "Vous avez un objectif de conversions mesurables (ventes, leads)",
+      "Vous avez suffisamment de données de conversion pour alimenter l'algorithme",
+      "Vous souhaitez couvrir tous les canaux Google avec une seule campagne",
+    ],
+    notForYou: [
+      "Vous n'avez pas de tracking des conversions configuré",
+      "Vous avez besoin d'un contrôle total sur les enchères et le ciblage",
+      "Votre volume de conversions est trop faible (moins de 30/mois)",
+      "Vous débutez en Google Ads (commencez par Search)",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Audit & Prérequis',
+        description: "Vérification du tracking, analyse des données de conversion et évaluation de la pertinence PMax.",
+      },
+      {
+        number: 2,
+        title: 'Setup Assets',
+        description: "Création des assets (textes, images, vidéos) et configuration des groupes d'assets.",
+      },
+      {
+        number: 3,
+        title: 'Signaux & Lancement',
+        description: "Configuration des signaux d'audience, exclusions et lancement de la campagne.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation',
+        description: "Analyse des insights, optimisation des assets et ajustement des signaux pour améliorer les performances.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Couverture multi-canaux',
+        description: "Une seule campagne diffuse sur Search, Shopping, Display, YouTube, Gmail, Discover et Maps. Maximisez votre reach sans multiplier les campagnes.",
+        highlight: 'multi-canaux',
+        icon: 'globe',
+        size: 'large',
+      },
+      {
+        title: 'Automatisation IA',
+        description: "L'algorithme Google optimise automatiquement enchères, ciblage et créatifs pour vos objectifs.",
+        highlight: 'IA',
+        icon: 'rocket',
+        size: 'medium',
+      },
+      {
+        title: 'E-commerce optimisé',
+        description: "Intégration parfaite avec Merchant Center pour maximiser les ventes de votre catalogue.",
+        highlight: 'E-commerce',
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'Apprentissage continu',
+        description: "L'algorithme s'améliore continuellement en apprenant de vos conversions.",
+        highlight: 'Apprentissage',
+        icon: 'chart',
+        size: 'medium',
+      },
+      {
+        title: 'Gestion simplifiée',
+        description: "Moins de paramètres à gérer manuellement, plus de temps pour la stratégie.",
+        highlight: 'Gestion',
+        icon: 'shield',
+        size: 'medium',
+      },
+      {
+        title: 'Performance mesurable',
+        description: "Google fournit des insights détaillés sur les assets, audiences et placements qui performent. Transparence sur l'allocation budgétaire et les résultats.",
+        highlight: 'Performance',
+        icon: 'target',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Tracking insuffisant',
+        description: "Performance Max nécessite des données de conversion solides pour fonctionner. Sans tracking précis, l'algorithme ne peut pas optimiser correctement.",
+      },
+      {
+        title: 'Assets de mauvaise qualité',
+        description: "L'IA combine vos assets automatiquement. Des images floues, des textes génériques ou l'absence de vidéo limitent les performances.",
+      },
+      {
+        title: 'Volume de conversion faible',
+        description: "PMax a besoin de données pour apprendre. Avec moins de 30 conversions/mois, l'algorithme ne peut pas s'optimiser efficacement.",
+      },
+      {
+        title: "Pas de signaux d'audience",
+        description: "Sans signaux d'audience (audiences personnalisées, données first-party), PMax cible trop large au démarrage et gaspille du budget.",
+      },
+      {
+        title: 'Cannibalisation Search/Shopping',
+        description: "PMax peut cannibaliser vos campagnes Search et Shopping existantes. Une stratégie de coexistence doit être mise en place.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Qu'est-ce que Performance Max ?",
+        answer: "Performance Max (PMax) est un type de campagne Google Ads qui utilise l'IA pour diffuser automatiquement vos annonces sur tous les canaux Google : Search, Shopping, Display, YouTube, Gmail, Discover et Maps. L'algorithme optimise en temps réel pour maximiser vos conversions.",
+      },
+      {
+        question: 'Performance Max remplace-t-il les autres campagnes ?',
+        answer: "PMax peut compléter ou remplacer certaines campagnes selon votre stratégie. Pour l'e-commerce, PMax Shopping remplace souvent les campagnes Shopping classiques. Nous recommandons généralement de garder des campagnes Search pour les requêtes marque et top-performers.",
+      },
+      {
+        question: 'Combien de conversions faut-il pour PMax ?',
+        answer: "Google recommande minimum 30 conversions par mois pour que l'algorithme apprenne efficacement. En dessous, les performances sont instables. Si vous n'avez pas ce volume, nous recommandons de commencer par des campagnes Search manuelles.",
+      },
+      {
+        question: 'Comment fonctionnent les Asset Groups ?',
+        answer: "Un Asset Group regroupe différents assets (titres, descriptions, images, vidéos, logos) que Google combine automatiquement pour créer des annonces. Vous pouvez créer plusieurs Asset Groups par campagne, chacun ciblant un thème ou une gamme de produits.",
+      },
+      {
+        question: "Qu'est-ce que les Signaux d'audience ?",
+        answer: "Les Signaux d'audience sont des indications que vous donnez à l'algorithme sur votre audience idéale : audiences personnalisées, listes de remarketing, données first-party. Ils guident PMax au démarrage sans limiter son reach.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Google Shopping', href: '/ads/sea/google-shopping' },
+      { name: 'YouTube Ads', href: '/ads/sea/youtube-ads' },
+      { name: 'Bing Ads', href: '/ads/sea/bing-ads' },
+    ],
+    pricing: {
+      tjm: '600-800€',
+      description: 'Frais de gestion + budget média + création assets',
+    },
+  },
+  {
     slug: 'formation',
     title: 'Formation SEO',
     tag: 'Formation',
@@ -1960,7 +3629,7 @@ export const prestationsData: Prestation[] = [
     otherExpertises: [
       { name: 'SEO E-commerce', href: '/seo/prestations/ecommerce' },
       { name: 'Migration SEO', href: '/seo/prestations/refonte-migration' },
-      { name: 'Google Ads', href: '/ads/prestations/google-ads' },
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
       { name: 'Agence GEO', href: '/seo/prestations/agence-geo' },
     ],
     pricing: {
@@ -3204,6 +4873,956 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
       description: 'Tarification selon la complexité du projet Webflow',
     },
   },
+  // ============================================
+  // PRESTATIONS SOCIAL ADS - Phase 2
+  // ============================================
+  {
+    slug: 'meta-ads',
+    title: 'Agence Meta Ads',
+    tag: 'Meta Ads',
+    category: 'social',
+    heroDescription: "Facebook, Instagram, Messenger, WhatsApp : l'écosystème Meta Ads offre un reach publicitaire inégalé. Notre agence à Lille vous accompagne pour créer et optimiser vos campagnes sur l'ensemble des plateformes Meta.",
+    metaTitle: 'Agence Meta Ads à Lille | Facebook & Instagram Ads | Slashr',
+    metaDescription: "Agence Meta Ads certifiée. Experts en publicités Facebook, Instagram, Messenger et WhatsApp. Stratégies d'audience avancées et optimisation des conversions.",
+    contentSection: {
+      tag: 'Meta Ads',
+      title: "Maîtrisez l'écosystème publicitaire Meta",
+      content: "Meta Ads (anciennement Facebook Ads) est la plateforme publicitaire la plus puissante pour toucher vos audiences sur Facebook, Instagram, Messenger et WhatsApp. Notre agence vous aide à exploiter tout le potentiel du gestionnaire de publicités Meta pour maximiser vos conversions.",
+      bulletPoints: [
+        "Stratégie cross-plateforme Facebook, Instagram, Messenger et WhatsApp.",
+        "Ciblage d'audience avancé et création de lookalike audiences.",
+        "Optimisation des conversions avec le pixel Meta et l'API Conversions.",
+        "Création de visuels et contenus publicitaires performants.",
+      ],
+    },
+    enjeux: {
+      tag: 'Enjeux',
+      title: "Les enjeux d'une stratégie Meta Ads performante",
+      intro: "L'écosystème Meta représente près de 3 milliards d'utilisateurs actifs. Mais la complexité croissante du gestionnaire de publicités et les évolutions iOS/ATT rendent l'expertise indispensable pour maintenir des performances optimales.",
+      expertiseLinks: [
+        { text: 'Facebook Ads', href: '/ads/social/facebook-ads' },
+        { text: 'Instagram Ads', href: '/ads/social/instagram-ads' },
+        { text: 'Remarketing', href: '/ads/remarketing' },
+      ],
+      ctaText: 'Discuter de votre stratégie Meta Ads',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Une expertise Meta Ads complète',
+      subtitle: 'Certified Meta Business Partner',
+      description: "Notre équipe maîtrise l'ensemble des fonctionnalités du Business Manager et du gestionnaire de publicités Meta. De la stratégie d'audience à l'optimisation des campagnes, nous maximisons votre retour sur investissement publicitaire.",
+      points: [
+        {
+          title: 'Stratégie multi-plateforme',
+          description: "Campagnes coordonnées sur Facebook, Instagram, Messenger pour maximiser le reach et les conversions.",
+        },
+        {
+          title: 'Audiences avancées',
+          description: "Création et gestion de vos Custom Audiences, Lookalike et audiences first-party.",
+        },
+        {
+          title: 'Tracking post-iOS 14',
+          description: "Configuration optimale du pixel, CAPI et domain verification pour un tracking précis.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous souhaitez toucher une large audience B2C ou B2B",
+      "Vous voulez développer votre notoriété sur les réseaux sociaux",
+      "Vous cherchez à générer des leads ou des ventes via les réseaux sociaux",
+      "Vous avez un budget publicitaire d'au moins 2000€/mois",
+    ],
+    notForYou: [
+      "Votre audience cible n'est pas présente sur Facebook/Instagram",
+      "Vous ciblez exclusivement des décideurs B2B seniors (privilégiez LinkedIn)",
+      "Vous n'avez pas de visuels ou contenus à diffuser",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Audit & Stratégie',
+        description: "Analyse de votre compte Meta Business, définition des objectifs et élaboration de la stratégie publicitaire adaptée à vos audiences.",
+      },
+      {
+        number: 2,
+        title: 'Setup technique',
+        description: "Configuration du pixel Meta, API Conversions, events et paramétrage du Business Manager pour un tracking optimal.",
+      },
+      {
+        number: 3,
+        title: 'Création & Lancement',
+        description: "Conception des campagnes, création des audiences, rédaction des copies et production des visuels publicitaires.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation continue',
+        description: "Tests A/B, optimisation des enchères, refresh des créas et scaling des audiences performantes.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Reach massif multi-plateforme',
+        description: "Accédez à 3 milliards d'utilisateurs sur Facebook, Instagram, Messenger et WhatsApp avec une seule plateforme publicitaire.",
+        highlight: 'multi-plateforme',
+        icon: 'globe',
+        size: 'large',
+      },
+      {
+        title: 'Ciblage précis',
+        description: "Les options de ciblage Meta restent les plus complètes du marché : démographique, intérêts, comportements, lookalike.",
+        icon: 'target',
+        size: 'medium',
+      },
+      {
+        title: 'Formats variés',
+        description: "Stories, Reels, carrousels, collections, vidéos : des formats adaptés à chaque objectif et étape du funnel.",
+        icon: 'rocket',
+        size: 'medium',
+      },
+      {
+        title: 'Optimisation IA',
+        description: "Les algorithmes Meta Advantage+ optimisent automatiquement vos campagnes vers les meilleurs résultats.",
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'Mesure complète',
+        description: "Pixel, CAPI, attribution cross-device : mesurez précisément l'impact de vos publicités sur vos conversions.",
+        icon: 'chart',
+        size: 'medium',
+      },
+      {
+        title: "E-commerce natif",
+        description: "Catalogues produits, dynamic ads, checkout Instagram : l'écosystème Meta est optimisé pour le commerce en ligne.",
+        highlight: 'E-commerce',
+        icon: 'rocket',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Fatigue publicitaire',
+        description: "Les audiences Meta se lassent vite. Un refresh régulier des visuels et copies est indispensable pour maintenir les performances.",
+      },
+      {
+        title: 'Tracking post-iOS 14',
+        description: "La mise à jour ATT a réduit la précision du tracking. Une configuration optimale du pixel et CAPI est cruciale.",
+      },
+      {
+        title: 'Budget minimum requis',
+        description: "Les algorithmes Meta ont besoin de volume pour optimiser. En dessous de 1500€/mois, les résultats sont instables.",
+      },
+      {
+        title: 'Qualité des créas',
+        description: "Sur Meta, le visuel fait 80% du succès. Des créas génériques ou mal adaptées au format plombent les performances.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Quelle différence entre Meta Ads et Facebook Ads ?",
+        answer: "Meta Ads est le nouveau nom de Facebook Ads depuis le rebranding de Facebook en Meta. La plateforme publicitaire permet désormais de diffuser sur Facebook, Instagram, Messenger et WhatsApp depuis un seul gestionnaire de publicités.",
+      },
+      {
+        question: "Quel budget minimum pour Meta Ads ?",
+        answer: "Nous recommandons un minimum de 1500-2000€/mois pour permettre aux algorithmes d'optimiser correctement. En dessous, les résultats sont trop variables et l'apprentissage trop lent.",
+      },
+      {
+        question: "Comment fonctionne le ciblage Meta Ads ?",
+        answer: "Meta Ads propose plusieurs types de ciblage : démographique (âge, localisation), par intérêts, par comportements, Custom Audiences (vos clients/visiteurs) et Lookalike (audiences similaires à vos clients).",
+      },
+      {
+        question: "Faut-il faire du Facebook ET Instagram ?",
+        answer: "Nous recommandons généralement de diffuser sur les deux plateformes et laisser l'algorithme optimiser la répartition. Cependant, selon votre audience et vos objectifs, une stratégie spécifique peut être préférable.",
+      },
+      {
+        question: "Comment mesurer les résultats sur Meta Ads ?",
+        answer: "Via le pixel Meta installé sur votre site, complété par l'API Conversions pour un tracking serveur-side. Nous paramétrons les événements de conversion clés et utilisons l'attribution Meta pour mesurer le ROI.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Facebook Ads', href: '/ads/social/facebook-ads' },
+      { name: 'Instagram Ads', href: '/ads/social/instagram-ads' },
+      { name: 'TikTok Ads', href: '/ads/social/tiktok-ads' },
+      { name: 'Remarketing', href: '/ads/remarketing' },
+    ],
+    pricing: {
+      tjm: '500-700€',
+      description: 'Gestion mensuelle selon budget publicitaire',
+    },
+  },
+  {
+    slug: 'pinterest-ads',
+    title: 'Agence Pinterest Ads',
+    tag: 'Pinterest Ads',
+    category: 'social',
+    heroDescription: "Pinterest est la plateforme d'inspiration par excellence. Nos experts créent des campagnes publicitaires qui touchent vos audiences au moment où elles planifient leurs achats.",
+    metaTitle: 'Agence Pinterest Ads à Lille | Publicité Pinterest | Slashr',
+    metaDescription: "Agence Pinterest Ads experte. Campagnes publicitaires sur Pinterest pour e-commerce, décoration, mode et lifestyle. Touchez vos clients en phase d'inspiration.",
+    contentSection: {
+      tag: 'Pinterest Ads',
+      title: "Touchez vos clients en phase d'inspiration",
+      content: "Pinterest n'est pas un réseau social classique, c'est un moteur de recherche visuel. Les utilisateurs y planifient leurs achats, découvrent des produits et s'inspirent. Notre agence vous aide à capter cette audience à forte intention via le gestionnaire d'annonces Pinterest.",
+      bulletPoints: [
+        "Campagnes adaptées au comportement d'inspiration Pinterest.",
+        "Formats publicitaires variés : Pins sponsorisés, carrousels, vidéos, collections.",
+        "Ciblage par intérêts, mots-clés et audiences similaires.",
+        "Catalogues produits synchronisés pour les annonces dynamiques.",
+      ],
+    },
+    enjeux: {
+      tag: 'Enjeux',
+      title: "Les enjeux de la publicité Pinterest",
+      intro: "Pinterest compte 450 millions d'utilisateurs actifs, dont 85% déclarent utiliser la plateforme pour planifier des achats. C'est l'opportunité de toucher votre audience très en amont du tunnel de conversion.",
+      expertiseLinks: [
+        { text: 'Social Ads', href: '/ads/social' },
+        { text: 'E-commerce Ads', href: '/ads/ecommerce' },
+        { text: 'Remarketing', href: '/ads/remarketing' },
+      ],
+      ctaText: 'Lancer vos campagnes Pinterest',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Experts en publicité Pinterest',
+      subtitle: 'Une plateforme unique',
+      description: "Pinterest demande une approche différente des autres plateformes sociales. Nos experts comprennent les comportements d'inspiration et créent des campagnes alignées sur le parcours utilisateur Pinterest.",
+      points: [
+        {
+          title: 'Stratégie inspiration',
+          description: "Contenus qui s'intègrent naturellement dans le flux d'inspiration Pinterest.",
+        },
+        {
+          title: 'E-commerce optimisé',
+          description: "Catalogues produits, Shopping Ads et intégration avec votre boutique en ligne.",
+        },
+        {
+          title: 'Ciblage intentioniste',
+          description: "Touchez les utilisateurs qui recherchent activement des produits comme les vôtres.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous êtes dans la mode, décoration, beauté, food ou lifestyle",
+      "Vous vendez des produits visuellement attrayants",
+      "Vous ciblez principalement une audience féminine (70% des utilisateurs)",
+      "Vous souhaitez toucher des clients en phase de découverte",
+    ],
+    notForYou: [
+      "Vous vendez des services B2B complexes",
+      "Vos produits ne sont pas visuellement attractifs",
+      "Vous cherchez des conversions immédiates uniquement",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Audit & Objectifs',
+        description: "Analyse de votre potentiel sur Pinterest et définition des objectifs de campagne alignés sur votre stratégie marketing.",
+      },
+      {
+        number: 2,
+        title: 'Setup compte',
+        description: "Configuration du compte Pinterest Business, du tag Pinterest et connexion de votre catalogue produits.",
+      },
+      {
+        number: 3,
+        title: 'Création campagnes',
+        description: "Conception des épingles sponsorisées, sélection des audiences et paramétrage des campagnes dans le gestionnaire.",
+      },
+      {
+        number: 4,
+        title: 'Optimisation',
+        description: "Analyse des performances, tests créatifs et optimisation continue pour améliorer le ROI.",
+      },
+    ],
+    benefits: [
+      {
+        title: "Audience à forte intention d'achat",
+        description: "85% des utilisateurs Pinterest déclarent utiliser la plateforme pour planifier des achats. Une audience qualifiée et intentioniste.",
+        highlight: "forte intention",
+        icon: 'target',
+        size: 'large',
+      },
+      {
+        title: 'Durée de vie longue',
+        description: "Contrairement aux autres réseaux, un Pin peut continuer à générer du trafic pendant des mois après sa publication.",
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'CPC compétitif',
+        description: "La concurrence moindre sur Pinterest permet souvent d'obtenir des coûts par clic inférieurs à Facebook ou Google.",
+        icon: 'chart',
+        size: 'medium',
+      },
+      {
+        title: 'Shopping natif',
+        description: "Les fonctionnalités shopping de Pinterest permettent un parcours d'achat fluide depuis l'inspiration jusqu'à la conversion.",
+        icon: 'globe',
+        size: 'medium',
+      },
+      {
+        title: 'SEO Pinterest',
+        description: "Pinterest fonctionne comme un moteur de recherche. Vos Pins sont découvrables via les recherches utilisateurs.",
+        icon: 'target',
+        size: 'medium',
+      },
+      {
+        title: 'Secteurs idéaux',
+        description: "Mode, décoration, beauté, food, voyage, DIY : ces secteurs performent exceptionnellement bien sur Pinterest.",
+        highlight: 'Secteurs idéaux',
+        icon: 'rocket',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Visuels spécifiques',
+        description: "Pinterest demande des visuels au format vertical (2:3) optimisés pour la plateforme. Les créas Facebook/Instagram ne fonctionnent pas directement.",
+      },
+      {
+        title: 'Cycle de conversion long',
+        description: "Pinterest intervient tôt dans le parcours d'achat. Les conversions peuvent prendre plusieurs semaines, ce qui complexifie la mesure.",
+      },
+      {
+        title: "Volume d'audience limité",
+        description: "Avec 450M d'utilisateurs vs 3Md pour Meta, le volume de reach est plus limité. Pinterest est un complément, pas un canal principal.",
+      },
+      {
+        title: 'Secteurs restreints',
+        description: "Certains secteurs (B2B, services, industrie) ont peu de potentiel sur Pinterest. Vérifiez que votre audience est présente.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Pinterest Ads fonctionne-t-il pour le B2B ?",
+        answer: "Pinterest est principalement B2C, orienté inspiration et lifestyle. Pour le B2B, LinkedIn Ads ou Google Ads sont généralement plus adaptés. Quelques exceptions existent (fournitures bureau design, outils créatifs).",
+      },
+      {
+        question: "Quel budget pour Pinterest Ads ?",
+        answer: "Nous recommandons un minimum de 1000€/mois pour tester la plateforme. Les CPC étant souvent plus bas que sur d'autres plateformes, ce budget permet d'obtenir un volume de données significatif.",
+      },
+      {
+        question: "Comment connecter mon catalogue produits ?",
+        answer: "Pinterest permet de synchroniser votre catalogue e-commerce via un flux produits (Shopify, WooCommerce, Magento natifs) ou un fichier CSV. Nous paramétrons cette intégration pour activer les Shopping Ads.",
+      },
+      {
+        question: "Quelle est l'audience Pinterest en France ?",
+        answer: "Pinterest compte environ 17 millions d'utilisateurs en France, avec une surreprésentation féminine (70%) et des tranches d'âge 25-44 ans particulièrement actives.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Meta Ads', href: '/ads/social/meta-ads' },
+      { name: 'Instagram Ads', href: '/ads/social/instagram-ads' },
+      { name: 'E-commerce Ads', href: '/ads/ecommerce' },
+      { name: 'Social Ads', href: '/ads/social' },
+    ],
+    pricing: {
+      tjm: '450-600€',
+      description: 'Gestion mensuelle selon budget publicitaire',
+    },
+  },
+  {
+    slug: 'snapchat-ads',
+    title: 'Agence Snapchat Ads',
+    tag: 'Snapchat Ads',
+    category: 'social',
+    heroDescription: "Snapchat touche une audience jeune et engagée que vous ne trouverez nulle part ailleurs. Notre agence crée des campagnes publicitaires adaptées aux codes de la plateforme.",
+    metaTitle: 'Agence Snapchat Ads à Lille | Publicité Snapchat | Slashr',
+    metaDescription: "Agence Snapchat Ads experte. Campagnes publicitaires Snapchat pour toucher les 15-35 ans. Story Ads, filtres sponsorisés et formats immersifs.",
+    contentSection: {
+      tag: 'Snapchat Ads',
+      title: "Touchez la génération Snapchat",
+      content: "Snapchat est la plateforme privilégiée des 15-35 ans, avec des formats publicitaires immersifs et engageants. Notre agence vous aide à créer et gérer des campagnes Snapchat Ads qui captent l'attention de cette audience unique.",
+      bulletPoints: [
+        "Formats immersifs : Story Ads, filtres AR, Snap Ads vidéo.",
+        "Ciblage précis de la génération Z et des millennials.",
+        "Création de contenus adaptés aux codes Snapchat.",
+        "Suivi des conversions avec le Snap Pixel.",
+      ],
+    },
+    enjeux: {
+      tag: 'Enjeux',
+      title: "Les enjeux de la publicité Snapchat",
+      intro: "Snapchat compte 750 millions d'utilisateurs actifs mensuels, dont une majorité a moins de 35 ans. C'est souvent le seul moyen de toucher cette audience qui délaisse Facebook et regarde peu la TV.",
+      expertiseLinks: [
+        { text: 'TikTok Ads', href: '/ads/social/tiktok-ads' },
+        { text: 'Instagram Ads', href: '/ads/social/instagram-ads' },
+        { text: 'Social Ads', href: '/ads/social' },
+      ],
+      ctaText: 'Lancer vos campagnes Snapchat',
+      ctaHref: '/contact',
+    },
+    whyChooseUs: {
+      title: 'Experts en publicité Snapchat',
+      subtitle: 'Des formats uniques',
+      description: "Snapchat propose des formats publicitaires qu'on ne trouve nulle part ailleurs : filtres AR, lenses, Story takeover. Notre équipe maîtrise ces formats pour créer des campagnes mémorables.",
+      points: [
+        {
+          title: 'Formats créatifs',
+          description: "Story Ads, Snap Ads, filtres AR sponsorisés, lenses : des formats engageants et immersifs.",
+        },
+        {
+          title: 'Audience unique',
+          description: "Accédez à une audience jeune difficile à toucher sur les autres plateformes.",
+        },
+        {
+          title: 'Codes maîtrisés',
+          description: "Contenus authentiques et natifs qui ne ressemblent pas à de la publicité traditionnelle.",
+        },
+      ],
+    },
+    forYou: [
+      "Votre cible principale est les 15-35 ans",
+      "Vous êtes dans la mode, beauté, food, entertainment ou gaming",
+      "Vous avez la capacité de produire du contenu vidéo vertical",
+      "Vous cherchez à construire de la notoriété auprès des jeunes",
+    ],
+    notForYou: [
+      "Votre audience a plus de 40 ans",
+      "Vous vendez des produits B2B ou des services professionnels",
+      "Vous n'avez pas de budget pour la création vidéo",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Analyse audience',
+        description: "Vérification du potentiel Snapchat pour votre marque et définition des objectifs de campagne.",
+      },
+      {
+        number: 2,
+        title: 'Setup & Tracking',
+        description: "Configuration du compte Snapchat Ads Manager et installation du Snap Pixel pour le suivi des conversions.",
+      },
+      {
+        number: 3,
+        title: 'Création contenu',
+        description: "Production de Snaps et Stories publicitaires adaptés aux codes de la plateforme.",
+      },
+      {
+        number: 4,
+        title: 'Gestion & Optimisation',
+        description: "Pilotage des campagnes, tests de formats et optimisation du budget pour maximiser les résultats.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Audience exclusive Gen Z',
+        description: "Snapchat est souvent le seul moyen de toucher efficacement les 15-25 ans, qui délaissent Facebook et regardent peu la TV.",
+        highlight: 'Gen Z',
+        icon: 'user',
+        size: 'large',
+      },
+      {
+        title: 'Formats immersifs',
+        description: "Les formats plein écran et interactifs de Snapchat génèrent un engagement supérieur aux formats display classiques.",
+        icon: 'rocket',
+        size: 'medium',
+      },
+      {
+        title: 'AR & Filtres',
+        description: "Les filtres et lenses AR offrent des expériences de marque uniques et virales.",
+        icon: 'zap',
+        size: 'medium',
+      },
+      {
+        title: 'Taux de complétion vidéo',
+        description: "Les vidéos Snapchat Ads affichent des taux de complétion élevés grâce au format natif.",
+        icon: 'check',
+        size: 'medium',
+      },
+      {
+        title: 'Snap Map & Local',
+        description: "Ciblez les utilisateurs par localisation pour des campagnes drive-to-store efficaces.",
+        icon: 'globe',
+        size: 'medium',
+      },
+      {
+        title: 'Concurrence moindre',
+        description: "Moins d'annonceurs sur Snapchat = CPM plus compétitifs et meilleure visibilité pour votre marque.",
+        highlight: 'CPM compétitifs',
+        icon: 'chart',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: 'Production vidéo spécifique',
+        description: "Snapchat demande du contenu vidéo vertical natif. Réutiliser des assets TV ou YouTube ne fonctionne pas.",
+      },
+      {
+        title: 'Audience limitée',
+        description: "Si votre cible dépasse les 35-40 ans, Snapchat n'est probablement pas le bon canal.",
+      },
+      {
+        title: 'Mesure attribution',
+        description: "L'attribution cross-device reste complexe sur Snapchat. Le Snap Pixel aide mais n'est pas parfait.",
+      },
+      {
+        title: 'Durée de vie courte',
+        description: "Les contenus Snapchat sont éphémères. Il faut produire régulièrement pour maintenir la présence.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Snapchat Ads est-il adapté à mon business ?",
+        answer: "Snapchat est idéal si votre audience cible a moins de 35 ans. Les secteurs mode, beauté, food, entertainment, gaming et e-commerce performent particulièrement bien.",
+      },
+      {
+        question: "Quel budget pour Snapchat Ads ?",
+        answer: "Nous recommandons un minimum de 1500€/mois pour tester la plateforme. La création de contenus vidéo spécifiques représente un investissement additionnel à prévoir.",
+      },
+      {
+        question: "Quels formats publicitaires sur Snapchat ?",
+        answer: "Snapchat propose plusieurs formats : Snap Ads (vidéo verticale), Story Ads, Collection Ads (e-commerce), Filtres AR sponsorisés et Lenses AR pour des expériences immersives.",
+      },
+      {
+        question: "Comment mesurer les conversions Snapchat ?",
+        answer: "Via le Snap Pixel installé sur votre site, qui permet de tracker les événements de conversion. Nous configurons également le suivi des événements offline pour les achats en magasin.",
+      },
+      {
+        question: "Snapchat vs TikTok : lequel choisir ?",
+        answer: "Les deux plateformes touchent une audience jeune mais avec des usages différents. Snapchat est plus conversationnel et privé, TikTok plus viral et discovery. Souvent, une stratégie combinée est optimale.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'TikTok Ads', href: '/ads/social/tiktok-ads' },
+      { name: 'Instagram Ads', href: '/ads/social/instagram-ads' },
+      { name: 'Meta Ads', href: '/ads/social/meta-ads' },
+      { name: 'Social Ads', href: '/ads/social' },
+    ],
+    pricing: {
+      tjm: '450-600€',
+      description: 'Gestion mensuelle selon budget publicitaire',
+    },
+  },
+  // ========== PRESTATIONS TRANSVERSES ADS ==========
+  // Tracking & Analytics
+  {
+    slug: 'tracking',
+    title: 'Tracking & Analytics',
+    tag: 'Tracking',
+    category: 'transverse',
+    heroDescription: "Notre pôle data analytics vous accompagne dans l'implémentation de votre tracking : Google Analytics 4, Tag Manager, server-side et attribution. Des données fiables pour des décisions éclairées.",
+    metaTitle: 'Agence Tracking & Analytics à Lille | GA4, GTM, Data | Slashr',
+    metaDescription: "Agence web analytics et tracking à Lille. Experts Google Analytics 4, Tag Manager, attribution et data marketing. Mesurez précisément vos performances digitales.",
+    contentSection: {
+      tag: 'Notre expertise',
+      title: 'Agence web analytics et tracking certifiée',
+      content: "Slashr est une agence tracking et analytics à Lille spécialisée dans la mesure de la performance digitale. Notre équipe data maîtrise l'ensemble de la stack Google : Analytics 4, Tag Manager, Looker Studio et BigQuery. Un tracking bien configuré est le fondement de toute stratégie marketing data-driven. Il alimente vos campagnes publicitaires en données de conversion fiables.",
+      bulletPoints: [
+        'Google Analytics 4 Certified',
+        'Google Tag Manager Expert',
+        'Server-Side Tracking Implementation',
+        'BigQuery & Data Engineering',
+        'Conformité RGPD & Consent Mode v2',
+      ],
+    },
+    methodology: [
+      { number: 1, title: 'Audit data existant', description: "Analyse de votre configuration analytics actuelle, identification des données manquantes et définition des KPIs prioritaires." },
+      { number: 2, title: 'Plan de taggage', description: "Élaboration du plan de mesure : événements à tracker, conventions de nommage, structure des données et documentation." },
+      { number: 3, title: 'Implémentation', description: "Déploiement technique via GTM : tags, triggers, variables, dataLayer et tests de validation." },
+      { number: 4, title: 'Dashboards & Formation', description: "Création de tableaux de bord personnalisés et formation de vos équipes à l'exploitation des données." },
+    ],
+    benefits: [
+      { icon: 'chart', title: 'Données fiables et complètes', description: "Un tracking bien configuré capture toutes les interactions importantes. Plus de données manquantes, plus de décisions basées sur des métriques incomplètes.", size: 'large', highlight: 'fiables' },
+      { icon: 'target', title: 'Attribution précise', description: "Comprenez vraiment quels canaux génèrent vos conversions. Attribution multi-touch pour des décisions d'investissement éclairées.", size: 'medium' },
+      { icon: 'zap', title: 'Optimisation publicitaire', description: "Des données de conversion précises permettent aux algorithmes Google et Meta d'optimiser efficacement vos campagnes.", size: 'medium' },
+      { icon: 'shield', title: 'Conformité RGPD', description: "Configuration respectueuse de la vie privée : consentement, anonymisation, durée de conservation des données.", size: 'medium' },
+      { icon: 'code', title: 'DataLayer structuré', description: "Un dataLayer bien conçu facilite le tracking e-commerce et événementiel pour des analyses granulaires.", size: 'medium' },
+      { icon: 'globe', title: 'Cross-device & Cross-platform', description: "Suivez vos utilisateurs sur tous leurs appareils et plateformes pour une vision unifiée du parcours client.", size: 'large', highlight: 'Cross-device' },
+    ],
+    vigilancePoints: [
+      { title: 'Données incomplètes sans consentement', description: "Le RGPD impose le consentement pour le tracking. Sans stratégie adaptée (server-side, modeling), vous perdez 30-50% de vos données." },
+      { title: 'Migration GA4 mal configurée', description: "Beaucoup de migrations GA4 sont incomplètes : événements manquants, conversions non configurées, audiences non créées. Un audit est souvent nécessaire." },
+      { title: 'Attribution last-click obsolète', description: "Se fier uniquement au last-click sous-estime les canaux de découverte. L'attribution data-driven ou positionnelle est indispensable." },
+      { title: 'Tags non maintenus', description: "Les sites évoluent, les tags doivent suivre. Un plan de maintenance garantit que votre tracking reste fonctionnel." },
+    ],
+    faqs: [
+      { question: "Pourquoi passer à Google Analytics 4 ?", answer: "GA4 est devenu la norme depuis juillet 2023 avec l'arrêt d'Universal Analytics. Au-delà de l'obligation, GA4 apporte des avantages concrets : modèle basé sur les événements plus flexible, meilleure mesure cross-device, attribution data-driven native, intégration native avec Google Ads." },
+      { question: "Qu'est-ce que le tracking server-side ?", answer: "Le tracking server-side (ou GTM Server-Side) consiste à envoyer les données de tracking via votre serveur plutôt que directement depuis le navigateur. Avantages : contourne les bloqueurs, améliore la précision des données de 15-30%, meilleure conformité RGPD." },
+      { question: "Comment mesurer les conversions post-iOS 14 ?", answer: "La mise à jour ATT d'Apple a réduit la précision du tracking publicitaire. Les solutions : API Conversions (CAPI) pour Meta Ads, Enhanced Conversions pour Google Ads, Server-Side Tracking via GTM SS, modeling statistique." },
+      { question: "Quel est le coût d'une implémentation tracking ?", answer: "Le coût dépend de la complexité : Setup GA4 basique 1-2 jours, plan de taggage complet 3-5 jours, GTM Server-Side 2-4 jours. Comptez entre 2000€ et 8000€ selon le périmètre." },
+    ],
+    otherExpertises: [
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Meta Ads', href: '/ads/social/meta-ads' },
+      { name: 'Remarketing', href: '/ads/remarketing' },
+      { name: 'Audit Campagnes', href: '/ads/audit-campagnes' },
+    ],
+    pricing: { tjm: '500-700€', description: "Implémentation tracking selon complexité" },
+  },
+  // E-commerce Ads
+  {
+    slug: 'ecommerce',
+    title: 'Publicité E-commerce',
+    tag: 'E-commerce Ads',
+    category: 'transverse',
+    heroDescription: "Stratégie publicitaire complète pour votre boutique en ligne : Google Shopping, Meta Ads, retargeting dynamique. Maximisez votre ROAS et développez vos ventes.",
+    metaTitle: 'Publicité E-commerce | Google Shopping, Meta Ads | Slashr',
+    metaDescription: "Agence publicité e-commerce à Lille. Experts Google Shopping, Meta Ads, retargeting dynamique. Développez vos ventes en ligne avec une stratégie full-funnel.",
+    contentSection: {
+      tag: 'Notre expertise',
+      title: 'Agence publicité e-commerce spécialisée',
+      content: "Slashr accompagne les e-commerçants dans leur stratégie d'acquisition payante. Notre approche full-funnel couvre toutes les étapes du parcours d'achat : de la découverte à la conversion, en passant par le retargeting. Nous maîtrisons les spécificités du e-commerce : flux produits, catalogues dynamiques, tracking transactionnel.",
+      bulletPoints: [
+        'Google Shopping & Performance Max',
+        'Meta Ads avec catalogue produits',
+        'Retargeting dynamique cross-platform',
+        'Tracking e-commerce enhanced (GA4)',
+        'Optimisation ROAS et CAC',
+      ],
+    },
+    methodology: [
+      { number: 1, title: 'Audit & Stratégie', description: "Analyse de votre catalogue, marges, saisonnalité. Définition des objectifs ROAS et de la stratégie d'acquisition." },
+      { number: 2, title: 'Setup technique', description: "Configuration des flux produits, catalogues Meta, tracking e-commerce complet avec enhanced conversions." },
+      { number: 3, title: 'Lancement campagnes', description: "Déploiement progressif : Shopping, Search, Social Ads avec segmentation par gamme de produits." },
+      { number: 4, title: 'Optimisation continue', description: "Ajustement des enchères, exclusion des produits non rentables, scaling des campagnes performantes." },
+    ],
+    benefits: [
+      { icon: 'chart', title: 'Google Shopping optimisé', description: "Flux produits parfaitement structurés, enchères par rentabilité produit, exclusion des références non performantes.", size: 'large', highlight: 'Shopping' },
+      { icon: 'target', title: 'Retargeting dynamique', description: "Rappel des visiteurs avec les produits consultés. Séquences personnalisées selon le niveau d'engagement.", size: 'medium' },
+      { icon: 'zap', title: 'Dynamic Ads', description: "Publicités dynamiques qui affichent automatiquement vos produits aux bonnes personnes. Personnalisation à grande échelle.", size: 'medium' },
+      { icon: 'rocket', title: 'Full-funnel e-commerce', description: "De la découverte à l'achat en passant par le retargeting : une stratégie complète qui couvre tout le parcours client.", size: 'large', highlight: 'Full-funnel' },
+    ],
+    vigilancePoints: [
+      { title: 'Flux produits mal optimisés', description: "Un flux mal structuré dégrade les performances Shopping. Titres, descriptions et attributs doivent être optimisés pour chaque plateforme." },
+      { title: 'Tracking e-commerce incomplet', description: "Sans tracking précis des transactions, impossible d'optimiser le ROAS. Enhanced e-commerce GA4 et conversions API sont indispensables." },
+      { title: 'Pas de segmentation catalogue', description: "Tous les produits n'ont pas le même potentiel. Identifier et isoler les best-sellers des produits à faible marge est crucial." },
+      { title: "Budget insuffisant pour l'apprentissage", description: "Les algorithmes ont besoin de volume pour optimiser. Un budget trop faible allonge la phase d'apprentissage." },
+    ],
+    faqs: [
+      { question: "Quel budget minimum pour de la pub e-commerce ?", answer: "Pour Google Shopping, comptez minimum 1500-2000€/mois pour avoir assez de données. Pour Meta Ads, 1000€/mois minimum. Ces budgets permettent aux algorithmes d'apprendre et d'optimiser." },
+      { question: "Google Shopping ou Meta Ads pour un e-commerce ?", answer: "Les deux sont complémentaires. Google Shopping capte l'intention d'achat (recherches produits), Meta Ads génère la découverte et le désir. Une stratégie full-funnel combine les deux." },
+      { question: "Comment optimiser le ROAS de mes campagnes ?", answer: "Plusieurs leviers : segmentation du catalogue par rentabilité, exclusion des produits non performants, enchères par valeur de conversion, audiences similaires basées sur vos meilleurs clients." },
+    ],
+    otherExpertises: [
+      { name: 'Google Shopping', href: '/ads/sea/google-shopping' },
+      { name: 'Meta Ads', href: '/ads/social/meta-ads' },
+      { name: 'Remarketing', href: '/ads/remarketing' },
+      { name: 'Tracking', href: '/ads/tracking' },
+    ],
+    pricing: { tjm: '450-650€', description: "Gestion e-commerce selon volume catalogue" },
+  },
+  // B2B Ads
+  {
+    slug: 'b2b',
+    title: 'Publicité B2B',
+    tag: 'B2B Ads',
+    category: 'transverse',
+    heroDescription: "Stratégie d'acquisition B2B : LinkedIn Ads, Google Ads, ABM. Générez des leads qualifiés et atteignez les décideurs de votre marché.",
+    metaTitle: 'Publicité B2B | LinkedIn Ads, Google Ads, ABM | Slashr',
+    metaDescription: "Agence publicité B2B à Lille. Experts LinkedIn Ads, Google Ads B2B, Account-Based Marketing. Générez des leads qualifiés et atteignez les décideurs.",
+    contentSection: {
+      tag: 'Notre expertise',
+      title: 'Agence publicité B2B spécialisée',
+      content: "Slashr accompagne les entreprises B2B dans leur stratégie d'acquisition digitale. Notre approche combine la précision du ciblage LinkedIn avec la puissance de Google Ads et les techniques d'Account-Based Marketing (ABM) pour atteindre les décideurs de votre marché.",
+      bulletPoints: [
+        'LinkedIn Ads avec ciblage décideurs',
+        'Google Ads B2B (Search, Display, YouTube)',
+        'Account-Based Marketing (ABM)',
+        'Lead generation et nurturing',
+        'Attribution multi-touch B2B',
+      ],
+    },
+    methodology: [
+      { number: 1, title: 'Définition des cibles', description: "Identification des personas, fonctions décisionnaires, secteurs et tailles d'entreprises à cibler." },
+      { number: 2, title: 'Stratégie multi-canal', description: "Définition du mix LinkedIn Ads / Google Ads / Display selon vos objectifs et votre cycle de vente." },
+      { number: 3, title: 'Création des campagnes', description: "Messages adaptés au B2B, contenus à valeur ajoutée, landing pages optimisées pour la conversion." },
+      { number: 4, title: 'Lead management', description: "Intégration CRM, scoring des leads, suivi du cycle de vente pour optimiser le ROI réel." },
+    ],
+    benefits: [
+      { icon: 'target', title: 'Ciblage décideurs précis', description: "LinkedIn permet de cibler par fonction, séniorité, secteur, taille d'entreprise. Atteignez directement les décideurs.", size: 'large', highlight: 'décideurs' },
+      { icon: 'user', title: 'Account-Based Marketing', description: "Ciblez nominativement les entreprises de votre liste de prospects. Personnalisation maximale pour les grands comptes.", size: 'medium' },
+      { icon: 'chart', title: 'Attribution B2B', description: "Suivi du parcours complet du lead au deal. Mesurez le vrai ROI de vos campagnes sur des cycles longs.", size: 'medium' },
+      { icon: 'zap', title: 'Lead Gen Forms', description: "Formulaires natifs LinkedIn pré-remplis pour maximiser les conversions. Intégration directe avec votre CRM.", size: 'medium' },
+    ],
+    vigilancePoints: [
+      { title: 'CPC élevés sur LinkedIn', description: "Les CPCs LinkedIn sont 3-5x plus chers que Google. La qualité du ciblage doit compenser. Un lead B2B qualifié vaut ce prix." },
+      { title: 'Contenu trop commercial', description: "Les décideurs B2B cherchent de la valeur, pas des pitchs. Le contenu éducatif (guides, études) performe mieux que les offres directes." },
+      { title: 'Cycle de vente ignoré', description: "Le B2B a des cycles longs. Des campagnes mesurées à court terme semblent peu performantes mais génèrent des deals plus tard." },
+      { title: "Pas d'alignement sales/marketing", description: "Sans coordination avec les commerciaux, les leads générés ne sont pas traités correctement et le ROI est mal mesuré." },
+    ],
+    faqs: [
+      { question: "LinkedIn Ads ou Google Ads pour le B2B ?", answer: "Les deux ont leur place. LinkedIn excelle pour le ciblage par fonction et séniorité. Google Ads capte l'intention de recherche. Une stratégie B2B complète combine les deux canaux." },
+      { question: "Quel budget pour LinkedIn Ads ?", answer: "Minimum 2000-3000€/mois pour avoir des résultats significatifs. Les CPCs élevés (5-15€) nécessitent un budget conséquent, mais les leads sont très qualifiés." },
+      { question: "Comment mesurer le ROI en B2B ?", answer: "L'attribution B2B nécessite de suivre le lead jusqu'à la signature. Intégration CRM, suivi des opportunités, attribution multi-touch sur plusieurs mois." },
+    ],
+    otherExpertises: [
+      { name: 'LinkedIn Ads', href: '/ads/social/linkedin-ads' },
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Lead Generation', href: '/ads/lead-generation' },
+      { name: 'Tracking', href: '/ads/tracking' },
+    ],
+    pricing: { tjm: '500-700€', description: "Gestion B2B selon complexité du ciblage" },
+  },
+  // Audit Campagnes
+  {
+    slug: 'audit-campagnes',
+    title: 'Audit Campagnes Publicitaires',
+    tag: 'Audit Ads',
+    category: 'transverse',
+    heroDescription: "Audit professionnel de vos campagnes Google Ads, Meta Ads, LinkedIn Ads. Identifiez les leviers d'optimisation et maximisez votre ROI publicitaire.",
+    metaTitle: 'Audit Campagnes Publicitaires | Google Ads, Meta Ads | Slashr',
+    metaDescription: "Audit professionnel de vos campagnes Ads : analyse des annonces, mots-clés, ciblage, enchères. Identifiez les leviers d'optimisation de vos performances.",
+    contentSection: {
+      tag: 'Notre expertise',
+      title: "Audit complet de vos campagnes publicitaires",
+      content: "Un audit de campagnes permet d'identifier rapidement les opportunités d'optimisation et les sources de déperdition budgétaire. Notre équipe analyse en profondeur la structure de vos comptes, la pertinence de vos ciblages, la qualité de vos annonces et l'efficacité de votre tracking.",
+      bulletPoints: [
+        'Analyse structure de compte',
+        'Audit des mots-clés et ciblages',
+        'Évaluation des annonces et créatifs',
+        'Vérification du tracking et des conversions',
+        'Recommandations priorisées',
+      ],
+    },
+    methodology: [
+      { number: 1, title: 'Collecte des accès', description: "Accès en lecture seule à vos comptes publicitaires et analytics pour une analyse complète." },
+      { number: 2, title: 'Analyse approfondie', description: "Revue méthodique de chaque composante : structure, ciblages, annonces, enchères, tracking." },
+      { number: 3, title: 'Diagnostic performances', description: "Analyse des KPIs : CTR, CPC, taux de conversion, ROAS. Identification des points forts et axes d'amélioration." },
+      { number: 4, title: 'Recommandations', description: "Livrable complet avec diagnostic, recommandations priorisées et plan d'action pour optimiser vos performances." },
+    ],
+    benefits: [
+      { icon: 'clipboard', title: 'Diagnostic complet', description: "Analyse exhaustive de vos campagnes : structure, annonces, mots-clés, ciblage, enchères et tracking. Aucun aspect n'est négligé.", size: 'large', highlight: 'complet' },
+      { icon: 'chart', title: 'Analyse des performances', description: "Revue détaillée de vos KPIs : CTR, CPC, taux de conversion, coût par acquisition, ROAS. Benchmark avec votre secteur.", size: 'medium' },
+      { icon: 'target', title: 'Optimisations identifiées', description: "Liste concrète des actions à mener pour améliorer vos performances. Chaque recommandation est argumentée.", size: 'medium' },
+      { icon: 'zap', title: 'Quick wins', description: "Identification des optimisations rapides à implémenter pour des gains immédiats sur vos campagnes.", size: 'medium' },
+    ],
+    vigilancePoints: [
+      { title: 'Historique de données insuffisant', description: "Un audit pertinent nécessite au moins 3 mois de données. Avec moins, les conclusions peuvent être biaisées." },
+      { title: 'Tracking non fiable', description: "Si votre tracking est mal configuré, l'audit des performances sera faussé. Nous commençons toujours par valider la fiabilité des données." },
+      { title: "Pas d'objectifs définis", description: "Sans objectifs clairs (ROAS cible, CPL max), difficile d'évaluer si les performances sont bonnes ou non." },
+      { title: 'Audit sans suite', description: "Un audit n'a de valeur que si les recommandations sont implémentées. Prévoyez les ressources pour la mise en œuvre." },
+    ],
+    faqs: [
+      { question: "Pourquoi faire auditer mes campagnes ?", answer: "Même des comptes bien gérés ont généralement 15-30% de potentiel d'amélioration identifiable via un audit. Un regard externe identifie les angles morts et les opportunités inexploitées." },
+      { question: "Que comprend un audit de campagnes ?", answer: "Nous analysons la structure des comptes, l'organisation des campagnes, la pertinence des mots-clés, la qualité des annonces, les stratégies d'enchères, le tracking et les performances globales." },
+      { question: "Combien de temps dure un audit ?", answer: "Comptez 5 à 10 jours selon la complexité de vos comptes. Nous livrons ensuite un rapport détaillé avec présentation des recommandations." },
+      { question: "Faut-il donner les accès administrateur ?", answer: "Non, un accès en lecture seule suffit pour l'audit. Aucune modification n'est effectuée pendant l'audit." },
+    ],
+    otherExpertises: [
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Meta Ads', href: '/ads/social/meta-ads' },
+      { name: 'LinkedIn Ads', href: '/ads/social/linkedin-ads' },
+      { name: 'Tracking', href: '/ads/tracking' },
+    ],
+    pricing: { tjm: '600-800€', description: "Audit selon nombre de comptes et complexité" },
+  },
+  // Landing Pages
+  {
+    slug: 'landing-pages',
+    title: 'Landing Pages & CRO',
+    tag: 'Landing Pages',
+    category: 'transverse',
+    heroDescription: "Création de landing pages optimisées pour la conversion. Design, copywriting et A/B testing pour maximiser le ROI de vos campagnes publicitaires.",
+    metaTitle: 'Landing Pages & CRO | Conversion Optimization | Slashr',
+    metaDescription: "Création de landing pages qui convertissent. Design, copywriting persuasif, A/B testing. Maximisez le taux de conversion de vos campagnes publicitaires.",
+    contentSection: {
+      tag: 'Notre expertise',
+      title: "Landing pages optimisées pour la conversion",
+      content: "Une landing page efficace est la clé du succès de vos campagnes publicitaires. Notre équipe combine design, copywriting persuasif et optimisation continue pour créer des pages qui transforment vos visiteurs en clients.",
+      bulletPoints: [
+        'Design orienté conversion',
+        'Copywriting persuasif',
+        'A/B testing continu',
+        'Optimisation mobile-first',
+        'Tracking des micro-conversions',
+      ],
+    },
+    methodology: [
+      { number: 1, title: 'Analyse & Brief', description: "Compréhension de votre offre, de votre cible et des objectifs de conversion. Analyse de la concurrence." },
+      { number: 2, title: 'Conception', description: "Wireframes, copywriting, design. Construction d'une page structurée pour guider vers la conversion." },
+      { number: 3, title: 'Développement', description: "Intégration responsive, optimisation vitesse, mise en place du tracking et des formulaires." },
+      { number: 4, title: 'Optimisation', description: "A/B testing des éléments clés : titres, CTA, formulaires. Amélioration continue du taux de conversion." },
+    ],
+    benefits: [
+      { icon: 'target', title: 'Taux de conversion optimisé', description: "Une landing page dédiée convertit 2 à 5 fois mieux qu'une page générique. Chaque élément est pensé pour la conversion.", size: 'large', highlight: 'conversion' },
+      { icon: 'zap', title: 'Message aligné', description: "Cohérence parfaite entre votre annonce et votre landing page. Le visiteur trouve exactement ce qui était promis.", size: 'medium' },
+      { icon: 'chart', title: 'A/B testing', description: "Tests continus des variantes pour identifier ce qui performe le mieux. Décisions basées sur les données.", size: 'medium' },
+      { icon: 'rocket', title: 'Chargement rapide', description: "Performance technique optimisée pour un chargement instantané. Chaque seconde de délai coûte des conversions.", size: 'medium' },
+    ],
+    vigilancePoints: [
+      { title: 'Message incohérent', description: "La landing page doit tenir la promesse de l'annonce. Un décalage entre les deux fait fuir les visiteurs." },
+      { title: 'Trop de distractions', description: "Une landing page efficace a un seul objectif. Évitez les menus de navigation, liens sortants et options multiples." },
+      { title: 'Formulaire trop long', description: "Chaque champ supplémentaire réduit le taux de complétion. Ne demandez que l'essentiel." },
+      { title: 'Pas de preuve sociale', description: "Témoignages, logos clients, avis : la preuve sociale rassure et augmente les conversions." },
+    ],
+    faqs: [
+      { question: "Pourquoi une landing page plutôt que mon site ?", answer: "Une landing page dédiée élimine les distractions et se concentre sur un seul objectif de conversion. Elle permet aussi un message parfaitement aligné avec votre annonce publicitaire." },
+      { question: "Combien coûte une landing page ?", answer: "Comptez entre 2000€ et 5000€ pour une landing page professionnelle avec copywriting, design et développement. Le ROI se mesure en quelques semaines via l'amélioration du taux de conversion." },
+      { question: "Qu'est-ce que le CRO ?", answer: "Le CRO (Conversion Rate Optimization) est l'optimisation continue du taux de conversion via l'A/B testing, l'analyse comportementale et l'amélioration itérative des pages." },
+    ],
+    otherExpertises: [
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Meta Ads', href: '/ads/social/meta-ads' },
+      { name: 'Lead Generation', href: '/ads/lead-generation' },
+      { name: 'Tracking', href: '/ads/tracking' },
+    ],
+    pricing: { tjm: '500-700€', description: "Création landing page selon complexité" },
+  },
+  // Lead Generation
+  {
+    slug: 'lead-generation',
+    title: 'Lead Generation Ads',
+    tag: 'Lead Gen',
+    category: 'transverse',
+    heroDescription: "Stratégie de génération de leads via publicité digitale. Facebook Lead Ads, LinkedIn Lead Gen Forms, Google Ads. Alimentez votre pipeline commercial.",
+    metaTitle: 'Lead Generation Ads | Facebook, LinkedIn, Google | Slashr',
+    metaDescription: "Agence lead generation à Lille. Experts Facebook Lead Ads, LinkedIn Lead Gen Forms. Générez des leads qualifiés pour alimenter votre pipeline commercial.",
+    contentSection: {
+      tag: 'Notre expertise',
+      title: "Génération de leads via publicité digitale",
+      content: "La génération de leads est au cœur de la croissance B2B et de nombreux business B2C. Notre équipe maîtrise les formats natifs de lead generation (Facebook Lead Ads, LinkedIn Lead Gen Forms) et les stratégies de conversion sur landing pages pour alimenter votre pipeline commercial.",
+      bulletPoints: [
+        'Facebook & Instagram Lead Ads',
+        'LinkedIn Lead Gen Forms',
+        'Google Ads avec landing pages',
+        'Intégration CRM automatisée',
+        'Lead scoring et qualification',
+      ],
+    },
+    methodology: [
+      { number: 1, title: 'Définition des leads', description: "Qualification du lead idéal, critères de scoring, processus de traitement. Alignement marketing/sales." },
+      { number: 2, title: 'Stratégie multi-canal', description: "Sélection des canaux selon votre cible : Meta Lead Ads, LinkedIn, Google Ads avec landing pages dédiées." },
+      { number: 3, title: 'Setup & Intégration', description: "Configuration des formulaires, intégration CRM, automatisation du flux de leads." },
+      { number: 4, title: 'Optimisation CPL', description: "Test des audiences, messages et formulaires. Réduction continue du coût par lead qualifié." },
+    ],
+    benefits: [
+      { icon: 'user', title: 'Formulaires natifs', description: "Les Lead Ads Facebook et LinkedIn pré-remplissent les formulaires. Taux de conversion jusqu'à 5x supérieur aux landing pages.", size: 'large', highlight: 'natifs' },
+      { icon: 'zap', title: 'Intégration CRM', description: "Les leads arrivent directement dans votre CRM. Traitement immédiat, pas de lead perdu.", size: 'medium' },
+      { icon: 'target', title: 'Ciblage précis', description: "Atteignez exactement votre cible avec les options de ciblage avancées de chaque plateforme.", size: 'medium' },
+      { icon: 'chart', title: 'CPL maîtrisé', description: "Optimisation continue pour réduire le coût par lead tout en maintenant la qualité.", size: 'medium' },
+    ],
+    vigilancePoints: [
+      { title: 'Leads non qualifiés', description: "Les formulaires trop simples génèrent du volume mais peu de qualité. Ajoutez des questions de qualification." },
+      { title: 'Pas de traitement rapide', description: "Un lead contacté dans l'heure convertit 7x mieux. Automatisez les alertes et le premier contact." },
+      { title: 'Tracking incomplet', description: "Suivez le lead jusqu'à la vente pour mesurer le vrai ROI. Le CPL seul ne suffit pas." },
+      { title: 'Message générique', description: "Personnalisez vos messages selon l'audience. Un message B2B ne parle pas comme du B2C." },
+    ],
+    faqs: [
+      { question: "Facebook Lead Ads ou landing page ?", answer: "Les Lead Ads offrent un taux de conversion supérieur grâce au pré-remplissage. Mais les landing pages permettent plus de qualification et un meilleur contexte. Testez les deux." },
+      { question: "Comment améliorer la qualité des leads ?", answer: "Ajoutez des questions de qualification dans vos formulaires, excluez les audiences non pertinentes, et retargeter uniquement les visiteurs engagés." },
+      { question: "Quel CPL viser ?", answer: "Le CPL acceptable dépend de votre panier moyen et taux de conversion. Un lead B2B à 50€ peut être rentable si le deal moyen est de 10k€." },
+    ],
+    otherExpertises: [
+      { name: 'Meta Ads', href: '/ads/social/meta-ads' },
+      { name: 'LinkedIn Ads', href: '/ads/social/linkedin-ads' },
+      { name: 'Landing Pages', href: '/ads/landing-pages' },
+      { name: 'B2B Ads', href: '/ads/b2b' },
+    ],
+    pricing: { tjm: '450-600€', description: "Gestion lead gen selon volume et canaux" },
+  },
+  // Remarketing & Retargeting
+  {
+    slug: 'remarketing',
+    title: 'Remarketing & Retargeting',
+    tag: 'Remarketing',
+    category: 'transverse',
+    heroDescription: "Transformez vos visiteurs en clients avec le remarketing. Campagnes de retargeting display, social ads et email pour reconvertir vos prospects et maximiser vos conversions.",
+    metaTitle: 'Agence Remarketing & Retargeting à Lille | Reciblage Publicitaire | Slashr',
+    metaDescription: "Agence remarketing à Lille spécialisée dans le retargeting publicitaire. Transformez vos visiteurs en clients grâce à des campagnes de reciblage performantes sur Google, Facebook et le display.",
+    contentSection: {
+      tag: 'Notre expertise',
+      title: 'Experts en remarketing et retargeting',
+      content: "Slashr est une agence remarketing à Lille spécialisée dans le reciblage publicitaire. Notre équipe d'experts met en place des campagnes de retargeting multi-plateformes pour reconvertir vos visiteurs et transformer vos prospects en clients. Le remarketing vous permet de relancer les utilisateurs qui ont visité votre site sans convertir.",
+      bulletPoints: [
+        'Segmentation avancée des audiences',
+        'Expertise multi-plateforme (Google, Meta, LinkedIn)',
+        'Personnalisation des messages publicitaires',
+        'Tracking et attribution des conversions',
+        'Conformité RGPD garantie',
+      ],
+    },
+    methodology: [
+      { number: 1, title: 'Audit & Stratégie de reciblage', description: "Analyse de vos audiences, du parcours utilisateur et définition des segments de remarketing prioritaires selon vos objectifs de conversion." },
+      { number: 2, title: 'Setup technique & Tracking', description: "Installation des pixels de tracking (Google Ads, Meta, LinkedIn), configuration des audiences et mise en place du suivi des conversions." },
+      { number: 3, title: 'Création des campagnes', description: "Conception des annonces et visuels adaptés à chaque segment. Messages personnalisés selon l'étape du parcours d'achat du visiteur." },
+      { number: 4, title: 'Optimisation continue', description: "Suivi des performances, ajustement des enchères et du ciblage, tests A/B des créas pour améliorer continuellement le taux de conversion." },
+    ],
+    benefits: [
+      { icon: 'target', title: 'Audiences qualifiées', description: "Ciblez des visiteurs qui connaissent déjà votre marque et ont montré un intérêt pour vos produits. Un trafic de qualité avec une intention d'achat plus élevée.", size: 'large', highlight: 'qualifiées' },
+      { icon: 'chart', title: 'ROI optimisé', description: "Le remarketing offre généralement un meilleur retour sur investissement que les campagnes d'acquisition grâce à des taux de conversion supérieurs.", size: 'medium' },
+      { icon: 'zap', title: 'Multi-plateforme', description: "Suivez vos prospects sur Google, Facebook, Instagram, LinkedIn et des milliers de sites display pour maximiser les points de contact.", size: 'medium' },
+      { icon: 'rocket', title: 'Personnalisation', description: "Adaptez vos messages selon le comportement et l'étape du parcours d'achat de chaque visiteur pour des annonces plus pertinentes.", size: 'medium' },
+      { icon: 'globe', title: 'Couverture étendue', description: "Touchez vos audiences sur l'ensemble du web grâce aux réseaux display et aux plateformes sociales partenaires.", size: 'medium' },
+      { icon: 'shield', title: 'RGPD compliant', description: "Des campagnes de reciblage respectueuses des réglementations européennes sur la protection des données.", size: 'large', highlight: 'RGPD compliant' },
+    ],
+    vigilancePoints: [
+      { title: 'Fréquence de diffusion', description: "Un remarketing trop agressif peut irriter les utilisateurs et nuire à votre image. Limitez la fréquence d'exposition pour éviter la fatigue publicitaire." },
+      { title: 'Durée des audiences', description: "Des listes de remarketing trop anciennes perdent en pertinence. Les utilisateurs ont peut-être déjà acheté ailleurs. Adaptez la durée de vos audiences." },
+      { title: 'Exclusions mal configurées', description: "Ne pas exclure les clients convertis gaspille du budget et dégrade l'expérience utilisateur. Les exclusions d'audiences sont essentielles." },
+      { title: 'Messages génériques', description: "Des annonces identiques pour tous les segments réduisent l'efficacité. La personnalisation selon le parcours utilisateur est clé." },
+    ],
+    faqs: [
+      { question: "Quelle est la différence entre remarketing et retargeting ?", answer: "Les termes sont souvent interchangeables. Le retargeting désigne généralement le reciblage via bannières display ou social ads. Le remarketing englobe un périmètre plus large incluant aussi le reciblage email et la fidélisation." },
+      { question: "Comment fonctionne le remarketing ?", answer: "Un pixel de tracking est installé sur votre site. Les visiteurs sont ajoutés à des listes d'audience segmentées. Des campagnes publicitaires ciblées sont ensuite diffusées à ces audiences sur d'autres sites et plateformes." },
+      { question: "Quel budget pour des campagnes de remarketing ?", answer: "Le remarketing est généralement plus rentable que l'acquisition. Budgets recommandés : petites entreprises à partir de 500€/mois, PME 1000 à 3000€/mois, grandes entreprises 5000€+/mois." },
+      { question: "Comment segmenter mes audiences de remarketing ?", answer: "Segmentation efficace : visiteurs de pages produits, abandonnistes panier, visiteurs blog, clients existants, durée depuis la dernière visite. Chaque segment reçoit des messages adaptés." },
+      { question: "Le remarketing est-il compatible avec le RGPD ?", answer: "Oui, avec un consentement utilisateurs via bandeau cookies, une information claire, la possibilité de retrait du consentement et une durée de conservation limitée." },
+    ],
+    otherExpertises: [
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Facebook Ads', href: '/ads/social/facebook-ads' },
+      { name: 'LinkedIn Ads', href: '/ads/social/linkedin-ads' },
+      { name: 'Programmatique', href: '/ads/programmatique' },
+    ],
+    pricing: { tjm: '450-600€', description: "Gestion remarketing selon volume et plateformes" },
+  },
+  // Programmatique
+  {
+    slug: 'programmatique',
+    title: 'Publicité Programmatique',
+    tag: 'Programmatique',
+    category: 'transverse',
+    heroDescription: "Agence programmatique à Lille spécialisée dans l'achat média automatisé. Campagnes display, vidéo et audio programmatiques pour maximiser la visibilité de votre marque.",
+    metaTitle: 'Agence Programmatique à Lille | Publicité Display & Vidéo | Slashr',
+    metaDescription: "Agence programmatique à Lille spécialisée dans l'achat média automatisé. Campagnes display, vidéo et audio programmatiques pour maximiser la visibilité de votre marque auprès de vos audiences cibles.",
+    contentSection: {
+      tag: 'Notre expertise',
+      title: 'Agence programmatique experte en achat média',
+      content: "Slashr est une agence programmatique à Lille spécialisée dans l'achat média automatisé. Notre équipe d'experts pilote vos campagnes display, vidéo et audio programmatiques sur les DSP leaders du marché pour maximiser la visibilité de votre marque auprès de vos audiences cibles.",
+      bulletPoints: [
+        'Display programmatique sur sites premium',
+        'Vidéo pre-roll, mid-roll et outstream',
+        'Ciblage data-driven (first, second, third party)',
+        'Brand safety et environnements qualifiés',
+        'Mesure et attribution avancées',
+      ],
+    },
+    methodology: [
+      { number: 1, title: 'Audit & Stratégie Data', description: "Analyse de votre marché, définition de vos audiences cibles et élaboration d'une stratégie programmatique alignée sur vos objectifs marketing." },
+      { number: 2, title: 'Setup technique & Data', description: "Configuration des plateformes DSP, intégration des données first-party, création des segments d'audience et mise en place du tracking." },
+      { number: 3, title: 'Création & Diffusion', description: "Production des formats publicitaires (display, vidéo), paramétrage des campagnes et lancement de la diffusion sur les sites premium." },
+      { number: 4, title: 'Optimisation & Performance', description: "Accompagnement continu, optimisation des enchères et du ciblage, A/B testing des créas et mesure des résultats." },
+    ],
+    benefits: [
+      { icon: 'target', title: 'Ciblage data-driven', description: "Exploitez la puissance des données pour toucher vos audiences avec précision. First-party data, segments d'intention, ciblage contextuel.", size: 'large', highlight: 'data-driven' },
+      { icon: 'globe', title: 'Couverture massive', description: "Accédez à des milliers de sites et applications premium en France et à l'international pour maximiser la visibilité de votre marque.", size: 'medium' },
+      { icon: 'zap', title: 'Enchères en temps réel', description: "L'achat programmatique optimise automatiquement vos enchères pour chaque impression, maximisant l'efficacité de votre budget média.", size: 'medium' },
+      { icon: 'chart', title: 'Mesure précise', description: "Tracking avancé et attribution multi-touch pour comprendre l'impact réel de vos campagnes sur les résultats business.", size: 'medium' },
+      { icon: 'rocket', title: 'Formats premium', description: "Display, vidéo, native, audio : des formats publicitaires engageants pour capter l'attention de votre audience.", size: 'medium' },
+      { icon: 'shield', title: 'Brand Safety', description: "Diffusion sur des environnements qualifiés et sécurisés pour votre marque. Contrôle total sur les contextes de diffusion.", size: 'large', highlight: 'Brand Safety' },
+    ],
+    vigilancePoints: [
+      { title: 'Budget média insuffisant', description: "Le programmatique nécessite un volume d'impressions significatif pour optimiser les algorithmes. Un budget trop faible limite l'apprentissage." },
+      { title: 'Qualité des données', description: "La performance du ciblage dépend de la qualité des données. Des segments mal définis ou obsolètes dégradent l'efficacité." },
+      { title: 'Créas non adaptées', description: "Des formats publicitaires génériques ou non optimisés réduisent l'engagement. Adaptez les contenus à chaque format." },
+      { title: 'Absence de brand safety', description: "Sans stratégie de brand safety (listes blanches/noires), vos publicités peuvent apparaître dans des contextes inappropriés." },
+    ],
+    faqs: [
+      { question: "Qu'est-ce que la publicité programmatique ?", answer: "La publicité programmatique est l'achat automatisé d'espaces publicitaires en temps réel via des plateformes technologiques (DSP). Les enchères se font instantanément pour chaque impression, permettant un ciblage précis et une optimisation continue." },
+      { question: "Quelle différence entre programmatique et Google Display ?", answer: "Google Display Network est un réseau fermé appartenant à Google. La publicité programmatique via DSP offre un accès à un inventaire plus large, des données de ciblage plus riches, plus de transparence et des formats premium." },
+      { question: "Quel budget pour des campagnes programmatiques ?", answer: "Budgets recommandés : campagnes display à partir de 3000€/mois, campagnes vidéo à partir de 5000€/mois, stratégie multi-formats à partir de 8000€/mois." },
+      { question: "Comment fonctionne le ciblage en programmatique ?", answer: "Le ciblage s'appuie sur la data : données first-party (vos propres données), second-party (partenariats), third-party (segments achetés) et ciblage contextuel sur des contenus thématiques." },
+      { question: "Sur quels sites mes publicités seront-elles diffusées ?", answer: "Nous sélectionnons des sites premium et brand-safe : éditeurs de presse nationaux, sites thématiques à forte audience, applications mobiles qualifiées, environnements vidéo (catch-up TV, streaming)." },
+    ],
+    otherExpertises: [
+      { name: 'Google Ads', href: '/ads/sea/google-ads' },
+      { name: 'Remarketing', href: '/ads/remarketing' },
+      { name: 'Social Ads', href: '/ads/social' },
+      { name: 'Tracking', href: '/ads/tracking' },
+    ],
+    pricing: { tjm: '600-800€', description: "Gestion programmatique selon budget média" },
+  },
 ];
 
 // Fonctions d'accès aux données
@@ -3244,15 +5863,70 @@ export function getSEOPrestationBySlug(slug: string): Prestation | undefined {
   return prestationsData.find((p) => p.slug === slug && p.category === 'seo');
 }
 
-// Fonctions pour les prestations Ads (route /ads/prestations/[slug])
-export function getAdsPrestations(): Prestation[] {
+// Fonctions pour les prestations SEA (route /ads/sea/[slug])
+// SEA = Google Ads, Google Shopping (catégorie 'ads')
+export function getSeaPrestations(): Prestation[] {
   return prestationsData.filter((p) => p.category === 'ads');
 }
 
-export function getAdsPrestationSlugs(): string[] {
-  return getAdsPrestations().map((p) => p.slug);
+export function getSeaPrestationSlugs(): string[] {
+  return getSeaPrestations().map((p) => p.slug);
 }
 
-export function getAdsPrestationBySlug(slug: string): Prestation | undefined {
+export function getSeaPrestationBySlug(slug: string): Prestation | undefined {
   return prestationsData.find((p) => p.slug === slug && p.category === 'ads');
+}
+
+// Fonctions pour les prestations Social Ads (route /ads/social/[slug])
+// Social = Facebook Ads, LinkedIn Ads, Social Ads (catégorie 'social')
+export function getSocialPrestations(): Prestation[] {
+  return prestationsData.filter((p) => p.category === 'social');
+}
+
+export function getSocialPrestationSlugs(): string[] {
+  return getSocialPrestations().map((p) => p.slug);
+}
+
+export function getSocialPrestationBySlug(slug: string): Prestation | undefined {
+  return prestationsData.find((p) => p.slug === slug && p.category === 'social');
+}
+
+// Fonctions pour les prestations Transverses Ads (route /ads/[slug])
+// Transverse = tracking, ecommerce, b2b, audit-campagnes, landing-pages, lead-generation
+export function getTransversePrestations(): Prestation[] {
+  return prestationsData.filter((p) => p.category === 'transverse');
+}
+
+export function getTransversePrestationSlugs(): string[] {
+  return getTransversePrestations().map((p) => p.slug);
+}
+
+export function getTransversePrestationBySlug(slug: string): Prestation | undefined {
+  return prestationsData.find((p) => p.slug === slug && p.category === 'transverse');
+}
+
+// Fonction pour récupérer TOUTES les prestations Ads (SEA + Social + Transverse) avec leurs URLs
+export function getAllAdsPrestations(): { slug: string; title: string; tag: string; href: string }[] {
+  const seaPrestations = getSeaPrestations().map(p => ({
+    slug: p.slug,
+    title: p.title,
+    tag: p.tag,
+    href: `/ads/sea/${p.slug}`,
+  }));
+
+  const socialPrestations = getSocialPrestations().map(p => ({
+    slug: p.slug,
+    title: p.title,
+    tag: p.tag,
+    href: `/ads/social/${p.slug}`,
+  }));
+
+  const transversePrestations = getTransversePrestations().map(p => ({
+    slug: p.slug,
+    title: p.title,
+    tag: p.tag,
+    href: `/ads/${p.slug}`,
+  }));
+
+  return [...seaPrestations, ...socialPrestations, ...transversePrestations];
 }

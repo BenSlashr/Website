@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
-  getAdsPrestationSlugs,
-  getAdsPrestationBySlug,
+  getSocialPrestationSlugs,
+  getSocialPrestationBySlug,
   Prestation,
 } from "@/lib/prestationsWP";
 import { caseStudies } from "@/lib/caseStudiesWP";
@@ -68,7 +68,7 @@ function generateServiceSchema(prestation: Prestation, slug: string) {
       name: "Lille, Hauts-de-France",
     },
     serviceType: prestation.tag,
-    url: `https://www.slashr.fr/ads/prestations/${slug}`,
+    url: `https://www.slashr.fr/ads/social/${slug}`,
   };
 }
 
@@ -109,14 +109,14 @@ function generateBreadcrumbSchema(prestation: Prestation, slug: string) {
       {
         "@type": "ListItem",
         position: 3,
-        name: "Prestations",
-        item: "https://www.slashr.fr/ads",
+        name: "Social Ads",
+        item: "https://www.slashr.fr/ads/social",
       },
       {
         "@type": "ListItem",
         position: 4,
         name: prestation.tag,
-        item: `https://www.slashr.fr/ads/prestations/${slug}`,
+        item: `https://www.slashr.fr/ads/social/${slug}`,
       },
     ],
   };
@@ -126,16 +126,16 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-// Génère toutes les pages de prestations Ads au build (SSG)
+// Génère toutes les pages Social Ads au build (SSG)
 export async function generateStaticParams() {
-  const slugs = getAdsPrestationSlugs();
+  const slugs = getSocialPrestationSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
 // Génère les métadonnées dynamiques pour le SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const prestation = getAdsPrestationBySlug(slug);
+  const prestation = getSocialPrestationBySlug(slug);
 
   if (!prestation) {
     return {
@@ -147,20 +147,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: prestation.metaTitle,
     description: prestation.metaDescription,
     alternates: {
-      canonical: `/ads/prestations/${slug}`,
+      canonical: `/ads/social/${slug}`,
     },
     openGraph: {
       title: prestation.metaTitle,
       description: prestation.metaDescription,
-      url: `/ads/prestations/${slug}`,
+      url: `/ads/social/${slug}`,
       type: "website",
     },
   };
 }
 
-export default async function AdsPrestationPage({ params }: Props) {
+export default async function SocialPrestationPage({ params }: Props) {
   const { slug } = await params;
-  const prestation = getAdsPrestationBySlug(slug);
+  const prestation = getSocialPrestationBySlug(slug);
 
   if (!prestation) {
     notFound();
@@ -298,7 +298,7 @@ export default async function AdsPrestationPage({ params }: Props) {
       {/* Autres expertises */}
       <OtherExpertisesSection
         currentSlug={slug}
-        category="ads"
+        category="social"
       />
 
       {/* Articles liés via embeddings (sémantiquement pertinents) */}
@@ -317,7 +317,7 @@ export default async function AdsPrestationPage({ params }: Props) {
         items={[
           { label: 'Accueil', href: '/' },
           { label: 'Ads', href: '/ads' },
-          { label: 'Prestations', href: '/ads' },
+          { label: 'Social Ads', href: '/ads/social' },
           { label: prestation.tag },
         ]}
       />

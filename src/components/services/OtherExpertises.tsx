@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getSEOPrestations, getAdsPrestations, PrestationCategory } from '@/lib/prestationsWP';
+import { getSEOPrestations, getAllAdsPrestations, PrestationCategory } from '@/lib/prestationsWP';
 
 interface Expertise {
   name: string;
@@ -29,30 +29,41 @@ interface ManualModeProps {
 type OtherExpertisesSectionProps = AutoModeProps | ManualModeProps;
 
 const OtherExpertisesSection = (props: OtherExpertisesSectionProps) => {
+  // Déterminer le sous-titre par défaut selon la catégorie
+  const isAdsCategory = 'category' in props && (props.category === 'ads' || props.category === 'social' || props.category === 'transverse');
+  const defaultSubtitle = isAdsCategory
+    ? "Découvrez l'ensemble de nos expertises en publicité digitale."
+    : "Découvrez l'ensemble de nos expertises en référencement.";
+
   const {
     title = "Nos autres expertises",
-    subtitle = "Découvrez l'ensemble de nos expertises en référencement.",
+    subtitle = defaultSubtitle,
   } = props;
 
   let expertisesToRender: { name: string; href: string; isActive?: boolean }[] = [];
 
   // Mode auto-génération par silo
   if ('category' in props && props.category && 'currentSlug' in props) {
-    const prestations = props.category === 'seo'
-      ? getSEOPrestations()
-      : props.category === 'ads'
-        ? getAdsPrestations()
-        : [];
-
-    const basePath = props.category === 'seo' ? '/seo/prestations' : '/ads/prestations';
-
-    expertisesToRender = prestations
-      .filter(p => p.slug !== props.currentSlug)
-      .map(p => ({
-        name: p.tag,
-        href: `${basePath}/${p.slug}`,
-        isActive: false,
-      }));
+    if (props.category === 'seo') {
+      const prestations = getSEOPrestations();
+      expertisesToRender = prestations
+        .filter(p => p.slug !== props.currentSlug)
+        .map(p => ({
+          name: p.title.replace('Agence ', ''),
+          href: `/seo/prestations/${p.slug}`,
+          isActive: false,
+        }));
+    } else if (props.category === 'ads' || props.category === 'social' || props.category === 'transverse') {
+      // Pour TOUTES les pages Ads (SEA, Social, Transverse) : afficher TOUTES les expertises Ads
+      const allAdsPrestations = getAllAdsPrestations();
+      expertisesToRender = allAdsPrestations
+        .filter(p => p.slug !== props.currentSlug)
+        .map(p => ({
+          name: p.title.replace('Agence ', '').replace('Publicité ', ''),
+          href: p.href,
+          isActive: false,
+        }));
+    }
   }
   // Mode manuel avec expertises personnalisées
   else if ('expertises' in props && props.expertises) {
