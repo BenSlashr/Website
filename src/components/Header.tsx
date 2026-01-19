@@ -11,6 +11,7 @@ const expertises = {
   ],
   geo: [
     { name: 'GEO', description: 'Référencement IA', href: '/seo/prestations/agence-geo', icon: 'ai' },
+    { name: 'Audit GEO', description: 'Analyse visibilité IA', href: '/seo/prestations/audit-geo', icon: 'data' },
   ],
   ads: [
     { name: 'Ads', description: 'Publicité digitale', href: '/ads', icon: 'euro' },

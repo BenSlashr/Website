@@ -2024,7 +2024,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Social Ads',
     category: 'social',
     heroDescription: "Touchez votre audience sur les réseaux sociaux. Notre agence Social Ads crée et gère vos campagnes publicitaires sur Meta, LinkedIn et TikTok pour générer des leads qualifiés et booster votre visibilité.",
-    metaTitle: 'Agence Social Ads à Lille | Meta, LinkedIn, TikTok | Slashr',
+    metaTitle: 'Agence Social Ads à Lille | Meta, LinkedIn, TikTok ',
     metaDescription: 'Agence Social Ads à Lille. Création et gestion de campagnes publicitaires sur les réseaux sociaux : Facebook Ads, Instagram Ads, LinkedIn Ads, TikTok Ads.',
     contentSection: {
       tag: 'Social Ads',
@@ -2208,7 +2208,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Facebook Ads',
     category: 'social',
     heroDescription: "Facebook et Instagram rassemblent 40 millions d'utilisateurs en France. Notre agence Meta Ads crée des campagnes publicitaires performantes pour générer des leads et des ventes.",
-    metaTitle: 'Agence Facebook Ads & Instagram Ads à Lille | Meta Ads | Slashr',
+    metaTitle: 'Agence Facebook Ads & Instagram Ads à Lille | Meta Ads ',
     metaDescription: 'Agence Facebook Ads à Lille. Création et gestion de campagnes Meta Ads (Facebook & Instagram). Génération de leads, e-commerce et notoriété.',
     contentSection: {
       tag: 'Meta Ads',
@@ -2392,7 +2392,7 @@ export const prestationsData: Prestation[] = [
     tag: 'LinkedIn Ads',
     category: 'social',
     heroDescription: "LinkedIn est LA plateforme B2B pour toucher les décideurs. Notre agence LinkedIn Ads crée des campagnes ciblées par fonction, secteur et entreprise pour générer des leads qualifiés.",
-    metaTitle: 'Agence LinkedIn Ads à Lille | Publicité B2B | Slashr',
+    metaTitle: 'Agence LinkedIn Ads à Lille | Publicité B2B ',
     metaDescription: 'Agence LinkedIn Ads à Lille. Création et gestion de campagnes publicitaires B2B. Ciblage par fonction, secteur, entreprise. Génération de leads qualifiés.',
     contentSection: {
       tag: 'LinkedIn Ads',
@@ -2579,7 +2579,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Instagram Ads',
     category: 'social',
     heroDescription: "Instagram rassemble plus de 26 millions d'utilisateurs actifs en France. Notre agence Instagram Ads crée des campagnes publicitaires visuelles et engageantes pour toucher votre audience et générer des résultats concrets.",
-    metaTitle: 'Agence Instagram Ads à Lille | Publicité Instagram | Slashr',
+    metaTitle: 'Agence Instagram Ads à Lille | Publicité Instagram ',
     metaDescription: 'Agence Instagram Ads à Lille. Création et gestion de campagnes publicitaires sur Instagram : Stories, Reels, carrousels. Experts en publicités visuelles pour maximiser votre engagement et vos conversions.',
     contentSection: {
       tag: 'Instagram Ads',
@@ -2765,7 +2765,7 @@ export const prestationsData: Prestation[] = [
     tag: 'TikTok Ads',
     category: 'social',
     heroDescription: "TikTok est devenu incontournable pour toucher la Gen Z et les Millennials. Notre agence TikTok Ads crée des campagnes publicitaires authentiques et engageantes qui s'intègrent naturellement dans l'expérience utilisateur.",
-    metaTitle: 'Agence TikTok Ads à Lille | Publicité TikTok | Slashr',
+    metaTitle: 'Agence TikTok Ads à Lille | Publicité TikTok ',
     metaDescription: 'Agence TikTok Ads à Lille. Création et gestion de campagnes publicitaires sur TikTok : vidéos natives, Spark Ads, challenges. Experts en marketing digital pour toucher la Gen Z.',
     contentSection: {
       tag: 'TikTok Ads',
@@ -2952,7 +2952,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Bing Ads',
     category: 'ads',
     heroDescription: "Microsoft Advertising (Bing Ads) est le complément idéal de Google Ads. Notre agence gère vos campagnes publicitaires sur Bing, Yahoo et les sites partenaires Microsoft pour toucher une audience qualifiée souvent négligée.",
-    metaTitle: 'Agence Bing Ads à Lille | Microsoft Advertising | Slashr',
+    metaTitle: 'Agence Bing Ads à Lille | Microsoft Advertising ',
     metaDescription: 'Agence Bing Ads (Microsoft Advertising) à Lille. Création et gestion de campagnes publicitaires sur Bing et Yahoo. Complétez votre stratégie SEA pour maximiser votre visibilité.',
     contentSection: {
       tag: 'Bing Ads',
@@ -3134,7 +3134,7 @@ export const prestationsData: Prestation[] = [
     tag: 'YouTube Ads',
     category: 'ads',
     heroDescription: "YouTube est le 2ème moteur de recherche au monde avec 40 millions de visiteurs uniques par mois en France. Notre agence YouTube Ads crée des campagnes vidéo percutantes pour développer votre visibilité et toucher votre audience.",
-    metaTitle: 'Agence YouTube Ads à Lille | Publicité Vidéo | Slashr',
+    metaTitle: 'Agence YouTube Ads à Lille | Publicité Vidéo ',
     metaDescription: 'Agence YouTube Ads à Lille. Création et gestion de campagnes publicitaires vidéo sur YouTube. Formats In-Stream, Discovery, Bumper pour maximiser votre visibilité et vos performances.',
     contentSection: {
       tag: 'YouTube Ads',
@@ -3320,7 +3320,7 @@ export const prestationsData: Prestation[] = [
     tag: 'Performance Max',
     category: 'ads',
     heroDescription: "Performance Max est le type de campagne Google Ads le plus avancé, utilisant l'IA pour diffuser vos annonces sur tous les canaux Google. Notre agence optimise vos campagnes PMax pour maximiser les conversions.",
-    metaTitle: 'Agence Performance Max à Lille | Google Ads PMax | Slashr',
+    metaTitle: 'Agence Performance Max à Lille | Google Ads PMax ',
     metaDescription: 'Agence Performance Max (PMax) à Lille. Experts en campagnes Google Ads automatisées. Optimisez vos conversions sur Search, Shopping, Display, YouTube et Gmail avec une seule campagne.',
     contentSection: {
       tag: 'Performance Max',
@@ -3994,14 +3994,324 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
       },
     ],
     otherExpertises: [
+      { name: 'Audit GEO', href: '/seo/prestations/audit-geo' },
       { name: 'Refonte & Migration SEO', href: '/seo/prestations/refonte-migration' },
       { name: 'SEO E-commerce', href: '/seo/prestations/ecommerce' },
       { name: 'SEO Local', href: '/seo/prestations/local' },
-      { name: 'SEO International', href: '/seo/prestations/international' },
     ],
     pricing: {
       tjm: '600-700€',
       description: 'Tarification selon la complexité du projet et la taille du site',
+    },
+  },
+  // ============================================
+  // AUDIT GEO - Analyse de visibilité IA
+  // ============================================
+  {
+    slug: 'audit-geo',
+    title: 'Audit GEO – Analyse de visibilité IA',
+    tag: 'Audit GEO',
+    category: 'seo',
+    heroDescription: 'Mesurez votre visibilité dans les réponses générées par les IA. ChatGPT, Perplexity, Gemini, Google AI Overviews… Découvrez si votre marque est citée, comment, et par qui vous êtes devancé.',
+    metaTitle: 'Audit GEO | Analyse Visibilité IA & Generative Engine Optimization ',
+    metaDescription: 'Audit GEO complet : mesurez votre présence dans ChatGPT, Perplexity, Google SGE. Analyse des citations, benchmark concurrentiel, recommandations actionnables.',
+    contentSection: {
+      tag: 'AUDIT GEO',
+      title: "Pourquoi auditer votre visibilité IA ?",
+      content: "40% des recherches informationnelles passent désormais par des IA génératives. Ne pas être cité dans leurs réponses, c'est perdre une partie croissante de votre audience. Notre audit GEO vous donne une vision claire de votre présence dans ce nouvel écosystème du search.",
+      bulletPoints: [
+        "Mesure de votre taux de mention dans les 6 principaux modèles IA",
+        "Identification des requêtes où vous êtes cité (et celles où vous devriez l'être)",
+        "Benchmark détaillé face à vos concurrents directs",
+        "Analyse des sources que les IA préfèrent citer dans votre secteur",
+        "Recommandations priorisées pour améliorer votre visibilité IA",
+      ],
+    },
+    geoExclusiveContent: {
+      howChatGPTSearches: {
+        tag: 'CE QUE NOUS ANALYSONS',
+        title: 'Un audit sur 6 modèles IA différents',
+        intro: "Chaque IA a ses propres sources et ses propres biais. Notre audit couvre l'ensemble de l'écosystème pour vous donner une vision complète de votre visibilité générative.",
+        points: [
+          {
+            title: 'ChatGPT (GPT-4o & GPT-4o-mini)',
+            description: "Le leader du marché avec 180M d'utilisateurs actifs. Analyse de votre présence dans les réponses conversationnelles et le nouveau mode SearchGPT.",
+          },
+          {
+            title: 'Perplexity & Google AI Overviews',
+            description: "Les moteurs de recherche hybrides qui affichent des réponses IA directement dans les résultats. Analyse de vos citations et de votre positionnement.",
+          },
+          {
+            title: 'Claude, Gemini & Copilot',
+            description: "Les challengers qui gagnent du terrain. Chaque modèle a ses préférences de sources – nous les analysons toutes.",
+          },
+        ],
+      },
+      queryFanOut: {
+        tag: 'DONNÉES EXCLUSIVES',
+        title: 'Les métriques clés de votre audit GEO',
+        intro: "Notre audit va au-delà des simples mentions. Nous analysons les patterns de citation des IA pour identifier précisément vos opportunités.",
+        stats: [
+          {
+            label: 'Taux de mention',
+            singleQuery: '12.4%',
+            multiQuery: '87.6%',
+            description: 'Moyenne des marques analysées : citées dans 12.4% des requêtes pertinentes',
+          },
+          {
+            label: 'Sources citées',
+            singleQuery: '3.2',
+            multiQuery: '8.7',
+            description: 'Nombre moyen de sources citées par réponse IA selon le type de requête',
+          },
+        ],
+        triggerWords: [
+          { word: 'Taux de mention', avgQueries: 'X%', impact: 'Sur requêtes cibles' },
+          { word: 'Position moyenne', avgQueries: '#X', impact: 'Dans les citations' },
+          { word: 'Share of Voice IA', avgQueries: 'X%', impact: 'vs concurrents' },
+          { word: 'Taux de lien', avgQueries: 'X%', impact: 'Citations avec URL' },
+          { word: 'Couverture thématique', avgQueries: 'X/Y', impact: 'Topics couverts' },
+        ],
+        insight: "Nous comparons vos métriques à celles de vos concurrents et aux benchmarks de votre secteur pour identifier précisément vos axes d'amélioration.",
+      },
+    },
+    enjeux: {
+      tag: 'ENJEUX',
+      title: 'Ce que révèle un audit GEO',
+      intro: "Un audit GEO met en lumière les opportunités invisibles et les problèmes techniques qui vous empêchent d'être cité par les IA.",
+      expertiseLinks: [
+        {
+          text: 'Vos pages sont-elles',
+          highlight: 'accessibles aux bots IA (OAI-SearchBot, GPTBot)',
+          href: '#',
+        },
+        {
+          text: 'Votre site est-il correctement',
+          highlight: 'indexé sur Bing (source principale de ChatGPT)',
+          href: '#',
+        },
+        {
+          text: 'Vos contenus ont-ils la',
+          highlight: 'structure sémantique attendue par les LLMs',
+          href: '#',
+        },
+        {
+          text: 'Quels concurrents',
+          highlight: 'captent les citations que vous devriez avoir',
+          href: '#',
+        },
+        {
+          text: 'Quelles requêtes stratégiques',
+          highlight: 'génèrent 0 mention de votre marque',
+          href: '#',
+        },
+      ],
+      ctaText: 'Demander mon audit GEO',
+      ctaHref: '/prestations/devis',
+    },
+    whyChooseUs: {
+      title: 'Un audit basé sur des données réelles',
+      subtitle: 'Pas de suppositions, que des faits',
+      description: "Notre audit GEO s'appuie sur notre outil propriétaire qui interroge réellement les IA et collecte les données de citation. Pas de simulation, pas d'estimation : des données brutes et vérifiables.",
+      points: [
+        {
+          title: 'Outil propriétaire de tracking GEO',
+          description: "Nous avons développé notre propre plateforme pour mesurer la visibilité IA en temps réel sur 6 modèles différents.",
+        },
+        {
+          title: 'Données vérifiables',
+          description: "Chaque citation est traçable. Nous vous fournissons les captures d'écran et les logs de nos requêtes.",
+        },
+        {
+          title: 'Benchmark sectoriel',
+          description: "Nous comparons vos performances à celles de vos concurrents directs et aux moyennes de votre secteur.",
+        },
+      ],
+    },
+    forYou: [
+      "Vous voulez savoir si votre marque est citée par les IA génératives",
+      "Vous constatez une baisse de trafic organique sans explication claire",
+      "Vous voulez identifier les opportunités de visibilité IA avant vos concurrents",
+      "Vous préparez une stratégie GEO et avez besoin d'un état des lieux",
+    ],
+    notForYou: [
+      "Vous n'avez pas encore de site web ou de présence en ligne",
+      "Vous cherchez un audit SEO classique (nous le proposons aussi, mais c'est différent)",
+      "Vous n'êtes pas prêt à agir sur les recommandations",
+    ],
+    methodology: [
+      {
+        number: 1,
+        title: 'Définition du périmètre',
+        description: "Identification de vos requêtes stratégiques (30-50 requêtes), de vos concurrents directs (5-10) et des thématiques clés de votre secteur.",
+      },
+      {
+        number: 2,
+        title: 'Collecte des données',
+        description: "Interrogation des 6 modèles IA sur vos requêtes cibles. Analyse des réponses, identification des sources citées, extraction des métriques clés.",
+      },
+      {
+        number: 3,
+        title: 'Audit technique',
+        description: "Vérification de l'accessibilité aux bots IA (robots.txt, logs serveur), indexation Bing, structure HTML et données structurées.",
+      },
+      {
+        number: 4,
+        title: 'Benchmark concurrentiel',
+        description: "Comparaison de votre visibilité avec celle de vos concurrents. Identification des gaps et des opportunités de différenciation.",
+      },
+      {
+        number: 5,
+        title: 'Livrable & recommandations',
+        description: "Rapport complet avec métriques, visualisations et plan d'action priorisé. Présentation en visio pour échanger sur les résultats.",
+      },
+    ],
+    benefits: [
+      {
+        title: 'Vision claire de votre visibilité IA',
+        description: "Découvrez exactement où vous êtes cité, où vous ne l'êtes pas, et pourquoi.",
+        highlight: 'Vision claire',
+        icon: 'chart',
+        size: 'large',
+      },
+      {
+        title: 'Analyse sur 6 modèles IA',
+        description: 'ChatGPT, Perplexity, Gemini, Claude, Copilot et Google AI Overviews.',
+        highlight: '6 modèles',
+        icon: 'globe',
+        size: 'medium',
+      },
+      {
+        title: 'Benchmark concurrentiel',
+        description: 'Comparez votre présence IA à celle de vos concurrents directs.',
+        highlight: 'concurrentiel',
+        icon: 'target',
+        size: 'medium',
+      },
+      {
+        title: 'Données vérifiables',
+        description: 'Chaque citation est documentée avec captures et logs.',
+        icon: 'check',
+        size: 'medium',
+      },
+      {
+        title: 'Audit technique inclus',
+        description: 'Accessibilité bots IA, indexation Bing, structure sémantique.',
+        highlight: 'technique',
+        icon: 'code',
+        size: 'medium',
+      },
+      {
+        title: "Plan d'action priorisé",
+        description: "Recommandations classées par impact et effort pour passer à l'action.",
+        highlight: 'priorisé',
+        icon: 'rocket',
+        size: 'large',
+      },
+    ],
+    vigilancePoints: [
+      {
+        title: "L'audit est une photo à un instant T",
+        description: "Les IA évoluent constamment. Un audit GEO donne une vision précise de votre situation actuelle, mais un suivi régulier est nécessaire pour maintenir votre visibilité.",
+      },
+      {
+        title: 'Les résultats varient selon les requêtes',
+        description: "Votre visibilité peut être excellente sur certaines requêtes et nulle sur d'autres. L'audit identifie ces disparités pour prioriser vos efforts.",
+      },
+      {
+        title: "L'audit ne suffit pas sans action",
+        description: "Un audit sans mise en œuvre des recommandations n'améliore pas votre visibilité. Nous pouvons vous accompagner dans l'exécution si besoin.",
+      },
+    ],
+    comparison: {
+      title: "Audit GEO vs Audit SEO classique",
+      without: [
+        "Focus sur Google uniquement",
+        "Pas de mesure de visibilité IA",
+        "Pas de benchmark sur les citations LLM",
+        "Recommandations SEO traditionnelles",
+      ],
+      with: [
+        "Analyse multi-modèles (6 IA différentes)",
+        "Mesure précise des mentions et citations",
+        "Benchmark concurrentiel spécifique IA",
+        "Recommandations GEO actionnables",
+      ],
+    },
+    engagements: [
+      {
+        title: 'Données réelles',
+        description: "Nous interrogeons réellement les IA avec nos outils. Pas de simulation, pas d'estimation.",
+      },
+      {
+        title: 'Transparence totale',
+        description: "Vous recevez les données brutes, les captures d'écran et les méthodologies utilisées.",
+      },
+      {
+        title: 'Actionnable',
+        description: "Chaque recommandation est classée par priorité avec un niveau d'effort et d'impact estimé.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Quelle est la différence entre un audit GEO et un audit SEO ?",
+        answer: `Un audit SEO analyse votre visibilité sur Google (positions, trafic, technique). Un audit GEO analyse votre visibilité dans les réponses des IA génératives (ChatGPT, Perplexity, etc.).
+
+Les deux sont complémentaires : un bon SEO améliore votre GEO (puisque les IA utilisent souvent les résultats Google), mais le GEO a ses propres critères (structure du contenu, autorité thématique, accessibilité aux bots IA).`,
+      },
+      {
+        question: "Combien de requêtes sont analysées dans l'audit ?",
+        answer: `Notre audit standard couvre 30 à 50 requêtes stratégiques, définies ensemble lors du cadrage. Nous pouvons étendre ce périmètre selon vos besoins.
+
+Pour chaque requête, nous testons 6 modèles IA différents, ce qui représente 180 à 300 analyses distinctes par audit.`,
+      },
+      {
+        question: "Comment définissez-vous les requêtes à analyser ?",
+        answer: `Nous partons de vos requêtes SEO prioritaires et les adaptons au contexte conversationnel des IA :
+• Vos mots-clés stratégiques transformés en questions
+• Les requêtes informationnelles de votre secteur
+• Les requêtes comparatives ("meilleur X", "X vs Y")
+• Les requêtes où vos concurrents sont déjà visibles`,
+      },
+      {
+        question: "Quel est le délai de livraison d'un audit GEO ?",
+        answer: "Comptez 2 à 3 semaines entre le cadrage et la livraison du rapport final. La collecte des données prend environ 1 semaine, l'analyse et la rédaction des recommandations 1 semaine supplémentaire.",
+      },
+      {
+        question: "Les données de l'audit sont-elles vérifiables ?",
+        answer: `Oui, totalement. Nous fournissons :
+• Les captures d'écran des réponses IA
+• Les logs de nos requêtes avec timestamps
+• Les données brutes exportables (CSV/JSON)
+• L'accès à notre dashboard de suivi pendant 1 mois`,
+      },
+      {
+        question: "Proposez-vous un suivi après l'audit ?",
+        answer: `Oui, plusieurs options :
+• Suivi ponctuel : nouvel audit 3-6 mois après pour mesurer l'évolution
+• Accompagnement GEO : mise en œuvre des recommandations + suivi mensuel
+• Accès dashboard : monitoring continu de votre visibilité IA
+
+L'audit seul vous donne la photo initiale, l'accompagnement vous aide à améliorer vos positions.`,
+      },
+      {
+        question: "Quel est le tarif d'un audit GEO ?",
+        answer: "Un audit GEO complet (30-50 requêtes, 6 modèles IA, benchmark 5-10 concurrents) est facturé entre 1 500€ et 2 500€ selon la complexité de votre secteur. Nous établissons un devis précis après le cadrage initial.",
+      },
+      {
+        question: "Puis-je faire l'audit moi-même avec vos outils ?",
+        answer: "Notre outil de tracking GEO est actuellement réservé à nos clients en accompagnement. L'audit inclut l'accès temporaire au dashboard pour consulter vos données, mais pas l'usage autonome de l'outil.",
+      },
+    ],
+    otherExpertises: [
+      { name: 'Agence GEO', href: '/seo/prestations/agence-geo' },
+      { name: 'Audit SEO Technique', href: '/seo/prestations/audit-technique' },
+      { name: 'Audit SEO Stratégique', href: '/seo/prestations/audit-strategique' },
+      { name: 'SEO E-commerce', href: '/seo/prestations/ecommerce' },
+    ],
+    pricing: {
+      tjm: '1 500€ - 2 500€',
+      description: 'Tarif forfaitaire selon le nombre de requêtes et la complexité du secteur',
     },
   },
   // ============================================
@@ -4882,7 +5192,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Meta Ads',
     category: 'social',
     heroDescription: "Facebook, Instagram, Messenger, WhatsApp : l'écosystème Meta Ads offre un reach publicitaire inégalé. Notre agence à Lille vous accompagne pour créer et optimiser vos campagnes sur l'ensemble des plateformes Meta.",
-    metaTitle: 'Agence Meta Ads à Lille | Facebook & Instagram Ads | Slashr',
+    metaTitle: 'Agence Meta Ads à Lille | Facebook & Instagram Ads ',
     metaDescription: "Agence Meta Ads certifiée. Experts en publicités Facebook, Instagram, Messenger et WhatsApp. Stratégies d'audience avancées et optimisation des conversions.",
     contentSection: {
       tag: 'Meta Ads',
@@ -5056,7 +5366,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Pinterest Ads',
     category: 'social',
     heroDescription: "Pinterest est la plateforme d'inspiration par excellence. Nos experts créent des campagnes publicitaires qui touchent vos audiences au moment où elles planifient leurs achats.",
-    metaTitle: 'Agence Pinterest Ads à Lille | Publicité Pinterest | Slashr',
+    metaTitle: 'Agence Pinterest Ads à Lille | Publicité Pinterest ',
     metaDescription: "Agence Pinterest Ads experte. Campagnes publicitaires sur Pinterest pour e-commerce, décoration, mode et lifestyle. Touchez vos clients en phase d'inspiration.",
     contentSection: {
       tag: 'Pinterest Ads',
@@ -5226,7 +5536,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Snapchat Ads',
     category: 'social',
     heroDescription: "Snapchat touche une audience jeune et engagée que vous ne trouverez nulle part ailleurs. Notre agence crée des campagnes publicitaires adaptées aux codes de la plateforme.",
-    metaTitle: 'Agence Snapchat Ads à Lille | Publicité Snapchat | Slashr',
+    metaTitle: 'Agence Snapchat Ads à Lille | Publicité Snapchat ',
     metaDescription: "Agence Snapchat Ads experte. Campagnes publicitaires Snapchat pour toucher les 15-35 ans. Story Ads, filtres sponsorisés et formats immersifs.",
     contentSection: {
       tag: 'Snapchat Ads',
@@ -5402,7 +5712,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Tracking',
     category: 'transverse',
     heroDescription: "Notre pôle data analytics vous accompagne dans l'implémentation de votre tracking : Google Analytics 4, Tag Manager, server-side et attribution. Des données fiables pour des décisions éclairées.",
-    metaTitle: 'Agence Tracking & Analytics à Lille | GA4, GTM, Data | Slashr',
+    metaTitle: 'Agence Tracking & Analytics à Lille | GA4, GTM, Data ',
     metaDescription: "Agence web analytics et tracking à Lille. Experts Google Analytics 4, Tag Manager, attribution et data marketing. Mesurez précisément vos performances digitales.",
     contentSection: {
       tag: 'Notre expertise',
@@ -5457,7 +5767,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'E-commerce Ads',
     category: 'transverse',
     heroDescription: "Stratégie publicitaire complète pour votre boutique en ligne : Google Shopping, Meta Ads, retargeting dynamique. Maximisez votre ROAS et développez vos ventes.",
-    metaTitle: 'Publicité E-commerce | Google Shopping, Meta Ads | Slashr',
+    metaTitle: 'Publicité E-commerce | Google Shopping, Meta Ads ',
     metaDescription: "Agence publicité e-commerce à Lille. Experts Google Shopping, Meta Ads, retargeting dynamique. Développez vos ventes en ligne avec une stratégie full-funnel.",
     contentSection: {
       tag: 'Notre expertise',
@@ -5509,7 +5819,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'B2B Ads',
     category: 'transverse',
     heroDescription: "Stratégie d'acquisition B2B : LinkedIn Ads, Google Ads, ABM. Générez des leads qualifiés et atteignez les décideurs de votre marché.",
-    metaTitle: 'Publicité B2B | LinkedIn Ads, Google Ads, ABM | Slashr',
+    metaTitle: 'Publicité B2B | LinkedIn Ads, Google Ads, ABM ',
     metaDescription: "Agence publicité B2B à Lille. Experts LinkedIn Ads, Google Ads B2B, Account-Based Marketing. Générez des leads qualifiés et atteignez les décideurs.",
     contentSection: {
       tag: 'Notre expertise',
@@ -5561,7 +5871,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Audit Ads',
     category: 'transverse',
     heroDescription: "Audit professionnel de vos campagnes Google Ads, Meta Ads, LinkedIn Ads. Identifiez les leviers d'optimisation et maximisez votre ROI publicitaire.",
-    metaTitle: 'Audit Campagnes Publicitaires | Google Ads, Meta Ads | Slashr',
+    metaTitle: 'Audit Campagnes Publicitaires | Google Ads, Meta Ads ',
     metaDescription: "Audit professionnel de vos campagnes Ads : analyse des annonces, mots-clés, ciblage, enchères. Identifiez les leviers d'optimisation de vos performances.",
     contentSection: {
       tag: 'Notre expertise',
@@ -5614,7 +5924,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Landing Pages',
     category: 'transverse',
     heroDescription: "Création de landing pages optimisées pour la conversion. Design, copywriting et A/B testing pour maximiser le ROI de vos campagnes publicitaires.",
-    metaTitle: 'Landing Pages & CRO | Conversion Optimization | Slashr',
+    metaTitle: 'Landing Pages & CRO | Conversion Optimization ',
     metaDescription: "Création de landing pages qui convertissent. Design, copywriting persuasif, A/B testing. Maximisez le taux de conversion de vos campagnes publicitaires.",
     contentSection: {
       tag: 'Notre expertise',
@@ -5666,7 +5976,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Lead Gen',
     category: 'transverse',
     heroDescription: "Stratégie de génération de leads via publicité digitale. Facebook Lead Ads, LinkedIn Lead Gen Forms, Google Ads. Alimentez votre pipeline commercial.",
-    metaTitle: 'Lead Generation Ads | Facebook, LinkedIn, Google | Slashr',
+    metaTitle: 'Lead Generation Ads | Facebook, LinkedIn, Google ',
     metaDescription: "Agence lead generation à Lille. Experts Facebook Lead Ads, LinkedIn Lead Gen Forms. Générez des leads qualifiés pour alimenter votre pipeline commercial.",
     contentSection: {
       tag: 'Notre expertise',
@@ -5718,7 +6028,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Remarketing',
     category: 'transverse',
     heroDescription: "Transformez vos visiteurs en clients avec le remarketing. Campagnes de retargeting display, social ads et email pour reconvertir vos prospects et maximiser vos conversions.",
-    metaTitle: 'Agence Remarketing & Retargeting à Lille | Reciblage Publicitaire | Slashr',
+    metaTitle: 'Agence Remarketing & Retargeting à Lille | Reciblage Publicitaire ',
     metaDescription: "Agence remarketing à Lille spécialisée dans le retargeting publicitaire. Transformez vos visiteurs en clients grâce à des campagnes de reciblage performantes sur Google, Facebook et le display.",
     contentSection: {
       tag: 'Notre expertise',
@@ -5774,7 +6084,7 @@ Perplexity est plus "transparent" dans ses sources, ChatGPT plus élaboré dans 
     tag: 'Programmatique',
     category: 'transverse',
     heroDescription: "Agence programmatique à Lille spécialisée dans l'achat média automatisé. Campagnes display, vidéo et audio programmatiques pour maximiser la visibilité de votre marque.",
-    metaTitle: 'Agence Programmatique à Lille | Publicité Display & Vidéo | Slashr',
+    metaTitle: 'Agence Programmatique à Lille | Publicité Display & Vidéo ',
     metaDescription: "Agence programmatique à Lille spécialisée dans l'achat média automatisé. Campagnes display, vidéo et audio programmatiques pour maximiser la visibilité de votre marque auprès de vos audiences cibles.",
     contentSection: {
       tag: 'Notre expertise',
