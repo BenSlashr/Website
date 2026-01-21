@@ -328,11 +328,11 @@ export default async function SEOPage() {
         </div>
       </section>
 
-      {/* Blog / Articles récents */}
-      <Articles title="Nos derniers articles SEO" />
-
       {/* FAQ */}
       <FAQ title="Questions fréquentes" faqs={faqs} />
+
+      {/* Blog / Articles récents */}
+      <Articles title="Nos derniers articles SEO" />
 
       {/* Fil d'Ariane */}
       <Breadcrumb

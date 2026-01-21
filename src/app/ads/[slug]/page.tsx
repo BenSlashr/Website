@@ -295,16 +295,16 @@ export default async function TransversePrestationPage({ params }: Props) {
         category="transverse"
       />
 
+      {/* FAQ */}
+      {prestation.faqs && prestation.faqs.length > 0 && (
+        <FAQ title="Questions fréquentes" faqs={prestation.faqs} />
+      )}
+
       {/* Articles liés via embeddings (sémantiquement pertinents) */}
       <Articles
         title="Articles connexes"
         articles={relatedArticles.length > 0 ? relatedArticles : undefined}
       />
-
-      {/* FAQ */}
-      {prestation.faqs && prestation.faqs.length > 0 && (
-        <FAQ title="Questions fréquentes" faqs={prestation.faqs} />
-      )}
 
       {/* Fil d'Ariane */}
       <Breadcrumb

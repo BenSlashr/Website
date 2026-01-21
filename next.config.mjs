@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // URLs avec trailing slash (ex: /seo/ au lieu de /seo)
+  trailingSlash: true,
+
   images: {
     formats: ['image/webp', 'image/avif'],
     remotePatterns: [
