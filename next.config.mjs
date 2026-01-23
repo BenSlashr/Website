@@ -73,9 +73,54 @@ const nextConfig = {
       { source: '/seo/prestations/devis', destination: '/prestations/devis', permanent: true },
 
       // === PRESTATIONS - Anciens slugs avec préfixe agence-seo- ===
-      { source: '/prestations/agence-seo-magento', destination: '/prestations/magento', permanent: true },
-      { source: '/prestations/agence-seo-wordpress', destination: '/prestations/wordpress', permanent: true },
-      { source: '/prestations/agence-seo-drupal', destination: '/prestations/drupal', permanent: true },
+      { source: '/prestations/agence-seo-magento', destination: '/seo/prestations/magento', permanent: true },
+      { source: '/prestations/agence-seo-wordpress', destination: '/seo/prestations/wordpress', permanent: true },
+      { source: '/prestations/agence-seo-drupal', destination: '/seo/prestations/drupal', permanent: true },
+
+      // === CONSOLIDATION /prestations/ -> structure hiérarchique ===
+      // Pages SEO : /prestations/[slug] -> /seo/prestations/[slug]
+      { source: '/prestations/prestashop', destination: '/seo/prestations/prestashop', permanent: true },
+      { source: '/prestations/shopify', destination: '/seo/prestations/shopify', permanent: true },
+      { source: '/prestations/woocommerce', destination: '/seo/prestations/woocommerce', permanent: true },
+      { source: '/prestations/magento', destination: '/seo/prestations/magento', permanent: true },
+      { source: '/prestations/ecommerce', destination: '/seo/prestations/ecommerce', permanent: true },
+      { source: '/prestations/local', destination: '/seo/prestations/local', permanent: true },
+      { source: '/prestations/international', destination: '/seo/prestations/international', permanent: true },
+      { source: '/prestations/refonte-migration', destination: '/seo/prestations/refonte-migration', permanent: true },
+      { source: '/prestations/formation', destination: '/seo/prestations/formation', permanent: true },
+      { source: '/prestations/agence-geo', destination: '/seo/prestations/agence-geo', permanent: true },
+      { source: '/prestations/audit-geo', destination: '/seo/prestations/audit-geo', permanent: true },
+      { source: '/prestations/drupal', destination: '/seo/prestations/drupal', permanent: true },
+      { source: '/prestations/wordpress', destination: '/seo/prestations/wordpress', permanent: true },
+      { source: '/prestations/framer', destination: '/seo/prestations/framer', permanent: true },
+      { source: '/prestations/salesforce', destination: '/seo/prestations/salesforce', permanent: true },
+      { source: '/prestations/webflow', destination: '/seo/prestations/webflow', permanent: true },
+
+      // Pages SEA : /prestations/[slug] -> /ads/sea/[slug]
+      { source: '/prestations/google-ads', destination: '/ads/sea/google-ads', permanent: true },
+      { source: '/prestations/google-shopping', destination: '/ads/sea/google-shopping', permanent: true },
+      { source: '/prestations/bing-ads', destination: '/ads/sea/bing-ads', permanent: true },
+      { source: '/prestations/youtube-ads', destination: '/ads/sea/youtube-ads', permanent: true },
+      { source: '/prestations/performance-max', destination: '/ads/sea/performance-max', permanent: true },
+
+      // Pages Social Ads : /prestations/[slug] -> /ads/social/[slug]
+      { source: '/prestations/social-ads', destination: '/ads/social/social-ads', permanent: true },
+      { source: '/prestations/facebook-ads', destination: '/ads/social/facebook-ads', permanent: true },
+      { source: '/prestations/linkedin-ads', destination: '/ads/social/linkedin-ads', permanent: true },
+      { source: '/prestations/instagram-ads', destination: '/ads/social/instagram-ads', permanent: true },
+      { source: '/prestations/tiktok-ads', destination: '/ads/social/tiktok-ads', permanent: true },
+      { source: '/prestations/meta-ads', destination: '/ads/social/meta-ads', permanent: true },
+      { source: '/prestations/pinterest-ads', destination: '/ads/social/pinterest-ads', permanent: true },
+      { source: '/prestations/snapchat-ads', destination: '/ads/social/snapchat-ads', permanent: true },
+
+      // Pages Transverses Ads : /prestations/[slug] -> /ads/[slug]
+      { source: '/prestations/tracking', destination: '/ads/tracking', permanent: true },
+      { source: '/prestations/b2b', destination: '/ads/b2b', permanent: true },
+      { source: '/prestations/audit-campagnes', destination: '/ads/audit-campagnes', permanent: true },
+      { source: '/prestations/landing-pages', destination: '/ads/landing-pages', permanent: true },
+      { source: '/prestations/lead-generation', destination: '/ads/lead-generation', permanent: true },
+      { source: '/prestations/remarketing', destination: '/ads/remarketing', permanent: true },
+      { source: '/prestations/programmatique', destination: '/ads/programmatique', permanent: true },
 
       // === CAS CLIENTS - URLs sans /cas-clients/ ===
       { source: '/cas-client-tradesy-vestiaire-collective', destination: '/cas-clients/cas-client-tradesy-vestiaire-collective', permanent: true },

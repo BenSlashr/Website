@@ -4937,7 +4937,7 @@ L'audit seul vous donne la photo initiale, l'accompagnement vous aide à amélio
         { text: 'SEO E-commerce', href: '/seo/prestations/ecommerce', highlight: 'E-commerce' },
       ],
       ctaText: 'Prendre RDV',
-      ctaHref: 'https://calendly.com/slashr-anthony/30min',
+      ctaHref: 'https://calendly.com/quentin-slashr/appel-de-decouverte-client-by-slashr?back=1',
     },
     vigilancePoints: [
       {
@@ -5118,7 +5118,7 @@ L'audit seul vous donne la photo initiale, l'accompagnement vous aide à amélio
         { text: 'Schema.org sur-mesure', href: '/seo/prestations/webflow', highlight: 'Schema.org' },
       ],
       ctaText: 'Prendre RDV',
-      ctaHref: 'https://calendly.com/slashr-anthony/30min',
+      ctaHref: 'https://calendly.com/quentin-slashr/appel-de-decouverte-client-by-slashr?back=1',
     },
     engagements: [
       {
@@ -6239,4 +6239,28 @@ export function getAllAdsPrestations(): { slug: string; title: string; tag: stri
   }));
 
   return [...seaPrestations, ...socialPrestations, ...transversePrestations];
+}
+
+// Fonction pour obtenir l'URL canonique d'une prestation selon sa catégorie
+export function getPrestationUrl(prestation: Prestation): string {
+  switch (prestation.category) {
+    case 'seo':
+      return `/seo/prestations/${prestation.slug}`;
+    case 'ads':
+      return `/ads/sea/${prestation.slug}`;
+    case 'social':
+      return `/ads/social/${prestation.slug}`;
+    case 'transverse':
+      return `/ads/${prestation.slug}`;
+    default:
+      return `/seo/prestations/${prestation.slug}`;
+  }
+}
+
+// Fonction pour récupérer toutes les prestations avec leurs URLs canoniques
+export function getAllPrestationsWithUrls(): (Prestation & { href: string })[] {
+  return prestationsData.map(p => ({
+    ...p,
+    href: getPrestationUrl(p),
+  }));
 }

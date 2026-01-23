@@ -1,10 +1,12 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { prestationsData as prestations } from "@/lib/prestationsWP";
+import { getAllPrestationsWithUrls } from "@/lib/prestationsWP";
 import CTA from "@/components/CTA";
 import Newsletter from "@/components/Newsletter";
 import { ServiceHero } from "@/components/services";
 import Breadcrumb from "@/components/Breadcrumb";
+
+const prestations = getAllPrestationsWithUrls();
 
 // Schema.org for ItemList
 const itemListSchema = {
@@ -13,13 +15,13 @@ const itemListSchema = {
   name: "Nos Expertises SEO & Search Marketing",
   description:
     "Découvrez toutes nos expertises en SEO et Search Marketing : audit, stratégie, SEO technique, contenu, netlinking, SEO local, e-commerce et international.",
-  url: "https://www.slashr.fr/prestations",
+  url: "https://agence-slashr.fr/prestations",
   numberOfItems: prestations.length,
   itemListElement: prestations.map((prestation, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: prestation.title,
-    url: `https://www.slashr.fr/prestations/${prestation.slug}`,
+    url: `https://agence-slashr.fr${prestation.href}`,
   })),
 };
 
@@ -77,7 +79,7 @@ export default function PrestationsPage() {
             {prestations.map((prestation) => (
               <Link
                 key={prestation.slug}
-                href={`/prestations/${prestation.slug}`}
+                href={prestation.href}
                 className="group bg-[#2C2E34] rounded-2xl p-6 hover:bg-[#2C2E34] transition-all duration-300 border border-transparent hover:border-gray-700"
               >
                 <h2 className="text-xl font-semibold text-white mb-3 group-hover:text-[#E74601] transition-colors">
